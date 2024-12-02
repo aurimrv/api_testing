@@ -1,0 +1,35 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_CartRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 3, Errors: 2, Skipped: 0, Time elapsed: 3.538 s <<< FAILURE! - in market.run01_CartRestControllerTest
+testAddItem  Time elapsed: 0.22 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path cartItems[0].productId doesn't match.
+Expected: <1>
+  Actual: 5
+
+	at market.run01_CartRestControllerTest.testAddItem(run01_CartRestControllerTest.java:81)
+
+testPayByCard  Time elapsed: 0.296 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.run01_CartRestControllerTest.testPayByCard(run01_CartRestControllerTest.java:112)
+
+testInternalServerError  Time elapsed: 0.048 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at market.run01_CartRestControllerTest.testInternalServerError(run01_CartRestControllerTest.java:139)
+
+testSchemaValidationForAddItem  Time elapsed: 0.151 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.run01_CartRestControllerTest.testSchemaValidationForAddItem(run01_CartRestControllerTest.java:160)
+
+testSchemaValidationForGetCart  Time elapsed: 0.112 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.run01_CartRestControllerTest.testSchemaValidationForGetCart(run01_CartRestControllerTest.java:148)
+

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>Region.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market.domain</a> &gt; <span class="el_source">Region.java</span></div><h1>Region.java</h1><pre class="source lang-java linenums">package market.domain;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+import java.io.Serializable;
+import java.util.Objects;
+
+@Entity
+@Table(name = &quot;region&quot;)
+<span class="nc" id="L16">public class Region implements Serializable {</span>
+	public static final Region NULL;
+	private static final long serialVersionUID = 5413261502059862627L;
+
+	static {
+<span class="nc" id="L21">		NULL = new Region.Builder()</span>
+<span class="nc" id="L22">			.setId(0L)</span>
+<span class="nc" id="L23">			.setName(&quot;null region&quot;)</span>
+<span class="nc" id="L24">			.build();</span>
+<span class="nc" id="L25">	}</span>
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = &quot;id&quot;, insertable = false, updatable = false, nullable = false)
+	private Long id;
+
+	@Column(name = &quot;name&quot;, nullable = false)
+	@NotEmpty
+	@Pattern(regexp = &quot;^[^#$%^&amp;*()']*$&quot;)
+	private String name;
+
+	@Column(name = &quot;subtitle&quot;)
+	@Pattern(regexp = &quot;^[^#$%^*()']*$&quot;)
+	private String subtitle;
+
+	@Column(name = &quot;description&quot;)
+	private String description;
+
+	@Column(name = &quot;color&quot;)
+	@Pattern(regexp = &quot;^(a-z|A-Z|0-9-)*[^#$%^&amp;*()']*$&quot;)
+	private String color;
+
+	public Long getId() {
+<span class="nc" id="L49">		return id;</span>
+	}
+
+	public void setId(Long id) {
+<span class="nc" id="L53">		this.id = id;</span>
+<span class="nc" id="L54">	}</span>
+
+	public String getName() {
+<span class="nc" id="L57">		return name;</span>
+	}
+
+	public void setName(String name) {
+<span class="nc" id="L61">		this.name = name;</span>
+<span class="nc" id="L62">	}</span>
+
+	public String getSubtitle() {
+<span class="nc" id="L65">		return subtitle;</span>
+	}
+
+	public void setSubtitle(String subtitle) {
+<span class="nc" id="L69">		this.subtitle = subtitle;</span>
+<span class="nc" id="L70">	}</span>
+
+	public String getDescription() {
+<span class="nc" id="L73">		return description;</span>
+	}
+
+	public void setDescription(String description) {
+<span class="nc" id="L77">		this.description = description;</span>
+<span class="nc" id="L78">	}</span>
+
+	public String getColor() {
+<span class="nc" id="L81">		return color;</span>
+	}
+
+	public void setColor(String color) {
+<span class="nc" id="L85">		this.color = color;</span>
+<span class="nc" id="L86">	}</span>
+
+	@Override
+	public boolean equals(Object o) {
+<span class="nc bnc" id="L90" title="All 2 branches missed.">		if (this == o) return true;</span>
+<span class="nc bnc" id="L91" title="All 4 branches missed.">		if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="nc" id="L92">		Region region = (Region) o;</span>
+<span class="nc bnc" id="L93" title="All 2 branches missed.">		return Objects.equals(id, region.id) &amp;&amp;</span>
+<span class="nc bnc" id="L94" title="All 2 branches missed.">			Objects.equals(name, region.name) &amp;&amp;</span>
+<span class="nc bnc" id="L95" title="All 2 branches missed.">			Objects.equals(subtitle, region.subtitle) &amp;&amp;</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">			Objects.equals(description, region.description) &amp;&amp;</span>
+<span class="nc bnc" id="L97" title="All 2 branches missed.">			Objects.equals(color, region.color);</span>
+	}
+
+	@Override
+	public int hashCode() {
+<span class="nc" id="L102">		return Objects.hash(id, name, subtitle, description, color);</span>
+	}
+
+	public static class Builder {
+		private Long id;
+		private String name;
+		private String subtitle;
+		private String description;
+		private String color;
+
+<span class="nc" id="L112">		public Builder() {</span>
+<span class="nc" id="L113">		}</span>
+
+<span class="nc" id="L115">		public Builder(Region region) {</span>
+<span class="nc" id="L116">			id = region.id;</span>
+<span class="nc" id="L117">			name = region.name;</span>
+<span class="nc" id="L118">			subtitle = region.subtitle;</span>
+<span class="nc" id="L119">			description = region.description;</span>
+<span class="nc" id="L120">			color = region.color;</span>
+<span class="nc" id="L121">		}</span>
+
+		public Region build() {
+<span class="nc" id="L124">			Region region = new Region();</span>
+<span class="nc" id="L125">			region.id = id;</span>
+<span class="nc" id="L126">			region.name = name;</span>
+<span class="nc" id="L127">			region.subtitle = subtitle;</span>
+<span class="nc" id="L128">			region.description = description;</span>
+<span class="nc" id="L129">			region.color = color;</span>
+<span class="nc" id="L130">			return region;</span>
+		}
+
+		public Builder setId(Long id) {
+<span class="nc" id="L134">			this.id = id;</span>
+<span class="nc" id="L135">			return this;</span>
+		}
+
+		public Builder setName(String name) {
+<span class="nc" id="L139">			this.name = name;</span>
+<span class="nc" id="L140">			return this;</span>
+		}
+
+		public Builder setSubtitle(String subtitle) {
+<span class="nc" id="L144">			this.subtitle = subtitle;</span>
+<span class="nc" id="L145">			return this;</span>
+		}
+
+		public Builder setDescription(String description) {
+<span class="nc" id="L149">			this.description = description;</span>
+<span class="nc" id="L150">			return this;</span>
+		}
+
+		public Builder setColor(String color) {
+<span class="nc" id="L154">			this.color = color;</span>
+<span class="nc" id="L155">			return this;</span>
+		}
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

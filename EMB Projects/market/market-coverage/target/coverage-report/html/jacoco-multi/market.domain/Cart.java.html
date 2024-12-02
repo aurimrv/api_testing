@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>Cart.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market.domain</a> &gt; <span class="el_source">Cart.java</span></div><h1>Cart.java</h1><pre class="source lang-java linenums">package market.domain;
+
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
+
+import javax.persistence.*;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
+
+/**
+ * Cart of the {@link UserAccount}.
+ */
+@Entity
+@Table(name = &quot;cart&quot;)
+public class Cart implements Serializable {
+	private static final long serialVersionUID = -6884843696895527904L;
+
+	@Id
+	@Column(name = &quot;id&quot;, unique = true, nullable = false)
+	@GeneratedValue(generator = &quot;gen&quot;)
+	@GenericGenerator(name = &quot;gen&quot;, strategy = &quot;foreign&quot;, parameters = @Parameter(name = &quot;property&quot;, value = &quot;userAccount&quot;))
+	private long id;
+
+	@OneToOne
+	@PrimaryKeyJoinColumn
+	private UserAccount userAccount;
+
+<span class="nc" id="L31">	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true,</span>
+		targetEntity = CartItem.class, mappedBy = &quot;cart&quot;)
+	private List&lt;CartItem&gt; cartItems = new ArrayList&lt;&gt;(0);
+
+<span class="nc" id="L35">	@Column(name = &quot;delivery_included&quot;, nullable = false)</span>
+	private boolean deliveryIncluded = true;
+
+	public Cart() {
+<span class="nc" id="L39">		this(null);</span>
+<span class="nc" id="L40">	}</span>
+
+<span class="nc" id="L42">	public Cart(UserAccount userAccount) {</span>
+<span class="nc" id="L43">		this.userAccount = userAccount;</span>
+<span class="nc" id="L44">	}</span>
+
+	public boolean isEmpty() {
+<span class="nc" id="L47">		return cartItems.isEmpty();</span>
+	}
+
+	public CartItem update(Product product, int newQuantity) {
+<span class="nc bnc" id="L51" title="All 2 branches missed.">		if (product == null)</span>
+<span class="nc" id="L52">			return null;</span>
+
+<span class="nc" id="L54">		CartItem updatedItem = null;</span>
+<span class="nc bnc" id="L55" title="All 2 branches missed.">		if (newQuantity &gt; 0) {</span>
+<span class="nc" id="L56">			CartItem existingItem = findItem(product.getId());</span>
+<span class="nc bnc" id="L57" title="All 2 branches missed.">			if (existingItem == null) {</span>
+<span class="nc" id="L58">				CartItem newItem = new CartItem(this, product, newQuantity);</span>
+<span class="nc" id="L59">				cartItems.add(newItem);</span>
+<span class="nc" id="L60">				updatedItem = newItem;</span>
+<span class="nc" id="L61">			} else {</span>
+<span class="nc" id="L62">				existingItem.setQuantity(newQuantity);</span>
+<span class="nc" id="L63">				updatedItem = existingItem;</span>
+			}
+<span class="nc" id="L65">		} else {</span>
+<span class="nc" id="L66">			removeItem(product.getId());</span>
+		}
+<span class="nc" id="L68">		return updatedItem;</span>
+	}
+
+	private void removeItem(long productId) {
+<span class="nc bnc" id="L72" title="All 2 branches missed.">		cartItems.removeIf(item -&gt; item.getProduct().getId() == productId);</span>
+<span class="nc" id="L73">	}</span>
+
+	private CartItem findItem(long productId) {
+<span class="nc bnc" id="L76" title="All 2 branches missed.">		for (CartItem existingItem : cartItems) {</span>
+<span class="nc bnc" id="L77" title="All 2 branches missed.">			if (existingItem.getProduct().getId() == productId)</span>
+<span class="nc" id="L78">				return existingItem;</span>
+<span class="nc" id="L79">		}</span>
+<span class="nc" id="L80">		return null;</span>
+	}
+
+	private double calculateItemsCost() {
+<span class="nc" id="L84">		return cartItems.stream()</span>
+<span class="nc" id="L85">			.mapToDouble(CartItem::calculateCost)</span>
+<span class="nc" id="L86">			.sum();</span>
+	}
+
+	public void clear() {
+<span class="nc" id="L90">		cartItems.clear();</span>
+<span class="nc" id="L91">	}</span>
+
+	public long getId() {
+<span class="nc" id="L94">		return id;</span>
+	}
+
+	public void setId(long id) {
+<span class="nc" id="L98">		this.id = id;</span>
+<span class="nc" id="L99">	}</span>
+
+	public UserAccount getUserAccount() {
+<span class="nc" id="L102">		return userAccount;</span>
+	}
+
+	public void setUserAccount(UserAccount userAccount) {
+<span class="nc" id="L106">		this.userAccount = userAccount;</span>
+<span class="nc" id="L107">	}</span>
+
+	public List&lt;CartItem&gt; getCartItems() {
+<span class="nc" id="L110">		return Collections.unmodifiableList(cartItems);</span>
+	}
+
+	public boolean isDeliveryIncluded() {
+<span class="nc" id="L114">		return deliveryIncluded;</span>
+	}
+
+	public void setDeliveryIncluded(boolean deliveryIncluded) {
+<span class="nc" id="L118">		this.deliveryIncluded = deliveryIncluded;</span>
+<span class="nc" id="L119">	}</span>
+
+	public int getItemsCount() {
+<span class="nc" id="L122">		return cartItems.size();</span>
+	}
+
+	public double getItemsCost() {
+<span class="nc" id="L126">		return calculateItemsCost();</span>
+	}
+
+	@Override
+	public boolean equals(Object o) {
+<span class="nc bnc" id="L131" title="All 2 branches missed.">		if (this == o) return true;</span>
+<span class="nc bnc" id="L132" title="All 4 branches missed.">		if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="nc" id="L133">		Cart cart = (Cart) o;</span>
+<span class="nc bnc" id="L134" title="All 2 branches missed.">		return deliveryIncluded == cart.deliveryIncluded &amp;&amp;</span>
+<span class="nc bnc" id="L135" title="All 2 branches missed.">			Objects.equals(id, cart.id) &amp;&amp;</span>
+<span class="nc bnc" id="L136" title="All 2 branches missed.">			Objects.equals(cartItems, cart.cartItems);</span>
+	}
+
+	@Override
+	public int hashCode() {
+<span class="nc" id="L141">		return Objects.hash(id, cartItems, deliveryIncluded);</span>
+	}
+
+	public static class Builder {
+		private long id;
+		private UserAccount userAccount;
+<span class="nc" id="L147">		private List&lt;CartItem&gt; cartItems = new ArrayList&lt;&gt;(0);</span>
+<span class="nc" id="L148">		private boolean deliveryIncluded = true;</span>
+
+<span class="nc" id="L150">		public Builder() {</span>
+<span class="nc" id="L151">		}</span>
+
+<span class="nc" id="L153">		public Builder(Cart cart) {</span>
+<span class="nc" id="L154">			id = cart.id;</span>
+<span class="nc" id="L155">			userAccount = cart.userAccount;</span>
+<span class="nc" id="L156">			cartItems = cart.cartItems;</span>
+<span class="nc" id="L157">			deliveryIncluded = cart.deliveryIncluded;</span>
+<span class="nc" id="L158">		}</span>
+
+		public Cart build() {
+<span class="nc" id="L161">			Cart cart = new Cart();</span>
+<span class="nc" id="L162">			cart.id = id;</span>
+<span class="nc" id="L163">			cart.userAccount = userAccount;</span>
+<span class="nc" id="L164">			cart.cartItems = cartItems;</span>
+<span class="nc" id="L165">			cart.deliveryIncluded = deliveryIncluded;</span>
+<span class="nc" id="L166">			return cart;</span>
+		}
+
+		public Builder setId(long id) {
+<span class="nc" id="L170">			this.id = id;</span>
+<span class="nc" id="L171">			return this;</span>
+		}
+
+		public Builder setUserAccount(UserAccount userAccount) {
+<span class="nc" id="L175">			this.userAccount = userAccount;</span>
+<span class="nc" id="L176">			return this;</span>
+		}
+
+		public Builder setDeliveryIncluded(boolean deliveryIncluded) {
+<span class="nc" id="L180">			this.deliveryIncluded = deliveryIncluded;</span>
+<span class="nc" id="L181">			return this;</span>
+		}
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

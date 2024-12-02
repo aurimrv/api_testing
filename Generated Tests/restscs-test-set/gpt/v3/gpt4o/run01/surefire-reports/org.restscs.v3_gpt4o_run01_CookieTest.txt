@@ -1,0 +1,43 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run01_CookieTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 10.391 s <<< FAILURE! - in org.restscs.v3_gpt4o_run01_CookieTest
+testCookieAPI(org.restscs.v3_gpt4o_run01_CookieTest)  Time elapsed: 1.944 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_CookieTest.testCookieAPI(v3_gpt4o_run01_CookieTest.java:69)
+
+testCalcAPI(org.restscs.v3_gpt4o_run01_CookieTest)  Time elapsed: 0.033 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run01_CookieTest.testCalcAPI(v3_gpt4o_run01_CookieTest.java:75)
+
+testDateParseAPI(org.restscs.v3_gpt4o_run01_CookieTest)  Time elapsed: 0.041 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_CookieTest.testDateParseAPI(v3_gpt4o_run01_CookieTest.java:98)
+
+testFileSuffixAPI(org.restscs.v3_gpt4o_run01_CookieTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: ".txt"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run01_CookieTest.testFileSuffixAPI(v3_gpt4o_run01_CookieTest.java:104)
+
+testPatternAPI(org.restscs.v3_gpt4o_run01_CookieTest)  Time elapsed: 0.04 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_CookieTest.testPatternAPI(v3_gpt4o_run01_CookieTest.java:134)
+

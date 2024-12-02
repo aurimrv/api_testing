@@ -1,0 +1,634 @@
+Correct the test code delimited by ***** according to the error messages delimited by ##### and generate another complete code in JUnit 5 format. The response must contain only Java code in JUnit 5 format.
+
+Keep these five instructions for this generated test code:
+
+Instruction 1: Keet this package line to generated test code file:
+package market;
+
+Instruction 2: Keep the following Java imports to generated test code file:
+import  org.junit.jupiter.api.AfterAll;
+import  org.junit.jupiter.api.BeforeAll;
+import  org.junit.jupiter.api.BeforeEach;
+import  org.junit.jupiter.api.Test;
+import  org.junit.jupiter.api.Timeout;
+import static org.junit.jupiter.api.Assertions.*;
+import  java.util.Map;
+import  java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import  org.evomaster.client.java.controller.SutHandler;
+import  io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import  io.restassured.response.ValidatableResponse;
+import static org.evomaster.client.java.sql.dsl.SqlDsl.sql;
+import  org.evomaster.client.java.controller.api.dto.database.operations.InsertionResultsDto;
+import  org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto;
+import static org.hamcrest.Matchers.*;
+import  io.restassured.config.JsonConfig;
+import  io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import  org.evomaster.client.java.controller.expect.ExpectationHandler;
+import  io.restassured.path.json.JsonPath;
+import  java.util.Arrays;
+
+Instruction 3: Keep the class name in this point (between the imports at instruction 2 and instruction 4)
+
+Instruction 4: Keep these variables in the generated test code:
+private static final SutHandler controller = new em.embedded.market.EmbeddedEvoMasterController();
+private static String baseUrlOfSut;
+
+Instruction 5: Keep the following setup and teardown methods in generated test code file:
+@BeforeAll
+public static void initClass() {
+    controller.setupForGeneratedTest();
+    baseUrlOfSut = controller.startSut();
+    controller.registerOrExecuteInitSqlCommandsIfNeeded();
+    assertNotNull(baseUrlOfSut);
+    RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+    RestAssured.useRelaxedHTTPSValidation();
+    RestAssured.urlEncodingEnabled = false;
+    RestAssured.config = RestAssured.config()
+        .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+        .redirect(redirectConfig().followRedirects(false));
+}
+
+
+@AfterAll
+public static void tearDown() {
+    controller.stopSut();
+}
+
+
+@BeforeEach
+public void initTest() {
+    controller.resetDatabase(Arrays.asList("USER_ROLE","CUSTOMER_ORDER","CART_ITEM","PRODUCT","CART","CONTACTS"));
+    controller.resetStateOfSUT();
+}
+
+*****
+
+package market;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+import static org.junit.jupiter.api.Assertions.*;
+import java.util.Map;
+import java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import org.evomaster.client.java.controller.SutHandler;
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import io.restassured.response.ValidatableResponse;
+import static org.evomaster.client.java.sql.dsl.SqlDsl.sql;
+import org.evomaster.client.java.controller.api.dto.database.operations.InsertionResultsDto;
+import org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto;
+import static org.hamcrest.Matchers.*;
+import io.restassured.config.JsonConfig;
+import io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import org.evomaster.client.java.controller.expect.ExpectationHandler;
+import io.restassured.path.json.JsonPath;
+import java.util.Arrays;
+
+public class run01_RestErrorResponseTest {
+
+    private static final SutHandler controller = new em.embedded.market.EmbeddedEvoMasterController();
+    private static String baseUrlOfSut;
+
+    @BeforeAll
+    public static void initClass() {
+        controller.setupForGeneratedTest();
+        baseUrlOfSut = controller.startSut();
+        controller.registerOrExecuteInitSqlCommandsIfNeeded();
+        assertNotNull(baseUrlOfSut);
+        RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+        RestAssured.useRelaxedHTTPSValidation();
+        RestAssured.urlEncodingEnabled = false;
+        RestAssured.config = RestAssured.config()
+            .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+            .redirect(redirectConfig().followRedirects(false));
+    }
+
+    @AfterAll
+    public static void tearDown() {
+        controller.stopSut();
+    }
+
+    @BeforeEach
+    public void initTest() {
+        controller.resetDatabase(Arrays.asList("USER_ROLE","CUSTOMER_ORDER","CART_ITEM","PRODUCT","CART","CONTACTS"));
+        controller.resetStateOfSUT();
+    }
+
+    @Test
+    public void testGetCustomer() {
+        given().baseUri(baseUrlOfSut)
+               .when().get("/customer")
+               .then().statusCode(401);
+
+        // Add a user and test
+        InsertionDto userDto = new InsertionDto();
+        userDto.setTable("USER");
+        userDto.setColumns(Arrays.asList("email", "password", "name", "phone", "address"));
+        userDto.setValues(Arrays.asList("ivan.petrov@yandex.ru", "petrov", "Ivan Petrov", "+7 123 456 78 90", "Riesstrasse 18"));
+        controller.insertData(userDto);
+
+        given().baseUri(baseUrlOfSut).auth().basic("ivan.petrov@yandex.ru", "petrov")
+               .when().get("/customer")
+               .then().statusCode(200);
+    }
+
+    @Test
+    public void testGetCustomerCart() {
+        given().baseUri(baseUrlOfSut)
+               .when().get("/customer/cart")
+               .then().statusCode(401);
+
+        // Add a user and test
+        InsertionDto userDto = new InsertionDto();
+        userDto.setTable("USER");
+        userDto.setColumns(Arrays.asList("email", "password", "name", "phone", "address"));
+        userDto.setValues(Arrays.asList("ivan.petrov@yandex.ru", "petrov", "Ivan Petrov", "+7 123 456 78 90", "Riesstrasse 18"));
+        controller.insertData(userDto);
+
+        given().baseUri(baseUrlOfSut).auth().basic("ivan.petrov@yandex.ru", "petrov")
+               .when().get("/customer/cart")
+               .then().statusCode(200);
+    }
+
+    @Test
+    public void testAddItemToCart() {
+        given().baseUri(baseUrlOfSut)
+               .body("{ \"productId\": 1, \"quantity\": 2 }")
+               .contentType("application/json")
+               .when().put("/customer/cart")
+               .then().statusCode(401);
+
+        // Add a user and test
+        InsertionDto userDto = new InsertionDto();
+        userDto.setTable("USER");
+        userDto.setColumns(Arrays.asList("email", "password", "name", "phone", "address"));
+        userDto.setValues(Arrays.asList("ivan.petrov@yandex.ru", "petrov", "Ivan Petrov", "+7 123 456 78 90", "Riesstrasse 18"));
+        controller.insertData(userDto);
+
+        given().baseUri(baseUrlOfSut).auth().basic("ivan.petrov@yandex.ru", "petrov")
+               .body("{ \"productId\": 1, \"quantity\": 2 }")
+               .contentType("application/json")
+               .when().put("/customer/cart")
+               .then().statusCode(200);
+    }
+
+    @Test
+    public void testClearCart() {
+        given().baseUri(baseUrlOfSut)
+               .when().delete("/customer/cart")
+               .then().statusCode(401);
+
+        // Add a user and test
+        InsertionDto userDto = new InsertionDto();
+        userDto.setTable("USER");
+        userDto.setColumns(Arrays.asList("email", "password", "name", "phone", "address"));
+        userDto.setValues(Arrays.asList("ivan.petrov@yandex.ru", "petrov", "Ivan Petrov", "+7 123 456 78 90", "Riesstrasse 18"));
+        controller.insertData(userDto);
+
+        given().baseUri(baseUrlOfSut).auth().basic("ivan.petrov@yandex.ru", "petrov")
+               .when().delete("/customer/cart")
+               .then().statusCode(200);
+    }
+
+    @Test
+    public void testSetDelivery() {
+        given().baseUri(baseUrlOfSut)
+               .queryParam("included", true)
+               .when().put("/customer/cart/delivery")
+               .then().statusCode(401);
+
+        // Add a user and test
+        InsertionDto userDto = new InsertionDto();
+        userDto.setTable("USER");
+        userDto.setColumns(Arrays.asList("email", "password", "name", "phone", "address"));
+        userDto.setValues(Arrays.asList("ivan.petrov@yandex.ru", "petrov", "Ivan Petrov", "+7 123 456 78 90", "Riesstrasse 18"));
+        controller.insertData(userDto);
+
+        given().baseUri(baseUrlOfSut).auth().basic("ivan.petrov@yandex.ru", "petrov")
+               .queryParam("included", true)
+               .when().put("/customer/cart/delivery")
+               .then().statusCode(200);
+    }
+
+    @Test
+    public void testPayByCard() {
+        given().baseUri(baseUrlOfSut)
+               .body("{ \"ccNumber\": \"4111111111111111\" }")
+               .contentType("application/json")
+               .when().post("/customer/cart/pay")
+               .then().statusCode(401);
+
+        // Add a user and test
+        InsertionDto userDto = new InsertionDto();
+        userDto.setTable("USER");
+        userDto.setColumns(Arrays.asList("email", "password", "name", "phone", "address"));
+        userDto.setValues(Arrays.asList("ivan.petrov@yandex.ru", "petrov", "Ivan Petrov", "+7 123 456 78 90", "Riesstrasse 18"));
+        controller.insertData(userDto);
+
+        given().baseUri(baseUrlOfSut).auth().basic("ivan.petrov@yandex.ru", "petrov")
+               .body("{ \"ccNumber\": \"4111111111111111\" }")
+               .contentType("application/json")
+               .when().post("/customer/cart/pay")
+               .then().statusCode(201);
+    }
+
+    @Test
+    public void testGetContacts() {
+        given().baseUri(baseUrlOfSut)
+               .when().get("/customer/contacts")
+               .then().statusCode(401);
+
+        // Add a user and test
+        InsertionDto userDto = new InsertionDto();
+        userDto.setTable("USER");
+        userDto.setColumns(Arrays.asList("email", "password", "name", "phone", "address"));
+        userDto.setValues(Arrays.asList("ivan.petrov@yandex.ru", "petrov", "Ivan Petrov", "+7 123 456 78 90", "Riesstrasse 18"));
+        controller.insertData(userDto);
+
+        given().baseUri(baseUrlOfSut).auth().basic("ivan.petrov@yandex.ru", "petrov")
+               .when().get("/customer/contacts")
+               .then().statusCode(200);
+    }
+
+    @Test
+    public void testUpdateContacts() {
+        given().baseUri(baseUrlOfSut)
+               .body("{ \"address\": \"Riesstrasse 18\", \"phone\": \"+7 123 456 78 90\" }")
+               .contentType("application/json")
+               .when().put("/customer/contacts")
+               .then().statusCode(401);
+
+        // Add a user and test
+        InsertionDto userDto = new InsertionDto();
+        userDto.setTable("USER");
+        userDto.setColumns(Arrays.asList("email", "password", "name", "phone", "address"));
+        userDto.setValues(Arrays.asList("ivan.petrov@yandex.ru", "petrov", "Ivan Petrov", "+7 123 456 78 90", "Riesstrasse 18"));
+        controller.insertData(userDto);
+
+        given().baseUri(baseUrlOfSut).auth().basic("ivan.petrov@yandex.ru", "petrov")
+               .body("{ \"address\": \"Riesstrasse 18\", \"phone\": \"+7 123 456 78 90\" }")
+               .contentType("application/json")
+               .when().put("/customer/contacts")
+               .then().statusCode(200);
+    }
+
+    @Test
+    public void testGetOrders() {
+        given().baseUri(baseUrlOfSut)
+               .when().get("/customer/orders")
+               .then().statusCode(401);
+
+        // Add a user and test
+        InsertionDto userDto = new InsertionDto();
+        userDto.setTable("USER");
+        userDto.setColumns(Arrays.asList("email", "password", "name", "phone", "address"));
+        userDto.setValues(Arrays.asList("ivan.petrov@yandex.ru", "petrov", "Ivan Petrov", "+7 123 456 78 90", "Riesstrasse 18"));
+        controller.insertData(userDto);
+
+        given().baseUri(baseUrlOfSut).auth().basic("ivan.petrov@yandex.ru", "petrov")
+               .when().get("/customer/orders")
+               .then().statusCode(200);
+    }
+
+    @Test
+    public void testGetProduct() {
+        given().baseUri(baseUrlOfSut)
+               .pathParam("productId", 1)
+               .when().get("/products/{productId}")
+               .then().statusCode(401);
+
+        // Add a product and test
+        InsertionDto productDto = new InsertionDto();
+        productDto.setTable("PRODUCT");
+        productDto.setColumns(Arrays.asList("productId", "name", "price", "volume", "alcohol", "available"));
+        productDto.setValues(Arrays.asList(1, "Whiskey", 50.0, 750, 40.0, true));
+        controller.insertData(productDto);
+
+        given().baseUri(baseUrlOfSut).auth().basic("ivan.petrov@yandex.ru", "petrov")
+               .pathParam("productId", 1)
+               .when().get("/products/{productId}")
+               .then().statusCode(200);
+    }
+}
+
+*****
+#####
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mnet.lukyanets:market-rest[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding market-rest 0.1.2[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Deleting /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 11 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/test-classes
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[70,16] cannot find symbol
+  symbol:   method setTable(java.lang.String)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[71,16] cannot find symbol
+  symbol:   method setColumns(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[72,16] cannot find symbol
+  symbol:   method setValues(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[73,19] cannot find symbol
+  symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+  location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[88,16] cannot find symbol
+  symbol:   method setTable(java.lang.String)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[89,16] cannot find symbol
+  symbol:   method setColumns(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[90,16] cannot find symbol
+  symbol:   method setValues(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[91,19] cannot find symbol
+  symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+  location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[108,16] cannot find symbol
+  symbol:   method setTable(java.lang.String)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[109,16] cannot find symbol
+  symbol:   method setColumns(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[110,16] cannot find symbol
+  symbol:   method setValues(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[111,19] cannot find symbol
+  symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+  location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[128,16] cannot find symbol
+  symbol:   method setTable(java.lang.String)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[129,16] cannot find symbol
+  symbol:   method setColumns(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[130,16] cannot find symbol
+  symbol:   method setValues(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[131,19] cannot find symbol
+  symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+  location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[147,16] cannot find symbol
+  symbol:   method setTable(java.lang.String)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[148,16] cannot find symbol
+  symbol:   method setColumns(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[149,16] cannot find symbol
+  symbol:   method setValues(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[150,19] cannot find symbol
+  symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+  location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[168,16] cannot find symbol
+  symbol:   method setTable(java.lang.String)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[169,16] cannot find symbol
+  symbol:   method setColumns(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[170,16] cannot find symbol
+  symbol:   method setValues(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[171,19] cannot find symbol
+  symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+  location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[188,16] cannot find symbol
+  symbol:   method setTable(java.lang.String)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[189,16] cannot find symbol
+  symbol:   method setColumns(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[190,16] cannot find symbol
+  symbol:   method setValues(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[191,19] cannot find symbol
+  symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+  location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[208,16] cannot find symbol
+  symbol:   method setTable(java.lang.String)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[209,16] cannot find symbol
+  symbol:   method setColumns(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[210,16] cannot find symbol
+  symbol:   method setValues(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[211,19] cannot find symbol
+  symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+  location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[228,16] cannot find symbol
+  symbol:   method setTable(java.lang.String)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[229,16] cannot find symbol
+  symbol:   method setColumns(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[230,16] cannot find symbol
+  symbol:   method setValues(java.util.List<java.lang.String>)
+  location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[231,19] cannot find symbol
+  symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+  location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[247,19] cannot find symbol
+  symbol:   method setTable(java.lang.String)
+  location: variable productDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[248,19] cannot find symbol
+  symbol:   method setColumns(java.util.List<java.lang.String>)
+  location: variable productDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[249,19] cannot find symbol
+  symbol:   method setValues(java.util.List<java.lang.Object&java.io.Serializable&java.lang.Comparable<? extends java.lang.Object&java.io.Serializable&java.lang.Comparable<?>>>)
+  location: variable productDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[250,19] cannot find symbol
+  symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+  location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;34mINFO[m] 40 errors 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  3.293 s
+[[1;34mINFO[m] Finished at: 2024-08-29T15:41:43-03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m on project [36mmarket-rest[m: [1;31mCompilation failure[m: Compilation failure: 
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[70,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setTable(java.lang.String)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[71,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setColumns(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[72,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setValues(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[73,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+[[1;31mERROR[m]   location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[88,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setTable(java.lang.String)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[89,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setColumns(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[90,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setValues(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[91,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+[[1;31mERROR[m]   location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[108,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setTable(java.lang.String)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[109,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setColumns(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[110,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setValues(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[111,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+[[1;31mERROR[m]   location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[128,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setTable(java.lang.String)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[129,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setColumns(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[130,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setValues(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[131,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+[[1;31mERROR[m]   location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[147,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setTable(java.lang.String)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[148,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setColumns(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[149,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setValues(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[150,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+[[1;31mERROR[m]   location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[168,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setTable(java.lang.String)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[169,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setColumns(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[170,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setValues(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[171,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+[[1;31mERROR[m]   location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[188,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setTable(java.lang.String)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[189,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setColumns(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[190,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setValues(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[191,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+[[1;31mERROR[m]   location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[208,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setTable(java.lang.String)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[209,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setColumns(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[210,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setValues(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[211,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+[[1;31mERROR[m]   location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[228,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setTable(java.lang.String)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[229,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setColumns(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[230,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setValues(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable userDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[231,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+[[1;31mERROR[m]   location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[247,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setTable(java.lang.String)
+[[1;31mERROR[m]   location: variable productDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[248,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setColumns(java.util.List<java.lang.String>)
+[[1;31mERROR[m]   location: variable productDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[249,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setValues(java.util.List<java.lang.Object&java.io.Serializable&java.lang.Comparable<? extends java.lang.Object&java.io.Serializable&java.lang.Comparable<?>>>)
+[[1;31mERROR[m]   location: variable productDto of type org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market/run01_RestErrorResponseTest.java:[250,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method insertData(org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto)
+[[1;31mERROR[m]   location: variable controller of type org.evomaster.client.java.controller.SutHandler
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+#####

@@ -1,0 +1,5 @@
+2024-12-02 15:47:49,606 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-02 15:47:49,606 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-02 15:47:54,461 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-02 15:47:54,464 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-02 15:47:56,281 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning

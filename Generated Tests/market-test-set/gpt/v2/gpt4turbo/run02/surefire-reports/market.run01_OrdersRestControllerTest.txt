@@ -1,0 +1,39 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_OrdersRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 1.945 s <<< FAILURE! - in market.run01_OrdersRestControllerTest
+testGetOrdersServerInternalError  Time elapsed: 0.044 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at market.run01_OrdersRestControllerTest.testGetOrdersServerInternalError(run01_OrdersRestControllerTest.java:111)
+
+testGetOrdersUnauthorized  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <404>.
+
+	at market.run01_OrdersRestControllerTest.testGetOrdersUnauthorized(run01_OrdersRestControllerTest.java:93)
+
+testGetOrdersForbidden  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <404>.
+
+	at market.run01_OrdersRestControllerTest.testGetOrdersForbidden(run01_OrdersRestControllerTest.java:101)
+
+testGetOrderById  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.run01_OrdersRestControllerTest.testGetOrderById(run01_OrdersRestControllerTest.java:75)
+
+testGetOrders  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.run01_OrdersRestControllerTest.testGetOrders(run01_OrdersRestControllerTest.java:64)
+

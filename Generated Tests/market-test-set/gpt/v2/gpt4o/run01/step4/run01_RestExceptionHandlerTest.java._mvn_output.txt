@@ -1,0 +1,576 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mnet.lukyanets:market-rest[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding market-rest 0.1.2[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Deleting /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 11 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.0:test[m [1m(default-test)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running market.[1mrun01_RestExceptionHandlerTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-08-31 11:50:53,140 INFO  [background-preinit] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.1.7.Final
+2024-08-31 11:50:53,268 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 16936 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-08-31 11:50:53,275 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-08-31 11:50:53,860 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-08-31 11:50:53,860 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-08-31 11:50:55,442 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-31 11:50:55,572 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 118 ms. Found 8 JPA repository interfaces.
+2024-08-31 11:50:56,112 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$d912bd15] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-31 11:50:56,297 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7d59d23d' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-31 11:50:56,306 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-31 11:50:56,814 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-08-31 11:50:56,832 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2024-08-31 11:50:56,833 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-08-31 11:50:56,833 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-08-31 11:50:56,964 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-08-31 11:50:56,964 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3099 ms
+2024-08-31 11:50:57,181 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2024-08-31 11:50:57,714 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-31 11:50:57,964 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-31 11:50:58,063 INFO  [main] o.h.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+2024-08-31 11:50:58,259 INFO  [main] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-31 11:50:58,621 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-08-31 11:50:58,962 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-08-31 11:50:58,964 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-08-31 11:50:59,780 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-31 11:50:59,796 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-31 11:51:01,057 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-31 11:51:02,045 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16037fa1, org.springframework.security.web.context.SecurityContextPersistenceFilter@77df1418, org.springframework.security.web.header.HeaderWriterFilter@2e3c75b9, org.springframework.security.web.authentication.logout.LogoutFilter@1afd7cc0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7e7a2405, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58dd5f84, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b6fbca5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@213a24ac, org.springframework.security.web.session.SessionManagementFilter@2171cf77, org.springframework.security.web.access.ExceptionTranslationFilter@6d34daf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3913b97]
+2024-08-31 11:51:02,210 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-31 11:51:02,649 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2024-08-31 11:51:02,679 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 36979 (http) with context path ''
+2024-08-31 11:51:03,293 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 11.016 seconds (JVM running for 13.28)
+2024-08-31 11:51:05,255 INFO  [http-nio-auto-1-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-31 11:51:05,255 INFO  [http-nio-auto-1-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-31 11:51:05,258 INFO  [http-nio-auto-1-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 3 ms
+2024-08-31 11:51:05,488 WARN  [http-nio-auto-1-exec-1] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart', fieldErrors=[]}
+Request method:	PUT
+Request URI:	http://localhost:36979/customer/cart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "productId": 999999,
+    "quantity": 1
+}
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 31 Aug 2024 14:51:05 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-08-31 11:51:05,858 WARN  [http-nio-auto-1-exec-2] m.r.e.RestExceptionHandler - RestErrorResponse{message='Argument validation error', entityName='userDTO', description='uri=/register', fieldErrors=[{field='email', message='The value shall be in the format of an email address'}]}
+Request method:	POST
+Request URI:	http://localhost:36979/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "invalidEmail",
+    "password": "validPass1",
+    "name": "Valid Name",
+    "phone": "+7 123 456 78 90",
+    "address": "Valid Address"
+}
+
+HTTP/1.1 406 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 31 Aug 2024 14:51:05 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Argument validation error",
+    "description": "uri=/register",
+    "entityName": "userDTO",
+    "fieldErrors": [
+        {
+            "field": "email",
+            "message": "The value shall be in the format of an email address"
+        }
+    ]
+}
+Request method:	GET
+Request URI:	http://localhost:36979/customer?name=NonExistentUser
+Proxy:			<none>
+Request params:	<none>
+Query params:	name=NonExistentUser
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+Set-Cookie: JSESSIONID=609D1B97ED08A7FF4D81AE0CD8409CE3; Path=/; HttpOnly
+WWW-Authenticate: Basic realm="Realm"
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 31 Aug 2024 14:51:05 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "timestamp": "2024-08-31T14:51:05.965+00:00",
+    "status": 401,
+    "error": "Unauthorized",
+    "message": "",
+    "path": "/customer"
+}
+2024-08-31 11:51:06,102 ERROR [http-nio-auto-1-exec-5] m.r.e.RestExceptionHandler - RestErrorResponse{message='Required boolean parameter 'included' is not present', entityName='null', description='uri=/customer/cart/delivery', fieldErrors=[]}
+org.springframework.web.bind.MissingServletRequestParameterException: Required boolean parameter 'included' is not present
+	at org.springframework.web.method.annotation.RequestParamMethodArgumentResolver.handleMissingValue(RequestParamMethodArgumentResolver.java:204)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:114)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Request method:	PUT
+Request URI:	http://localhost:36979/customer/cart/delivery
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 500 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 31 Aug 2024 14:51:05 GMT
+Connection: close
+
+{
+    "message": "Required boolean parameter 'included' is not present",
+    "description": "uri=/customer/cart/delivery",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-08-31 11:51:06,167 WARN  [http-nio-auto-1-exec-6] m.r.e.RestExceptionHandler - RestErrorResponse{message='Argument validation error', entityName='creditCardDTO', description='uri=/customer/cart/pay', fieldErrors=[{field='ccNumber', message='Card number shall consist of 13-16 digits'}, {field='ccNumber', message='Not a valid credit card number'}]}
+Request method:	POST
+Request URI:	http://localhost:36979/customer/cart/pay
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ccNumber": "1234"
+}
+
+HTTP/1.1 406 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 31 Aug 2024 14:51:05 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Argument validation error",
+    "description": "uri=/customer/cart/pay",
+    "entityName": "creditCardDTO",
+    "fieldErrors": [
+        {
+            "field": "ccNumber",
+            "message": "Card number shall consist of 13-16 digits"
+        },
+        {
+            "field": "ccNumber",
+            "message": "Not a valid credit card number"
+        }
+    ]
+}
+2024-08-31 11:51:06,205 WARN  [http-nio-auto-1-exec-7] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/orders', fieldErrors=[]}
+2024-08-31 11:51:06,401 WARN  [http-nio-auto-1-exec-8] m.r.e.RestExceptionHandler - RestErrorResponse{message='Argument validation error', entityName='UserAccount', description='uri=/register', fieldErrors=[{field='email', message='Account with this email already exists'}]}
+Request method:	POST
+Request URI:	http://localhost:36979/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "ivan.petrov@yandex.ru",
+    "password": "petrov",
+    "name": "Ivan Petrov",
+    "phone": "+7 123 456 78 90",
+    "address": "Riesstrasse 18"
+}
+
+HTTP/1.1 406 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 31 Aug 2024 14:51:05 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Argument validation error",
+    "description": "uri=/register",
+    "entityName": "UserAccount",
+    "fieldErrors": [
+        {
+            "field": "email",
+            "message": "Account with this email already exists"
+        }
+    ]
+}
+2024-08-31 11:51:06,439 WARN  [http-nio-auto-1-exec-9] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart', fieldErrors=[]}
+Request method:	GET
+Request URI:	http://localhost:36979/customer/cart?name=NonExistentUser
+Proxy:			<none>
+Request params:	<none>
+Query params:	name=NonExistentUser
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 31 Aug 2024 14:51:05 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-08-31 11:51:06,479 WARN  [http-nio-auto-1-exec-10] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart', fieldErrors=[]}
+2024-08-31 11:51:06,512 WARN  [http-nio-auto-1-exec-1] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart', fieldErrors=[]}
+2024-08-31 11:51:06,531 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-1"]
+2024-08-31 11:51:06,531 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-08-31 11:51:06,533 INFO  [main] o.a.c.c.C.[.[.[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-08-31 11:51:06,537 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-1"]
+2024-08-31 11:51:06,542 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-1"]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m11[m, [1;31mFailures: [0;1;31m7[m, Errors: 0, Skipped: 0, Time elapsed: 15.542 s[1;31m <<< FAILURE![m - in market.[1mrun01_RestExceptionHandlerTest[m
+[[1;31mERROR[m] testAddToCartInvalidProduct  Time elapsed: 1.66 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.run01_RestExceptionHandlerTest.testAddToCartInvalidProduct(run01_RestExceptionHandlerTest.java:87)
+
+[[1;31mERROR[m] testCreateCustomerInvalidEmail  Time elapsed: 0.141 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <406>.
+
+	at market.run01_RestExceptionHandlerTest.testCreateCustomerInvalidEmail(run01_RestExceptionHandlerTest.java:121)
+
+[[1;31mERROR[m] testGetCustomerNotFound  Time elapsed: 0.152 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.run01_RestExceptionHandlerTest.testGetCustomerNotFound(run01_RestExceptionHandlerTest.java:75)
+
+[[1;31mERROR[m] testSetDeliveryInvalidQuery  Time elapsed: 0.062 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <500>.
+
+	at market.run01_RestExceptionHandlerTest.testSetDeliveryInvalidQuery(run01_RestExceptionHandlerTest.java:179)
+
+[[1;31mERROR[m] testPayByCardInvalidCard  Time elapsed: 0.048 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <406>.
+
+	at market.run01_RestExceptionHandlerTest.testPayByCardInvalidCard(run01_RestExceptionHandlerTest.java:99)
+
+[[1;31mERROR[m] testCreateCustomerSuccess  Time elapsed: 0.203 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run01_RestExceptionHandlerTest.testCreateCustomerSuccess(run01_RestExceptionHandlerTest.java:133)
+
+[[1;31mERROR[m] testGetCartNotFound  Time elapsed: 0.032 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.run01_RestExceptionHandlerTest.testGetCartNotFound(run01_RestExceptionHandlerTest.java:158)
+
+2024-08-31 11:51:06,787 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-31 11:51:06,799 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-31 11:51:06,801 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-31 11:51:06,804 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  run01_RestExceptionHandlerTest.testAddToCartInvalidProduct:87 1 expectation failed.
+Expected status code <404> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  run01_RestExceptionHandlerTest.testCreateCustomerInvalidEmail:121 1 expectation failed.
+Expected status code <400> but was <406>.
+[m
+[[1;31mERROR[m] [1;31m  run01_RestExceptionHandlerTest.testCreateCustomerSuccess:133 1 expectation failed.
+Expected status code <201> but was <406>.
+[m
+[[1;31mERROR[m] [1;31m  run01_RestExceptionHandlerTest.testGetCartNotFound:158 1 expectation failed.
+Expected status code <404> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  run01_RestExceptionHandlerTest.testGetCustomerNotFound:75 1 expectation failed.
+Expected status code <404> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  run01_RestExceptionHandlerTest.testPayByCardInvalidCard:99 1 expectation failed.
+Expected status code <400> but was <406>.
+[m
+[[1;31mERROR[m] [1;31m  run01_RestExceptionHandlerTest.testSetDeliveryInvalidQuery:179 1 expectation failed.
+Expected status code <400> but was <500>.
+[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 11, Failures: 7, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  20.737 s
+[[1;34mINFO[m] Finished at: 2024-08-31T11:51:07-03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.22.0:test[m [1m(default-test)[m on project [36mmarket-rest[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] [1;31mPlease refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

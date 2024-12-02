@@ -1,0 +1,103 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run03_NotyPevarTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 11, Errors: 0, Skipped: 0, Time elapsed: 1.109 s <<< FAILURE! - in org.restscs.v3_gpt4o_run03_NotyPevarTest
+testCostfuns(org.restscs.v3_gpt4o_run03_NotyPevarTest)  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 10
+
+	at org.restscs.v3_gpt4o_run03_NotyPevarTest.testCostfuns(v3_gpt4o_run03_NotyPevarTest.java:74)
+
+testCalc(org.restscs.v3_gpt4o_run03_NotyPevarTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2.0"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run03_NotyPevarTest.testCalc(v3_gpt4o_run03_NotyPevarTest.java:59)
+
+testCookie(org.restscs.v3_gpt4o_run03_NotyPevarTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Cookie set"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run03_NotyPevarTest.testCookie(v3_gpt4o_run03_NotyPevarTest.java:68)
+
+testDateParse(org.restscs.v3_gpt4o_run03_NotyPevarTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2023-01-02"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run03_NotyPevarTest.testDateParse(v3_gpt4o_run03_NotyPevarTest.java:83)
+
+testFileSuffix(org.restscs.v3_gpt4o_run03_NotyPevarTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: ".txt"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run03_NotyPevarTest.testFileSuffix(v3_gpt4o_run03_NotyPevarTest.java:89)
+
+testNotyPevar(org.restscs.v3_gpt4o_run03_NotyPevarTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 3
+
+	at org.restscs.v3_gpt4o_run03_NotyPevarTest.testNotyPevar(v3_gpt4o_run03_NotyPevarTest.java:95)
+
+testOrdered4(org.restscs.v3_gpt4o_run03_NotyPevarTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "abcd"
+  Actual: unordered
+
+	at org.restscs.v3_gpt4o_run03_NotyPevarTest.testOrdered4(v3_gpt4o_run03_NotyPevarTest.java:104)
+
+testRegex(org.restscs.v3_gpt4o_run03_NotyPevarTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Pattern matched"
+  Actual: none
+
+	at org.restscs.v3_gpt4o_run03_NotyPevarTest.testRegex(v3_gpt4o_run03_NotyPevarTest.java:110)
+
+testPat(org.restscs.v3_gpt4o_run03_NotyPevarTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Pattern matched"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run03_NotyPevarTest.testPat(v3_gpt4o_run03_NotyPevarTest.java:116)
+
+testText2txt(org.restscs.v3_gpt4o_run03_NotyPevarTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "word1 word2 word3"
+  Actual: 
+
+	at org.restscs.v3_gpt4o_run03_NotyPevarTest.testText2txt(v3_gpt4o_run03_NotyPevarTest.java:122)
+
+testTitle(org.restscs.v3_gpt4o_run03_NotyPevarTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Mr"
+  Actual: 1
+
+	at org.restscs.v3_gpt4o_run03_NotyPevarTest.testTitle(v3_gpt4o_run03_NotyPevarTest.java:128)
+

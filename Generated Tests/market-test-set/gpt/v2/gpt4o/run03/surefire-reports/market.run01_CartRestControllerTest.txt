@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_CartRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.678 s <<< FAILURE! - in market.run01_CartRestControllerTest
+testSchemaValidation  Time elapsed: 0.139 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.run01_CartRestControllerTest.testSchemaValidation(run01_CartRestControllerTest.java:153)
+

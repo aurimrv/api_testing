@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_CustomerRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 2.849 s <<< FAILURE! - in market.run01_CustomerRestControllerTest
+testCreateCustomerSuccess  Time elapsed: 0.459 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.run01_CustomerRestControllerTest.testCreateCustomerSuccess(run01_CustomerRestControllerTest.java:81)
+
+testCreateCustomerWithExistingEmail  Time elapsed: 0.062 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run01_CustomerRestControllerTest.testCreateCustomerWithExistingEmail(run01_CustomerRestControllerTest.java:63)
+
+testGetCustomerSuccessful  Time elapsed: 0.06 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run01_CustomerRestControllerTest.testGetCustomerSuccessful(run01_CustomerRestControllerTest.java:102)
+
+testRegisterCustomerInvalidData  Time elapsed: 0.064 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <406>.
+
+	at market.run01_CustomerRestControllerTest.testRegisterCustomerInvalidData(run01_CustomerRestControllerTest.java:95)
+

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>DistilleryController.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market.controller.backend</a> &gt; <span class="el_source">DistilleryController.java</span></div><h1>DistilleryController.java</h1><pre class="source lang-java linenums">package market.controller.backend;
+
+import market.domain.Distillery;
+import market.dto.DistilleryDTO;
+import market.dto.RegionDTO;
+import market.dto.assembler.DistilleryDtoAssembler;
+import market.dto.assembler.RegionDtoAssembler;
+import market.service.DistilleryService;
+import market.service.RegionService;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.validation.Valid;
+import java.util.List;
+
+import static java.util.stream.Collectors.toList;
+
+@Controller
+@RequestMapping(&quot;/admin/distilleries&quot;)
+@Secured({&quot;ROLE_STAFF&quot;, &quot;ROLE_ADMIN&quot;})
+public class DistilleryController {
+	private static final String DISTILLERIES_BASE = &quot;admin/distilleries&quot;;
+	private static final String DISTILLERIES_NEW = DISTILLERIES_BASE + &quot;/new&quot;;
+	private static final String DISTILLERIES_EDIT = DISTILLERIES_BASE + &quot;/edit&quot;;
+
+	private final DistilleryService distilleryService;
+	private final RegionService regionService;
+<span class="nc" id="L33">	private final RegionDtoAssembler regionDtoAssembler = new RegionDtoAssembler();</span>
+<span class="nc" id="L34">	private final DistilleryDtoAssembler distilleryDtoAssembler = new DistilleryDtoAssembler();</span>
+
+<span class="nc" id="L36">	public DistilleryController(DistilleryService distilleryService, RegionService regionService) {</span>
+<span class="nc" id="L37">		this.distilleryService = distilleryService;</span>
+<span class="nc" id="L38">		this.regionService = regionService;</span>
+<span class="nc" id="L39">	}</span>
+
+	@RequestMapping(method = RequestMethod.GET)
+	public String allDistilleries(Model model) {
+<span class="nc" id="L43">		List&lt;DistilleryDTO&gt; distilleriesDto = distilleryService.findAll().stream()</span>
+<span class="nc" id="L44">			.map(distilleryDtoAssembler::toModel)</span>
+<span class="nc" id="L45">			.collect(toList());</span>
+<span class="nc" id="L46">		model.addAttribute(&quot;distilleries&quot;, distilleriesDto);</span>
+<span class="nc" id="L47">		return DISTILLERIES_BASE;</span>
+	}
+
+	//------------------------------------------------ Creating new distillery
+
+	@RequestMapping(method = RequestMethod.GET, value = &quot;/new&quot;)
+	public String newDistillery(Model model) {
+<span class="nc" id="L54">		List&lt;RegionDTO&gt; regionsDto = regionService.findAll().stream()</span>
+<span class="nc" id="L55">			.map(regionDtoAssembler::toModel)</span>
+<span class="nc" id="L56">			.collect(toList());</span>
+<span class="nc" id="L57">		model.addAttribute(&quot;regions&quot;, regionsDto);</span>
+<span class="nc" id="L58">		model.addAttribute(&quot;distillery&quot;, new Distillery());</span>
+<span class="nc" id="L59">		return DISTILLERIES_NEW;</span>
+	}
+
+	@RequestMapping(method = RequestMethod.POST, value = &quot;/new&quot;)
+	public String postDistillery(
+		@Valid DistilleryDTO distilleryDto, BindingResult bindingResult
+	) {
+<span class="nc bnc" id="L66" title="All 2 branches missed.">		if (bindingResult.hasErrors())</span>
+<span class="nc" id="L67">			return DISTILLERIES_NEW;</span>
+
+<span class="nc" id="L69">		Distillery newDistillery = distilleryDtoAssembler.toDomain(distilleryDto);</span>
+<span class="nc" id="L70">		distilleryService.create(newDistillery, distilleryDto.getRegion());</span>
+<span class="nc" id="L71">		return &quot;redirect:/&quot; + DISTILLERIES_BASE;</span>
+	}
+
+	//------------------------------------------------ Changing distillery
+
+	@RequestMapping(method = RequestMethod.GET, value = &quot;/{distilleryId}/edit&quot;)
+	public String editDistillery(
+		@PathVariable long distilleryId, Model model
+	) {
+<span class="nc" id="L80">		List&lt;RegionDTO&gt; regionsDto = regionService.findAll().stream()</span>
+<span class="nc" id="L81">			.map(regionDtoAssembler::toModel)</span>
+<span class="nc" id="L82">			.collect(toList());</span>
+<span class="nc" id="L83">		model.addAttribute(&quot;regions&quot;, regionsDto);</span>
+
+<span class="nc" id="L85">		Distillery distillery = distilleryService.findById(distilleryId);</span>
+<span class="nc" id="L86">		model.addAttribute(&quot;distillery&quot;, distilleryDtoAssembler.toModel(distillery));</span>
+
+<span class="nc" id="L88">		return DISTILLERIES_EDIT;</span>
+	}
+
+	@RequestMapping(method = RequestMethod.POST, value = &quot;/{distilleryId}/edit&quot;)
+	public String putDistillery(
+		@PathVariable long distilleryId,
+		@Valid DistilleryDTO distilleryDto, BindingResult bindingResult
+	) {
+<span class="nc bnc" id="L96" title="All 2 branches missed.">		if (bindingResult.hasErrors())</span>
+<span class="nc" id="L97">			return DISTILLERIES_EDIT;</span>
+
+<span class="nc" id="L99">		Distillery changedDistillery = distilleryDtoAssembler.toDomain(distilleryDto);</span>
+<span class="nc" id="L100">		distilleryService.update(distilleryId, changedDistillery, distilleryDto.getRegion());</span>
+<span class="nc" id="L101">		return &quot;redirect:/&quot; + DISTILLERIES_BASE;</span>
+	}
+
+	//------------------------------------------------------ Removing distillery
+
+	@RequestMapping(method = RequestMethod.POST, value = &quot;/{distilleryId}/delete&quot;)
+	public String deleteDistillery(@PathVariable long distilleryId) {
+<span class="nc" id="L108">		distilleryService.delete(distilleryId);</span>
+<span class="nc" id="L109">		return &quot;redirect:/&quot; + DISTILLERIES_BASE;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

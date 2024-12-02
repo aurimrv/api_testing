@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v3_gpt4turbo_run03_RemainderTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.532 s <<< FAILURE! - in org.restncs.v3_gpt4turbo_run03_RemainderTest
+testRemainderWithZeroDivisor(org.restncs.v3_gpt4turbo_run03_RemainderTest)  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: Expected an ArithmeticException to be thrown
+	at org.restncs.v3_gpt4turbo_run03_RemainderTest.testRemainderWithZeroDivisor(v3_gpt4turbo_run03_RemainderTest.java:108)
+

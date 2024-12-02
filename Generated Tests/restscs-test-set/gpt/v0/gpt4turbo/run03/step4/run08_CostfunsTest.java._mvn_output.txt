@@ -1,0 +1,345 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------< [0;36morg.evomaster:evomaster-benchmark-cs-rest-artificial-scs[0;1m >------[m
+[[1;34mINFO[m] [1mBuilding evomaster-benchmark-cs-rest-artificial-scs 3.0.0[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Deleting /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 14 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 14 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 14 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.0:test[m [1m(default-test)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.restscs.[1mrun08_CostfunsTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.3.RELEASE)
+
+2024-08-05 18:17:10.390  INFO 34146 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v2.22.0 on IFTO-PROBOOK with PID 34146 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs)
+2024-08-05 18:17:10.397  INFO 34146 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to default profiles: default
+2024-08-05 18:17:10.940  INFO 34146 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7661e474: startup date [Mon Aug 05 18:17:10 BRT 2024]; root of context hierarchy
+2024-08-05 18:17:12.233  INFO 34146 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2024-08-05 18:17:12.724  INFO 34146 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-08-05 18:17:12.772  INFO 34146 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-05 18:17:12.772  INFO 34146 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2024-08-05 18:17:12.782  INFO 34146 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2024-08-05 18:17:12.877  INFO 34146 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-05 18:17:12.878  INFO 34146 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1941 ms
+2024-08-05 18:17:12.982  INFO 34146 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2024-08-05 18:17:12.987  INFO 34146 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2024-08-05 18:17:12.987  INFO 34146 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2024-08-05 18:17:12.987  INFO 34146 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2024-08-05 18:17:12.988  INFO 34146 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2024-08-05 18:17:13.474  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/pat/{txt}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.regex(java.lang.String)
+2024-08-05 18:17:13.475  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/title/{sex}/{title}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.title(java.lang.String,java.lang.String)
+2024-08-05 18:17:13.476  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cookie/{name}/{val}/{site}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.cookie(java.lang.String,java.lang.String,java.lang.String)
+2024-08-05 18:17:13.477  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/costfuns/{i}/{s}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.costfuns(java.lang.Integer,java.lang.String)
+2024-08-05 18:17:13.477  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/calc/{op}/{arg1}/{arg2}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.calc(java.lang.String,double,double)
+2024-08-05 18:17:13.478  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/dateparse/{dayname}/{monthname}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.dateParse(java.lang.String,java.lang.String)
+2024-08-05 18:17:13.479  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/filesuffix/{directory}/{file}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.fileSuffix(java.lang.String,java.lang.String)
+2024-08-05 18:17:13.479  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/notypevar/{i}/{s}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.notyPevar(java.lang.Integer,java.lang.String)
+2024-08-05 18:17:13.480  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/ordered4/{w}/{x}/{z}/{y}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.ordered4(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2024-08-05 18:17:13.481  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/pat/{txt}/{pat}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.pat(java.lang.String,java.lang.String)
+2024-08-05 18:17:13.482  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/text2txt/{word1}/{word2}/{word3}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.text2txt(java.lang.String,java.lang.String,java.lang.String)
+2024-08-05 18:17:13.486  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2024-08-05 18:17:13.488  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2024-08-05 18:17:13.489  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2024-08-05 18:17:13.493  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2024-08-05 18:17:13.493  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2024-08-05 18:17:13.616  INFO 34146 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-08-05 18:17:13.697  INFO 34146 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-08-05 18:17:13.858  INFO 34146 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7661e474: startup date [Mon Aug 05 18:17:10 BRT 2024]; root of context hierarchy
+2024-08-05 18:17:13.920  INFO 34146 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-08-05 18:17:13.920  INFO 34146 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-08-05 18:17:14.166  INFO 34146 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2024-08-05 18:17:14.179  INFO 34146 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2024-08-05 18:17:14.180  INFO 34146 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2024-08-05 18:17:14.215  INFO 34146 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2024-08-05 18:17:14.267  INFO 34146 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2024-08-05 18:17:14.473  INFO 34146 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 38639 (http) with context path ''
+2024-08-05 18:17:14.479  INFO 34146 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 4.749 seconds (JVM running for 5.535)
+2024-08-05 18:17:15.886  INFO 34146 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2024-08-05 18:17:15.886  INFO 34146 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2024-08-05 18:17:16.056  INFO 34146 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 170 ms
+Request method:	GET
+Request URI:	http://localhost:38639/api/costfuns/5/baab
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	i=5
+				s=baab
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 2
+Date: Mon, 05 Aug 2024 21:17:16 GMT
+
+10
+Request method:	GET
+Request URI:	http://localhost:38639/api/costfuns/-445/baab
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	i=-445
+				s=baab
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 2
+Date: Mon, 05 Aug 2024 21:17:16 GMT
+
+10
+Request method:	GET
+Request URI:	http://localhost:38639/api/costfuns/667/baab
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	i=667
+				s=baab
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 2
+Date: Mon, 05 Aug 2024 21:17:16 GMT
+
+10
+Request method:	GET
+Request URI:	http://localhost:38639/api/costfuns/555/aabb
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	i=555
+				s=aabb
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 2
+Date: Mon, 05 Aug 2024 21:17:16 GMT
+
+10
+Request method:	GET
+Request URI:	http://localhost:38639/api/costfuns/0/aabaabba
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	i=0
+				s=aabaabba
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 2
+Date: Mon, 05 Aug 2024 21:17:16 GMT
+
+10
+Request method:	GET
+Request URI:	http://localhost:38639/api/costfuns/0/mismatch
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	i=0
+				s=mismatch
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 2
+Date: Mon, 05 Aug 2024 21:17:16 GMT
+
+10
+2024-08-05 18:17:16.497  INFO 34146 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m7[m, [1;31mFailures: [0;1;31m6[m, Errors: 0, Skipped: 0, Time elapsed: 7.11 s[1;31m <<< FAILURE![m - in org.restscs.[1mrun08_CostfunsTest[m
+[[1;31mERROR[m] testCostfunsEndpointValue1(org.restscs.run08_CostfunsTest)  Time elapsed: 1.398 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "7"
+  Actual: 10
+
+	at org.restscs.run08_CostfunsTest.testCostfunsEndpointValue1(run08_CostfunsTest.java:63)
+
+[[1;31mERROR[m] testCostfunsEndpointValue2(org.restscs.run08_CostfunsTest)  Time elapsed: 0.032 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 10
+
+	at org.restscs.run08_CostfunsTest.testCostfunsEndpointValue2(run08_CostfunsTest.java:73)
+
+[[1;31mERROR[m] testCostfunsEndpointValue3(org.restscs.run08_CostfunsTest)  Time elapsed: 0.04 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "4"
+  Actual: 10
+
+	at org.restscs.run08_CostfunsTest.testCostfunsEndpointValue3(run08_CostfunsTest.java:83)
+
+[[1;31mERROR[m] testCostfunsEndpointValue4(org.restscs.run08_CostfunsTest)  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "5"
+  Actual: 10
+
+	at org.restscs.run08_CostfunsTest.testCostfunsEndpointValue4(run08_CostfunsTest.java:93)
+
+[[1;31mERROR[m] testCostfunsEndpointValue6(org.restscs.run08_CostfunsTest)  Time elapsed: 0.033 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "9"
+  Actual: 10
+
+	at org.restscs.run08_CostfunsTest.testCostfunsEndpointValue6(run08_CostfunsTest.java:113)
+
+[[1;31mERROR[m] testCostfunsEndpointValue7(org.restscs.run08_CostfunsTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "6"
+  Actual: 10
+
+	at org.restscs.run08_CostfunsTest.testCostfunsEndpointValue7(run08_CostfunsTest.java:123)
+
+2024-08-05 18:17:16.538  INFO 34146 --- [       Thread-4] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7661e474: startup date [Mon Aug 05 18:17:10 BRT 2024]; root of context hierarchy
+2024-08-05 18:17:16.542  INFO 34146 --- [       Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2024-08-05 18:17:16.543  INFO 34146 --- [       Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  run08_CostfunsTest.testCostfunsEndpointValue1:63 1 expectation failed.
+Response body doesn't match expectation.
+Expected: "7"
+  Actual: 10
+[m
+[[1;31mERROR[m] [1;31m  run08_CostfunsTest.testCostfunsEndpointValue2:73 1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 10
+[m
+[[1;31mERROR[m] [1;31m  run08_CostfunsTest.testCostfunsEndpointValue3:83 1 expectation failed.
+Response body doesn't match expectation.
+Expected: "4"
+  Actual: 10
+[m
+[[1;31mERROR[m] [1;31m  run08_CostfunsTest.testCostfunsEndpointValue4:93 1 expectation failed.
+Response body doesn't match expectation.
+Expected: "5"
+  Actual: 10
+[m
+[[1;31mERROR[m] [1;31m  run08_CostfunsTest.testCostfunsEndpointValue6:113 1 expectation failed.
+Response body doesn't match expectation.
+Expected: "9"
+  Actual: 10
+[m
+[[1;31mERROR[m] [1;31m  run08_CostfunsTest.testCostfunsEndpointValue7:123 1 expectation failed.
+Response body doesn't match expectation.
+Expected: "6"
+  Actual: 10
+[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 7, Failures: 6, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  10.641 s
+[[1;34mINFO[m] Finished at: 2024-08-05T18:17:17-03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.22.0:test[m [1m(default-test)[m on project [36mevomaster-benchmark-cs-rest-artificial-scs[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] [1;31mPlease refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

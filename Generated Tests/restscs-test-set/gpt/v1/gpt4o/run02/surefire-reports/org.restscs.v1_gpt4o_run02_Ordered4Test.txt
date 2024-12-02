@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run02_Ordered4Test
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.372 s <<< FAILURE! - in org.restscs.v1_gpt4o_run02_Ordered4Test
+testCalcEndpoint(org.restscs.v1_gpt4o_run02_Ordered4Test)  Time elapsed: 0.026 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "30.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run02_Ordered4Test.testCalcEndpoint(v1_gpt4o_run02_Ordered4Test.java:66)
+
+testDateParseEndpoint(org.restscs.v1_gpt4o_run02_Ordered4Test)  Time elapsed: 0.026 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v1_gpt4o_run02_Ordered4Test.testDateParseEndpoint(v1_gpt4o_run02_Ordered4Test.java:159)
+
+testRegexEndpoint(org.restscs.v1_gpt4o_run02_Ordered4Test)  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "none"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run02_Ordered4Test.testRegexEndpoint(v1_gpt4o_run02_Ordered4Test.java:250)
+

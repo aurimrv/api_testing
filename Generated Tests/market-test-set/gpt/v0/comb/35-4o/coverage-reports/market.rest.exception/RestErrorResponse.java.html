@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RestErrorResponse.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">market-rest</a> &gt; <a href="index.source.html" class="el_package">market.rest.exception</a> &gt; <span class="el_source">RestErrorResponse.java</span></div><h1>RestErrorResponse.java</h1><pre class="source lang-java linenums">package market.rest.exception;
+
+import market.dto.exception.FieldErrorDTO;
+import org.springframework.web.context.request.WebRequest;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Generalized response for the case of a request processing error.
+ */
+public class RestErrorResponse {
+
+	private final String message;
+	private final String description;
+	private final String entityName;
+<span class="fc" id="L17">	private final List&lt;FieldErrorDTO&gt; fieldErrors = new ArrayList&lt;&gt;();</span>
+
+	public RestErrorResponse(String message, WebRequest request) {
+<span class="fc" id="L20">		this(message, null, request.getDescription(false));</span>
+<span class="fc" id="L21">	}</span>
+
+	public RestErrorResponse(String message, String entityName, WebRequest request) {
+<span class="fc" id="L24">		this(message, entityName, request.getDescription(false));</span>
+<span class="fc" id="L25">	}</span>
+
+<span class="fc" id="L27">	public RestErrorResponse(String message, String entityName, String description) {</span>
+<span class="fc" id="L28">		this.message = message;</span>
+<span class="fc" id="L29">		this.entityName = entityName;</span>
+<span class="fc" id="L30">		this.description = description;</span>
+<span class="fc" id="L31">	}</span>
+
+	public void addFieldError(String path, String message) {
+<span class="fc" id="L34">		fieldErrors.add(new FieldErrorDTO(path, message));</span>
+<span class="fc" id="L35">	}</span>
+
+	public String getDescription() {
+<span class="fc" id="L38">		return description;</span>
+	}
+
+	public String getMessage() {
+<span class="fc" id="L42">		return message;</span>
+	}
+
+	public String getEntityName() {
+<span class="fc" id="L46">		return entityName;</span>
+	}
+
+	public List&lt;FieldErrorDTO&gt; getFieldErrors() {
+<span class="fc" id="L50">		return fieldErrors;</span>
+	}
+
+	@Override
+	public String toString() {
+<span class="fc" id="L55">		return &quot;RestErrorResponse{&quot; +</span>
+			&quot;message='&quot; + message + '\'' +
+			&quot;, entityName='&quot; + entityName + '\'' +
+			&quot;, description='&quot; + description + '\'' +
+			&quot;, fieldErrors=&quot; + fieldErrors +
+			'}';
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

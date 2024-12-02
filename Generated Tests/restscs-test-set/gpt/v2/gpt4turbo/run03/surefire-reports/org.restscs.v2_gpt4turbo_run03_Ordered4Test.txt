@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4turbo_run03_Ordered4Test
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.415 s <<< FAILURE! - in org.restscs.v2_gpt4turbo_run03_Ordered4Test
+testOrdered4Decreasing(org.restscs.v2_gpt4turbo_run03_Ordered4Test)  Time elapsed: 0.026 s  <<< FAILURE!
+java.lang.AssertionError: Expected 'decreasing' but got 'unordered'
+	at org.restscs.v2_gpt4turbo_run03_Ordered4Test.testOrdered4Decreasing(v2_gpt4turbo_run03_Ordered4Test.java:83)
+
+testOrdered4Increasing(org.restscs.v2_gpt4turbo_run03_Ordered4Test)  Time elapsed: 0.032 s  <<< FAILURE!
+java.lang.AssertionError: Expected 'increasing' but got 'unordered'
+	at org.restscs.v2_gpt4turbo_run03_Ordered4Test.testOrdered4Increasing(v2_gpt4turbo_run03_Ordered4Test.java:68)
+
+testOrdered4Error(org.restscs.v2_gpt4turbo_run03_Ordered4Test)  Time elapsed: 0.026 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4turbo_run03_Ordered4Test.testOrdered4Error(v2_gpt4turbo_run03_Ordered4Test.java:110)
+

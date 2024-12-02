@@ -1,0 +1,235 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------< [0;36morg.evomaster:evomaster-benchmark-cs-rest-artificial-ncs[0;1m >------[m
+[[1;34mINFO[m] [1mBuilding evomaster-benchmark-cs-rest-artificial-ncs 3.0.0[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Deleting /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 10 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 10 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 10 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.0:test[m [1m(default-test)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.restncs.imp.[1mv2_gpt35_run03_ExpintTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.3.RELEASE)
+
+2024-09-09 15:37:52.304  INFO 33879 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v2.22.0 on IFTO-PROBOOK with PID 33879 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs)
+2024-09-09 15:37:52.312  INFO 33879 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to default profiles: default
+2024-09-09 15:37:52.973  INFO 33879 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@aca3c85: startup date [Mon Sep 09 15:37:52 BRT 2024]; root of context hierarchy
+2024-09-09 15:37:54.714  INFO 33879 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2024-09-09 15:37:55.414  INFO 33879 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-09-09 15:37:55.480  INFO 33879 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-09 15:37:55.481  INFO 33879 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2024-09-09 15:37:55.498  INFO 33879 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2024-09-09 15:37:55.655  INFO 33879 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-09 15:37:55.655  INFO 33879 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2685 ms
+2024-09-09 15:37:55.821  INFO 33879 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2024-09-09 15:37:55.827  INFO 33879 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2024-09-09 15:37:55.828  INFO 33879 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2024-09-09 15:37:55.828  INFO 33879 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2024-09-09 15:37:55.829  INFO 33879 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2024-09-09 15:37:56.511  INFO 33879 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/triangle/{a}/{b}/{c}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<org.restncs.Dto> org.restncs.NcsRest.checkTriangle(java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2024-09-09 15:37:56.513  INFO 33879 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/bessj/{n}/{x}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<org.restncs.Dto> org.restncs.NcsRest.bessj(java.lang.Integer,java.lang.Double)
+2024-09-09 15:37:56.514  INFO 33879 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/expint/{n}/{x}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<org.restncs.Dto> org.restncs.NcsRest.expint(java.lang.Integer,java.lang.Double)
+2024-09-09 15:37:56.515  INFO 33879 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fisher/{m}/{n}/{x}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<org.restncs.Dto> org.restncs.NcsRest.fisher(java.lang.Integer,java.lang.Integer,java.lang.Double)
+2024-09-09 15:37:56.516  INFO 33879 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/gammq/{a}/{x}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<org.restncs.Dto> org.restncs.NcsRest.gammq(java.lang.Double,java.lang.Double)
+2024-09-09 15:37:56.517  INFO 33879 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/remainder/{a}/{b}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<org.restncs.Dto> org.restncs.NcsRest.remainder(java.lang.Integer,java.lang.Integer)
+2024-09-09 15:37:56.526  INFO 33879 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2024-09-09 15:37:56.528  INFO 33879 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2024-09-09 15:37:56.530  INFO 33879 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2024-09-09 15:37:56.536  INFO 33879 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2024-09-09 15:37:56.537  INFO 33879 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2024-09-09 15:37:56.759  INFO 33879 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-09-09 15:37:56.890  INFO 33879 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-09-09 15:37:57.091  INFO 33879 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@aca3c85: startup date [Mon Sep 09 15:37:52 BRT 2024]; root of context hierarchy
+2024-09-09 15:37:57.173  INFO 33879 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-09-09 15:37:57.173  INFO 33879 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-09-09 15:37:57.452  INFO 33879 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2024-09-09 15:37:57.466  INFO 33879 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2024-09-09 15:37:57.467  INFO 33879 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2024-09-09 15:37:57.508  INFO 33879 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2024-09-09 15:37:57.569  INFO 33879 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2024-09-09 15:37:57.816  INFO 33879 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 44525 (http) with context path ''
+2024-09-09 15:37:57.821  INFO 33879 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 6.339 seconds (JVM running for 7.544)
+2024-09-09 15:37:59.422  INFO 33879 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2024-09-09 15:37:59.422  INFO 33879 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2024-09-09 15:37:59.442  INFO 33879 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+Request method:	GET
+Request URI:	http://localhost:44525/api/expint/-1/2
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 400 
+Content-Length: 0
+Date: Mon, 09 Sep 2024 18:37:59 GMT
+Connection: close
+Request method:	GET
+Request URI:	http://localhost:44525/api/expint/1/2
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Mon, 09 Sep 2024 18:37:59 GMT
+
+{
+    "resultAsInt": null,
+    "resultAsDouble": 0.04890050831618357
+}
+Request method:	GET
+Request URI:	http://localhost:44525/api/expint/0/2
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Mon, 09 Sep 2024 18:38:01 GMT
+
+{
+    "resultAsInt": null,
+    "resultAsDouble": 0.06766764161830635
+}
+2024-09-09 15:38:01.098  INFO 33879 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m3[m, [1;31mFailures: [0;1;31m3[m, Errors: 0, Skipped: 0, Time elapsed: 10.203 s[1;31m <<< FAILURE![m - in org.restncs.imp.[1mv2_gpt35_run03_ExpintTest[m
+[[1;31mERROR[m] testInvalidInputsForExpint(org.restncs.imp.v2_gpt35_run03_ExpintTest)  Time elapsed: 1.622 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at org.restncs.imp.v2_gpt35_run03_ExpintTest.testInvalidInputsForExpint(v2_gpt35_run03_ExpintTest.java:62)
+
+[[1;31mERROR[m] testSchemaValidationForExpint(org.restncs.imp.v2_gpt35_run03_ExpintTest)  Time elapsed: 1.107 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsInt doesn't match.
+Expected: not null
+  Actual: null
+
+	at org.restncs.imp.v2_gpt35_run03_ExpintTest.testSchemaValidationForExpint(v2_gpt35_run03_ExpintTest.java:73)
+
+[[1;31mERROR[m] testBusinessRuleEnforcementForExpint(org.restncs.imp.v2_gpt35_run03_ExpintTest)  Time elapsed: 0.042 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restncs.imp.v2_gpt35_run03_ExpintTest.testBusinessRuleEnforcementForExpint(v2_gpt35_run03_ExpintTest.java:82)
+
+2024-09-09 15:38:01.152  INFO 33879 --- [       Thread-4] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@aca3c85: startup date [Mon Sep 09 15:37:52 BRT 2024]; root of context hierarchy
+2024-09-09 15:38:01.155  INFO 33879 --- [       Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2024-09-09 15:38:01.156  INFO 33879 --- [       Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  v2_gpt35_run03_ExpintTest.testBusinessRuleEnforcementForExpint:82 1 expectation failed.
+Expected status code <500> but was <200>.
+[m
+[[1;31mERROR[m] [1;31m  v2_gpt35_run03_ExpintTest.testInvalidInputsForExpint:62 1 expectation failed.
+Expected status code <500> but was <400>.
+[m
+[[1;31mERROR[m] [1;31m  v2_gpt35_run03_ExpintTest.testSchemaValidationForExpint:73 1 expectation failed.
+JSON path resultAsInt doesn't match.
+Expected: not null
+  Actual: null
+[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 3, Failures: 3, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  15.066 s
+[[1;34mINFO[m] Finished at: 2024-09-09T15:38:01-03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.22.0:test[m [1m(default-test)[m on project [36mevomaster-benchmark-cs-rest-artificial-ncs[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] [1;31mPlease refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

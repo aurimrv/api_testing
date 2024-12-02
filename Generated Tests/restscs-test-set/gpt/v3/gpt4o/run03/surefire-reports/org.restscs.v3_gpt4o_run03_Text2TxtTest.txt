@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run03_Text2TxtTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.985 s <<< FAILURE! - in org.restscs.v3_gpt4o_run03_Text2TxtTest
+testSchemaValidation(org.restscs.v3_gpt4o_run03_Text2TxtTest)  Time elapsed: 0.026 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restscs.v3_gpt4o_run03_Text2TxtTest.testSchemaValidation(v3_gpt4o_run03_Text2TxtTest.java:115)
+
+testText2TxtServerError(org.restscs.v3_gpt4o_run03_Text2TxtTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_Text2TxtTest.testText2TxtServerError(v3_gpt4o_run03_Text2TxtTest.java:105)
+

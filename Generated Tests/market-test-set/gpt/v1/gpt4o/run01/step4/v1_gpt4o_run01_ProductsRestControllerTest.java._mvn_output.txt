@@ -1,0 +1,645 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mnet.lukyanets:market-rest[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding market-rest 0.1.2[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Deleting /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 11 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.0:test[m [1m(default-test)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running market.[1mv1_gpt4o_run01_ProductsRestControllerTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-09-12 16:55:58,115 INFO  [background-preinit] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.1.7.Final
+2024-09-12 16:55:58,229 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 25722 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-09-12 16:55:58,237 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-09-12 16:55:58,896 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-09-12 16:55:58,896 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-09-12 16:56:00,477 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-12 16:56:00,609 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 120 ms. Found 8 JPA repository interfaces.
+2024-09-12 16:56:01,130 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$9ba7094c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-09-12 16:56:01,315 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7d59d23d' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-09-12 16:56:01,325 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-09-12 16:56:01,836 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-09-12 16:56:01,855 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2024-09-12 16:56:01,856 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-09-12 16:56:01,856 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-09-12 16:56:01,981 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-09-12 16:56:01,982 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3082 ms
+2024-09-12 16:56:02,190 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2024-09-12 16:56:02,610 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-12 16:56:02,838 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-12 16:56:02,924 INFO  [main] o.h.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+2024-09-12 16:56:03,149 INFO  [main] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-09-12 16:56:03,503 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-09-12 16:56:03,962 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-09-12 16:56:03,966 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-09-12 16:56:04,963 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-09-12 16:56:04,975 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-12 16:56:06,221 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-12 16:56:07,218 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@841e89a, org.springframework.security.web.context.SecurityContextPersistenceFilter@4c03e6d7, org.springframework.security.web.header.HeaderWriterFilter@30c83e5c, org.springframework.security.web.authentication.logout.LogoutFilter@339e56eb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1f67d8cb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f9166e3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ae8bce, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c598b0b, org.springframework.security.web.session.SessionManagementFilter@7406e065, org.springframework.security.web.access.ExceptionTranslationFilter@13dbd948, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@f4576ef]
+2024-09-12 16:56:07,371 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-12 16:56:07,867 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2024-09-12 16:56:07,900 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 42407 (http) with context path ''
+2024-09-12 16:56:08,566 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 11.3 seconds (JVM running for 13.612)
+2024-09-12 16:56:10,474 INFO  [http-nio-auto-1-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-12 16:56:10,474 INFO  [http-nio-auto-1-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-09-12 16:56:10,477 INFO  [http-nio-auto-1-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 3 ms
+2024-09-12 16:56:10,564 WARN  [http-nio-auto-1-exec-1] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart/delivery', fieldErrors=[]}
+Request method:	PUT
+Request URI:	http://localhost:42407/customer/cart/delivery?included=true
+Proxy:			<none>
+Request params:	<none>
+Query params:	included=true
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 12 Sep 2024 19:56:10 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart/delivery",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-09-12 16:56:10,884 WARN  [http-nio-auto-1-exec-2] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart', fieldErrors=[]}
+Request method:	GET
+Request URI:	http://localhost:42407/customer/cart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 12 Sep 2024 19:56:10 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-09-12 16:56:11,038 WARN  [http-nio-auto-1-exec-3] m.r.e.RestExceptionHandler - RestErrorResponse{message='Requested entity doesn't exist', entityName='ProductDTO', description='uri=/products/9999', fieldErrors=[{field='id', message='No instance with this id'}]}
+2024-09-12 16:56:11,223 WARN  [http-nio-auto-1-exec-4] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/contacts', fieldErrors=[]}
+Request method:	PUT
+Request URI:	http://localhost:42407/customer/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "address": "New Address",
+    "phone": "+7 987 654 32 10"
+}
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 12 Sep 2024 19:56:10 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/contacts",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-09-12 16:56:11,282 WARN  [http-nio-auto-1-exec-5] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart/pay', fieldErrors=[]}
+Request method:	POST
+Request URI:	http://localhost:42407/customer/cart/pay
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ccNumber": "4111111111111111"
+}
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 12 Sep 2024 19:56:10 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart/pay",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-09-12 16:56:11,342 WARN  [http-nio-auto-1-exec-1] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart', fieldErrors=[]}
+Request method:	DELETE
+Request URI:	http://localhost:42407/customer/cart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 12 Sep 2024 19:56:10 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-09-12 16:56:11,404 WARN  [http-nio-auto-1-exec-2] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart', fieldErrors=[]}
+Request method:	PUT
+Request URI:	http://localhost:42407/customer/cart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "productId": 1,
+    "quantity": 2
+}
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 12 Sep 2024 19:56:10 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-09-12 16:56:12,599 WARN  [http-nio-auto-1-exec-6] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/orders/1', fieldErrors=[]}
+Request method:	GET
+Request URI:	http://localhost:42407/customer/orders/1
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 12 Sep 2024 19:56:12 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/orders/1",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-09-12 16:56:12,633 WARN  [http-nio-auto-1-exec-10] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/contacts', fieldErrors=[]}
+Request method:	GET
+Request URI:	http://localhost:42407/customer/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 12 Sep 2024 19:56:12 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/contacts",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+Request method:	GET
+Request URI:	http://localhost:42407/products/1
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/hal+json
+Transfer-Encoding: chunked
+Date: Thu, 12 Sep 2024 19:56:12 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "productId": 1,
+    "distillery": "Ardbeg",
+    "name": "Ten",
+    "price": 4420.0,
+    "age": 10,
+    "volume": 700,
+    "alcohol": 46.0,
+    "description": "Ten Years Old is the basis of the Ardbeg range. After 10 years of maturation in ex-bourbon casks, the whiskey bottled at 46% ABV without cold filtering. The characteristic peat, although clearly present but in perfect balance with the natural sweetness and not predominant in the taste.",
+    "available": false,
+    "_links": {
+        "All products": {
+            "href": "http://localhost:42407/products"
+        }
+    }
+}
+2024-09-12 16:56:12,747 WARN  [http-nio-auto-1-exec-9] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/orders', fieldErrors=[]}
+Request method:	GET
+Request URI:	http://localhost:42407/customer/orders
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 12 Sep 2024 19:56:12 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/orders",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+Request method:	GET
+Request URI:	http://localhost:42407/customer
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+Set-Cookie: JSESSIONID=FF52C3A93C457057D3570472F414012C; Path=/; HttpOnly
+WWW-Authenticate: Basic realm="Realm"
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 12 Sep 2024 19:56:12 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "timestamp": "2024-09-12T19:56:12.815+00:00",
+    "status": 401,
+    "error": "Unauthorized",
+    "message": "",
+    "path": "/customer"
+}
+2024-09-12 16:56:12,868 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-1"]
+2024-09-12 16:56:12,869 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-09-12 16:56:12,871 INFO  [main] o.a.c.c.C.[.[.[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-09-12 16:56:12,875 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-1"]
+2024-09-12 16:56:12,879 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-1"]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m13[m, [1;31mFailures: [0;1;31m11[m, Errors: 0, Skipped: 0, Time elapsed: 16.879 s[1;31m <<< FAILURE![m - in market.[1mv1_gpt4o_run01_ProductsRestControllerTest[m
+[[1;31mERROR[m] testSetDelivery  Time elapsed: 1.462 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testSetDelivery(v1_gpt4o_run01_ProductsRestControllerTest.java:147)
+
+[[1;31mERROR[m] testGetCustomerCart  Time elapsed: 0.055 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testGetCustomerCart(v1_gpt4o_run01_ProductsRestControllerTest.java:113)
+
+[[1;31mERROR[m] testUpdateContacts  Time elapsed: 0.183 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testUpdateContacts(v1_gpt4o_run01_ProductsRestControllerTest.java:183)
+
+[[1;31mERROR[m] testPayByCard  Time elapsed: 0.084 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testPayByCard(v1_gpt4o_run01_ProductsRestControllerTest.java:160)
+
+[[1;31mERROR[m] testClearCart  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <204> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testClearCart(v1_gpt4o_run01_ProductsRestControllerTest.java:136)
+
+[[1;31mERROR[m] testAddItemToCart  Time elapsed: 0.061 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testAddItemToCart(v1_gpt4o_run01_ProductsRestControllerTest.java:126)
+
+[[1;31mERROR[m] testGetOrderById  Time elapsed: 0.046 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testGetOrderById(v1_gpt4o_run01_ProductsRestControllerTest.java:204)
+
+[[1;31mERROR[m] testGetContacts  Time elapsed: 0.032 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testGetContacts(v1_gpt4o_run01_ProductsRestControllerTest.java:170)
+
+[[1;31mERROR[m] testGetProductById  Time elapsed: 0.09 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path productId doesn't match.
+Expected: <1L>
+  Actual: 1
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testGetProductById(v1_gpt4o_run01_ProductsRestControllerTest.java:82)
+
+[[1;31mERROR[m] testGetOrders  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testGetOrders(v1_gpt4o_run01_ProductsRestControllerTest.java:193)
+
+[[1;31mERROR[m] testGetCustomer  Time elapsed: 0.104 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testGetCustomer(v1_gpt4o_run01_ProductsRestControllerTest.java:103)
+
+2024-09-12 16:56:13,150 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-12 16:56:13,162 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-12 16:56:13,164 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-12 16:56:13,167 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_ProductsRestControllerTest.testAddItemToCart:126 1 expectation failed.
+Expected status code <201> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_ProductsRestControllerTest.testClearCart:136 1 expectation failed.
+Expected status code <204> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_ProductsRestControllerTest.testGetContacts:170 1 expectation failed.
+Expected status code <200> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_ProductsRestControllerTest.testGetCustomer:103 1 expectation failed.
+Expected status code <200> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_ProductsRestControllerTest.testGetCustomerCart:113 1 expectation failed.
+Expected status code <200> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_ProductsRestControllerTest.testGetOrderById:204 1 expectation failed.
+Expected status code <200> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_ProductsRestControllerTest.testGetOrders:193 1 expectation failed.
+Expected status code <200> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_ProductsRestControllerTest.testGetProductById:82 1 expectation failed.
+JSON path productId doesn't match.
+Expected: <1L>
+  Actual: 1
+[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_ProductsRestControllerTest.testPayByCard:160 1 expectation failed.
+Expected status code <201> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_ProductsRestControllerTest.testSetDelivery:147 1 expectation failed.
+Expected status code <201> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_ProductsRestControllerTest.testUpdateContacts:183 1 expectation failed.
+Expected status code <201> but was <401>.
+[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 13, Failures: 11, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  22.246 s
+[[1;34mINFO[m] Finished at: 2024-09-12T16:56:13-03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.22.0:test[m [1m(default-test)[m on project [36mmarket-rest[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] [1;31mPlease refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

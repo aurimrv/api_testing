@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>SecurityConfigBase.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market</a> &gt; <span class="el_source">SecurityConfigBase.java</span></div><h1>SecurityConfigBase.java</h1><pre class="source lang-java linenums">package market;
+
+import market.security.AuthenticationService;
+import market.security.UserDetailsServiceImpl;
+import market.service.UserAccountService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.BeanIds;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
+@Configuration
+@EnableWebSecurity
+@ComponentScan(basePackages = {&quot;market.security&quot;})
+@EnableGlobalMethodSecurity(securedEnabled = true)
+<span class="nc" id="L24">public class SecurityConfigBase extends WebSecurityConfigurerAdapter {</span>
+
+	@Autowired
+	private DaoAuthenticationProvider daoAuthenticationProvider;
+
+	@Bean
+	public AuthenticationService authenticationService(AuthenticationManager authenticationManager) {
+<span class="nc" id="L31">		return new AuthenticationService(authenticationManager);</span>
+	}
+
+	@Bean(name = BeanIds.AUTHENTICATION_MANAGER)
+	@Override
+	public AuthenticationManager authenticationManagerBean() throws Exception {
+<span class="nc" id="L37">		return super.authenticationManagerBean();</span>
+	}
+
+	protected void configure(AuthenticationManagerBuilder auth) {
+<span class="nc" id="L41">		auth.authenticationProvider(daoAuthenticationProvider);</span>
+<span class="nc" id="L42">	}</span>
+
+	@Bean
+	public DaoAuthenticationProvider daoAuthenticationProvider(
+		UserDetailsServiceImpl customUserDetailsService, PasswordEncoder passwordEncoder)
+	{
+<span class="nc" id="L48">		DaoAuthenticationProvider provider = new DaoAuthenticationProvider();</span>
+<span class="nc" id="L49">		provider.setUserDetailsService(customUserDetailsService);</span>
+<span class="nc" id="L50">		provider.setPasswordEncoder(passwordEncoder);</span>
+<span class="nc" id="L51">		return provider;</span>
+	}
+
+	@Bean
+	public UserDetailsServiceImpl customUserDetailsService(UserAccountService userAccountService) {
+<span class="nc" id="L56">		return new UserDetailsServiceImpl(userAccountService);</span>
+	}
+
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+<span class="nc" id="L61">		return new BCryptPasswordEncoder();</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

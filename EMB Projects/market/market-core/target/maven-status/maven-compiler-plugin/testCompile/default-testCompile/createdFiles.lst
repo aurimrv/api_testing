@@ -1,0 +1,7 @@
+market/service/DistilleryServiceTest.class
+market/service/CartServiceTest.class
+market/service/UserAccountServiceTest.class
+market/service/ProductServiceTest.class
+market/service/OrderServiceTest.class
+market/service/ContactsServiceTest.class
+market/service/RegionServiceTest.class

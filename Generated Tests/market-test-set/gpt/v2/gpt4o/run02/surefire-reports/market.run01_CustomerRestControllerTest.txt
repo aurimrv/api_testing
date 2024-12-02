@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_CustomerRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 2.38 s <<< FAILURE! - in market.run01_CustomerRestControllerTest
+testRegisterCustomerDuplicateEmail  Time elapsed: 0.188 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run01_CustomerRestControllerTest.testRegisterCustomerDuplicateEmail(run01_CustomerRestControllerTest.java:127)
+
+testSchemaValidationOnGetCustomer  Time elapsed: 0.045 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run01_CustomerRestControllerTest.testSchemaValidationOnGetCustomer(run01_CustomerRestControllerTest.java:175)
+
+testRegisterCustomer  Time elapsed: 0.049 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run01_CustomerRestControllerTest.testRegisterCustomer(run01_CustomerRestControllerTest.java:96)
+

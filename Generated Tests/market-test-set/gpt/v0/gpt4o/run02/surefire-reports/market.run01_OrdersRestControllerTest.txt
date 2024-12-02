@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_OrdersRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 2.113 s <<< FAILURE! - in market.run01_OrdersRestControllerTest
+testGetOrdersSuccess  Time elapsed: 0.251 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.run01_OrdersRestControllerTest.registerAndLoginUser(run01_OrdersRestControllerTest.java:166)
+	at market.run01_OrdersRestControllerTest.testGetOrdersSuccess(run01_OrdersRestControllerTest.java:90)
+
+testGetOrderSuccess  Time elapsed: 0.187 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.run01_OrdersRestControllerTest.registerAndLoginUser(run01_OrdersRestControllerTest.java:166)
+	at market.run01_OrdersRestControllerTest.testGetOrderSuccess(run01_OrdersRestControllerTest.java:144)
+
+testGetOrderNotFound  Time elapsed: 0.121 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.run01_OrdersRestControllerTest.registerAndLoginUser(run01_OrdersRestControllerTest.java:166)
+	at market.run01_OrdersRestControllerTest.testGetOrderNotFound(run01_OrdersRestControllerTest.java:130)
+

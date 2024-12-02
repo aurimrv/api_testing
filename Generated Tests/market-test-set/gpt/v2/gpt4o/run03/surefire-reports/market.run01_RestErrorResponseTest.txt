@@ -1,0 +1,87 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_RestErrorResponseTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 11, Errors: 0, Skipped: 0, Time elapsed: 17.544 s <<< FAILURE! - in market.run01_RestErrorResponseTest
+testCreateCustomerInvalidEmail  Time elapsed: 2.51 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: a string containing "The value shall be in the format of an email address"
+  Actual: Argument validation error
+
+	at market.run01_RestErrorResponseTest.testCreateCustomerInvalidEmail(run01_RestErrorResponseTest.java:111)
+
+testGetCustomerNotFound  Time elapsed: 0.466 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testGetCustomerNotFound(run01_RestErrorResponseTest.java:64)
+
+testSetDeliveryIncluded  Time elapsed: 0.072 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testSetDeliveryIncluded(run01_RestErrorResponseTest.java:187)
+
+testUpdateContacts  Time elapsed: 0.072 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testUpdateContacts(run01_RestErrorResponseTest.java:175)
+
+testClearCart  Time elapsed: 0.043 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testClearCart(run01_RestErrorResponseTest.java:163)
+
+testCreateCustomer  Time elapsed: 0.121 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run01_RestErrorResponseTest.testCreateCustomer(run01_RestErrorResponseTest.java:96)
+
+testPayByCardInvalidCardNumber  Time elapsed: 0.079 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: a string containing "Card number shall consist of 13-16 digits"
+  Actual: Argument validation error
+
+	at market.run01_RestErrorResponseTest.testPayByCardInvalidCardNumber(run01_RestErrorResponseTest.java:154)
+
+testSetDeliveryExcluded  Time elapsed: 0.047 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testSetDeliveryExcluded(run01_RestErrorResponseTest.java:198)
+
+testAddItemToCartInvalidProduct  Time elapsed: 0.064 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testAddItemToCartInvalidProduct(run01_RestErrorResponseTest.java:76)
+
+testGetOrderNotFound  Time elapsed: 0.042 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testGetOrderNotFound(run01_RestErrorResponseTest.java:141)
+
+testGetCartUnauthorized  Time elapsed: 0.051 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: Unauthorized
+  Actual: Acesso negado
+
+	at market.run01_RestErrorResponseTest.testGetCartUnauthorized(run01_RestErrorResponseTest.java:86)
+

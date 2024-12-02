@@ -1,0 +1,39 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_ContactsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 4.415 s <<< FAILURE! - in market.run01_ContactsRestControllerTest
+testUpdateContactsSuccess  Time elapsed: 0.131 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_ContactsRestControllerTest.testUpdateContactsSuccess(run01_ContactsRestControllerTest.java:90)
+
+testGetContactsSuccess  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_ContactsRestControllerTest.testGetContactsSuccess(run01_ContactsRestControllerTest.java:65)
+
+testSchemaValidation  Time elapsed: 0.039 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_ContactsRestControllerTest.testSchemaValidation(run01_ContactsRestControllerTest.java:168)
+
+testUpdateContactsSchemaValidation  Time elapsed: 0.041 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_ContactsRestControllerTest.testUpdateContactsSchemaValidation(run01_ContactsRestControllerTest.java:185)
+
+testUpdateContactsInvalidInput  Time elapsed: 0.038 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <406>.
+
+	at market.run01_ContactsRestControllerTest.testUpdateContactsInvalidInput(run01_ContactsRestControllerTest.java:122)
+

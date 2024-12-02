@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_OrdersRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.114 s <<< FAILURE! - in market.run01_OrdersRestControllerTest
+testGetOrder  Time elapsed: 0.248 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.run01_OrdersRestControllerTest.testGetOrder(run01_OrdersRestControllerTest.java:82)
+
+testGetOrders  Time elapsed: 0.116 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.run01_OrdersRestControllerTest.testGetOrders(run01_OrdersRestControllerTest.java:68)
+

@@ -1,0 +1,468 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mnet.lukyanets:market-rest[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding market-rest 0.1.2[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Deleting /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 11 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.0:test[m [1m(default-test)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running market.[1mrun01_CartRestControllerTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-08-31 11:36:51,448 INFO  [background-preinit] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.1.7.Final
+2024-08-31 11:36:51,555 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 14044 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-08-31 11:36:51,562 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-08-31 11:36:52,204 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-08-31 11:36:52,204 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-08-31 11:36:53,836 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-31 11:36:53,959 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 112 ms. Found 8 JPA repository interfaces.
+2024-08-31 11:36:54,448 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$93a4f978] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-31 11:36:54,633 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1b37a2b2' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-31 11:36:54,642 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-31 11:36:55,160 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-08-31 11:36:55,180 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2024-08-31 11:36:55,180 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-08-31 11:36:55,181 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-08-31 11:36:55,302 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-08-31 11:36:55,302 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3094 ms
+2024-08-31 11:36:55,524 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2024-08-31 11:36:55,962 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-31 11:36:56,234 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-31 11:36:56,351 INFO  [main] o.h.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+2024-08-31 11:36:56,571 INFO  [main] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-08-31 11:36:56,922 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-08-31 11:36:57,270 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-08-31 11:36:57,274 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-08-31 11:36:58,099 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-08-31 11:36:58,112 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-31 11:36:59,294 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-31 11:37:00,403 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@81a32ef, org.springframework.security.web.context.SecurityContextPersistenceFilter@32fd4753, org.springframework.security.web.header.HeaderWriterFilter@1726261d, org.springframework.security.web.authentication.logout.LogoutFilter@893ea78, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1a2c88f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62cb258b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@38aa83a0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@481ff6e9, org.springframework.security.web.session.SessionManagementFilter@150b361b, org.springframework.security.web.access.ExceptionTranslationFilter@753f1762, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@52ad997f]
+2024-08-31 11:37:00,556 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-08-31 11:37:01,014 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2024-08-31 11:37:01,045 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 33877 (http) with context path ''
+2024-08-31 11:37:01,677 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 11.114 seconds (JVM running for 13.328)
+2024-08-31 11:37:03,469 INFO  [http-nio-auto-1-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-31 11:37:03,469 INFO  [http-nio-auto-1-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-08-31 11:37:03,471 INFO  [http-nio-auto-1-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+2024-08-31 11:37:03,543 WARN  [http-nio-auto-1-exec-1] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart/delivery', fieldErrors=[]}
+Request method:	PUT
+Request URI:	http://localhost:33877/customer/cart/delivery?included=true
+Proxy:			<none>
+Request params:	<none>
+Query params:	included=true
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 31 Aug 2024 14:37:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart/delivery",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-08-31 11:37:04,120 WARN  [http-nio-auto-1-exec-3] m.r.e.RestExceptionHandler - RestErrorResponse{message='Argument validation error', entityName='cartItemDTO', description='uri=/customer/cart', fieldErrors=[{field='productId', message='Value shall be a positive number'}]}
+Request method:	PUT
+Request URI:	http://localhost:33877/customer/cart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "productId": -1,
+    "quantity": 1
+}
+
+HTTP/1.1 406 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 31 Aug 2024 14:37:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Argument validation error",
+    "description": "uri=/customer/cart",
+    "entityName": "cartItemDTO",
+    "fieldErrors": [
+        {
+            "field": "productId",
+            "message": "Value shall be a positive number"
+        }
+    ]
+}
+2024-08-31 11:37:04,183 WARN  [http-nio-auto-1-exec-4] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart', fieldErrors=[]}
+Request method:	PUT
+Request URI:	http://localhost:33877/customer/cart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "productId": 1,
+    "quantity": 1
+}
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 31 Aug 2024 14:37:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-08-31 11:37:04,254 WARN  [http-nio-auto-1-exec-5] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart/pay', fieldErrors=[]}
+Request method:	POST
+Request URI:	http://localhost:33877/customer/cart/pay
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ccNumber": "4111111111111111"
+}
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 31 Aug 2024 14:37:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart/pay",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-08-31 11:37:04,290 WARN  [http-nio-auto-1-exec-6] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart', fieldErrors=[]}
+Request method:	DELETE
+Request URI:	http://localhost:33877/customer/cart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 31 Aug 2024 14:37:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-08-31 11:37:04,321 WARN  [http-nio-auto-1-exec-7] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart', fieldErrors=[]}
+Request method:	GET
+Request URI:	http://localhost:33877/customer/cart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 31 Aug 2024 14:37:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-08-31 11:37:04,351 WARN  [http-nio-auto-1-exec-8] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart/pay', fieldErrors=[]}
+Request method:	POST
+Request URI:	http://localhost:33877/customer/cart/pay
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ccNumber": "4111111111111111"
+}
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 31 Aug 2024 14:37:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart/pay",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-08-31 11:37:04,367 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-1"]
+2024-08-31 11:37:04,368 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-08-31 11:37:04,369 INFO  [main] o.a.c.c.C.[.[.[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-08-31 11:37:04,372 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-1"]
+2024-08-31 11:37:04,375 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-1"]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m7[m, [1;31mFailures: [0;1;31m7[m, Errors: 0, Skipped: 0, Time elapsed: 15.019 s[1;31m <<< FAILURE![m - in market.[1mrun01_CartRestControllerTest[m
+[[1;31mERROR[m] testSetDelivery  Time elapsed: 1.389 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_CartRestControllerTest.testSetDelivery(run01_CartRestControllerTest.java:109)
+
+[[1;31mERROR[m] testAddInvalidItem  Time elapsed: 0.269 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <406>.
+
+	at market.run01_CartRestControllerTest.testAddInvalidItem(run01_CartRestControllerTest.java:136)
+
+[[1;31mERROR[m] testAddItem  Time elapsed: 0.059 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_CartRestControllerTest.testAddItem(run01_CartRestControllerTest.java:85)
+
+[[1;31mERROR[m] testPayByCard  Time elapsed: 0.068 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <401>.
+
+	at market.run01_CartRestControllerTest.testPayByCard(run01_CartRestControllerTest.java:122)
+
+[[1;31mERROR[m] testClearCart  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_CartRestControllerTest.testClearCart(run01_CartRestControllerTest.java:97)
+
+[[1;31mERROR[m] testGetCart  Time elapsed: 0.031 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_CartRestControllerTest.testGetCart(run01_CartRestControllerTest.java:65)
+
+[[1;31mERROR[m] testPayWithEmptyCart  Time elapsed: 0.028 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <401>.
+
+	at market.run01_CartRestControllerTest.testPayWithEmptyCart(run01_CartRestControllerTest.java:146)
+
+2024-08-31 11:37:04,606 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-08-31 11:37:04,619 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-31 11:37:04,621 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-31 11:37:04,624 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  run01_CartRestControllerTest.testAddInvalidItem:136 1 expectation failed.
+Expected status code <404> but was <406>.
+[m
+[[1;31mERROR[m] [1;31m  run01_CartRestControllerTest.testAddItem:85 1 expectation failed.
+Expected status code <200> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  run01_CartRestControllerTest.testClearCart:97 1 expectation failed.
+Expected status code <200> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  run01_CartRestControllerTest.testGetCart:65 1 expectation failed.
+Expected status code <200> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  run01_CartRestControllerTest.testPayByCard:122 1 expectation failed.
+Expected status code <201> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  run01_CartRestControllerTest.testPayWithEmptyCart:146 1 expectation failed.
+Expected status code <500> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  run01_CartRestControllerTest.testSetDelivery:109 1 expectation failed.
+Expected status code <200> but was <401>.
+[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 7, Failures: 7, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  20.517 s
+[[1;34mINFO[m] Finished at: 2024-08-31T11:37:05-03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.22.0:test[m [1m(default-test)[m on project [36mmarket-rest[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] [1;31mPlease refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

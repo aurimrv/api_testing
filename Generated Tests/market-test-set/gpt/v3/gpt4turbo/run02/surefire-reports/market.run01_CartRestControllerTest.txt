@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_CartRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 4.044 s <<< FAILURE! - in market.run01_CartRestControllerTest
+testAddItemSuccess  Time elapsed: 0.285 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path cartItems.productId doesn't match.
+Expected: a collection containing <1>
+  Actual: [5]
+
+	at market.run01_CartRestControllerTest.testAddItemSuccess(run01_CartRestControllerTest.java:74)
+
+testPayByCardSuccess  Time elapsed: 0.379 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.run01_CartRestControllerTest.testPayByCardSuccess(run01_CartRestControllerTest.java:101)
+

@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_CustomerRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.759 s <<< FAILURE! - in market.run01_CustomerRestControllerTest
+testCreateCustomer_schemaValidation  Time elapsed: 0.27 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.run01_CustomerRestControllerTest.testCreateCustomer_schemaValidation(run01_CustomerRestControllerTest.java:86)
+

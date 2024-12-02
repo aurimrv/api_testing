@@ -1,0 +1,54 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4o_run01_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 1.102 s <<< FAILURE! - in org.restscs.v2_gpt4o_run01_RegexTest
+testCalcUsingGET_ValidInput(org.restscs.v2_gpt4o_run01_RegexTest)  Time elapsed: 0.042 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "3.0"
+  Actual: 0.0
+
+	at org.restscs.v2_gpt4o_run01_RegexTest.testCalcUsingGET_ValidInput(v2_gpt4o_run01_RegexTest.java:67)
+
+testCalcUsingGET_InvalidOp(org.restscs.v2_gpt4o_run01_RegexTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v2_gpt4o_run01_RegexTest.testCalcUsingGET_InvalidOp(v2_gpt4o_run01_RegexTest.java:79)
+
+testRegexUsingGET_ValidURL(org.restscs.v2_gpt4o_run01_RegexTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "url"
+  Actual: 0
+
+	at org.restscs.v2_gpt4o_run01_RegexTest.testRegexUsingGET_ValidURL(v2_gpt4o_run01_RegexTest.java:90)
+
+testFileSuffixUsingGET_ValidInput(org.restscs.v2_gpt4o_run01_RegexTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is ".txt"
+  Actual: 0
+
+	at org.restscs.v2_gpt4o_run01_RegexTest.testFileSuffixUsingGET_ValidInput(v2_gpt4o_run01_RegexTest.java:149)
+
+testErrorScenario_500_InternalServerError(org.restscs.v2_gpt4o_run01_RegexTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4o_run01_RegexTest.testErrorScenario_500_InternalServerError(v2_gpt4o_run01_RegexTest.java:159)
+
+testText2txtUsingGET_ValidInput(org.restscs.v2_gpt4o_run01_RegexTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: not (null or an empty string)
+  Actual: 
+
+	at org.restscs.v2_gpt4o_run01_RegexTest.testText2txtUsingGET_ValidInput(v2_gpt4o_run01_RegexTest.java:210)
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>UnknownEntityException.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market.exception</a> &gt; <span class="el_source">UnknownEntityException.java</span></div><h1>UnknownEntityException.java</h1><pre class="source lang-java linenums">package market.exception;
+
+/**
+ * Попытка сослаться на неизвестный товар.
+ */
+public class UnknownEntityException extends CustomNotValidException {
+	private static final long serialVersionUID = 4827971686664741607L;
+
+	private final String idField;
+	private final long idValue;
+
+	public UnknownEntityException(Class&lt;?&gt; clazz, long idValue) {
+<span class="nc" id="L13">		this(clazz, &quot;id&quot;, idValue);</span>
+<span class="nc" id="L14">	}</span>
+
+	public UnknownEntityException(Class&lt;?&gt; clazz, String idField, long idValue) {
+<span class="nc" id="L17">		super(&quot;NotExist&quot;, clazz.getSimpleName(), idField);</span>
+<span class="nc" id="L18">		this.idField = idField;</span>
+<span class="nc" id="L19">		this.idValue = idValue;</span>
+<span class="nc" id="L20">	}</span>
+
+	public String getIdField() {
+<span class="nc" id="L23">		return idField;</span>
+	}
+
+	public long getIdValue() {
+<span class="nc" id="L27">		return idValue;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

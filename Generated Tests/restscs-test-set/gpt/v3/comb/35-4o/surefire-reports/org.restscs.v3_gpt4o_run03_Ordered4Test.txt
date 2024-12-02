@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run03_Ordered4Test
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.267 s <<< FAILURE! - in org.restscs.v3_gpt4o_run03_Ordered4Test
+testCalcUsingGET_200(org.restscs.v3_gpt4o_run03_Ordered4Test)  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run03_Ordered4Test.testCalcUsingGET_200(v3_gpt4o_run03_Ordered4Test.java:66)
+
+testCalcUsingGET_404(org.restscs.v3_gpt4o_run03_Ordered4Test)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_Ordered4Test.testCalcUsingGET_404(v3_gpt4o_run03_Ordered4Test.java:78)
+
+testPatUsingGET_200(org.restscs.v3_gpt4o_run03_Ordered4Test)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "false"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run03_Ordered4Test.testPatUsingGET_200(v3_gpt4o_run03_Ordered4Test.java:181)
+

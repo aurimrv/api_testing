@@ -1,0 +1,377 @@
+Correct the test code delimited by ***** according to the error messages delimited by ##### and generate another complete code in JUnit 4 format. The response must contain only Java code in JUnit 4 format.
+
+Keep these five instructions for this generated test code:
+
+Instruction 1: Keet this package line to generated test code file:
+package org.restscs;
+
+Instruction 2: Keep the following Java imports to generated test code file:
+import  org.junit.AfterClass;
+import  org.junit.BeforeClass;
+import  org.junit.Before;
+import  org.junit.Test;
+import static org.junit.Assert.*;
+import  java.util.Map;
+import  java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import  org.evomaster.client.java.controller.SutHandler;
+import  io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import  io.restassured.response.ValidatableResponse;
+import static org.hamcrest.Matchers.*;
+import  io.restassured.config.JsonConfig;
+import  io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import  org.evomaster.client.java.controller.expect.ExpectationHandler;
+import  io.restassured.path.json.JsonPath;
+import  java.util.Arrays;
+
+Instruction 3: Keep the same class name in this point (between the imports at instruction 2 and instruction 4)
+
+Instruction 4: Keep these variables in the generated test code:
+private static final SutHandler controller = new em.embedded.org.restscs.EmbeddedEvoMasterController();
+private static String baseUrlOfSut;
+
+Instruction 5: Keep the following setup and teardown methods in generated test code file:
+@BeforeClass
+public static void initClass() {
+    controller.setupForGeneratedTest();
+    baseUrlOfSut = controller.startSut();
+    controller.registerOrExecuteInitSqlCommandsIfNeeded();
+    assertNotNull(baseUrlOfSut);
+    RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+    RestAssured.useRelaxedHTTPSValidation();
+    RestAssured.urlEncodingEnabled = false;
+    RestAssured.config = RestAssured.config()
+        .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+        .redirect(redirectConfig().followRedirects(false));
+}
+
+
+@AfterClass
+public static void tearDown() {
+    controller.stopSut();
+}
+
+
+@Before
+public void initTest() {
+    controller.resetStateOfSUT();
+}
+
+
+*****
+
+package org.restscs;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.Map;
+import java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import org.evomaster.client.java.controller.SutHandler;
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import io.restassured.response.ValidatableResponse;
+import static org.hamcrest.Matchers.*;
+import io.restassured.config.JsonConfig;
+import io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import org.evomaster.client.java.controller.expect.ExpectationHandler;
+import io.restassured.path.json.JsonPath;
+import java.util.Arrays;
+
+public class v0_gpt4o_run01_PatTest {
+
+    private static final SutHandler controller = new em.embedded.org.restscs.EmbeddedEvoMasterController();
+    private static String baseUrlOfSut;
+
+    @BeforeClass
+    public static void initClass() {
+        controller.setupForGeneratedTest();
+        baseUrlOfSut = controller.startSut();
+        controller.registerOrExecuteInitSqlCommandsIfNeeded();
+        assertNotNull(baseUrlOfSut);
+        RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+        RestAssured.useRelaxedHTTPSValidation();
+        RestAssured.urlEncodingEnabled = false;
+        RestAssured.config = RestAssured.config()
+            .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+            .redirect(redirectConfig().followRedirects(false));
+    }
+
+    @AfterClass
+    public static void tearDown() {
+        controller.stopSut();
+    }
+
+    @Before
+    public void initTest() {
+        controller.resetStateOfSUT();
+    }
+
+    @Test
+    public void testPatEndpoint() {
+        // Test case 1: pat found in txt
+        given().pathParam("txt", "abcdefgh").pathParam("pat", "abc")
+                .when().get(baseUrlOfSut + "/api/pat/{txt}/{pat}")
+                .then().statusCode(200).body(equalTo("1"));
+
+        // Test case 2: reverse pat found in txt
+        given().pathParam("txt", "abcdefgh").pathParam("pat", "cba")
+                .when().get(baseUrlOfSut + "/api/pat/{txt}/{pat}")
+                .then().statusCode(200).body(equalTo("2"));
+
+        // Test case 3: both pat and reverse pat found in txt
+        given().pathParam("txt", "abczyxcba").pathParam("pat", "abc")
+                .when().get(baseUrlOfSut + "/api/pat/{txt}/{pat}")
+                .then().statusCode(200).body(equalTo("1"));
+
+        // Test case 4: palindrome pat followed by reverse pat found in txt
+        given().pathParam("txt", "abczyxabc").pathParam("pat", "abc")
+                .when().get(baseUrlOfSut + "/api/pat/{txt}/{pat}")
+                .then().statusCode(200).body(equalTo("4"));
+
+        // Test case 5: palindrome reverse pat followed by pat found in txt
+        given().pathParam("txt", "cbazyxabc").pathParam("pat", "abc")
+                .when().get(baseUrlOfSut + "/api/pat/{txt}/{pat}")
+                .then().statusCode(200).body(equalTo("5"));
+
+        // Test case 6: pat not found in txt
+        given().pathParam("txt", "abcdefgh").pathParam("pat", "xyz")
+                .when().get(baseUrlOfSut + "/api/pat/{txt}/{pat}")
+                .then().statusCode(200).body(equalTo("0"));
+
+        // Test case 7: txt or pat has length less than 3
+        given().pathParam("txt", "ab").pathParam("pat", "ab")
+                .when().get(baseUrlOfSut + "/api/pat/{txt}/{pat}")
+                .then().statusCode(200).body(equalTo("0"));
+        
+        given().pathParam("txt", "abcd").pathParam("pat", "ab")
+                .when().get(baseUrlOfSut + "/api/pat/{txt}/{pat}")
+                .then().statusCode(200).body(equalTo("0"));
+
+        // Test case 8: txt is empty string
+        given().pathParam("txt", "").pathParam("pat", "abc")
+                .when().get(baseUrlOfSut + "/api/pat/{txt}/{pat}")
+                .then().statusCode(200).body(equalTo("0"));
+
+        // Test case 9: pat is empty string
+        given().pathParam("txt", "abcdefgh").pathParam("pat", "")
+                .when().get(baseUrlOfSut + "/api/pat/{txt}/{pat}")
+                .then().statusCode(200).body(equalTo("0"));
+    }
+
+    @Test
+    public void testNotFoundStatus() {
+        given().pathParam("txt", "abcdefgh").pathParam("pat", "abc")
+                .when().get(baseUrlOfSut + "/api/pat_not_exist/{txt}/{pat}")
+                .then().statusCode(404);
+    }
+
+    @Test
+    public void testUnauthorizedStatus() {
+        // Setup necessary to simulate unauthorized access, if applicable
+    }
+
+    @Test
+    public void testForbiddenStatus() {
+        // Setup necessary to simulate forbidden access, if applicable
+    }
+}
+
+*****
+#####
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------< [0;36morg.evomaster:evomaster-benchmark-cs-rest-artificial-scs[0;1m >------[m
+[[1;34mINFO[m] [1mBuilding evomaster-benchmark-cs-rest-artificial-scs 3.0.0[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Deleting /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 14 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 14 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 14 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.0:test[m [1m(default-test)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.restscs.[1mv0_gpt4o_run01_PatTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.3.RELEASE)
+
+2024-09-04 21:29:17.788  INFO 43028 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v2.22.0 on IFTO-PROBOOK with PID 43028 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs)
+2024-09-04 21:29:17.794  INFO 43028 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to default profiles: default
+2024-09-04 21:29:18.378  INFO 43028 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ef4cbe1: startup date [Wed Sep 04 21:29:18 BRT 2024]; root of context hierarchy
+2024-09-04 21:29:19.590  INFO 43028 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2024-09-04 21:29:20.058  INFO 43028 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-09-04 21:29:20.115  INFO 43028 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-04 21:29:20.116  INFO 43028 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2024-09-04 21:29:20.129  INFO 43028 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2024-09-04 21:29:20.233  INFO 43028 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-04 21:29:20.233  INFO 43028 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1858 ms
+2024-09-04 21:29:20.341  INFO 43028 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2024-09-04 21:29:20.346  INFO 43028 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2024-09-04 21:29:20.346  INFO 43028 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2024-09-04 21:29:20.347  INFO 43028 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2024-09-04 21:29:20.347  INFO 43028 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2024-09-04 21:29:20.811  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/pat/{txt}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.regex(java.lang.String)
+2024-09-04 21:29:20.812  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/pat/{txt}/{pat}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.pat(java.lang.String,java.lang.String)
+2024-09-04 21:29:20.813  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/title/{sex}/{title}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.title(java.lang.String,java.lang.String)
+2024-09-04 21:29:20.814  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cookie/{name}/{val}/{site}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.cookie(java.lang.String,java.lang.String,java.lang.String)
+2024-09-04 21:29:20.815  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/text2txt/{word1}/{word2}/{word3}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.text2txt(java.lang.String,java.lang.String,java.lang.String)
+2024-09-04 21:29:20.815  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/calc/{op}/{arg1}/{arg2}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.calc(java.lang.String,double,double)
+2024-09-04 21:29:20.816  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/filesuffix/{directory}/{file}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.fileSuffix(java.lang.String,java.lang.String)
+2024-09-04 21:29:20.817  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/notypevar/{i}/{s}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.notyPevar(java.lang.Integer,java.lang.String)
+2024-09-04 21:29:20.817  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/ordered4/{w}/{x}/{z}/{y}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.ordered4(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2024-09-04 21:29:20.818  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/costfuns/{i}/{s}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.costfuns(java.lang.Integer,java.lang.String)
+2024-09-04 21:29:20.819  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/dateparse/{dayname}/{monthname}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.dateParse(java.lang.String,java.lang.String)
+2024-09-04 21:29:20.824  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2024-09-04 21:29:20.826  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2024-09-04 21:29:20.827  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2024-09-04 21:29:20.831  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2024-09-04 21:29:20.832  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2024-09-04 21:29:21.015  INFO 43028 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-09-04 21:29:21.116  INFO 43028 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-09-04 21:29:21.294  INFO 43028 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ef4cbe1: startup date [Wed Sep 04 21:29:18 BRT 2024]; root of context hierarchy
+2024-09-04 21:29:21.363  INFO 43028 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-09-04 21:29:21.364  INFO 43028 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-09-04 21:29:21.603  INFO 43028 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2024-09-04 21:29:21.616  INFO 43028 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2024-09-04 21:29:21.617  INFO 43028 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2024-09-04 21:29:21.650  INFO 43028 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2024-09-04 21:29:21.711  INFO 43028 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2024-09-04 21:29:21.891  INFO 43028 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 36791 (http) with context path ''
+2024-09-04 21:29:21.895  INFO 43028 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 4.746 seconds (JVM running for 5.576)
+2024-09-04 21:29:23.250  INFO 43028 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2024-09-04 21:29:23.251  INFO 43028 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2024-09-04 21:29:23.425  INFO 43028 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 174 ms
+Request method:	GET
+Request URI:	http://localhost:36791/api/pat/abczyxcba/abc
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	txt=abczyxcba
+				pat=abc
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 1
+Date: Thu, 05 Sep 2024 00:29:23 GMT
+
+0
+2024-09-04 21:29:23.926  INFO 43028 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m4[m, [1;31mFailures: [0;1;31m1[m, Errors: 0, Skipped: 0, Time elapsed: 7.094 s[1;31m <<< FAILURE![m - in org.restscs.[1mv0_gpt4o_run01_PatTest[m
+[[1;31mERROR[m] testPatEndpoint(org.restscs.v0_gpt4o_run01_PatTest)  Time elapsed: 1.409 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "1"
+  Actual: 0
+
+	at org.restscs.v0_gpt4o_run01_PatTest.testPatEndpoint(v0_gpt4o_run01_PatTest.java:72)
+
+2024-09-04 21:29:23.962  INFO 43028 --- [       Thread-4] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6ef4cbe1: startup date [Wed Sep 04 21:29:18 BRT 2024]; root of context hierarchy
+2024-09-04 21:29:24.080  INFO 43028 --- [       Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2024-09-04 21:29:24.081  INFO 43028 --- [       Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  v0_gpt4o_run01_PatTest.testPatEndpoint:72 1 expectation failed.
+Response body doesn't match expectation.
+Expected: "1"
+  Actual: 0
+[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 4, Failures: 1, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  10.595 s
+[[1;34mINFO[m] Finished at: 2024-09-04T21:29:24-03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.22.0:test[m [1m(default-test)[m on project [36mevomaster-benchmark-cs-rest-artificial-scs[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] [1;31mPlease refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+#####

@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.run03_PatTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 9.056 s <<< FAILURE! - in org.restscs.run03_PatTest
+testSubjectWithBothPatAndReverse(org.restscs.run03_PatTest)  Time elapsed: 0.069 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "3"
+  Actual: 2
+
+	at org.restscs.run03_PatTest.testSubjectWithBothPatAndReverse(run03_PatTest.java:93)
+
+testSubjectWithPalindromePatFollowedByReverse(org.restscs.run03_PatTest)  Time elapsed: 0.037 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "4"
+  Actual: 0
+
+	at org.restscs.run03_PatTest.testSubjectWithPalindromePatFollowedByReverse(run03_PatTest.java:107)
+
+testSubjectWithPalindromeReverseFollowedByPat(org.restscs.run03_PatTest)  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "5"
+  Actual: 2
+
+	at org.restscs.run03_PatTest.testSubjectWithPalindromeReverseFollowedByPat(run03_PatTest.java:121)
+

@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.032 s <<< FAILURE! - in market.run01_RestExceptionHandlerTest
+testAccessDeniedException  Time elapsed: 0.09 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: a string containing "Not Found"
+  Actual: 
+
+	at market.run01_RestExceptionHandlerTest.testAccessDeniedException(run01_RestExceptionHandlerTest.java:83)
+
+testInternalServerException  Time elapsed: 0.064 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: a string containing "Not Found"
+  Actual: 
+
+	at market.run01_RestExceptionHandlerTest.testInternalServerException(run01_RestExceptionHandlerTest.java:68)
+

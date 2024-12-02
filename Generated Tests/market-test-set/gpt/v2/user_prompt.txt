@@ -1,0 +1,79 @@
+Create a white box test suite in JUnit 5 and Java 11 using REST Assured for the Java code delimited by *****. Use the swagger documentation delimited by ##### to provide complementary information about the application. The objective of this test suite is to maximize code coverage (including decision coverage), ensure compliance with the API specification, and validate the robustness, schema conformity, and business rule enforcement of the API.
+
+If necessary, use these data to registered user: {"email":"ivan.petrov@yandex.ru","password":"petrov","name":"Ivan Petrov","phone":"+7 123 456 78 90","address":"Riesstrasse 18"}
+
+Follow these six instructions when generating the test code:
+
+Instruction 1. Package Declaration: Add this package line at the beginning of the test code file: package market;
+
+Instruction 2. Imports: Include the following Java imports:
+import  org.junit.jupiter.api.AfterAll;
+import  org.junit.jupiter.api.BeforeAll;
+import  org.junit.jupiter.api.BeforeEach;
+import  org.junit.jupiter.api.Test;
+import  org.junit.jupiter.api.Timeout;
+import static org.junit.jupiter.api.Assertions.*;
+import  java.util.Map;
+import  java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import  org.evomaster.client.java.controller.SutHandler;
+import  io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import  io.restassured.response.ValidatableResponse;
+import static org.evomaster.client.java.sql.dsl.SqlDsl.sql;
+import  org.evomaster.client.java.controller.api.dto.database.operations.InsertionResultsDto;
+import  org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto;
+import static org.hamcrest.Matchers.*;
+import  io.restassured.config.JsonConfig;
+import  io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import  org.evomaster.client.java.controller.expect.ExpectationHandler;
+import  io.restassured.path.json.JsonPath;
+import  java.util.Arrays;
+
+Instruction 3. Class Declaration: Create the class with the following declaration: <<class_name>>
+
+
+Instruction 4. Variable Declarations: Include these variables:
+private static final SutHandler controller = new em.embedded.market.EmbeddedEvoMasterController();
+private static String baseUrlOfSut;
+
+Instruction 5. Setup and Teardown Methods: Include the following setup and teardown methods:
+@BeforeAll
+public static void initClass() {
+    controller.setupForGeneratedTest();
+    baseUrlOfSut = controller.startSut();
+    controller.registerOrExecuteInitSqlCommandsIfNeeded();
+    assertNotNull(baseUrlOfSut);
+    RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+    RestAssured.useRelaxedHTTPSValidation();
+    RestAssured.urlEncodingEnabled = false;
+    RestAssured.config = RestAssured.config()
+        .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+        .redirect(redirectConfig().followRedirects(false));
+}
+
+
+@AfterAll
+public static void tearDown() {
+    controller.stopSut();
+}
+
+
+@BeforeEach
+public void initTest() {
+    controller.resetDatabase(Arrays.asList("USER_ROLE","CUSTOMER_ORDER","CART_ITEM","PRODUCT","CART","CONTACTS"));
+    controller.resetStateOfSUT();
+}
+
+Instruction 6. Test Methods: Ensure the generated tests include:
+* Error Scenarios: Tests that simulate invalid inputs or conditions that force the API to return 5xx status codes, particularly 500. Include assertions to verify these responses.
+
+* Schema Validation: Tests that check whether the API responses conform to the OpenAPI schema. Ensure all required fields are present, data types match, and values are valid.
+
+* Business Rule Enforcement: Tests that validate operations like POST, PUT, and DELETE follow the business rules, ensuring correct creation, modification, or deletion of resources. Any violations should be captured and asserted.
+

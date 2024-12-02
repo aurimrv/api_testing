@@ -1,0 +1,587 @@
+Correct the test code delimited by ***** according to the error messages delimited by ##### and generate another complete code in JUnit 5 format. The response must contain only Java code in JUnit 5 format.
+
+Keep these five instructions for this generated test code:
+
+Instruction 1: Keet this package line to generated test code file:
+package market;
+
+Instruction 2: Keep the following Java imports to generated test code file:
+import  org.junit.jupiter.api.AfterAll;
+import  org.junit.jupiter.api.BeforeAll;
+import  org.junit.jupiter.api.BeforeEach;
+import  org.junit.jupiter.api.Test;
+import  org.junit.jupiter.api.Timeout;
+import static org.junit.jupiter.api.Assertions.*;
+import  java.util.Map;
+import  java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import  org.evomaster.client.java.controller.SutHandler;
+import  io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import  io.restassured.response.ValidatableResponse;
+import static org.evomaster.client.java.sql.dsl.SqlDsl.sql;
+import  org.evomaster.client.java.controller.api.dto.database.operations.InsertionResultsDto;
+import  org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto;
+import static org.hamcrest.Matchers.*;
+import  io.restassured.config.JsonConfig;
+import  io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import  org.evomaster.client.java.controller.expect.ExpectationHandler;
+import  io.restassured.path.json.JsonPath;
+import  java.util.Arrays;
+
+Instruction 3: Keep the same class name in this point (between the imports at instruction 2 and instruction 4)
+
+Instruction 4: Keep these variables in the generated test code:
+private static final SutHandler controller = new em.embedded.market.EmbeddedEvoMasterController();
+private static String baseUrlOfSut;
+
+Instruction 5: Keep the following setup and teardown methods in generated test code file:
+@BeforeAll
+public static void initClass() {
+    controller.setupForGeneratedTest();
+    baseUrlOfSut = controller.startSut();
+    controller.registerOrExecuteInitSqlCommandsIfNeeded();
+    assertNotNull(baseUrlOfSut);
+    RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+    RestAssured.useRelaxedHTTPSValidation();
+    RestAssured.urlEncodingEnabled = false;
+    RestAssured.config = RestAssured.config()
+        .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+        .redirect(redirectConfig().followRedirects(false));
+}
+
+
+@AfterAll
+public static void tearDown() {
+    controller.stopSut();
+}
+
+
+@BeforeEach
+public void initTest() {
+    controller.resetDatabase(Arrays.asList("USER_ROLE","CUSTOMER_ORDER","CART_ITEM","PRODUCT","CART","CONTACTS"));
+    controller.resetStateOfSUT();
+}
+
+*****
+
+package market;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+import static org.junit.jupiter.api.Assertions.*;
+import java.util.Map;
+import java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import org.evomaster.client.java.controller.SutHandler;
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import io.restassured.response.ValidatableResponse;
+import static org.evomaster.client.java.sql.dsl.SqlDsl.sql;
+import org.evomaster.client.java.controller.api.dto.database.operations.InsertionResultsDto;
+import org.evomaster.client.java.controller.api.dto.database.operations.InsertionDto;
+import static org.hamcrest.Matchers.*;
+import io.restassured.config.JsonConfig;
+import io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import org.evomaster.client.java.controller.expect.ExpectationHandler;
+import io.restassured.path.json.JsonPath;
+import java.util.Arrays;
+
+public class v1_gpt4o_run01_RestErrorResponseTest {
+
+    private static final SutHandler controller = new em.embedded.market.EmbeddedEvoMasterController();
+    private static String baseUrlOfSut;
+
+    @BeforeAll
+    public static void initClass() {
+        controller.setupForGeneratedTest();
+        baseUrlOfSut = controller.startSut();
+        controller.registerOrExecuteInitSqlCommandsIfNeeded();
+        assertNotNull(baseUrlOfSut);
+        RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+        RestAssured.useRelaxedHTTPSValidation();
+        RestAssured.urlEncodingEnabled = false;
+        RestAssured.config = RestAssured.config()
+            .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+            .redirect(redirectConfig().followRedirects(false));
+    }
+
+    @AfterAll
+    public static void tearDown() {
+        controller.stopSut();
+    }
+
+    @BeforeEach
+    public void initTest() {
+        controller.resetDatabase(Arrays.asList("USER_ROLE","CUSTOMER_ORDER","CART_ITEM","PRODUCT","CART","CONTACTS"));
+        controller.resetStateOfSUT();
+    }
+
+    @Test
+    public void testGetCustomer() {
+        ValidatableResponse response = given()
+            .baseUri(baseUrlOfSut)
+            .basePath("/customer")
+            .queryParam("name", "Ivan Petrov")
+            .when()
+            .get()
+            .then();
+
+        response.statusCode(anyOf(is(200), is(401), is(403), is(404)));
+        if (response.extract().statusCode() == 200) {
+            response.body("email", equalTo("ivan.petrov@yandex.ru"));
+        }
+    }
+
+    @Test
+    public void testGetCart() {
+        ValidatableResponse response = given()
+            .baseUri(baseUrlOfSut)
+            .basePath("/customer/cart")
+            .queryParam("name", "Ivan Petrov")
+            .when()
+            .get()
+            .then();
+
+        response.statusCode(anyOf(is(200), is(401), is(403), is(404)));
+    }
+
+    @Test
+    public void testAddItemToCart() {
+        ValidatableResponse response = given()
+            .baseUri(baseUrlOfSut)
+            .basePath("/customer/cart")
+            .queryParam("name", "Ivan Petrov")
+            .contentType("application/json")
+            .body("{\"productId\": 1, \"quantity\": 2}")
+            .when()
+            .put()
+            .then();
+
+        response.statusCode(anyOf(is(200), is(201), is(401), is(403), is(404)));
+    }
+
+    @Test
+    public void testClearCart() {
+        ValidatableResponse response = given()
+            .baseUri(baseUrlOfSut)
+            .basePath("/customer/cart")
+            .queryParam("name", "Ivan Petrov")
+            .when()
+            .delete()
+            .then();
+
+        response.statusCode(anyOf(is(200), is(204), is(401), is(403)));
+    }
+
+    @Test
+    public void testSetDelivery() {
+        ValidatableResponse response = given()
+            .baseUri(baseUrlOfSut)
+            .basePath("/customer/cart/delivery")
+            .queryParam("included", true)
+            .queryParam("name", "Ivan Petrov")
+            .contentType("application/json")
+            .when()
+            .put()
+            .then();
+
+        response.statusCode(anyOf(is(200), is(201), is(401), is(403), is(404)));
+    }
+
+    @Test
+    public void testPayByCard() {
+        ValidatableResponse response = given()
+            .baseUri(baseUrlOfSut)
+            .basePath("/customer/cart/pay")
+            .queryParam("name", "Ivan Petrov")
+            .contentType("application/json")
+            .body("{\"ccNumber\": \"4111111111111111\"}")
+            .when()
+            .post()
+            .then();
+
+        response.statusCode(anyOf(is(201), is(401), is(403), is(404)));
+    }
+
+    @Test
+    public void testGetContacts() {
+        ValidatableResponse response = given()
+            .baseUri(baseUrlOfSut)
+            .basePath("/customer/contacts")
+            .queryParam("name", "Ivan Petrov")
+            .when()
+            .get()
+            .then();
+
+        response.statusCode(anyOf(is(200), is(401), is(403), is(404)));
+    }
+
+    @Test
+    public void testUpdateContacts() {
+        ValidatableResponse response = given()
+            .baseUri(baseUrlOfSut)
+            .basePath("/customer/contacts")
+            .queryParam("name", "Ivan Petrov")
+            .contentType("application/json")
+            .body("{\"address\": \"Riesstrasse 18\", \"phone\": \"+7 123 456 78 90\"}")
+            .when()
+            .put()
+            .then();
+
+        response.statusCode(anyOf(is(200), is(201), is(401), is(403), is(404)));
+    }
+
+    @Test
+    public void testGetOrders() {
+        ValidatableResponse response = given()
+            .baseUri(baseUrlOfSut)
+            .basePath("/customer/orders")
+            .queryParam("name", "Ivan Petrov")
+            .when()
+            .get()
+            .then();
+
+        response.statusCode(anyOf(is(200), is(401), is(403), is(404)));
+    }
+
+    @Test
+    public void testGetOrder() {
+        ValidatableResponse response = given()
+            .baseUri(baseUrlOfSut)
+            .basePath("/customer/orders/1")
+            .queryParam("name", "Ivan Petrov")
+            .when()
+            .get()
+            .then();
+
+        response.statusCode(anyOf(is(200), is(401), is(403), is(404)));
+    }
+
+    @Test
+    public void testGetProducts() {
+        ValidatableResponse response = given()
+            .baseUri(baseUrlOfSut)
+            .basePath("/products")
+            .when()
+            .get()
+            .then();
+
+        response.statusCode(anyOf(is(200), is(401), is(403), is(404)));
+    }
+
+    @Test
+    public void testGetProduct() {
+        ValidatableResponse response = given()
+            .baseUri(baseUrlOfSut)
+            .basePath("/products/1")
+            .when()
+            .get()
+            .then();
+
+        response.statusCode(anyOf(is(200), is(401), is(403), is(404)));
+    }
+
+    @Test
+    public void testCreateCustomer() {
+        ValidatableResponse response = given()
+            .baseUri(baseUrlOfSut)
+            .basePath("/register")
+            .contentType("application/json")
+            .body("{\"email\": \"ivan.petrov@yandex.ru\", \"password\": \"petrov\", \"name\": \"Ivan Petrov\", \"phone\": \"+7 123 456 78 90\", \"address\": \"Riesstrasse 18\"}")
+            .when()
+            .post()
+            .then();
+
+        response.statusCode(anyOf(is(201), is(401), is(403), is(404)));
+    }
+}
+
+*****
+#####
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mnet.lukyanets:market-rest[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding market-rest 0.1.2[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Deleting /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 11 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.0:test[m [1m(default-test)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running market.[1mv1_gpt4o_run01_RestErrorResponseTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-09-12 16:54:19,105 INFO  [background-preinit] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.1.7.Final
+2024-09-12 16:54:19,203 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 25277 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-09-12 16:54:19,209 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-09-12 16:54:19,783 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-09-12 16:54:19,783 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-09-12 16:54:21,366 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-12 16:54:21,489 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 111 ms. Found 8 JPA repository interfaces.
+2024-09-12 16:54:22,007 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$d769a68a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-09-12 16:54:22,186 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@582c3422' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-09-12 16:54:22,194 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-09-12 16:54:22,778 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-09-12 16:54:22,798 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2024-09-12 16:54:22,799 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-09-12 16:54:22,799 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-09-12 16:54:22,924 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-09-12 16:54:22,924 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3136 ms
+2024-09-12 16:54:23,155 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2024-09-12 16:54:23,526 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2024-09-12 16:54:23,752 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-12 16:54:23,876 INFO  [main] o.h.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+2024-09-12 16:54:24,071 INFO  [main] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-09-12 16:54:24,339 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-09-12 16:54:24,672 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-09-12 16:54:24,676 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-09-12 16:54:25,856 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-09-12 16:54:25,870 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-12 16:54:27,113 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-09-12 16:54:28,147 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f819cfd, org.springframework.security.web.context.SecurityContextPersistenceFilter@674f1650, org.springframework.security.web.header.HeaderWriterFilter@6951d19d, org.springframework.security.web.authentication.logout.LogoutFilter@39076e3e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@58b6d424, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f16d015, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@638b6eff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@438eba9b, org.springframework.security.web.session.SessionManagementFilter@37d16ca9, org.springframework.security.web.access.ExceptionTranslationFilter@5da01f66, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6048d75]
+2024-09-12 16:54:28,325 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-09-12 16:54:28,788 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2024-09-12 16:54:28,826 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 34119 (http) with context path ''
+2024-09-12 16:54:29,527 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 11.315 seconds (JVM running for 13.462)
+2024-09-12 16:54:31,548 INFO  [http-nio-auto-1-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-12 16:54:31,548 INFO  [http-nio-auto-1-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-09-12 16:54:31,550 INFO  [http-nio-auto-1-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+2024-09-12 16:54:32,406 WARN  [http-nio-auto-1-exec-2] m.r.e.RestExceptionHandler - RestErrorResponse{message='Argument validation error', entityName='UserAccount', description='uri=/register', fieldErrors=[{field='email', message='Account with this email already exists'}]}
+Request method:	POST
+Request URI:	http://localhost:34119/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "ivan.petrov@yandex.ru",
+    "password": "petrov",
+    "name": "Ivan Petrov",
+    "phone": "+7 123 456 78 90",
+    "address": "Riesstrasse 18"
+}
+
+HTTP/1.1 406 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Thu, 12 Sep 2024 19:54:31 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Argument validation error",
+    "description": "uri=/register",
+    "entityName": "UserAccount",
+    "fieldErrors": [
+        {
+            "field": "email",
+            "message": "Account with this email already exists"
+        }
+    ]
+}
+2024-09-12 16:54:32,648 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-1"]
+2024-09-12 16:54:32,649 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-09-12 16:54:32,651 INFO  [main] o.a.c.c.C.[.[.[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-09-12 16:54:32,655 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-1"]
+2024-09-12 16:54:32,659 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-1"]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m13[m, [1;31mFailures: [0;1;31m1[m, [1;31mErrors: [0;1;31m10[m, Skipped: 0, Time elapsed: 15.539 s[1;31m <<< FAILURE![m - in market.[1mv1_gpt4o_run01_RestErrorResponseTest[m
+[[1;31mERROR[m] testSetDelivery  Time elapsed: 0.508 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal character in query at index 47: /customer/cart/delivery?included=true&name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testSetDelivery(v1_gpt4o_run01_RestErrorResponseTest.java:128)
+Caused by: java.net.URISyntaxException: Illegal character in query at index 47: /customer/cart/delivery?included=true&name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testSetDelivery(v1_gpt4o_run01_RestErrorResponseTest.java:128)
+
+[[1;31mERROR[m] testGetOrder  Time elapsed: 0.021 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal character in query at index 28: /customer/orders/1?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testGetOrder(v1_gpt4o_run01_RestErrorResponseTest.java:197)
+Caused by: java.net.URISyntaxException: Illegal character in query at index 28: /customer/orders/1?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testGetOrder(v1_gpt4o_run01_RestErrorResponseTest.java:197)
+
+[[1;31mERROR[m] testUpdateContacts  Time elapsed: 0.02 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal character in query at index 28: /customer/contacts?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testUpdateContacts(v1_gpt4o_run01_RestErrorResponseTest.java:171)
+Caused by: java.net.URISyntaxException: Illegal character in query at index 28: /customer/contacts?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testUpdateContacts(v1_gpt4o_run01_RestErrorResponseTest.java:171)
+
+[[1;31mERROR[m] testPayByCard  Time elapsed: 0.019 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal character in query at index 28: /customer/cart/pay?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testPayByCard(v1_gpt4o_run01_RestErrorResponseTest.java:143)
+Caused by: java.net.URISyntaxException: Illegal character in query at index 28: /customer/cart/pay?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testPayByCard(v1_gpt4o_run01_RestErrorResponseTest.java:143)
+
+[[1;31mERROR[m] testClearCart  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal character in query at index 24: /customer/cart?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testClearCart(v1_gpt4o_run01_RestErrorResponseTest.java:113)
+Caused by: java.net.URISyntaxException: Illegal character in query at index 24: /customer/cart?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testClearCart(v1_gpt4o_run01_RestErrorResponseTest.java:113)
+
+[[1;31mERROR[m] testGetCart  Time elapsed: 0.013 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal character in query at index 24: /customer/cart?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testGetCart(v1_gpt4o_run01_RestErrorResponseTest.java:85)
+Caused by: java.net.URISyntaxException: Illegal character in query at index 24: /customer/cart?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testGetCart(v1_gpt4o_run01_RestErrorResponseTest.java:85)
+
+[[1;31mERROR[m] testAddItemToCart  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal character in query at index 24: /customer/cart?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testAddItemToCart(v1_gpt4o_run01_RestErrorResponseTest.java:100)
+Caused by: java.net.URISyntaxException: Illegal character in query at index 24: /customer/cart?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testAddItemToCart(v1_gpt4o_run01_RestErrorResponseTest.java:100)
+
+[[1;31mERROR[m] testCreateCustomer  Time elapsed: 0.436 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code (is <201> or is <401> or is <403> or is <404>) but was <406>.
+
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testCreateCustomer(v1_gpt4o_run01_RestErrorResponseTest.java:238)
+
+[[1;31mERROR[m] testGetContacts  Time elapsed: 0.02 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal character in query at index 28: /customer/contacts?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testGetContacts(v1_gpt4o_run01_RestErrorResponseTest.java:156)
+Caused by: java.net.URISyntaxException: Illegal character in query at index 28: /customer/contacts?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testGetContacts(v1_gpt4o_run01_RestErrorResponseTest.java:156)
+
+[[1;31mERROR[m] testGetOrders  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal character in query at index 26: /customer/orders?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testGetOrders(v1_gpt4o_run01_RestErrorResponseTest.java:184)
+Caused by: java.net.URISyntaxException: Illegal character in query at index 26: /customer/orders?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testGetOrders(v1_gpt4o_run01_RestErrorResponseTest.java:184)
+
+[[1;31mERROR[m] testGetCustomer  Time elapsed: 0.015 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal character in query at index 19: /customer?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testGetCustomer(v1_gpt4o_run01_RestErrorResponseTest.java:69)
+Caused by: java.net.URISyntaxException: Illegal character in query at index 19: /customer?name=Ivan Petrov
+	at market.v1_gpt4o_run01_RestErrorResponseTest.testGetCustomer(v1_gpt4o_run01_RestErrorResponseTest.java:69)
+
+2024-09-12 16:54:32,719 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-09-12 16:54:32,735 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-09-12 16:54:32,737 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-09-12 16:54:32,749 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_RestErrorResponseTest.testCreateCustomer:238 1 expectation failed.
+Expected status code (is <201> or is <401> or is <403> or is <404>) but was <406>.
+[m
+[[1;31mERROR[m] [1;31mErrors: [m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_RestErrorResponseTest.testAddItemToCart:100 » IllegalArgument I...[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_RestErrorResponseTest.testClearCart:113 » IllegalArgument Illeg...[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_RestErrorResponseTest.testGetCart:85 » IllegalArgument Illegal ...[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_RestErrorResponseTest.testGetContacts:156 » IllegalArgument Ill...[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_RestErrorResponseTest.testGetCustomer:69 » IllegalArgument Ille...[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_RestErrorResponseTest.testGetOrder:197 » IllegalArgument Illega...[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_RestErrorResponseTest.testGetOrders:184 » IllegalArgument Illeg...[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_RestErrorResponseTest.testPayByCard:143 » IllegalArgument Illeg...[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_RestErrorResponseTest.testSetDelivery:128 » IllegalArgument Ill...[m
+[[1;31mERROR[m] [1;31m  v1_gpt4o_run01_RestErrorResponseTest.testUpdateContacts:171 » IllegalArgument ...[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 13, Failures: 1, Errors: 10, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  20.984 s
+[[1;34mINFO[m] Finished at: 2024-09-12T16:54:33-03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.22.0:test[m [1m(default-test)[m on project [36mmarket-rest[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] [1;31mPlease refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+#####

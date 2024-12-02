@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.run09_FisherTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.958 s - in org.restncs.run09_FisherTest

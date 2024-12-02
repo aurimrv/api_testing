@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 2.295 s <<< FAILURE! - in market.run01_RestExceptionHandlerTest
+testMethodArgumentNotValidExceptionOnPost  Time elapsed: 0.112 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: a string containing "Account with this email already exists"
+  Actual: Argument validation error
+
+	at market.run01_RestExceptionHandlerTest.testMethodArgumentNotValidExceptionOnPost(run01_RestExceptionHandlerTest.java:97)
+
+testValidResponseAgainstSchema  Time elapsed: 0.191 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.run01_RestExceptionHandlerTest.testValidResponseAgainstSchema(run01_RestExceptionHandlerTest.java:115)
+

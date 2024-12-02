@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>AbstractSorter.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market.sorting</a> &gt; <span class="el_source">AbstractSorter.java</span></div><h1>AbstractSorter.java</h1><pre class="source lang-java linenums">package market.sorting;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
+import org.springframework.ui.Model;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.stream.IntStream;
+
+import static java.util.stream.Collectors.toList;
+
+/**
+ * Управляющий сортировкой и разбивкой на страницы.
+ * &lt;p&gt;
+ * Инкапсулирует операции с опциями сортировки и разбивки на страницы: хранение
+ * и обновление значений, а также дополнение модели необходимыми объектами в
+ * соответствии с текущими значениями.
+ * &lt;p&gt;
+ * Добавление перечня опций сортировки (по умолчанию пустой) и другого
+ * дополнительного функционала (e.g. фильтрации) осуществляется в классах-потомках.
+ *
+ * @param &lt;T&gt; класс элементов обрабатываемого списка
+ */
+public abstract class AbstractSorter&lt;T&gt; implements ISorter&lt;T&gt; {
+
+<span class="nc" id="L28">	public static Integer FIRST_PAGE = 1;</span>
+<span class="nc" id="L29">	public static Integer PAGE_SIZE_DEFAULT = 2;</span>
+<span class="nc" id="L30">	public static Sort.Direction DIRECTION_DEFAULT = Sort.Direction.ASC;</span>
+
+<span class="nc" id="L32">	protected final Map&lt;String, String&gt; sortFieldOptions = new LinkedHashMap&lt;&gt;();</span>
+<span class="nc" id="L33">	private final Map&lt;Integer, String&gt; pageSizeOptions = new LinkedHashMap&lt;&gt;();</span>
+<span class="nc" id="L34">	private final Map&lt;String, String&gt; directionOptions = new LinkedHashMap&lt;&gt;();</span>
+	private Integer pageNumber;
+	private Integer pageSize;
+	private String sortBy;
+	private Sort.Direction sortDirection;
+
+<span class="nc" id="L40">	public AbstractSorter() {</span>
+<span class="nc" id="L41">		directionOptions.put(DIRECTION_DEFAULT.toString(), &quot;по возрастанию&quot;);</span>
+<span class="nc" id="L42">		directionOptions.put(Sort.Direction.DESC.toString(), &quot;по убыванию&quot;);</span>
+
+<span class="nc" id="L44">		pageSizeOptions.put(2, &quot;2&quot;);</span>
+<span class="nc" id="L45">		pageSizeOptions.put(5, &quot;5&quot;);</span>
+<span class="nc" id="L46">		pageSizeOptions.put(10, &quot;10&quot;);</span>
+<span class="nc" id="L47">		pageSizeOptions.put(20, &quot;20&quot;);</span>
+<span class="nc" id="L48">	}</span>
+
+	//-------------------------------------------------------- Обновление опций
+
+	private static Sort.Direction parseSortDirection(String direction) {
+<span class="nc bnc" id="L53" title="All 2 branches missed.">		if (direction == null)</span>
+<span class="nc" id="L54">			return DIRECTION_DEFAULT;</span>
+<span class="nc" id="L55">		return Sort.Direction.fromOptionalString(direction).orElse(DIRECTION_DEFAULT);</span>
+	}
+
+	@Override
+	public PageRequest updateSorting(SortingValuesDTO values) {
+<span class="nc bnc" id="L60" title="All 2 branches missed.">		this.sortBy = (values.getSort() == null) ? getSortFieldDefault() : values.getSort();</span>
+<span class="nc bnc" id="L61" title="All 2 branches missed.">		this.pageSize = (values.getSize() == null) ? getDefaultPageSize() : values.getSize();</span>
+<span class="nc bnc" id="L62" title="All 2 branches missed.">		this.pageNumber = (values.getPage() == null) ? FIRST_PAGE : values.getPage();</span>
+<span class="nc" id="L63">		this.sortDirection = parseSortDirection(values.getDirect());</span>
+<span class="nc" id="L64">		return createPageRequest();</span>
+	}
+
+	/**
+	 * @return кол-во объектов на странице
+	 */
+	protected int getDefaultPageSize() {
+<span class="nc" id="L71">		return PAGE_SIZE_DEFAULT;</span>
+	}
+
+	private String getSortFieldDefault() {
+<span class="nc" id="L75">		return sortFieldOptions.keySet().iterator().next();</span>
+	}
+
+	private PageRequest createPageRequest() {
+<span class="nc" id="L79">		return PageRequest.of(</span>
+<span class="nc" id="L80">			getPageNumber() - 1,</span>
+<span class="nc" id="L81">			getPageSize(),</span>
+<span class="nc" id="L82">			getSortDirection(),</span>
+<span class="nc" id="L83">			getSortBy());</span>
+	}
+
+	//------------------------------------------------------- Подготовка модели
+
+	@Override
+	public Model prepareModel(Model model, Page&lt;T&gt; page) {
+<span class="nc" id="L90">		preparePagedModel(model, page);</span>
+<span class="nc" id="L91">		prepareSortedModel(model);</span>
+<span class="nc" id="L92">		prepareFilteredModel(model);</span>
+<span class="nc" id="L93">		return model;</span>
+	}
+
+	/**
+	 * Дополнение модели объектами разбивки на страницы.
+	 *
+	 * @param model изменяемая модель
+	 * @return изменённая модель
+	 */
+	protected Model preparePagedModel(Model model, Page&lt;T&gt; page) {
+<span class="nc" id="L103">		int current = page.getNumber() + 1;</span>
+<span class="nc" id="L104">		int begin = Math.max(1, current - 5);</span>
+<span class="nc" id="L105">		int end = Math.min(begin + 10, page.getTotalPages());</span>
+<span class="nc" id="L106">		model.addAttribute(&quot;page&quot;, page);</span>
+<span class="nc" id="L107">		model.addAttribute(&quot;beginIndex&quot;, begin);</span>
+<span class="nc" id="L108">		model.addAttribute(&quot;endIndex&quot;, end);</span>
+<span class="nc" id="L109">		model.addAttribute(&quot;currentIndex&quot;, current);</span>
+<span class="nc" id="L110">		model.addAttribute(&quot;indexesList&quot;, IntStream.rangeClosed(begin, end).boxed().collect(toList()));</span>
+<span class="nc" id="L111">		return model;</span>
+	}
+
+	/**
+	 * Дополнение модели объектами сортировки.
+	 *
+	 * @param model изменяемая модель
+	 * @return изменённая модель
+	 */
+	protected Model prepareSortedModel(Model model) {
+<span class="nc" id="L121">		model.addAttribute(&quot;pageSizeOptions&quot;, getPageSizeOptions());</span>
+<span class="nc" id="L122">		model.addAttribute(&quot;sortOptions&quot;, getSortFieldOptions());</span>
+<span class="nc" id="L123">		model.addAttribute(&quot;directOptions&quot;, getDirectionOptions());</span>
+<span class="nc" id="L124">		model.addAttribute(&quot;currentPageSize&quot;, getPageSize());</span>
+<span class="nc" id="L125">		model.addAttribute(&quot;currentSort&quot;, getSortBy());</span>
+<span class="nc" id="L126">		model.addAttribute(&quot;currentDirection&quot;, getSortDirection().toString());</span>
+<span class="nc" id="L127">		return model;</span>
+	}
+
+	/**
+	 * Дополнение модели объектами фильтрации.
+	 *
+	 * @param model изменяемая модель
+	 * @return изменённая модель
+	 */
+	protected Model prepareFilteredModel(Model model) {
+<span class="nc" id="L137">		return model;</span>
+	}
+
+	//---------------------------------------------------- Аксессоры и мутаторы
+
+	public Integer getPageNumber() {
+<span class="nc" id="L143">		return pageNumber;</span>
+	}
+
+	public Integer getPageSize() {
+<span class="nc" id="L147">		return pageSize;</span>
+	}
+
+	public String getSortBy() {
+<span class="nc" id="L151">		return sortBy;</span>
+	}
+
+	public Sort.Direction getSortDirection() {
+<span class="nc" id="L155">		return sortDirection;</span>
+	}
+
+	public Map&lt;Integer, String&gt; getPageSizeOptions() {
+<span class="nc" id="L159">		return pageSizeOptions;</span>
+	}
+
+	public Map&lt;String, String&gt; getSortFieldOptions() {
+<span class="nc" id="L163">		return sortFieldOptions;</span>
+	}
+
+	public Map&lt;String, String&gt; getDirectionOptions() {
+<span class="nc" id="L167">		return directionOptions;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

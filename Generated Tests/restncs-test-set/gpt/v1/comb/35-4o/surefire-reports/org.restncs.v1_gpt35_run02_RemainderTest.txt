@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v1_gpt35_run02_RemainderTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.94 s <<< FAILURE! - in org.restncs.v1_gpt35_run02_RemainderTest
+testRemainderEndpointWithZeroValues(org.restncs.v1_gpt35_run02_RemainderTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsInt doesn't match.
+Expected: <0>
+  Actual: -1
+
+	at org.restncs.v1_gpt35_run02_RemainderTest.testRemainderEndpointWithZeroValues(v1_gpt35_run02_RemainderTest.java:84)
+

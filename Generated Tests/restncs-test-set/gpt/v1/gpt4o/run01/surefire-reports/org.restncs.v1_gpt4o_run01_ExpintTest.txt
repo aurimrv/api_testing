@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v1_gpt4o_run01_ExpintTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.323 s <<< FAILURE! - in org.restncs.v1_gpt4o_run01_ExpintTest
+testBessjEndpoint(org.restncs.v1_gpt4o_run01_ExpintTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v1_gpt4o_run01_ExpintTest.testBessjEndpoint(v1_gpt4o_run01_ExpintTest.java:96)
+
+testFisherEndpoint_InvalidParams(org.restncs.v1_gpt4o_run01_ExpintTest)  Time elapsed: 0.033 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restncs.v1_gpt4o_run01_ExpintTest.testFisherEndpoint_InvalidParams(v1_gpt4o_run01_ExpintTest.java:150)
+
+testTriangleEndpoint_InvalidParams(org.restncs.v1_gpt4o_run01_ExpintTest)  Time elapsed: 0.027 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restncs.v1_gpt4o_run01_ExpintTest.testTriangleEndpoint_InvalidParams(v1_gpt4o_run01_ExpintTest.java:247)
+

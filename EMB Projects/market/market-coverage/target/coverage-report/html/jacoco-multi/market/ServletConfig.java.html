@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>ServletConfig.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market</a> &gt; <span class="el_source">ServletConfig.java</span></div><h1>ServletConfig.java</h1><pre class="source lang-java linenums">package market;
+
+import market.interceptors.SessionCartInterceptor;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+@ComponentScan(basePackages = {
+	&quot;market.controller.frontend&quot;,
+	&quot;market.controller.backend&quot;
+})
+<span class="nc" id="L14">public class ServletConfig implements WebMvcConfigurer {</span>
+
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+<span class="nc" id="L18">		registry.addInterceptor(new SessionCartInterceptor())</span>
+<span class="nc" id="L19">			.addPathPatterns(&quot;/**&quot;)</span>
+<span class="nc" id="L20">			.excludePathPatterns(&quot;/admin/**&quot;);</span>
+<span class="nc" id="L21">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

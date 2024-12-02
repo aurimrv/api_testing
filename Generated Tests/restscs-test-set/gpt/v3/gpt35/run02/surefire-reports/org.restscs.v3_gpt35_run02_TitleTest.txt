@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt35_run02_TitleTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.255 s - in org.restscs.v3_gpt35_run02_TitleTest

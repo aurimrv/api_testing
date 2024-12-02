@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v2_gpt35_run01_GammqTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.126 s <<< FAILURE! - in org.restncs.v2_gpt35_run01_GammqTest
+testErrorScenarios(org.restncs.v2_gpt35_run01_GammqTest)  Time elapsed: 1.795 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at org.restncs.v2_gpt35_run01_GammqTest.testErrorScenarios(v2_gpt35_run01_GammqTest.java:65)
+
+testSchemaValidation(org.restncs.v2_gpt35_run01_GammqTest)  Time elapsed: 1.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsInt doesn't match.
+Expected: is not null
+  Actual: null
+
+	at org.restncs.v2_gpt35_run01_GammqTest.testSchemaValidation(v2_gpt35_run01_GammqTest.java:82)
+

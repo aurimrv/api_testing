@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4turbo_run03_Text2TxtTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.542 s <<< FAILURE! - in org.restscs.v3_gpt4turbo_run03_Text2TxtTest
+testSubjectWithValidInputs(org.restscs.v3_gpt4turbo_run03_Text2TxtTest)  Time elapsed: 0.057 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "you are great"
+  Actual: u
+
+	at org.restscs.v3_gpt4turbo_run03_Text2TxtTest.testSubjectWithValidInputs(v3_gpt4turbo_run03_Text2TxtTest.java:69)
+
+testSubjectWithInvalidInput(org.restscs.v3_gpt4turbo_run03_Text2TxtTest)  Time elapsed: 0.034 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v3_gpt4turbo_run03_Text2TxtTest.testSubjectWithInvalidInput(v3_gpt4turbo_run03_Text2TxtTest.java:86)
+
+testSubjectWithBoundaryConditions(org.restscs.v3_gpt4turbo_run03_Text2TxtTest)  Time elapsed: 0.04 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v3_gpt4turbo_run03_Text2TxtTest.testSubjectWithBoundaryConditions(v3_gpt4turbo_run03_Text2TxtTest.java:102)
+

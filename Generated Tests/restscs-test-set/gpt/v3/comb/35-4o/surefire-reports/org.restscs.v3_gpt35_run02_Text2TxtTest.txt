@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt35_run02_Text2TxtTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.091 s <<< FAILURE! - in org.restscs.v3_gpt35_run02_Text2TxtTest
+testText2TxtSchemaValidation(org.restscs.v3_gpt35_run02_Text2TxtTest)  Time elapsed: 0.028 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected content-type "application/json" doesn't match actual content-type "text/plain;charset=UTF-8".
+
+	at org.restscs.v3_gpt35_run02_Text2TxtTest.testText2TxtSchemaValidation(v3_gpt35_run02_Text2TxtTest.java:83)
+
+testText2TxtInvalidInput(org.restscs.v3_gpt35_run02_Text2TxtTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_Text2TxtTest.testText2TxtInvalidInput(v3_gpt35_run02_Text2TxtTest.java:73)
+

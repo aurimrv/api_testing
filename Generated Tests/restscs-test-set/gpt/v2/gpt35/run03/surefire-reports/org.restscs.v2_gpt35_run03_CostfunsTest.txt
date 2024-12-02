@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt35_run03_CostfunsTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 2.843 s <<< FAILURE! - in org.restscs.v2_gpt35_run03_CostfunsTest
+testBusinessRuleEnforcementForCostfunsEndpoint(org.restscs.v2_gpt35_run03_CostfunsTest)  Time elapsed: 1.494 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "1"
+  Actual: 10
+
+	at org.restscs.v2_gpt35_run03_CostfunsTest.testBusinessRuleEnforcementForCostfunsEndpoint(v2_gpt35_run03_CostfunsTest.java:72)
+
+testSchemaValidationForCostfunsEndpoint(org.restscs.v2_gpt35_run03_CostfunsTest)  Time elapsed: 0.077 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+10
+
+	at org.restscs.v2_gpt35_run03_CostfunsTest.testSchemaValidationForCostfunsEndpoint(v2_gpt35_run03_CostfunsTest.java:66)
+
+testInvalidInputsReturn500Error(org.restscs.v2_gpt35_run03_CostfunsTest)  Time elapsed: 0.214 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at org.restscs.v2_gpt35_run03_CostfunsTest.testInvalidInputsReturn500Error(v2_gpt35_run03_CostfunsTest.java:60)
+

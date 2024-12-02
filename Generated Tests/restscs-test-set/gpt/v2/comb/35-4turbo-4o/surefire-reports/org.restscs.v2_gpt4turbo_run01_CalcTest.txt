@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4turbo_run01_CalcTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.89 s - in org.restscs.v2_gpt4turbo_run01_CalcTest

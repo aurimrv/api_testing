@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_OrdersRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.016 s <<< FAILURE! - in market.run01_OrdersRestControllerTest
+testGetOrderInvalidId  Time elapsed: 0.162 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <500>.
+
+	at market.run01_OrdersRestControllerTest.testGetOrderInvalidId(run01_OrdersRestControllerTest.java:100)
+
+testInvalidEndpoint  Time elapsed: 0.139 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <500>.
+
+	at market.run01_OrdersRestControllerTest.testInvalidEndpoint(run01_OrdersRestControllerTest.java:155)
+

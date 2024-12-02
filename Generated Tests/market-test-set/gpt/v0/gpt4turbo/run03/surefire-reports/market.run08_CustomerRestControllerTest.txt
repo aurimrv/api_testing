@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.run08_CustomerRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 2.837 s <<< FAILURE! - in market.run08_CustomerRestControllerTest
+testCreateCustomer_201  Time elapsed: 0.124 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run08_CustomerRestControllerTest.testCreateCustomer_201(run08_CustomerRestControllerTest.java:89)
+
+testCreateCustomer_400  Time elapsed: 0.124 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <406>.
+
+	at market.run08_CustomerRestControllerTest.testCreateCustomer_400(run08_CustomerRestControllerTest.java:101)
+
+testCreateCustomer_409  Time elapsed: 0.055 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <409> but was <406>.
+
+	at market.run08_CustomerRestControllerTest.testCreateCustomer_409(run08_CustomerRestControllerTest.java:110)
+

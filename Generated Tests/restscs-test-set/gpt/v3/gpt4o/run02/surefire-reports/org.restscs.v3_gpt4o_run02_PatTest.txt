@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run02_PatTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 1.375 s <<< FAILURE! - in org.restscs.v3_gpt4o_run02_PatTest
+testCostfunsEndpoint(org.restscs.v3_gpt4o_run02_PatTest)  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at org.restscs.v3_gpt4o_run02_PatTest.testCostfunsEndpoint(v3_gpt4o_run02_PatTest.java:92)
+
+testCalcEndpoint(org.restscs.v3_gpt4o_run02_PatTest)  Time elapsed: 0.028 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "0.0"
+  Actual: 2.0
+
+	at org.restscs.v3_gpt4o_run02_PatTest.testCalcEndpoint(v3_gpt4o_run02_PatTest.java:62)
+
+testDateParseEndpoint(org.restscs.v3_gpt4o_run02_PatTest)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run02_PatTest.testDateParseEndpoint(v3_gpt4o_run02_PatTest.java:102)
+
+testNotyPevarEndpoint(org.restscs.v3_gpt4o_run02_PatTest)  Time elapsed: 0.029 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at org.restscs.v3_gpt4o_run02_PatTest.testNotyPevarEndpoint(v3_gpt4o_run02_PatTest.java:122)
+

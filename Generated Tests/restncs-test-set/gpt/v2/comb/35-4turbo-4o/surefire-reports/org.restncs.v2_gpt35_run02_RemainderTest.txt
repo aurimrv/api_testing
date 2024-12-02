@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v2_gpt35_run02_RemainderTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.702 s <<< FAILURE! - in org.restncs.v2_gpt35_run02_RemainderTest
+testInvalidInputsForRemainderEndpoint(org.restncs.v2_gpt35_run02_RemainderTest)  Time elapsed: 1.714 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restncs.v2_gpt35_run02_RemainderTest.testInvalidInputsForRemainderEndpoint(v2_gpt35_run02_RemainderTest.java:65)
+

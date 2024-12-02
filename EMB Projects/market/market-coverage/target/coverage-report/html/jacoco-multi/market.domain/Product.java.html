@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>Product.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market.domain</a> &gt; <span class="el_source">Product.java</span></div><h1>Product.java</h1><pre class="source lang-java linenums">package market.domain;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import java.io.Serializable;
+import java.util.Objects;
+
+@Entity
+@Table(name = &quot;product&quot;)
+<span class="nc" id="L22">public class Product implements Serializable {</span>
+	private static final long serialVersionUID = -5637368176838137416L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = &quot;id&quot;, insertable = false, updatable = false, nullable = false)
+	private Long id;
+
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = &quot;distillery_id&quot;, nullable = false)
+	private Distillery distillery;
+
+	@Column(name = &quot;name&quot;, nullable = false)
+	@NotEmpty
+	@Pattern(regexp = &quot;^[^#$%^&amp;*()']*$&quot;)
+	private String name;
+
+	@Column(name = &quot;price&quot;, nullable = false)
+	@NotNull
+	private Double price;
+
+	@Column(name = &quot;description&quot;)
+	private String description;
+
+	@Column(name = &quot;volume&quot;)
+	@NotNull
+	private Integer volume;
+
+	@Column(name = &quot;alcohol&quot;)
+	@NotNull
+	@Min(value = 1)
+	@Max(value = 96)
+	private Float alcohol;
+
+	@Column(name = &quot;age&quot;)
+	@Max(value = 2000)
+	private Integer age;
+
+<span class="nc" id="L60">	@Column(name = &quot;available&quot;, nullable = false)</span>
+	private boolean available = true;
+
+	public Long getId() {
+<span class="nc" id="L64">		return id;</span>
+	}
+
+	public void setId(Long id) {
+<span class="nc" id="L68">		this.id = id;</span>
+<span class="nc" id="L69">	}</span>
+
+	public String getName() {
+<span class="nc" id="L72">		return name;</span>
+	}
+
+	public void setName(String name) {
+<span class="nc" id="L76">		this.name = name;</span>
+<span class="nc" id="L77">	}</span>
+
+	public @NotNull Double getPrice() {
+<span class="nc" id="L80">		return price;</span>
+	}
+
+	public void setPrice(@NotNull Double price) {
+<span class="nc" id="L84">		this.price = price;</span>
+<span class="nc" id="L85">	}</span>
+
+	public String getDescription() {
+<span class="nc" id="L88">		return description;</span>
+	}
+
+	public void setDescription(String description) {
+<span class="nc" id="L92">		this.description = description;</span>
+<span class="nc" id="L93">	}</span>
+
+	public Integer getVolume() {
+<span class="nc" id="L96">		return volume;</span>
+	}
+
+	public void setVolume(Integer volume) {
+<span class="nc" id="L100">		this.volume = volume;</span>
+<span class="nc" id="L101">	}</span>
+
+	public Float getAlcohol() {
+<span class="nc" id="L104">		return alcohol;</span>
+	}
+
+	public void setAlcohol(Float alcohol) {
+<span class="nc" id="L108">		this.alcohol = alcohol;</span>
+<span class="nc" id="L109">	}</span>
+
+	public Integer getAge() {
+<span class="nc" id="L112">		return age;</span>
+	}
+
+	public void setAge(Integer age) {
+<span class="nc" id="L116">		this.age = age;</span>
+<span class="nc" id="L117">	}</span>
+
+	public Distillery getDistillery() {
+<span class="nc" id="L120">		return distillery;</span>
+	}
+
+	public void setDistillery(Distillery distillery) {
+<span class="nc" id="L124">		this.distillery = distillery;</span>
+<span class="nc" id="L125">	}</span>
+
+	public boolean isAvailable() {
+<span class="nc" id="L128">		return available;</span>
+	}
+
+	public void setAvailable(boolean available) {
+<span class="nc" id="L132">		this.available = available;</span>
+<span class="nc" id="L133">	}</span>
+
+	@Override
+	public boolean equals(Object o) {
+<span class="nc bnc" id="L137" title="All 2 branches missed.">		if (this == o) return true;</span>
+<span class="nc bnc" id="L138" title="All 4 branches missed.">		if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="nc" id="L139">		Product product = (Product) o;</span>
+<span class="nc bnc" id="L140" title="All 4 branches missed.">		return id == product.id &amp;&amp;</span>
+			available == product.available &amp;&amp;
+<span class="nc bnc" id="L142" title="All 2 branches missed.">			Objects.equals(distillery, product.distillery) &amp;&amp;</span>
+<span class="nc bnc" id="L143" title="All 2 branches missed.">			Objects.equals(name, product.name) &amp;&amp;</span>
+<span class="nc bnc" id="L144" title="All 2 branches missed.">			Objects.equals(price, product.price) &amp;&amp;</span>
+<span class="nc bnc" id="L145" title="All 2 branches missed.">			Objects.equals(description, product.description) &amp;&amp;</span>
+<span class="nc bnc" id="L146" title="All 2 branches missed.">			Objects.equals(volume, product.volume) &amp;&amp;</span>
+<span class="nc bnc" id="L147" title="All 2 branches missed.">			Objects.equals(alcohol, product.alcohol) &amp;&amp;</span>
+<span class="nc bnc" id="L148" title="All 2 branches missed.">			Objects.equals(age, product.age);</span>
+	}
+
+	@Override
+	public int hashCode() {
+<span class="nc" id="L153">		return Objects.hash(id, distillery, name, price, description, volume, alcohol, age, available);</span>
+	}
+
+	public static class Builder {
+		private Long id;
+		private Distillery distillery;
+		private String name;
+		private Double price;
+		private String description;
+		private Integer volume;
+		private Float alcohol;
+		private Integer age;
+<span class="nc" id="L165">		private boolean available = true;</span>
+
+<span class="nc" id="L167">		public Builder() {</span>
+<span class="nc" id="L168">		}</span>
+
+<span class="nc" id="L170">		public Builder(Product product) {</span>
+<span class="nc" id="L171">			id = product.id;</span>
+<span class="nc" id="L172">			distillery = product.distillery;</span>
+<span class="nc" id="L173">			name = product.name;</span>
+<span class="nc" id="L174">			price = product.price;</span>
+<span class="nc" id="L175">			description = product.description;</span>
+<span class="nc" id="L176">			volume = product.volume;</span>
+<span class="nc" id="L177">			alcohol = product.alcohol;</span>
+<span class="nc" id="L178">			age = product.age;</span>
+<span class="nc" id="L179">			available = product.available;</span>
+<span class="nc" id="L180">		}</span>
+
+		public Product build() {
+<span class="nc" id="L183">			Product product = new Product();</span>
+<span class="nc" id="L184">			product.id = id;</span>
+<span class="nc" id="L185">			product.distillery = distillery;</span>
+<span class="nc" id="L186">			product.name = name;</span>
+<span class="nc" id="L187">			product.price = price;</span>
+<span class="nc" id="L188">			product.description = description;</span>
+<span class="nc" id="L189">			product.volume = volume;</span>
+<span class="nc" id="L190">			product.alcohol = alcohol;</span>
+<span class="nc" id="L191">			product.age = age;</span>
+<span class="nc" id="L192">			product.available = available;</span>
+<span class="nc" id="L193">			return product;</span>
+		}
+
+		public Builder setId(Long id) {
+<span class="nc" id="L197">			this.id = id;</span>
+<span class="nc" id="L198">			return this;</span>
+		}
+
+		public Builder setDistillery(Distillery distillery) {
+<span class="nc" id="L202">			this.distillery = distillery;</span>
+<span class="nc" id="L203">			return this;</span>
+		}
+
+		public Builder setName(String name) {
+<span class="nc" id="L207">			this.name = name;</span>
+<span class="nc" id="L208">			return this;</span>
+		}
+
+		public Builder setPrice(@NotNull Double price) {
+<span class="nc" id="L212">			this.price = price;</span>
+<span class="nc" id="L213">			return this;</span>
+		}
+
+		public Builder setDescription(String description) {
+<span class="nc" id="L217">			this.description = description;</span>
+<span class="nc" id="L218">			return this;</span>
+		}
+
+		public Builder setVolume(Integer volume) {
+<span class="nc" id="L222">			this.volume = volume;</span>
+<span class="nc" id="L223">			return this;</span>
+		}
+
+		public Builder setAlcohol(Float alcohol) {
+<span class="nc" id="L227">			this.alcohol = alcohol;</span>
+<span class="nc" id="L228">			return this;</span>
+		}
+
+		public Builder setAge(Integer age) {
+<span class="nc" id="L232">			this.age = age;</span>
+<span class="nc" id="L233">			return this;</span>
+		}
+
+		public Builder setAvailable(boolean available) {
+<span class="nc" id="L237">			this.available = available;</span>
+<span class="nc" id="L238">			return this;</span>
+		}
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

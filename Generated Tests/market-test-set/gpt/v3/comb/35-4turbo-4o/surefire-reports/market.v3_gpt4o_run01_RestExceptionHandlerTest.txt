@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt4o_run01_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 2.484 s <<< FAILURE! - in market.v3_gpt4o_run01_RestExceptionHandlerTest
+testGetCustomer_NotFound  Time elapsed: 0.286 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.v3_gpt4o_run01_RestExceptionHandlerTest.testGetCustomer_NotFound(v3_gpt4o_run01_RestExceptionHandlerTest.java:70)
+
+testAddItemToCart_InvalidProduct  Time elapsed: 0.058 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.v3_gpt4o_run01_RestExceptionHandlerTest.testAddItemToCart_InvalidProduct(v3_gpt4o_run01_RestExceptionHandlerTest.java:94)
+
+testCreateCustomer_Duplicate  Time elapsed: 0.049 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v3_gpt4o_run01_RestExceptionHandlerTest.testCreateCustomer_Duplicate(v3_gpt4o_run01_RestExceptionHandlerTest.java:148)
+
+testGetProduct_Unauthorized  Time elapsed: 0.047 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <200>.
+
+	at market.v3_gpt4o_run01_RestExceptionHandlerTest.testGetProduct_Unauthorized(v3_gpt4o_run01_RestExceptionHandlerTest.java:189)
+

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>BillDTO.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market.dto</a> &gt; <span class="el_source">BillDTO.java</span></div><h1>BillDTO.java</h1><pre class="source lang-java linenums">package market.dto;
+
+import org.springframework.hateoas.RepresentationModel;
+
+import java.util.Objects;
+
+<span class="nc" id="L7">public class BillDTO extends RepresentationModel&lt;BillDTO&gt; {</span>
+	private Long id;
+	private int number;
+	private double totalCost;
+	private boolean payed;
+	private String ccNumber;
+	private String dateCreated;
+
+	public Long getId() {
+<span class="nc" id="L16">		return id;</span>
+	}
+
+	public void setId(Long id) {
+<span class="nc" id="L20">		this.id = id;</span>
+<span class="nc" id="L21">	}</span>
+
+	public int getNumber() {
+<span class="nc" id="L24">		return number;</span>
+	}
+
+	public void setNumber(int number) {
+<span class="nc" id="L28">		this.number = number;</span>
+<span class="nc" id="L29">	}</span>
+
+	public double getTotalCost() {
+<span class="nc" id="L32">		return totalCost;</span>
+	}
+
+	public void setTotalCost(double totalCost) {
+<span class="nc" id="L36">		this.totalCost = totalCost;</span>
+<span class="nc" id="L37">	}</span>
+
+	public boolean isPayed() {
+<span class="nc" id="L40">		return payed;</span>
+	}
+
+	public void setPayed(boolean payed) {
+<span class="nc" id="L44">		this.payed = payed;</span>
+<span class="nc" id="L45">	}</span>
+
+	public String getCcNumber() {
+<span class="nc" id="L48">		return ccNumber;</span>
+	}
+
+	public void setCcNumber(String ccNumber) {
+<span class="nc" id="L52">		this.ccNumber = ccNumber;</span>
+<span class="nc" id="L53">	}</span>
+
+	public String getDateCreated() {
+<span class="nc" id="L56">		return dateCreated;</span>
+	}
+
+	public void setDateCreated(String dateCreated) {
+<span class="nc" id="L60">		this.dateCreated = dateCreated;</span>
+<span class="nc" id="L61">	}</span>
+
+	@Override
+	public boolean equals(Object o) {
+<span class="nc bnc" id="L65" title="All 2 branches missed.">		if (this == o) return true;</span>
+<span class="nc bnc" id="L66" title="All 4 branches missed.">		if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="nc" id="L67">		BillDTO billDTO = (BillDTO) o;</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">		return number == billDTO.number &amp;&amp;</span>
+<span class="nc bnc" id="L69" title="All 4 branches missed.">			Double.compare(billDTO.totalCost, totalCost) == 0 &amp;&amp;</span>
+			payed == billDTO.payed &amp;&amp;
+<span class="nc bnc" id="L71" title="All 2 branches missed.">			Objects.equals(id, billDTO.id) &amp;&amp;</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">			Objects.equals(ccNumber, billDTO.ccNumber) &amp;&amp;</span>
+<span class="nc bnc" id="L73" title="All 2 branches missed.">			Objects.equals(dateCreated, billDTO.dateCreated);</span>
+	}
+
+	@Override
+	public int hashCode() {
+<span class="nc" id="L78">		return Objects.hash(id, number, totalCost, payed, ccNumber, dateCreated);</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

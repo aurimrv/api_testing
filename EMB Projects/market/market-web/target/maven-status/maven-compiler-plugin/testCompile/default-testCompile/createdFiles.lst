@@ -1,0 +1,12 @@
+market/controller/backend/RegionControllerTest.class
+market/controller/frontend/ShowcaseControllerTest.class
+market/controller/Application.class
+market/controller/backend/ProductControllerTest.class
+market/controller/backend/DistilleryControllerTest.class
+market/controller/backend/BackendControllerTest.class
+market/controller/backend/OrdersControllerTest.class
+market/controller/frontend/CartControllerTest.class
+market/controller/frontend/CustomerControllerTest.class
+market/controller/backend/StorageControllerTest.class
+market/controller/frontend/FrontendControllerTest.class
+market/controller/frontend/CheckoutControllerTest.class

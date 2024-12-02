@@ -1,0 +1,488 @@
+Correct the test code delimited by ***** according to the error messages delimited by ##### and generate another complete code in JUnit 4 format. The response must contain only Java code in JUnit 4 format.
+
+Keep these five instructions for this generated test code:
+
+Instruction 1: Keet this package line to generated test code file:
+package org.restscs;
+
+Instruction 2: Keep the following Java imports to generated test code file:
+import  org.junit.AfterClass;
+import  org.junit.BeforeClass;
+import  org.junit.Before;
+import  org.junit.Test;
+import static org.junit.Assert.*;
+import  java.util.Map;
+import  java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import  org.evomaster.client.java.controller.SutHandler;
+import  io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import  io.restassured.response.ValidatableResponse;
+import static org.hamcrest.Matchers.*;
+import  io.restassured.config.JsonConfig;
+import  io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import  org.evomaster.client.java.controller.expect.ExpectationHandler;
+import  io.restassured.path.json.JsonPath;
+import  java.util.Arrays;
+
+Instruction 3: Keep the same class name in this point (between the imports at instruction 2 and instruction 4)
+
+Instruction 4: Keep these variables in the generated test code:
+private static final SutHandler controller = new em.embedded.org.restscs.EmbeddedEvoMasterController();
+private static String baseUrlOfSut;
+
+Instruction 5: Keep the following setup and teardown methods in generated test code file:
+@BeforeClass
+public static void initClass() {
+    controller.setupForGeneratedTest();
+    baseUrlOfSut = controller.startSut();
+    controller.registerOrExecuteInitSqlCommandsIfNeeded();
+    assertNotNull(baseUrlOfSut);
+    RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+    RestAssured.useRelaxedHTTPSValidation();
+    RestAssured.urlEncodingEnabled = false;
+    RestAssured.config = RestAssured.config()
+        .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+        .redirect(redirectConfig().followRedirects(false));
+}
+
+
+@AfterClass
+public static void tearDown() {
+    controller.stopSut();
+}
+
+
+@Before
+public void initTest() {
+    controller.resetStateOfSUT();
+}
+
+
+*****
+
+package org.restscs;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.Map;
+import java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import org.evomaster.client.java.controller.SutHandler;
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import io.restassured.response.ValidatableResponse;
+import static org.hamcrest.Matchers.*;
+import io.restassured.config.JsonConfig;
+import io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import org.evomaster.client.java.controller.expect.ExpectationHandler;
+import io.restassured.path.json.JsonPath;
+import java.util.Arrays;
+
+public class v0_gpt4o_run02_RegexTest {
+
+    private static final SutHandler controller = new em.embedded.org.restscs.EmbeddedEvoMasterController();
+    private static String baseUrlOfSut;
+
+    @BeforeClass
+    public static void initClass() {
+        controller.setupForGeneratedTest();
+        baseUrlOfSut = controller.startSut();
+        controller.registerOrExecuteInitSqlCommandsIfNeeded();
+        assertNotNull(baseUrlOfSut);
+        RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+        RestAssured.useRelaxedHTTPSValidation();
+        RestAssured.urlEncodingEnabled = false;
+        RestAssured.config = RestAssured.config()
+            .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+            .redirect(redirectConfig().followRedirects(false));
+    }
+
+    @AfterClass
+    public static void tearDown() {
+        controller.stopSut();
+    }
+
+    @Before
+    public void initTest() {
+        controller.resetStateOfSUT();
+    }
+
+    @Test
+    public void testRegexUrl() {
+        ValidatableResponse response = given().get(baseUrlOfSut + "/api/pat/http://example.com");
+        response.then().statusCode(200).body(equalTo("url"));
+    }
+
+    @Test
+    public void testRegexDate() {
+        ValidatableResponse response = given().get(baseUrlOfSut + "/api/pat/mon01jan");
+        response.then().statusCode(200).body(equalTo("date"));
+    }
+
+    @Test
+    public void testRegexFpe() {
+        ValidatableResponse response = given().get(baseUrlOfSut + "/api/pat/12.34e+56");
+        response.then().statusCode(200).body(equalTo("fpe"));
+    }
+
+    @Test
+    public void testRegexNone() {
+        ValidatableResponse response = given().get(baseUrlOfSut + "/api/pat/randomtext");
+        response.then().statusCode(200).body(equalTo("none"));
+    }
+
+    @Test
+    public void testCalc() {
+        ValidatableResponse response = given().get(baseUrlOfSut + "/api/calc/add/1.0/2.0");
+        response.then().statusCode(200).body(equalTo("3.0"));
+
+        response = given().get(baseUrlOfSut + "/api/calc/subtract/5.0/3.0");
+        response.then().statusCode(200).body(equalTo("2.0"));
+
+        response = given().get(baseUrlOfSut + "/api/calc/multiply/3.0/4.0");
+        response.then().statusCode(200).body(equalTo("12.0"));
+
+        response = given().get(baseUrlOfSut + "/api/calc/divide/10.0/2.0");
+        response.then().statusCode(200).body(equalTo("5.0"));
+    }
+
+    @Test
+    public void testCookie() {
+        ValidatableResponse response = given().get(baseUrlOfSut + "/api/cookie/session/1234/www.example.com");
+        response.then().statusCode(200).body(equalTo("Cookie set"));
+
+        response = given().get(baseUrlOfSut + "/api/cookie/session/1234/www.unauthorized.com");
+        response.then().statusCode(401);
+    }
+
+    @Test
+    public void testCostfuns() {
+        ValidatableResponse response = given().get(baseUrlOfSut + "/api/costfuns/1/s");
+        response.then().statusCode(200).body(equalTo("Cost function 1"));
+
+        response = given().get(baseUrlOfSut + "/api/costfuns/99/s");
+        response.then().statusCode(404);
+    }
+
+    @Test
+    public void testDateParse() {
+        ValidatableResponse response = given().get(baseUrlOfSut + "/api/dateparse/mon/jan");
+        response.then().statusCode(200).body(equalTo("Parsed date"));
+
+        response = given().get(baseUrlOfSut + "/api/dateparse/invalid/mon");
+        response.then().statusCode(404);
+    }
+
+    @Test
+    public void testFileSuffix() {
+        ValidatableResponse response = given().get(baseUrlOfSut + "/api/filesuffix/home/user/file.txt");
+        response.then().statusCode(200).body(equalTo("txt"));
+
+        response = given().get(baseUrlOfSut + "/api/filesuffix/home/user/file");
+        response.then().statusCode(404);
+    }
+
+    @Test
+    public void testNotyPevar() {
+        ValidatableResponse response = given().get(baseUrlOfSut + "/api/notypevar/1/abc");
+        response.then().statusCode(200).body(equalTo("Variable notyPevar processed"));
+
+        response = given().get(baseUrlOfSut + "/api/notypevar/999/abc");
+        response.then().statusCode(404);
+    }
+
+    @Test
+    public void testOrdered4() {
+        ValidatableResponse response = given().get(baseUrlOfSut + "/api/ordered4/a/b/c/d");
+        response.then().statusCode(200).body(equalTo("Ordered 4 processed"));
+
+        response = given().get(baseUrlOfSut + "/api/ordered4/a/b/c");
+        response.then().statusCode(404);
+    }
+
+    @Test
+    public void testText2txt() {
+        ValidatableResponse response = given().get(baseUrlOfSut + "/api/text2txt/word1/word2/word3");
+        response.then().statusCode(200).body(equalTo("Text to text processed"));
+
+        response = given().get(baseUrlOfSut + "/api/text2txt/word1/word2");
+        response.then().statusCode(404);
+    }
+
+    @Test
+    public void testTitle() {
+        ValidatableResponse response = given().get(baseUrlOfSut + "/api/title/mr/john");
+        response.then().statusCode(200).body(equalTo("Title processed"));
+
+        response = given().get(baseUrlOfSut + "/api/title/mr");
+        response.then().statusCode(404);
+    }
+}
+
+*****
+#####
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------< [0;36morg.evomaster:evomaster-benchmark-cs-rest-artificial-scs[0;1m >------[m
+[[1;34mINFO[m] [1mBuilding evomaster-benchmark-cs-rest-artificial-scs 3.0.0[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Deleting /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 14 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 14 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/test-classes
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[59,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[60,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[65,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[66,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[71,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[72,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[77,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[78,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[83,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[84,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[86,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[87,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[89,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[90,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[92,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[93,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[98,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[99,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[101,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[102,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[107,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[108,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[110,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[111,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[116,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[117,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[119,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[120,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[125,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[126,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[128,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[129,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[134,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[135,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[137,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[138,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[143,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[144,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[146,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[147,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[152,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[153,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[155,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[156,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[161,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[162,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[164,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[165,17] cannot find symbol
+  symbol:   method then()
+  location: variable response of type io.restassured.response.ValidatableResponse
+[[1;34mINFO[m] 48 errors 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  2.111 s
+[[1;34mINFO[m] Finished at: 2024-09-04T21:35:59-03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m on project [36mevomaster-benchmark-cs-rest-artificial-scs[m: [1;31mCompilation failure[m: Compilation failure: 
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[59,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[60,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[65,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[66,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[71,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[72,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[77,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[78,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[83,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[84,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[86,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[87,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[89,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[90,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[92,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[93,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[98,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[99,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[101,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[102,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[107,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[108,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[110,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[111,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[116,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[117,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[119,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[120,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[125,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[126,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[128,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[129,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[134,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[135,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[137,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[138,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[143,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[144,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[146,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[147,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[152,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[153,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[155,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[156,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[161,51] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[162,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[164,31] incompatible types: io.restassured.response.Response cannot be converted to io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v0_gpt4o_run02_RegexTest.java:[165,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   method then()
+[[1;31mERROR[m]   location: variable response of type io.restassured.response.ValidatableResponse
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+#####

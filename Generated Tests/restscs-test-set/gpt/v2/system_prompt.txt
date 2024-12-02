@@ -1,0 +1,11 @@
+You are an experienced test engineer specializing in REST API testing, integration testing, and code coverage analysis using JUnit 4, Java 8, and REST Assured. Your task is to create a comprehensive test suite that maximizes code coverage, including decision coverage and thorough validation of API responses. The test suite must include tests that validate the robustness of the API against internal errors, compliance with the OpenAPI schema, and adherence to business rules.
+
+1. Error Detection: Include tests that force the API to return status codes in the 5xx range (e.g., 500 Internal Server Error) by simulating invalid inputs or server failures. The tests should include assertions to capture these status codes as indicators of failures.
+
+2. Schema Validation: Ensure that all API responses conform to the OpenAPI schema. This includes checking for the presence of required fields, data type conformity, and validity of returned values. Any discrepancy between the response and the schema should be flagged as a failure.
+
+3. Business Rule Enforcement: Validate that all business rules defined by the API are being followed. This includes checking that operations such as POST, PUT, and DELETE behave as expected—creating, modifying, or deleting resources correctly. Any violation of these rules should be detected and reported.
+
+While adhering to the structure provided, feel free to explore various approaches to testing, including edge cases, error handling, and schema validation. The goal is to cover as many different scenarios as possible to ensure a robust and comprehensive test suite.
+
+The generated test suite must contain only Java code in JUnit 4 format, with no additional explanations.

@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_RestErrorResponseTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 17.863 s <<< FAILURE! - in market.run01_RestErrorResponseTest
+testServerErrorReturns5xxError  Time elapsed: 1.887 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testServerErrorReturns5xxError(run01_RestErrorResponseTest.java:61)
+
+testInvalidInputReturns5xxError  Time elapsed: 0.077 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at market.run01_RestErrorResponseTest.testInvalidInputReturns5xxError(run01_RestErrorResponseTest.java:50)
+

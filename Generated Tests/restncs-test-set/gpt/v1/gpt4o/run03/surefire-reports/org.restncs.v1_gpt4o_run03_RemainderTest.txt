@@ -1,0 +1,56 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v1_gpt4o_run03_RemainderTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 1.172 s <<< FAILURE! - in org.restncs.v1_gpt4o_run03_RemainderTest
+testBessjEndpoint(org.restncs.v1_gpt4o_run03_RemainderTest)  Time elapsed: 0.044 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v1_gpt4o_run03_RemainderTest.testBessjEndpoint(v1_gpt4o_run03_RemainderTest.java:61)
+
+testExpintEndpoint(org.restncs.v1_gpt4o_run03_RemainderTest)  Time elapsed: 0.039 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path result doesn't match.
+Expected: is not null
+  Actual: null
+
+	at org.restncs.v1_gpt4o_run03_RemainderTest.testExpintEndpoint(v1_gpt4o_run03_RemainderTest.java:72)
+
+testFisherEndpoint(org.restncs.v1_gpt4o_run03_RemainderTest)  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path result doesn't match.
+Expected: is not null
+  Actual: null
+
+	at org.restncs.v1_gpt4o_run03_RemainderTest.testFisherEndpoint(v1_gpt4o_run03_RemainderTest.java:81)
+
+testGammqEndpoint(org.restncs.v1_gpt4o_run03_RemainderTest)  Time elapsed: 0.039 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path result doesn't match.
+Expected: is not null
+  Actual: null
+
+	at org.restncs.v1_gpt4o_run03_RemainderTest.testGammqEndpoint(v1_gpt4o_run03_RemainderTest.java:90)
+
+testRemainderEndpoint(org.restncs.v1_gpt4o_run03_RemainderTest)  Time elapsed: 0.037 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path result doesn't match.
+Expected: is <1>
+  Actual: null
+
+	at org.restncs.v1_gpt4o_run03_RemainderTest.testRemainderEndpoint(v1_gpt4o_run03_RemainderTest.java:99)
+
+testTriangleEndpoint(org.restncs.v1_gpt4o_run03_RemainderTest)  Time elapsed: 0.031 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path result doesn't match.
+Expected: is not null
+  Actual: null
+
+	at org.restncs.v1_gpt4o_run03_RemainderTest.testTriangleEndpoint(v1_gpt4o_run03_RemainderTest.java:108)
+

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: market.v1_gpt35_run03_ContactsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.421 s - in market.v1_gpt35_run03_ContactsRestControllerTest

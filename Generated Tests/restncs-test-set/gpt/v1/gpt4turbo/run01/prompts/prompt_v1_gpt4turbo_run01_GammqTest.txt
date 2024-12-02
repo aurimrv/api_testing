@@ -1,0 +1,509 @@
+Create a white box test suite in JUnit 4 and Java 8 using REST Assured for the Java code delimited by *****. Use the swagger documentation delimited by ##### to provide complementary information about the application.
+
+Follow these five instructions for this generated test code:
+
+Instruction 1: Add this package line to generated test code file:
+package org.restncs;
+
+Instruction 2: Add the following Java imports to generated test code file:
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.Map;
+import java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import org.evomaster.client.java.controller.SutHandler;
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import io.restassured.response.ValidatableResponse;
+import static org.hamcrest.Matchers.*;
+import io.restassured.config.JsonConfig;
+import io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import org.evomaster.client.java.controller.expect.ExpectationHandler;
+import io.restassured.path.json.JsonPath;
+import java.util.Arrays;
+
+Instruction 3. Class Declaration: Create the class with the following declaration: 
+public class v1_gpt4turbo_run01_GammqTest
+
+Instruction 4: Create these variables in the generated test code:
+private static final SutHandler controller = new em.embedded.org.restncs.EmbeddedEvoMasterController();
+private static String baseUrlOfSut;
+
+Instruction 5: Include the following setup and teardown methods in generated test code file:
+@BeforeClass
+public static void initClass() {
+    controller.setupForGeneratedTest();
+    baseUrlOfSut = controller.startSut();
+    controller.registerOrExecuteInitSqlCommandsIfNeeded();
+    assertNotNull(baseUrlOfSut);
+    RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+    RestAssured.useRelaxedHTTPSValidation();
+    RestAssured.urlEncodingEnabled = false;
+    RestAssured.config = RestAssured.config()
+        .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+        .redirect(redirectConfig().followRedirects(false));
+}
+
+@AfterClass
+public static void tearDown() {
+    controller.stopSut();
+}
+
+@Before
+public void initTest() {
+    controller.resetStateOfSUT();
+}
+
+
+*****
+package org.restncs.imp;
+public class Gammq {
+	private static final int ITMAX = 100;
+	private static final double EPS = 3.0e-7;
+	private static final double FPMIN = 1.0e-30;
+
+	private double gamser, gammcf, gln;
+
+	private double gammln(double xx) {
+
+		double x,y,tmp,ser;
+
+		double cof[]  = {76.18009172947146,-86.50532032941677,24.01409824083091,-1.231739572450155,0.1208650973866179e-2,-0.5395239384953e-5};
+
+		int j;
+
+		y=x=xx;
+		tmp=x+5.5;
+		tmp -= (x+0.5)*Math.log(tmp);
+		ser=1.000000000190015;
+		for (j=0;j<=5;j++) ser += cof[j]/++y;
+		return -tmp+Math.log(2.5066282746310005*ser/x);
+	}
+
+	private void gcf(double a, double x)
+	{
+		int i;
+		double an,b,c,d,del,h;
+
+		gln=gammln(a);
+		b=x+1.0-a;
+		c=1.0/FPMIN;
+		d=1.0/b;
+		h=d;
+		for (i=1;i<=ITMAX;i++) {
+			an = -i*(i-a);
+			b += 2.0;
+			d=an*d+b;
+			if (Math.abs(d) < FPMIN) d=FPMIN;
+			c=b+an/c;
+			if (Math.abs(c) < FPMIN) c=FPMIN;
+			d=1.0/d;
+			del=d*c;
+			h *= del;
+			if (Math.abs(del-1.0) < EPS) break;
+		}
+		if (i > ITMAX) throw new RuntimeException ("a too large, ITMAX too small in gcf");
+		gammcf=Math.exp(-x+a*Math.log(x)-gln)*h;
+	}
+
+	private void gser(double a, double x) {
+
+		int n;
+		double sum,del,ap;
+
+		gln=gammln(a);
+
+		if (x <= 0.0) {
+			if (x < 0.0) throw new RuntimeException ("x less than 0 in routine gser");
+			gamser=0.0;
+			return;
+		}
+		else {
+			ap=a;
+			del=sum=1.0/a;
+			for (n=1;n<=ITMAX;n++) {
+				++ap;
+				del *= x/ap;
+				sum += del;
+				if (Math.abs(del) < Math.abs(sum)*EPS) {
+					gamser=sum*Math.exp(-x+a*Math.log(x)-gln);
+					return;
+				}
+			}
+			throw new RuntimeException ("a too large, ITMAX too small in routine gser");
+		}
+	}
+
+	public double exe(double a, double x) {
+		if (x < 0.0 || a <= 0.0) throw new RuntimeException("Invalid arguments in routine gammq");
+		if (x < (a+1.0)) {
+			gser(a,x);
+			return 1-gamser;
+		}
+		else {
+			gcf(a,x);
+			return gammcf;
+		}
+	}
+
+}
+
+
+*****
+#####
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Examples of different numerical algorithms accessible via REST",
+    "version": "1.0",
+    "title": "API for Numerical Case Study (NCS)"
+  },
+  "schemes": [
+    "http"
+  ],
+  "host": "localhost:8080",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "ncs-rest",
+      "description": "Ncs Rest"
+    }
+  ],
+  "paths": {
+    "/api/bessj/{n}/{x}": {
+      "get": {
+        "tags": [
+          "ncs-rest"
+        ],
+        "summary": "bessj",
+        "operationId": "bessjUsingGET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "n",
+            "in": "path",
+            "description": "n",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "x",
+            "in": "path",
+            "description": "x",
+            "required": true,
+            "type": "number",
+            "format": "double"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Dto",
+              "originalRef": "Dto"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/expint/{n}/{x}": {
+      "get": {
+        "tags": [
+          "ncs-rest"
+        ],
+        "summary": "expint",
+        "operationId": "expintUsingGET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "n",
+            "in": "path",
+            "description": "n",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "x",
+            "in": "path",
+            "description": "x",
+            "required": true,
+            "type": "number",
+            "format": "double"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Dto",
+              "originalRef": "Dto"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/fisher/{m}/{n}/{x}": {
+      "get": {
+        "tags": [
+          "ncs-rest"
+        ],
+        "summary": "fisher",
+        "operationId": "fisherUsingGET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "m",
+            "in": "path",
+            "description": "m",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "n",
+            "in": "path",
+            "description": "n",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "x",
+            "in": "path",
+            "description": "x",
+            "required": true,
+            "type": "number",
+            "format": "double"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Dto",
+              "originalRef": "Dto"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/gammq/{a}/{x}": {
+      "get": {
+        "tags": [
+          "ncs-rest"
+        ],
+        "summary": "gammq",
+        "operationId": "gammqUsingGET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "in": "path",
+            "description": "a",
+            "required": true,
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "name": "x",
+            "in": "path",
+            "description": "x",
+            "required": true,
+            "type": "number",
+            "format": "double"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Dto",
+              "originalRef": "Dto"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/remainder/{a}/{b}": {
+      "get": {
+        "tags": [
+          "ncs-rest"
+        ],
+        "summary": "remainder",
+        "operationId": "remainderUsingGET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "in": "path",
+            "description": "a",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "b",
+            "in": "path",
+            "description": "b",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Dto",
+              "originalRef": "Dto"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/triangle/{a}/{b}/{c}": {
+      "get": {
+        "tags": [
+          "ncs-rest"
+        ],
+        "summary": "Check the triangle type of the given three edges",
+        "operationId": "checkTriangleUsingGET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "in": "path",
+            "description": "First edge",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "b",
+            "in": "path",
+            "description": "Second edge",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "c",
+            "in": "path",
+            "description": "Third edge",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Dto",
+              "originalRef": "Dto"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "definitions": {
+    "Dto": {
+      "type": "object",
+      "properties": {
+        "resultAsDouble": {
+          "type": "number",
+          "format": "double"
+        },
+        "resultAsInt": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "Dto"
+    }
+  }
+}
+#####

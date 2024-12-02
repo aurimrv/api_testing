@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run03_CalcTest
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.747 s <<< FAILURE! - in org.restscs.v3_gpt4o_run03_CalcTest
+testInternalServerError(org.restscs.v3_gpt4o_run03_CalcTest)  Time elapsed: 0.028 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at org.restscs.v3_gpt4o_run03_CalcTest.testInternalServerError(v3_gpt4o_run03_CalcTest.java:141)
+
+testInvalidOperation(org.restscs.v3_gpt4o_run03_CalcTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_CalcTest.testInvalidOperation(v3_gpt4o_run03_CalcTest.java:135)
+
+testNotFound(org.restscs.v3_gpt4o_run03_CalcTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_CalcTest.testNotFound(v3_gpt4o_run03_CalcTest.java:159)
+

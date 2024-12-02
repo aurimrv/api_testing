@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_ContactsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.198 s <<< FAILURE! - in market.run01_ContactsRestControllerTest
+testUpdateContacts  Time elapsed: 0.313 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.run01_ContactsRestControllerTest.testUpdateContacts(run01_ContactsRestControllerTest.java:94)
+
+testGetContacts  Time elapsed: 0.187 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.run01_ContactsRestControllerTest.testGetContacts(run01_ContactsRestControllerTest.java:68)
+

@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_RestErrorResponseTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 17.087 s <<< FAILURE! - in market.run01_RestErrorResponseTest
+testUpdateContacts  Time elapsed: 0.277 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testUpdateContacts(run01_RestErrorResponseTest.java:137)
+
+testPayByCard  Time elapsed: 0.196 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <406>.
+
+	at market.run01_RestErrorResponseTest.testPayByCard(run01_RestErrorResponseTest.java:116)
+
+testAddItemToCart  Time elapsed: 0.085 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testAddItemToCart(run01_RestErrorResponseTest.java:85)
+
+testCreateCustomer  Time elapsed: 0.182 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <406>.
+
+	at market.run01_RestErrorResponseTest.testCreateCustomer(run01_RestErrorResponseTest.java:186)
+

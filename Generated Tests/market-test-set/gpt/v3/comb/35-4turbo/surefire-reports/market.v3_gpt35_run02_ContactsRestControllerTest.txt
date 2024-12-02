@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt35_run02_ContactsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.509 s <<< FAILURE! - in market.v3_gpt35_run02_ContactsRestControllerTest
+testUpdateContactsEndpoint  Time elapsed: 0.046 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v3_gpt35_run02_ContactsRestControllerTest.testUpdateContactsEndpoint(v3_gpt35_run02_ContactsRestControllerTest.java:81)
+
+testGetContactsEndpoint  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v3_gpt35_run02_ContactsRestControllerTest.testGetContactsEndpoint(v3_gpt35_run02_ContactsRestControllerTest.java:69)
+

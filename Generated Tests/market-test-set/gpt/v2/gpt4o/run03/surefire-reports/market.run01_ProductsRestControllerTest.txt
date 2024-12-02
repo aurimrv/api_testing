@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_ProductsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.03 s <<< FAILURE! - in market.run01_ProductsRestControllerTest
+testBusinessRuleEnforcement  Time elapsed: 0.098 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <405>.
+
+	at market.run01_ProductsRestControllerTest.testBusinessRuleEnforcement(run01_ProductsRestControllerTest.java:111)
+

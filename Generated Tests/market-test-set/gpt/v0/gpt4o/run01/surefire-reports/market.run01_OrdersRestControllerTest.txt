@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_OrdersRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 2.132 s <<< FAILURE! - in market.run01_OrdersRestControllerTest
+testGetOrder  Time elapsed: 0.242 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.run01_OrdersRestControllerTest.testGetOrder(run01_OrdersRestControllerTest.java:101)
+
+testGetOrderNotFound  Time elapsed: 0.161 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.run01_OrdersRestControllerTest.testGetOrderNotFound(run01_OrdersRestControllerTest.java:143)
+
+testGetOrders  Time elapsed: 0.148 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.run01_OrdersRestControllerTest.testGetOrders(run01_OrdersRestControllerTest.java:72)
+

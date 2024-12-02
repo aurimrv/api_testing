@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4turbo_run02_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 1.683 s <<< FAILURE! - in market.v2_gpt4turbo_run02_RestExceptionHandlerTest
+testMethodArgumentNotValidExceptionOnPost  Time elapsed: 0.083 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: a string containing "Account with this email already exists"
+  Actual: Argument validation error
+
+	at market.v2_gpt4turbo_run02_RestExceptionHandlerTest.testMethodArgumentNotValidExceptionOnPost(v2_gpt4turbo_run02_RestExceptionHandlerTest.java:97)
+
+testValidResponseAgainstSchema  Time elapsed: 0.045 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.v2_gpt4turbo_run02_RestExceptionHandlerTest.testValidResponseAgainstSchema(v2_gpt4turbo_run02_RestExceptionHandlerTest.java:115)
+

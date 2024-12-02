@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_RestErrorResponseTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 18.489 s <<< FAILURE! - in market.run01_RestErrorResponseTest
+testInvalidInput_Returns5xxStatusCode  Time elapsed: 1.954 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code a value equal to or greater than <500> but <406> was less than <500>.
+
+	at market.run01_RestErrorResponseTest.testInvalidInput_Returns5xxStatusCode(run01_RestErrorResponseTest.java:70)
+
+testSchemaValidation_CustomerRegistration  Time elapsed: 0.246 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run01_RestErrorResponseTest.testSchemaValidation_CustomerRegistration(run01_RestErrorResponseTest.java:92)
+
+testServerError_Returns5xxStatusCode  Time elapsed: 0.074 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code a value equal to or greater than <500> but <406> was less than <500>.
+
+	at market.run01_RestErrorResponseTest.testServerError_Returns5xxStatusCode(run01_RestErrorResponseTest.java:81)
+

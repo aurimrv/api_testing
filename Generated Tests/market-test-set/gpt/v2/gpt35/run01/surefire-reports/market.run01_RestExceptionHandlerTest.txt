@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 2.119 s <<< FAILURE! - in market.run01_RestExceptionHandlerTest
+testUpdateContactsBusinessRuleEnforcement  Time elapsed: 0.072 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_RestExceptionHandlerTest.testUpdateContactsBusinessRuleEnforcement(run01_RestExceptionHandlerTest.java:98)
+
+testInvalidInputReturns500  Time elapsed: 0.073 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <406>.
+
+	at market.run01_RestExceptionHandlerTest.testInvalidInputReturns500(run01_RestExceptionHandlerTest.java:71)
+
+testGetCustomerSchemaValidation  Time elapsed: 0.046 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_RestExceptionHandlerTest.testGetCustomerSchemaValidation(run01_RestExceptionHandlerTest.java:81)
+

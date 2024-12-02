@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v0_gpt4o_run01_RemainderTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 2.772 s <<< FAILURE! - in org.restncs.v0_gpt4o_run01_RemainderTest
+testTriangleApi(org.restncs.v0_gpt4o_run01_RemainderTest)  Time elapsed: 0.078 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsString doesn't match.
+Expected: Right
+  Actual: null
+
+	at org.restncs.v0_gpt4o_run01_RemainderTest.testTriangle(v0_gpt4o_run01_RemainderTest.java:181)
+	at org.restncs.v0_gpt4o_run01_RemainderTest.testTriangleApi(v0_gpt4o_run01_RemainderTest.java:166)
+
+testRemainderApi(org.restncs.v0_gpt4o_run01_RemainderTest)  Time elapsed: 0.198 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsInt doesn't match.
+Expected: <-1>
+  Actual: 1
+
+	at org.restncs.v0_gpt4o_run01_RemainderTest.testRemainder(v0_gpt4o_run01_RemainderTest.java:79)
+	at org.restncs.v0_gpt4o_run01_RemainderTest.testRemainderApi(v0_gpt4o_run01_RemainderTest.java:63)
+
+testBessjApi(org.restncs.v0_gpt4o_run01_RemainderTest)  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code (is <200> or is <401> or is <403> or is <404>) but was <400>.
+
+	at org.restncs.v0_gpt4o_run01_RemainderTest.testBessj(v0_gpt4o_run01_RemainderTest.java:96)
+	at org.restncs.v0_gpt4o_run01_RemainderTest.testBessjApi(v0_gpt4o_run01_RemainderTest.java:85)
+

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ScsRest.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">evomaster-benchmark-cs-rest-artificial-scs</a> &gt; <a href="index.source.html" class="el_package">org.restscs</a> &gt; <span class="el_source">ScsRest.java</span></div><h1>ScsRest.java</h1><pre class="source lang-java linenums">package org.restscs;
+
+import org.restscs.imp.*;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping(path = &quot;/api&quot;)
+<span class="fc" id="L12">public class ScsRest {</span>
+
+    @GetMapping(path = &quot;/calc/{op}/{arg1}/{arg2}&quot;)
+    public ResponseEntity&lt;String&gt; calc(
+            @PathVariable(&quot;op&quot;)
+                    String op,
+            @PathVariable(&quot;arg1&quot;)
+                    double arg1,
+            @PathVariable(&quot;arg2&quot;)
+                    double arg2
+    ) {
+<span class="fc" id="L23">        String res = Calc.subject(op, arg1, arg2);</span>
+<span class="fc" id="L24">        return ResponseEntity.ok(res);</span>
+    }
+
+
+    @GetMapping(path = &quot;/cookie/{name}/{val}/{site}&quot;)
+    public ResponseEntity&lt;String&gt; cookie(
+            @PathVariable(&quot;name&quot;)
+                    String name,
+            @PathVariable(&quot;val&quot;)
+                    String val,
+            @PathVariable(&quot;site&quot;)
+                    String site
+    ) {
+<span class="fc" id="L37">        String res = Cookie.subject(name, val, site);</span>
+<span class="fc" id="L38">        return ResponseEntity.ok(res);</span>
+    }
+
+
+    @GetMapping(path = &quot;/costfuns/{i}/{s}&quot;)
+    public ResponseEntity&lt;String&gt; costfuns(
+            @PathVariable(&quot;i&quot;)
+                    Integer i,
+            @PathVariable(&quot;s&quot;)
+                    String s
+    ) {
+<span class="fc" id="L49">        String res = Costfuns.subject(i, s);</span>
+<span class="fc" id="L50">        return ResponseEntity.ok(res);</span>
+    }
+
+
+    @GetMapping(path = &quot;/dateparse/{dayname}/{monthname}&quot;)
+    public ResponseEntity&lt;String&gt; dateParse(
+            @PathVariable(&quot;dayname&quot;)
+                    String dayname,
+            @PathVariable(&quot;monthname&quot;)
+                    String monthname
+    ) {
+<span class="fc" id="L61">        String res = DateParse.subject(dayname, monthname);</span>
+<span class="fc" id="L62">        return ResponseEntity.ok(res);</span>
+    }
+
+
+    @GetMapping(path = &quot;/filesuffix/{directory}/{file}&quot;)
+    public ResponseEntity&lt;String&gt; fileSuffix(
+            @PathVariable(&quot;directory&quot;)
+                    String directory,
+            @PathVariable(&quot;file&quot;)
+                    String file
+    ) {
+<span class="fc" id="L73">        String res = FileSuffix.subject(directory, file);</span>
+<span class="fc" id="L74">        return ResponseEntity.ok(res);</span>
+    }
+
+
+
+    @GetMapping(path = &quot;/notypevar/{i}/{s}&quot;)
+    public ResponseEntity&lt;String&gt; notyPevar(
+            @PathVariable(&quot;i&quot;)
+                    Integer i,
+            @PathVariable(&quot;s&quot;)
+                    String s
+    ) {
+<span class="fc" id="L86">        String res = NotyPevar.subject(i, s);</span>
+<span class="fc" id="L87">        return ResponseEntity.ok(res);</span>
+    }
+
+
+    @GetMapping(path = &quot;/ordered4/{w}/{x}/{z}/{y}&quot;)
+    public ResponseEntity&lt;String&gt; ordered4(
+            @PathVariable(&quot;w&quot;)
+                    String w,
+            @PathVariable(&quot;x&quot;)
+                    String x,
+            @PathVariable(&quot;z&quot;)
+                    String z,
+            @PathVariable(&quot;y&quot;)
+                    String y
+    ) {
+<span class="fc" id="L102">        String res = Ordered4.subject(w, x, z, y);</span>
+<span class="fc" id="L103">        return ResponseEntity.ok(res);</span>
+    }
+
+
+    @GetMapping(path = &quot;/pat/{txt}/{pat}&quot;)
+    public ResponseEntity&lt;String&gt; pat(
+            @PathVariable(&quot;txt&quot;)
+                    String txt,
+            @PathVariable(&quot;pat&quot;)
+                    String pat
+    ) {
+<span class="fc" id="L114">        String res = Pat.subject(txt, pat);</span>
+<span class="fc" id="L115">        return ResponseEntity.ok(res);</span>
+    }
+
+
+    @GetMapping(path = &quot;/pat/{txt}&quot;)
+    public ResponseEntity&lt;String&gt; regex(
+            @PathVariable(&quot;txt&quot;)
+                    String txt
+    ) {
+<span class="fc" id="L124">        String res = Regex.subject(txt);</span>
+<span class="fc" id="L125">        return ResponseEntity.ok(res);</span>
+    }
+
+
+    @GetMapping(path = &quot;/text2txt/{word1}/{word2}/{word3}&quot;)
+    public ResponseEntity&lt;String&gt; text2txt(
+            @PathVariable(&quot;word1&quot;)
+                    String word1,
+            @PathVariable(&quot;word2&quot;)
+                    String word2,
+            @PathVariable(&quot;word3&quot;)
+                    String word3
+    ) {
+<span class="fc" id="L138">        String res = Text2Txt.subject(word1, word2, word3);</span>
+<span class="fc" id="L139">        return ResponseEntity.ok(res);</span>
+    }
+
+
+    @GetMapping(path = &quot;/title/{sex}/{title}&quot;)
+    public ResponseEntity&lt;String&gt; title(
+            @PathVariable(&quot;sex&quot;)
+                    String sex,
+            @PathVariable(&quot;title&quot;)
+                    String title
+    ) {
+<span class="fc" id="L150">        String res = Title.subject(sex, title);</span>
+<span class="fc" id="L151">        return ResponseEntity.ok(res);</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

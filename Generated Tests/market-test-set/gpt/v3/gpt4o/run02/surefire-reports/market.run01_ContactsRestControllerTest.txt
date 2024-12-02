@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_ContactsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.782 s <<< FAILURE! - in market.run01_ContactsRestControllerTest
+testUpdateContacts  Time elapsed: 0.123 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.run01_ContactsRestControllerTest.getAuthToken(run01_ContactsRestControllerTest.java:160)
+	at market.run01_ContactsRestControllerTest.testUpdateContacts(run01_ContactsRestControllerTest.java:104)
+
+testGetContacts  Time elapsed: 0.037 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.run01_ContactsRestControllerTest.getAuthToken(run01_ContactsRestControllerTest.java:160)
+	at market.run01_ContactsRestControllerTest.testGetContacts(run01_ContactsRestControllerTest.java:90)
+
+testUpdateContactsInvalidPhone  Time elapsed: 0.031 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.run01_ContactsRestControllerTest.getAuthToken(run01_ContactsRestControllerTest.java:160)
+	at market.run01_ContactsRestControllerTest.testUpdateContactsInvalidPhone(run01_ContactsRestControllerTest.java:125)
+

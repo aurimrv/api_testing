@@ -1,0 +1,34 @@
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m2[m, [1;31mFailures: [0;1;31m2[m, Errors: 0, Skipped: 0, Time elapsed: 14.657 s[1;31m <<< FAILURE![m - in market.[1mv1_gpt35_run03_ContactsRestControllerTest[m
+[[1;31mERROR[m] testUpdateContactsEndpoint  Time elapsed: 1.617 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <406>.
+
+	at market.v1_gpt35_run03_ContactsRestControllerTest.testUpdateContactsEndpoint(v1_gpt35_run03_ContactsRestControllerTest.java:78)
+
+[[1;31mERROR[m] testGetContactsEndpoint  Time elapsed: 0.049 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt35_run03_ContactsRestControllerTest.testGetContactsEndpoint(v1_gpt35_run03_ContactsRestControllerTest.java:67)
+
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  v1_gpt35_run03_ContactsRestControllerTest.testGetContactsEndpoint:67 1 expectation failed.
+Expected status code <200> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  v1_gpt35_run03_ContactsRestControllerTest.testUpdateContactsEndpoint:78 1 expectation failed.
+Expected status code <200> but was <406>.
+[m
+[[1;31mERROR[m] [1;31mTests run: 2, Failures: 2, Errors: 0, Skipped: 0[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.22.0:test[m [1m(default-test)[m on project [36mmarket-rest[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] [1;31mPlease refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

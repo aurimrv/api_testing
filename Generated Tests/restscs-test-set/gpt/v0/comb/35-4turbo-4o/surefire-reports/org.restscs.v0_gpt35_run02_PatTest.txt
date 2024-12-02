@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt35_run02_PatTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.888 s <<< FAILURE! - in org.restscs.v0_gpt35_run02_PatTest
+testReversePatEndpoint(org.restscs.v0_gpt35_run02_PatTest)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "2"
+  Actual: 0
+
+	at org.restscs.v0_gpt35_run02_PatTest.testReversePatEndpoint(v0_gpt35_run02_PatTest.java:90)
+

@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4turbo_run02_ContactsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.311 s <<< FAILURE! - in market.v2_gpt4turbo_run02_ContactsRestControllerTest
+testUpdateContacts_InvalidPhoneFormat  Time elapsed: 0.166 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path error doesn't match.
+Expected: a string containing "Shall consist of a + sign, a country code, a region code (1-4 digits), and a number (6-7 digits)"
+  Actual: null
+
+	at market.v2_gpt4turbo_run02_ContactsRestControllerTest.testUpdateContacts_InvalidPhoneFormat(v2_gpt4turbo_run02_ContactsRestControllerTest.java:107)
+

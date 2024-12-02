@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: market.run08_RestErrorResponseTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.727 s - in market.run08_RestErrorResponseTest

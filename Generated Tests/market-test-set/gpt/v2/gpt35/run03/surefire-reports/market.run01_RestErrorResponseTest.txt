@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_RestErrorResponseTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 16.215 s <<< FAILURE! - in market.run01_RestErrorResponseTest
+testSchemaValidation  Time elapsed: 2.413 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path schemaField doesn't match.
+Expected: not null
+  Actual: null
+
+	at market.run01_RestErrorResponseTest.testSchemaValidation(run01_RestErrorResponseTest.java:82)
+
+testInvalidInputReturns500Error  Time elapsed: 0.108 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at market.run01_RestErrorResponseTest.testInvalidInputReturns500Error(run01_RestErrorResponseTest.java:70)
+
+testBusinessRuleEnforcement  Time elapsed: 0.109 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.run01_RestErrorResponseTest.testBusinessRuleEnforcement(run01_RestErrorResponseTest.java:96)
+

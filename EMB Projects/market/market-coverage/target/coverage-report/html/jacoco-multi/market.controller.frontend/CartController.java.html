@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>CartController.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market.controller.frontend</a> &gt; <span class="el_source">CartController.java</span></div><h1>CartController.java</h1><pre class="source lang-java linenums">package market.controller.frontend;
+
+import market.controller.CartModelHelper;
+import market.domain.Cart;
+import market.domain.CartItem;
+import market.domain.Product;
+import market.dto.CartDTO;
+import market.dto.CartItemDTO;
+import market.dto.ProductDTO;
+import market.dto.assembler.CartDtoAssembler;
+import market.dto.assembler.ProductDtoAssembler;
+import market.exception.UnknownEntityException;
+import market.properties.MarketProperties;
+import market.service.CartService;
+import market.service.ProductService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+import java.security.Principal;
+import java.util.Map;
+import java.util.Optional;
+
+import static java.util.stream.Collectors.toMap;
+
+@Controller
+@RequestMapping(&quot;/cart&quot;)
+@SessionAttributes({&quot;cart&quot;})
+public class CartController {
+<span class="nc" id="L42">	private static final Logger log = LogManager.getLogger(CartController.class);</span>
+
+	private static final String CART_BASE = &quot;cart&quot;;
+
+	private final CartService cartService;
+	private final ProductService productService;
+	private final CartDtoAssembler cartDtoAssembler;
+<span class="nc" id="L49">	private final ProductDtoAssembler productDtoAssembler = new ProductDtoAssembler();</span>
+	private final MarketProperties marketProperties;
+	private final CartModelHelper cartModelHelper;
+
+<span class="nc" id="L53">	public CartController(CartService cartService, ProductService productService, MarketProperties marketProperties) {</span>
+<span class="nc" id="L54">		this.cartService = cartService;</span>
+<span class="nc" id="L55">		this.productService = productService;</span>
+<span class="nc" id="L56">		this.marketProperties = marketProperties;</span>
+<span class="nc" id="L57">		cartDtoAssembler = new CartDtoAssembler(marketProperties);</span>
+<span class="nc" id="L58">		cartModelHelper = new CartModelHelper(cartDtoAssembler);</span>
+<span class="nc" id="L59">	}</span>
+
+	@RequestMapping(method = RequestMethod.GET)
+	public String getCart(
+		Principal principal, HttpServletRequest request, Model model,
+		@ModelAttribute(value = &quot;cart&quot;) CartDTO cartDto)
+	{
+<span class="nc bnc" id="L66" title="All 2 branches missed.">		if (isAuthorized(principal)) {</span>
+<span class="nc" id="L67">			Cart cart = cartService.getCartOrCreate(principal.getName());</span>
+<span class="nc" id="L68">			cartModelHelper.convertAndUpdateAttributes(cart, model, request);</span>
+<span class="nc" id="L69">			model.addAttribute(&quot;productsById&quot;, collectProductsMap(cart));</span>
+<span class="nc" id="L70">		} else {</span>
+<span class="nc" id="L71">			Map&lt;Long, ProductDTO&gt; productsById = cartDto.getCartItems().stream()</span>
+<span class="nc" id="L72">				.map(CartItemDTO::getProductId)</span>
+<span class="nc" id="L73">				.map(productService::findById)</span>
+<span class="nc" id="L74">				.filter(Optional::isPresent)</span>
+<span class="nc" id="L75">				.map(Optional::get)</span>
+<span class="nc" id="L76">				.map(productDtoAssembler::toModel)</span>
+<span class="nc" id="L77">				.collect(toMap(ProductDTO::getProductId, p -&gt; p));</span>
+<span class="nc" id="L78">			model.addAttribute(&quot;productsById&quot;, productsById);</span>
+		}
+<span class="nc" id="L80">		model.addAttribute(&quot;deliveryCost&quot;, marketProperties.getDeliveryCost());</span>
+<span class="nc" id="L81">		return CART_BASE;</span>
+	}
+
+	private Map&lt;Long, ProductDTO&gt; collectProductsMap(Cart cart) {
+<span class="nc" id="L85">		return cart.getCartItems().stream()</span>
+<span class="nc" id="L86">			.map(CartItem::getProduct)</span>
+<span class="nc" id="L87">			.distinct()</span>
+<span class="nc" id="L88">			.map(productDtoAssembler::toModel)</span>
+<span class="nc" id="L89">			.collect(toMap(ProductDTO::getProductId, p -&gt; p));</span>
+	}
+
+	@RequestMapping(value = &quot;/clear&quot;, method = RequestMethod.POST)
+	public String clearCart(
+		Principal principal, HttpServletRequest request, Model model,
+		@ModelAttribute(value = &quot;cart&quot;) CartDTO cartDto)
+	{
+<span class="nc bnc" id="L97" title="All 2 branches missed.">		if (isAuthorized(principal)) {</span>
+<span class="nc" id="L98">			Cart clearedCart = cartService.clearCart(principal.getName());</span>
+<span class="nc" id="L99">			cartModelHelper.convertAndUpdateAttributes(clearedCart, model, request);</span>
+<span class="nc" id="L100">		} else {</span>
+<span class="nc" id="L101">			Cart cart = cartDtoAssembler.toDomain(cartDto, productService);</span>
+<span class="nc" id="L102">			cart.clear();</span>
+<span class="nc" id="L103">			model.addAttribute(&quot;cart&quot;, cartDtoAssembler.toAnonymousResource(cart));</span>
+		}
+<span class="nc" id="L105">		return &quot;redirect:/&quot; + CART_BASE;</span>
+	}
+
+	//--------------------------------------------- Adding item to cart
+
+	@RequestMapping(method = RequestMethod.POST)
+	public String updateCartByForm(
+		Model model, HttpServletRequest request, Principal principal,
+		@Valid @ModelAttribute(&quot;cartItem&quot;) CartItemDTO cartItemDto, BindingResult bindingResult,
+		@ModelAttribute(value = &quot;cart&quot;) CartDTO cartDto
+	) {
+<span class="nc bnc" id="L116" title="All 2 branches missed.">		if (bindingResult.hasErrors())</span>
+<span class="nc" id="L117">			return CART_BASE;</span>
+
+<span class="nc bnc" id="L119" title="All 2 branches missed.">		if (!isAuthorized(principal)) {</span>
+<span class="nc" id="L120">			CartDTO handledCartDto = updateGuestCart(cartDto, cartItemDto);</span>
+<span class="nc" id="L121">			model.addAttribute(&quot;cart&quot;, handledCartDto);</span>
+<span class="nc" id="L122">			model.addAttribute(&quot;deliveryCost&quot;, marketProperties.getDeliveryCost());</span>
+<span class="nc" id="L123">			return CART_BASE;</span>
+		} else {
+			try {
+<span class="nc" id="L126">				addToAuthorizedCart(cartItemDto, principal.getName(), request, model);</span>
+<span class="nc" id="L127">			} catch (UnknownEntityException ex) {</span>
+<span class="nc" id="L128">				bindingResult.addError(ex.getFieldError());</span>
+<span class="nc" id="L129">				return CART_BASE;</span>
+<span class="nc" id="L130">			}</span>
+		}
+<span class="nc" id="L132">		return &quot;redirect:/&quot; + CART_BASE;</span>
+	}
+
+	/**
+	 * Adding via AJAX
+	 * @return updated cart
+	 */
+	@RequestMapping(method = RequestMethod.PUT,
+		consumes = MediaType.APPLICATION_JSON_VALUE,
+		produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	public CartDTO updateCartByAjax(
+		Principal principal, HttpServletRequest request,
+		@Valid @RequestBody CartItemDTO cartItemDto,
+		BindingResult bindingResult, Model model,
+		@ModelAttribute(value = &quot;cart&quot;) CartDTO cartDto
+	) {
+<span class="nc bnc" id="L149" title="All 2 branches missed.">		if (bindingResult.hasErrors())</span>
+<span class="nc" id="L150">			return cartDto;</span>
+
+<span class="nc bnc" id="L152" title="All 2 branches missed.">		if (!isAuthorized(principal)) {</span>
+<span class="nc" id="L153">			CartDTO handledCartDto = updateGuestCart(cartDto, cartItemDto);</span>
+<span class="nc" id="L154">			model.addAttribute(&quot;cart&quot;, handledCartDto);</span>
+<span class="nc" id="L155">			return handledCartDto;</span>
+		} else {
+			try {
+<span class="nc" id="L158">				return addToAuthorizedCart(cartItemDto, principal.getName(), request, model);</span>
+<span class="nc" id="L159">			} catch (UnknownEntityException e) {</span>
+<span class="nc" id="L160">				log.error(&quot;Cannot add item to cart&quot;, e);</span>
+<span class="nc" id="L161">				return cartDto;</span>
+			}
+		}
+	}
+
+	private CartDTO addToAuthorizedCart(CartItemDTO itemToAdd, String login, HttpServletRequest request, Model model) {
+<span class="nc" id="L167">		long productId = itemToAdd.getProductId();</span>
+<span class="nc" id="L168">		int quantity = itemToAdd.getQuantity();</span>
+<span class="nc" id="L169">		Cart updatedCart = cartService.addToCart(login, productId, quantity);</span>
+<span class="nc" id="L170">		return cartModelHelper.convertAndUpdateAttributes(updatedCart, model, request);</span>
+	}
+
+	private CartDTO updateGuestCart(CartDTO cartDto, CartItemDTO newCartItem) {
+<span class="nc" id="L174">		Optional&lt;Product&gt; productOptional = productService.findById(newCartItem.getProductId());</span>
+<span class="nc bnc" id="L175" title="All 2 branches missed.">		if (productOptional.isPresent()) {</span>
+<span class="nc" id="L176">			Product product = productOptional.get();</span>
+<span class="nc bnc" id="L177" title="All 2 branches missed.">			if (product.isAvailable()) {</span>
+<span class="nc" id="L178">				Cart cart = cartDtoAssembler.toDomain(cartDto, productService);</span>
+<span class="nc" id="L179">				cart.update(product, newCartItem.getQuantity());</span>
+<span class="nc" id="L180">				return cartDtoAssembler.toAnonymousResource(cart);</span>
+			}
+		}
+<span class="nc" id="L183">		return cartDto;</span>
+	}
+
+	//---------------------------------------------- Setting delivery option
+
+	/**
+	 * Setting delivery option via AJAX.
+	 * @return updated cart
+	 */
+	@RequestMapping(value = &quot;/delivery/{delivery}&quot;,
+		method = RequestMethod.PUT,
+		produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	public CartDTO setDelivery(
+		Principal principal, Model model, HttpServletRequest request,
+		@PathVariable String delivery,
+		@ModelAttribute(value = &quot;cart&quot;) CartDTO cartDto)
+	{
+<span class="nc" id="L201">		boolean included = Boolean.parseBoolean(delivery);</span>
+<span class="nc bnc" id="L202" title="All 2 branches missed.">		if (isAuthorized(principal)) {</span>
+<span class="nc" id="L203">			String login = principal.getName();</span>
+<span class="nc" id="L204">			Cart updatedCart = cartService.setDelivery(login, included);</span>
+<span class="nc" id="L205">			return cartModelHelper.convertAndUpdateAttributes(updatedCart, model, request);</span>
+		} else {
+<span class="nc" id="L207">			cartDto.setDeliveryIncluded(included);</span>
+<span class="nc" id="L208">			return cartDto;</span>
+		}
+	}
+
+	private boolean isAuthorized(Principal principal) {
+<span class="nc bnc" id="L213" title="All 2 branches missed.">		return principal != null;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

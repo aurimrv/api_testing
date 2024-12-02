@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: market.run02_RestErrorResponseTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 18.93 s <<< FAILURE! - in market.run02_RestErrorResponseTest
+testFieldErrorAddition  Time elapsed: 2.641 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: a string containing "Content type 'application/x-www-form-urlencoded;charset=ISO-8859-1' not supported"
+  Actual: Required request body is missing: public org.springframework.http.ResponseEntity<market.dto.OrderDTO> market.rest.CartRestController.payByCard(java.security.Principal,market.dto.CreditCardDTO)
+
+	at market.run02_RestErrorResponseTest.testFieldErrorAddition(run02_RestErrorResponseTest.java:78)
+

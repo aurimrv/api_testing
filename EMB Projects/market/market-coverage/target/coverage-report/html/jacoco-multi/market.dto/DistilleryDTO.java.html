@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>DistilleryDTO.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market.dto</a> &gt; <span class="el_source">DistilleryDTO.java</span></div><h1>DistilleryDTO.java</h1><pre class="source lang-java linenums">package market.dto;
+
+import org.springframework.hateoas.RepresentationModel;
+
+import java.util.Objects;
+
+<span class="nc" id="L7">public class DistilleryDTO extends RepresentationModel&lt;DistilleryDTO&gt; {</span>
+
+	private Long id;
+	private String title;
+	private String region;
+	private String description;
+
+	public Long getId() {
+<span class="nc" id="L15">		return id;</span>
+	}
+
+	public void setId(Long id) {
+<span class="nc" id="L19">		this.id = id;</span>
+<span class="nc" id="L20">	}</span>
+
+	public String getTitle() {
+<span class="nc" id="L23">		return title;</span>
+	}
+
+	public void setTitle(String title) {
+<span class="nc" id="L27">		this.title = title;</span>
+<span class="nc" id="L28">	}</span>
+
+	public String getRegion() {
+<span class="nc" id="L31">		return region;</span>
+	}
+
+	public void setRegion(String region) {
+<span class="nc" id="L35">		this.region = region;</span>
+<span class="nc" id="L36">	}</span>
+
+	public String getDescription() {
+<span class="nc" id="L39">		return description;</span>
+	}
+
+	public void setDescription(String description) {
+<span class="nc" id="L43">		this.description = description;</span>
+<span class="nc" id="L44">	}</span>
+
+	@Override
+	public boolean equals(Object o) {
+<span class="nc bnc" id="L48" title="All 2 branches missed.">		if (this == o) return true;</span>
+<span class="nc bnc" id="L49" title="All 4 branches missed.">		if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="nc" id="L50">		DistilleryDTO that = (DistilleryDTO) o;</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">		return Objects.equals(id, that.id) &amp;&amp;</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">			Objects.equals(title, that.title) &amp;&amp;</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">			Objects.equals(region, that.region) &amp;&amp;</span>
+<span class="nc bnc" id="L54" title="All 2 branches missed.">			Objects.equals(description, that.description);</span>
+	}
+
+	@Override
+	public int hashCode() {
+<span class="nc" id="L59">		return Objects.hash(id, title, region, description);</span>
+	}
+
+	@Override
+	public String toString() {
+<span class="nc" id="L64">		return &quot;DistilleryDTO{&quot; +</span>
+			&quot;id=&quot; + id +
+			&quot;, title='&quot; + title + '\'' +
+			&quot;, region='&quot; + region + '\'' +
+			&quot;, description='&quot; + description + '\'' +
+			'}';
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

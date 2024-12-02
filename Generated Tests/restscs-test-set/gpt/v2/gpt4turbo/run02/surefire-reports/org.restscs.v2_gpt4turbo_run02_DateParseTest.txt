@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4turbo_run02_DateParseTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 1, Skipped: 0, Time elapsed: 0.995 s <<< FAILURE! - in org.restscs.v2_gpt4turbo_run02_DateParseTest
+testDateParseInvalidDayName(org.restscs.v2_gpt4turbo_run02_DateParseTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v2_gpt4turbo_run02_DateParseTest.testDateParseInvalidDayName(v2_gpt4turbo_run02_DateParseTest.java:72)
+
+testDateParseInvalidMonthName(org.restscs.v2_gpt4turbo_run02_DateParseTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v2_gpt4turbo_run02_DateParseTest.testDateParseInvalidMonthName(v2_gpt4turbo_run02_DateParseTest.java:80)
+
+testDateParseInternalServerError(org.restscs.v2_gpt4turbo_run02_DateParseTest)  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code (is <500> or is <503>) but was <200>.
+
+	at org.restscs.v2_gpt4turbo_run02_DateParseTest.testDateParseInternalServerError(v2_gpt4turbo_run02_DateParseTest.java:88)
+
+testDateParseSchemaValidation(org.restscs.v2_gpt4turbo_run02_DateParseTest)  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restscs.v2_gpt4turbo_run02_DateParseTest.testDateParseSchemaValidation(v2_gpt4turbo_run02_DateParseTest.java:97)
+

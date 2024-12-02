@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.run03_TitleTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.285 s <<< FAILURE! - in org.restscs.run03_TitleTest
+testTitleInvalidSex(org.restscs.run03_TitleTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.run03_TitleTest.testTitleInvalidSex(run03_TitleTest.java:98)
+
+testTitleInvalidTitle(org.restscs.run03_TitleTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.run03_TitleTest.testTitleInvalidTitle(run03_TitleTest.java:107)
+

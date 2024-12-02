@@ -1,0 +1,42 @@
+-------------------------------------------------------------------------------
+Test set: market.v1_gpt4o_run03_ContactsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 2.492 s <<< FAILURE! - in market.v1_gpt4o_run03_ContactsRestControllerTest
+testGetContacts_200  Time elapsed: 0.257 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v1_gpt4o_run03_ContactsRestControllerTest.loginAndGetToken(v1_gpt4o_run03_ContactsRestControllerTest.java:150)
+	at market.v1_gpt4o_run03_ContactsRestControllerTest.testGetContacts_200(v1_gpt4o_run03_ContactsRestControllerTest.java:64)
+
+testGetContacts_401  Time elapsed: 0.041 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <404>.
+
+	at market.v1_gpt4o_run03_ContactsRestControllerTest.testGetContacts_401(v1_gpt4o_run03_ContactsRestControllerTest.java:81)
+
+testUpdateContacts_200  Time elapsed: 0.052 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v1_gpt4o_run03_ContactsRestControllerTest.loginAndGetToken(v1_gpt4o_run03_ContactsRestControllerTest.java:150)
+	at market.v1_gpt4o_run03_ContactsRestControllerTest.testUpdateContacts_200(v1_gpt4o_run03_ContactsRestControllerTest.java:86)
+
+testUpdateContacts_400  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v1_gpt4o_run03_ContactsRestControllerTest.loginAndGetToken(v1_gpt4o_run03_ContactsRestControllerTest.java:150)
+	at market.v1_gpt4o_run03_ContactsRestControllerTest.testUpdateContacts_400(v1_gpt4o_run03_ContactsRestControllerTest.java:122)
+
+testUpdateContacts_401  Time elapsed: 0.04 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <404>.
+
+	at market.v1_gpt4o_run03_ContactsRestControllerTest.testUpdateContacts_401(v1_gpt4o_run03_ContactsRestControllerTest.java:117)
+

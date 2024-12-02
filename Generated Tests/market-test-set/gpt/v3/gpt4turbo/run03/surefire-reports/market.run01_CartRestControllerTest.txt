@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_CartRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.562 s <<< FAILURE! - in market.run01_CartRestControllerTest
+testInternalServerErrorOnAddItem  Time elapsed: 0.186 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at market.run01_CartRestControllerTest.testInternalServerErrorOnAddItem(run01_CartRestControllerTest.java:110)
+
+testPayByCardSuccess  Time elapsed: 0.296 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.run01_CartRestControllerTest.testPayByCardSuccess(run01_CartRestControllerTest.java:100)
+

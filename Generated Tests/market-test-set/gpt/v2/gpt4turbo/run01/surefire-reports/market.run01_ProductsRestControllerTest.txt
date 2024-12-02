@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_ProductsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 2.605 s <<< FAILURE! - in market.run01_ProductsRestControllerTest
+testProductSchemaValidation  Time elapsed: 0.282 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.run01_ProductsRestControllerTest.testProductSchemaValidation(run01_ProductsRestControllerTest.java:109)
+
+testGetProduct  Time elapsed: 0.129 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path _links.self.href doesn't match.
+Expected: a string containing "/products/1"
+  Actual: null
+
+	at market.run01_ProductsRestControllerTest.testGetProduct(run01_ProductsRestControllerTest.java:84)
+

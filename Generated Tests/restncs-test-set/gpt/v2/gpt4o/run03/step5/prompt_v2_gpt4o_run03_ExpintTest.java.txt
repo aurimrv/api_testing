@@ -1,0 +1,703 @@
+Correct the test code delimited by ***** according to the error messages delimited by ##### and generate another complete code in JUnit 4 format. The response must contain only Java code in JUnit 4 format.
+
+Keep these five instructions for this generated test code:
+
+Instruction 1: Keet this package line to generated test code file:
+package org.restncs;
+
+Instruction 2: Keep the following Java imports to generated test code file:
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.Map;
+import java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import org.evomaster.client.java.controller.SutHandler;
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import io.restassured.response.ValidatableResponse;
+import static org.hamcrest.Matchers.*;
+import io.restassured.config.JsonConfig;
+import io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import org.evomaster.client.java.controller.expect.ExpectationHandler;
+import io.restassured.path.json.JsonPath;
+import java.util.Arrays;
+
+Instruction 3: Keep the same class name in this point (between the imports at instruction 2 and instruction 4)
+
+Instruction 4: Keep these variables in the generated test code:
+private static final SutHandler controller = new em.embedded.org.restncs.EmbeddedEvoMasterController();
+private static String baseUrlOfSut;
+
+Instruction 5: Keep the following setup and teardown methods in generated test code file:
+@BeforeClass
+public static void initClass() {
+    controller.setupForGeneratedTest();
+    baseUrlOfSut = controller.startSut();
+    controller.registerOrExecuteInitSqlCommandsIfNeeded();
+    assertNotNull(baseUrlOfSut);
+    RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+    RestAssured.useRelaxedHTTPSValidation();
+    RestAssured.urlEncodingEnabled = false;
+    RestAssured.config = RestAssured.config()
+        .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+        .redirect(redirectConfig().followRedirects(false));
+}
+
+@AfterClass
+public static void tearDown() {
+    controller.stopSut();
+}
+
+@Before
+public void initTest() {
+    controller.resetStateOfSUT();
+}
+
+
+*****
+
+package org.restncs;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.Map;
+import java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import org.evomaster.client.java.controller.SutHandler;
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import io.restassured.response.ValidatableResponse;
+import static org.hamcrest.Matchers.*;
+import io.restassured.config.JsonConfig;
+import io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import org.evomaster.client.java.controller.expect.ExpectationHandler;
+import io.restassured.path.json.JsonPath;
+import java.util.Arrays;
+
+public class v2_gpt4o_run03_ExpintTest {
+    private static final SutHandler controller = new em.embedded.org.restncs.EmbeddedEvoMasterController();
+    private static String baseUrlOfSut;
+
+    @BeforeClass
+    public static void initClass() {
+        controller.setupForGeneratedTest();
+        baseUrlOfSut = controller.startSut();
+        controller.registerOrExecuteInitSqlCommandsIfNeeded();
+        assertNotNull(baseUrlOfSut);
+        RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+        RestAssured.useRelaxedHTTPSValidation();
+        RestAssured.urlEncodingEnabled = false;
+        RestAssured.config = RestAssured.config()
+            .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+            .redirect(redirectConfig().followRedirects(false));
+    }
+
+    @AfterClass
+    public static void tearDown() {
+        controller.stopSut();
+    }
+
+    @Before
+    public void initTest() {
+        controller.resetStateOfSUT();
+    }
+
+    @Test
+    public void testExpintValid() {
+        given()
+            .pathParam("n", 1)
+            .pathParam("x", 1.0)
+        .when()
+            .get(baseUrlOfSut + "/api/expint/{n}/{x}")
+        .then()
+            .statusCode(200)
+            .body("resultAsDouble", equalTo(0.21938393439552028));
+    }
+
+    @Test
+    public void testExpintInvalidParams() {
+        given()
+            .pathParam("n", -1)
+            .pathParam("x", -1.0)
+        .when()
+            .get(baseUrlOfSut + "/api/expint/{n}/{x}")
+        .then()
+            .statusCode(500);
+    }
+
+    @Test
+    public void testSchemaValidation() {
+        ValidatableResponse response = given()
+            .pathParam("n", 1)
+            .pathParam("x", 1.0)
+        .when()
+            .get(baseUrlOfSut + "/api/expint/{n}/{x}")
+        .then()
+            .statusCode(200)
+            .body("$", hasKey("resultAsDouble"))
+            .body("resultAsDouble", instanceOf(Double.class));
+    }
+
+    @Test
+    public void testBessj() {
+        given()
+            .pathParam("n", 1)
+            .pathParam("x", 1.0)
+        .when()
+            .get(baseUrlOfSut + "/api/bessj/{n}/{x}")
+        .then()
+            .statusCode(200)
+            .body("resultAsDouble", notNullValue());
+    }
+
+    @Test
+    public void testBessjInvalidParams() {
+        given()
+            .pathParam("n", -1)
+            .pathParam("x", -1.0)
+        .when()
+            .get(baseUrlOfSut + "/api/bessj/{n}/{x}")
+        .then()
+            .statusCode(500);
+    }
+
+    @Test
+    public void testFisher() {
+        given()
+            .pathParam("m", 5)
+            .pathParam("n", 5)
+            .pathParam("x", 1.0)
+        .when()
+            .get(baseUrlOfSut + "/api/fisher/{m}/{n}/{x}")
+        .then()
+            .statusCode(200)
+            .body("resultAsDouble", notNullValue());
+    }
+
+    @Test
+    public void testFisherInvalidParams() {
+        given()
+            .pathParam("m", -1)
+            .pathParam("n", -1)
+            .pathParam("x", -1.0)
+        .when()
+            .get(baseUrlOfSut + "/api/fisher/{m}/{n}/{x}")
+        .then()
+            .statusCode(500);
+    }
+
+    @Test
+    public void testGammq() {
+        given()
+            .pathParam("a", 1.0)
+            .pathParam("x", 1.0)
+        .when()
+            .get(baseUrlOfSut + "/api/gammq/{a}/{x}")
+        .then()
+            .statusCode(200)
+            .body("resultAsDouble", notNullValue());
+    }
+
+    @Test
+    public void testGammqInvalidParams() {
+        given()
+            .pathParam("a", -1.0)
+            .pathParam("x", -1.0)
+        .when()
+            .get(baseUrlOfSut + "/api/gammq/{a}/{x}")
+        .then()
+            .statusCode(500);
+    }
+
+    @Test
+    public void testRemainder() {
+        given()
+            .pathParam("a", 10)
+            .pathParam("b", 3)
+        .when()
+            .get(baseUrlOfSut + "/api/remainder/{a}/{b}")
+        .then()
+            .statusCode(200)
+            .body("resultAsInt", equalTo(1));
+    }
+
+    @Test
+    public void testRemainderInvalidParams() {
+        given()
+            .pathParam("a", 10)
+            .pathParam("b", 0)
+        .when()
+            .get(baseUrlOfSut + "/api/remainder/{a}/{b}")
+        .then()
+            .statusCode(500);
+    }
+
+    @Test
+    public void testTriangle() {
+        given()
+            .pathParam("a", 3)
+            .pathParam("b", 4)
+            .pathParam("c", 5)
+        .when()
+            .get(baseUrlOfSut + "/api/triangle/{a}/{b}/{c}")
+        .then()
+            .statusCode(200)
+            .body("resultAsDouble", notNullValue());
+    }
+
+    @Test
+    public void testTriangleInvalidParams() {
+        given()
+            .pathParam("a", -3)
+            .pathParam("b", -4)
+            .pathParam("c", -5)
+        .when()
+            .get(baseUrlOfSut + "/api/triangle/{a}/{b}/{c}")
+        .then()
+            .statusCode(500);
+    }
+}
+
+*****
+#####
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------< [0;36morg.evomaster:evomaster-benchmark-cs-rest-artificial-ncs[0;1m >------[m
+[[1;34mINFO[m] [1mBuilding evomaster-benchmark-cs-rest-artificial-ncs 3.0.0[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Deleting /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 10 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 10 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 10 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.0:test[m [1m(default-test)[m @ [36mevomaster-benchmark-cs-rest-artificial-ncs[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running org.restncs.[1mv2_gpt4o_run03_ExpintTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.3.RELEASE)
+
+2024-09-09 16:33:54.648  INFO 43472 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v2.22.0 on IFTO-PROBOOK with PID 43472 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs)
+2024-09-09 16:33:54.653  INFO 43472 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to default profiles: default
+2024-09-09 16:33:55.186  INFO 43472 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@25a290ee: startup date [Mon Sep 09 16:33:55 BRT 2024]; root of context hierarchy
+2024-09-09 16:33:56.504  INFO 43472 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2024-09-09 16:33:56.922  INFO 43472 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-09-09 16:33:56.974  INFO 43472 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-09 16:33:56.975  INFO 43472 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2024-09-09 16:33:56.988  INFO 43472 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2024-09-09 16:33:57.112  INFO 43472 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-09 16:33:57.112  INFO 43472 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1930 ms
+2024-09-09 16:33:57.218  INFO 43472 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2024-09-09 16:33:57.222  INFO 43472 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2024-09-09 16:33:57.223  INFO 43472 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2024-09-09 16:33:57.223  INFO 43472 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2024-09-09 16:33:57.223  INFO 43472 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2024-09-09 16:33:57.704  INFO 43472 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/triangle/{a}/{b}/{c}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<org.restncs.Dto> org.restncs.NcsRest.checkTriangle(java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2024-09-09 16:33:57.705  INFO 43472 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/bessj/{n}/{x}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<org.restncs.Dto> org.restncs.NcsRest.bessj(java.lang.Integer,java.lang.Double)
+2024-09-09 16:33:57.706  INFO 43472 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/expint/{n}/{x}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<org.restncs.Dto> org.restncs.NcsRest.expint(java.lang.Integer,java.lang.Double)
+2024-09-09 16:33:57.706  INFO 43472 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/fisher/{m}/{n}/{x}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<org.restncs.Dto> org.restncs.NcsRest.fisher(java.lang.Integer,java.lang.Integer,java.lang.Double)
+2024-09-09 16:33:57.707  INFO 43472 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/gammq/{a}/{x}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<org.restncs.Dto> org.restncs.NcsRest.gammq(java.lang.Double,java.lang.Double)
+2024-09-09 16:33:57.707  INFO 43472 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/remainder/{a}/{b}],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<org.restncs.Dto> org.restncs.NcsRest.remainder(java.lang.Integer,java.lang.Integer)
+2024-09-09 16:33:57.714  INFO 43472 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2024-09-09 16:33:57.715  INFO 43472 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2024-09-09 16:33:57.716  INFO 43472 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2024-09-09 16:33:57.722  INFO 43472 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2024-09-09 16:33:57.723  INFO 43472 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2024-09-09 16:33:57.887  INFO 43472 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-09-09 16:33:57.970  INFO 43472 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-09-09 16:33:58.128  INFO 43472 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@25a290ee: startup date [Mon Sep 09 16:33:55 BRT 2024]; root of context hierarchy
+2024-09-09 16:33:58.197  INFO 43472 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-09-09 16:33:58.197  INFO 43472 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-09-09 16:33:58.435  INFO 43472 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2024-09-09 16:33:58.447  INFO 43472 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2024-09-09 16:33:58.448  INFO 43472 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2024-09-09 16:33:58.481  INFO 43472 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2024-09-09 16:33:58.535  INFO 43472 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2024-09-09 16:33:58.744  INFO 43472 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 35541 (http) with context path ''
+2024-09-09 16:33:58.748  INFO 43472 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 4.68 seconds (JVM running for 5.546)
+2024-09-09 16:34:00.155  INFO 43472 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2024-09-09 16:34:00.155  INFO 43472 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2024-09-09 16:34:00.173  INFO 43472 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+Request method:	GET
+Request URI:	http://localhost:35541/api/expint/1/1.0
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	n=1
+				x=1.0
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Disposition: inline;filename=f.txt
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Mon, 09 Sep 2024 19:34:00 GMT
+
+{
+    "resultAsInt": null,
+    "resultAsDouble": 0.21938393455944422
+}
+Request method:	GET
+Request URI:	http://localhost:35541/api/expint/-1/-1.0
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	n=-1
+				x=-1.0
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 400 
+Content-Length: 0
+Date: Mon, 09 Sep 2024 19:34:01 GMT
+Connection: close
+Request method:	GET
+Request URI:	http://localhost:35541/api/bessj/1/1.0
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	n=1
+				x=1.0
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 400 
+Content-Length: 0
+Date: Mon, 09 Sep 2024 19:34:01 GMT
+Connection: close
+Request method:	GET
+Request URI:	http://localhost:35541/api/bessj/-1/-1.0
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	n=-1
+				x=-1.0
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 400 
+Content-Length: 0
+Date: Mon, 09 Sep 2024 19:34:01 GMT
+Connection: close
+Request method:	GET
+Request URI:	http://localhost:35541/api/fisher/-1/-1/-1.0
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	m=-1
+				n=-1
+				x=-1.0
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Disposition: inline;filename=f.txt
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Mon, 09 Sep 2024 19:34:01 GMT
+
+{
+    "resultAsInt": null,
+    "resultAsDouble": "NaN"
+}
+Request method:	GET
+Request URI:	http://localhost:35541/api/gammq/-1.0/-1.0
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	a=-1.0
+				x=-1.0
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 400 
+Content-Length: 0
+Date: Mon, 09 Sep 2024 19:34:01 GMT
+Connection: close
+Request method:	GET
+Request URI:	http://localhost:35541/api/remainder/10/0
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	a=10
+				b=0
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Mon, 09 Sep 2024 19:34:01 GMT
+
+{
+    "resultAsInt": -1,
+    "resultAsDouble": null
+}
+Request method:	GET
+Request URI:	http://localhost:35541/api/triangle/3/4/5
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	a=3
+				b=4
+				c=5
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Mon, 09 Sep 2024 19:34:01 GMT
+
+{
+    "resultAsInt": 1,
+    "resultAsDouble": null
+}
+Request method:	GET
+Request URI:	http://localhost:35541/api/triangle/-3/-4/-5
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	a=-3
+				b=-4
+				c=-5
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Mon, 09 Sep 2024 19:34:01 GMT
+
+{
+    "resultAsInt": 0,
+    "resultAsDouble": null
+}
+2024-09-09 16:34:01.682  INFO 43472 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m13[m, [1;31mFailures: [0;1;31m9[m, Errors: 0, Skipped: 0, Time elapsed: 8.033 s[1;31m <<< FAILURE![m - in org.restncs.[1mv2_gpt4o_run03_ExpintTest[m
+[[1;31mERROR[m] testExpintValid(org.restncs.v2_gpt4o_run03_ExpintTest)  Time elapsed: 2.217 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: <0.21938393439552029>
+  Actual: 0.21938393455944422
+
+	at org.restncs.v2_gpt4o_run03_ExpintTest.testExpintValid(v2_gpt4o_run03_ExpintTest.java:65)
+
+[[1;31mERROR[m] testExpintInvalidParams(org.restncs.v2_gpt4o_run03_ExpintTest)  Time elapsed: 0.037 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at org.restncs.v2_gpt4o_run03_ExpintTest.testExpintInvalidParams(v2_gpt4o_run03_ExpintTest.java:76)
+
+[[1;31mERROR[m] testBessj(org.restncs.v2_gpt4o_run03_ExpintTest)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v2_gpt4o_run03_ExpintTest.testBessj(v2_gpt4o_run03_ExpintTest.java:100)
+
+[[1;31mERROR[m] testBessjInvalidParams(org.restncs.v2_gpt4o_run03_ExpintTest)  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at org.restncs.v2_gpt4o_run03_ExpintTest.testBessjInvalidParams(v2_gpt4o_run03_ExpintTest.java:112)
+
+[[1;31mERROR[m] testFisherInvalidParams(org.restncs.v2_gpt4o_run03_ExpintTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restncs.v2_gpt4o_run03_ExpintTest.testFisherInvalidParams(v2_gpt4o_run03_ExpintTest.java:137)
+
+[[1;31mERROR[m] testGammqInvalidParams(org.restncs.v2_gpt4o_run03_ExpintTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at org.restncs.v2_gpt4o_run03_ExpintTest.testGammqInvalidParams(v2_gpt4o_run03_ExpintTest.java:160)
+
+[[1;31mERROR[m] testRemainderInvalidParams(org.restncs.v2_gpt4o_run03_ExpintTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restncs.v2_gpt4o_run03_ExpintTest.testRemainderInvalidParams(v2_gpt4o_run03_ExpintTest.java:183)
+
+[[1;31mERROR[m] testTriangle(org.restncs.v2_gpt4o_run03_ExpintTest)  Time elapsed: 0.045 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: not null
+  Actual: null
+
+	at org.restncs.v2_gpt4o_run03_ExpintTest.testTriangle(v2_gpt4o_run03_ExpintTest.java:196)
+
+[[1;31mERROR[m] testTriangleInvalidParams(org.restncs.v2_gpt4o_run03_ExpintTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restncs.v2_gpt4o_run03_ExpintTest.testTriangleInvalidParams(v2_gpt4o_run03_ExpintTest.java:208)
+
+2024-09-09 16:34:01.741  INFO 43472 --- [       Thread-4] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@25a290ee: startup date [Mon Sep 09 16:33:55 BRT 2024]; root of context hierarchy
+2024-09-09 16:34:01.743  INFO 43472 --- [       Thread-4] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483647
+2024-09-09 16:34:01.743  INFO 43472 --- [       Thread-4] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  v2_gpt4o_run03_ExpintTest.testBessj:100 1 expectation failed.
+Expected status code <200> but was <400>.
+[m
+[[1;31mERROR[m] [1;31m  v2_gpt4o_run03_ExpintTest.testBessjInvalidParams:112 1 expectation failed.
+Expected status code <500> but was <400>.
+[m
+[[1;31mERROR[m] [1;31m  v2_gpt4o_run03_ExpintTest.testExpintInvalidParams:76 1 expectation failed.
+Expected status code <500> but was <400>.
+[m
+[[1;31mERROR[m] [1;31m  v2_gpt4o_run03_ExpintTest.testExpintValid:65 1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: <0.21938393439552029>
+  Actual: 0.21938393455944422
+[m
+[[1;31mERROR[m] [1;31m  v2_gpt4o_run03_ExpintTest.testFisherInvalidParams:137 1 expectation failed.
+Expected status code <500> but was <200>.
+[m
+[[1;31mERROR[m] [1;31m  v2_gpt4o_run03_ExpintTest.testGammqInvalidParams:160 1 expectation failed.
+Expected status code <500> but was <400>.
+[m
+[[1;31mERROR[m] [1;31m  v2_gpt4o_run03_ExpintTest.testRemainderInvalidParams:183 1 expectation failed.
+Expected status code <500> but was <200>.
+[m
+[[1;31mERROR[m] [1;31m  v2_gpt4o_run03_ExpintTest.testTriangle:196 1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: not null
+  Actual: null
+[m
+[[1;31mERROR[m] [1;31m  v2_gpt4o_run03_ExpintTest.testTriangleInvalidParams:208 1 expectation failed.
+Expected status code <500> but was <200>.
+[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 13, Failures: 9, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  11.563 s
+[[1;34mINFO[m] Finished at: 2024-09-09T16:34:02-03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-surefire-plugin:2.22.0:test[m [1m(default-test)[m on project [36mevomaster-benchmark-cs-rest-artificial-ncs[m: [1;31mThere are test failures.[m
+[[1;31mERROR[m] [1;31m[m
+[[1;31mERROR[m] [1;31mPlease refer to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/ncs/target/surefire-reports for the individual test results.[m
+[[1;31mERROR[m] [1;31mPlease refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.[m
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+#####

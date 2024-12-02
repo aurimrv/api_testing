@@ -1,0 +1,487 @@
+Create a white box test suite in JUnit 4 and Java 8 using REST Assured for the Java code delimited by *****. Use the swagger documentation delimited by ##### to provide complementary information about the application. The objective of this test suite is to maximize code coverage (including decision coverage), ensure compliance with the API specification, and validate the robustness, schema conformity, and business rule enforcement of the API.
+
+Follow these six instructions when generating the test code:
+
+Instruction 1. Package Declaration: Add this package line at the beginning of the test code file: package org.restncs;
+
+Instruction 2. Imports: Include the following Java imports:
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.Map;
+import java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import org.evomaster.client.java.controller.SutHandler;
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import io.restassured.response.ValidatableResponse;
+import static org.hamcrest.Matchers.*;
+import io.restassured.config.JsonConfig;
+import io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import org.evomaster.client.java.controller.expect.ExpectationHandler;
+import io.restassured.path.json.JsonPath;
+import java.util.Arrays;
+
+
+Instruction 3. Class Declaration: Create the class with the following declaration: 
+public class v2_gpt4turbo_run02_FisherTest
+
+Instruction 4. Variable Declarations: Include these variables:
+private static final SutHandler controller = new em.embedded.org.restncs.EmbeddedEvoMasterController();
+private static String baseUrlOfSut;
+
+Instruction 5. Setup and Teardown Methods: Include the following setup and teardown methods:
+@BeforeClass
+public static void initClass() {
+    controller.setupForGeneratedTest();
+    baseUrlOfSut = controller.startSut();
+    controller.registerOrExecuteInitSqlCommandsIfNeeded();
+    assertNotNull(baseUrlOfSut);
+    RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+    RestAssured.useRelaxedHTTPSValidation();
+    RestAssured.urlEncodingEnabled = false;
+    RestAssured.config = RestAssured.config()
+        .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+        .redirect(redirectConfig().followRedirects(false));
+}
+
+@AfterClass
+public static void tearDown() {
+    controller.stopSut();
+}
+
+@Before
+public void initTest() {
+    controller.resetStateOfSUT();
+}
+
+Instruction 6. Test Methods: Ensure the generated tests include:
+* Error Scenarios: Tests that simulate invalid inputs or conditions that force the API to return 5xx status codes, particularly 500. Include assertions to verify these responses.
+
+* Schema Validation: Tests that check whether the API responses conform to the OpenAPI schema. Ensure all required fields are present, data types match, and values are valid.
+
+* Business Rule Enforcement: Tests that validate operations like POST, PUT, and DELETE follow the business rules, ensuring correct creation, modification, or deletion of resources. Any violations should be captured and asserted.
+
+
+*****
+package org.restncs.imp;
+
+
+
+public class Fisher {
+    public static double exe(int m, int n, double x) {
+        int a, b, i, j;
+        double w, y, z, zk, d, p;
+
+        a = 2 * (m / 2) - m + 2;
+        b = 2 * (n / 2) - n + 2;
+        w = (x * m) / n;
+        z = 1.0 / (1.0 + w);
+
+        if (a == 1) {
+            if (b == 1) {
+                p = Math.sqrt(w);
+                y = 0.3183098862;
+                d = y * z / p;
+                p = 2.0 * y * Math.atan(p);
+            } else {
+                p = Math.sqrt(w * z);
+                d = 0.5 * p * z / w;
+            }
+        } else if (b == 1) {
+            p = Math.sqrt(z);
+            d = 0.5 * z * p;
+            p = 1.0 - p;
+        } else {
+            d = z * z;
+            p = w * z;
+        }
+
+        y = 2.0 * w / z;
+
+        if (a == 1)
+            for (j = b + 2; j <= n; j += 2) {
+                d *= (1.0 + 1.0 / (j - 2)) * z;
+                p += d * y / (j - 1);
+            }
+        else {
+            zk = Math.pow(z, (double) ((n - 1) / 2));
+            d *= (zk * n) / b;
+            p = p * zk + w * z * (zk - 1.0) / (z - 1.0);
+        }
+
+        y = w * z;
+        z = 2.0 / z;
+        b = n - 2;
+        for (i = a + 2; i <= m; i += 2) {
+            j = i + b;
+            d *= (y * j) / (i - 2);
+            p -= z * d / j;
+        }
+
+        if (p < 0.0)
+            return 0.0;
+        else if (p > 1.0)
+            return 1.0;
+        else
+            return p;
+    }
+}
+
+*****
+#####
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Examples of different numerical algorithms accessible via REST",
+    "version": "1.0",
+    "title": "API for Numerical Case Study (NCS)"
+  },
+  "schemes": [
+    "http"
+  ],
+  "host": "localhost:8080",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "ncs-rest",
+      "description": "Ncs Rest"
+    }
+  ],
+  "paths": {
+    "/api/bessj/{n}/{x}": {
+      "get": {
+        "tags": [
+          "ncs-rest"
+        ],
+        "summary": "bessj",
+        "operationId": "bessjUsingGET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "n",
+            "in": "path",
+            "description": "n",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "x",
+            "in": "path",
+            "description": "x",
+            "required": true,
+            "type": "number",
+            "format": "double"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Dto",
+              "originalRef": "Dto"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/expint/{n}/{x}": {
+      "get": {
+        "tags": [
+          "ncs-rest"
+        ],
+        "summary": "expint",
+        "operationId": "expintUsingGET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "n",
+            "in": "path",
+            "description": "n",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "x",
+            "in": "path",
+            "description": "x",
+            "required": true,
+            "type": "number",
+            "format": "double"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Dto",
+              "originalRef": "Dto"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/fisher/{m}/{n}/{x}": {
+      "get": {
+        "tags": [
+          "ncs-rest"
+        ],
+        "summary": "fisher",
+        "operationId": "fisherUsingGET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "m",
+            "in": "path",
+            "description": "m",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "n",
+            "in": "path",
+            "description": "n",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "x",
+            "in": "path",
+            "description": "x",
+            "required": true,
+            "type": "number",
+            "format": "double"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Dto",
+              "originalRef": "Dto"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/gammq/{a}/{x}": {
+      "get": {
+        "tags": [
+          "ncs-rest"
+        ],
+        "summary": "gammq",
+        "operationId": "gammqUsingGET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "in": "path",
+            "description": "a",
+            "required": true,
+            "type": "number",
+            "format": "double"
+          },
+          {
+            "name": "x",
+            "in": "path",
+            "description": "x",
+            "required": true,
+            "type": "number",
+            "format": "double"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Dto",
+              "originalRef": "Dto"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/remainder/{a}/{b}": {
+      "get": {
+        "tags": [
+          "ncs-rest"
+        ],
+        "summary": "remainder",
+        "operationId": "remainderUsingGET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "in": "path",
+            "description": "a",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "b",
+            "in": "path",
+            "description": "b",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Dto",
+              "originalRef": "Dto"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/triangle/{a}/{b}/{c}": {
+      "get": {
+        "tags": [
+          "ncs-rest"
+        ],
+        "summary": "Check the triangle type of the given three edges",
+        "operationId": "checkTriangleUsingGET",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "a",
+            "in": "path",
+            "description": "First edge",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "b",
+            "in": "path",
+            "description": "Second edge",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "c",
+            "in": "path",
+            "description": "Third edge",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Dto",
+              "originalRef": "Dto"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "definitions": {
+    "Dto": {
+      "type": "object",
+      "properties": {
+        "resultAsDouble": {
+          "type": "number",
+          "format": "double"
+        },
+        "resultAsInt": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "title": "Dto"
+    }
+  }
+}
+#####

@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_CustomerRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 2.409 s <<< FAILURE! - in market.run01_CustomerRestControllerTest
+testInternalServerErrorOnInvalidInput  Time elapsed: 0.08 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <406>.
+
+	at market.run01_CustomerRestControllerTest.testInternalServerErrorOnInvalidInput(run01_CustomerRestControllerTest.java:70)
+
+testCreateCustomerBusinessRuleEnforcement  Time elapsed: 0.212 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run01_CustomerRestControllerTest.testCreateCustomerBusinessRuleEnforcement(run01_CustomerRestControllerTest.java:95)
+
+testGetCustomerSchemaValidation  Time elapsed: 0.299 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_CustomerRestControllerTest.testGetCustomerSchemaValidation(run01_CustomerRestControllerTest.java:80)
+

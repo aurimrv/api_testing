@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt4o_run01_CostfunsTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.33 s <<< FAILURE! - in org.restscs.v0_gpt4o_run01_CostfunsTest
+testCostfunsAllResponses(org.restscs.v0_gpt4o_run01_CostfunsTest)  Time elapsed: 0.095 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "-445test"
+  Actual: 10
+
+	at org.restscs.v0_gpt4o_run01_CostfunsTest.testCostfuns(v0_gpt4o_run01_CostfunsTest.java:85)
+	at org.restscs.v0_gpt4o_run01_CostfunsTest.testCostfunsAllResponses(v0_gpt4o_run01_CostfunsTest.java:61)
+

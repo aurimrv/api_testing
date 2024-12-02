@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.run08_FisherTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.577 s <<< FAILURE! - in org.restncs.run08_FisherTest
+testFisherEndpoint_mNegative_nNegative_xNegative(org.restncs.run08_FisherTest)  Time elapsed: 0.058 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: is <NaN>
+  Actual: NaN
+
+	at org.restncs.run08_FisherTest.testFisherEndpoint_mNegative_nNegative_xNegative(run08_FisherTest.java:89)
+
+testFisherEndpoint_m0_n0_x0(org.restncs.run08_FisherTest)  Time elapsed: 0.04 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: is <NaN>
+  Actual: NaN
+
+	at org.restncs.run08_FisherTest.testFisherEndpoint_m0_n0_x0(run08_FisherTest.java:82)
+

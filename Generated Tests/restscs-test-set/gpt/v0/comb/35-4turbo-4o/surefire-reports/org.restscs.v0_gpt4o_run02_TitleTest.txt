@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt4o_run02_TitleTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.98 s <<< FAILURE! - in org.restscs.v0_gpt4o_run02_TitleTest
+testUnauthorized(org.restscs.v0_gpt4o_run02_TitleTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <200>.
+
+	at org.restscs.v0_gpt4o_run02_TitleTest.testUnauthorized(v0_gpt4o_run02_TitleTest.java:190)
+
+testForbidden(org.restscs.v0_gpt4o_run02_TitleTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at org.restscs.v0_gpt4o_run02_TitleTest.testForbidden(v0_gpt4o_run02_TitleTest.java:202)
+

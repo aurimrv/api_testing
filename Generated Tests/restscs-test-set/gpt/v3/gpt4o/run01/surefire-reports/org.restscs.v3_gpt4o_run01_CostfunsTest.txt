@@ -1,0 +1,171 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run01_CostfunsTest
+-------------------------------------------------------------------------------
+Tests run: 22, Failures: 21, Errors: 0, Skipped: 0, Time elapsed: 1.865 s <<< FAILURE! - in org.restscs.v3_gpt4o_run01_CostfunsTest
+testCalcValid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testCalcValid(v3_gpt4o_run01_CostfunsTest.java:166)
+
+testCalcInvalid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testCalcInvalid(v3_gpt4o_run01_CostfunsTest.java:177)
+
+testCostfunsValid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "1"
+  Actual: 10
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testCostfunsValid(v3_gpt4o_run01_CostfunsTest.java:65)
+
+testCostfunsInvalid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.034 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testCostfunsInvalid(v3_gpt4o_run01_CostfunsTest.java:154)
+
+testCookieValid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Cookie set: session=12345 for site=example.com"
+  Actual: 2
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testCookieValid(v3_gpt4o_run01_CostfunsTest.java:189)
+
+testCookieInvalid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testCookieInvalid(v3_gpt4o_run01_CostfunsTest.java:200)
+
+testDateParseValid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Date parsed: Monday, January"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testDateParseValid(v3_gpt4o_run01_CostfunsTest.java:211)
+
+testDateParseInvalid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testDateParseInvalid(v3_gpt4o_run01_CostfunsTest.java:221)
+
+testFileSuffixValid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testFileSuffixValid(v3_gpt4o_run01_CostfunsTest.java:231)
+
+testFileSuffixInvalid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testFileSuffixInvalid(v3_gpt4o_run01_CostfunsTest.java:242)
+
+testNotyPevarValid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Notypevar: 1, test"
+  Actual: 2
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testNotyPevarValid(v3_gpt4o_run01_CostfunsTest.java:253)
+
+testOrdered4Valid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Ordered4: apple, banana, date, cherry"
+  Actual: unordered
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testOrdered4Valid(v3_gpt4o_run01_CostfunsTest.java:276)
+
+testOrdered4Invalid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testOrdered4Invalid(v3_gpt4o_run01_CostfunsTest.java:288)
+
+testRegexValid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Regex: hello world"
+  Actual: none
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testRegexValid(v3_gpt4o_run01_CostfunsTest.java:298)
+
+testRegexInvalid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testRegexInvalid(v3_gpt4o_run01_CostfunsTest.java:307)
+
+testPatValid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Pat: hello world, hello"
+  Actual: 1
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testPatValid(v3_gpt4o_run01_CostfunsTest.java:318)
+
+testPatInvalid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testPatInvalid(v3_gpt4o_run01_CostfunsTest.java:328)
+
+testText2TxtValid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Text2txt: one, two, three"
+  Actual: 
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testText2TxtValid(v3_gpt4o_run01_CostfunsTest.java:340)
+
+testText2TxtInvalid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testText2TxtInvalid(v3_gpt4o_run01_CostfunsTest.java:351)
+
+testTitleValid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Title: male, Mr"
+  Actual: 1
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testTitleValid(v3_gpt4o_run01_CostfunsTest.java:362)
+
+testTitleInvalid(org.restscs.v3_gpt4o_run01_CostfunsTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at org.restscs.v3_gpt4o_run01_CostfunsTest.testTitleInvalid(v3_gpt4o_run01_CostfunsTest.java:372)
+

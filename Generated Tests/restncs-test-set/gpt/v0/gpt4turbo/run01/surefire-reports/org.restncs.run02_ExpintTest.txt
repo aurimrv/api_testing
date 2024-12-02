@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.run02_ExpintTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.413 s <<< FAILURE! - in org.restncs.run02_ExpintTest
+testExpintBoundaryInput(org.restncs.run02_ExpintTest)  Time elapsed: 0.066 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.run02_ExpintTest.testExpintBoundaryInput(run02_ExpintTest.java:72)
+

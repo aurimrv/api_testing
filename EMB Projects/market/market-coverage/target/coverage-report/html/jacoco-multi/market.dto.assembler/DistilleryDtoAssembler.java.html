@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>DistilleryDtoAssembler.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market.dto.assembler</a> &gt; <span class="el_source">DistilleryDtoAssembler.java</span></div><h1>DistilleryDtoAssembler.java</h1><pre class="source lang-java linenums">package market.dto.assembler;
+
+import market.domain.Distillery;
+import market.dto.DistilleryDTO;
+import org.springframework.hateoas.server.RepresentationModelAssembler;
+
+import java.util.List;
+
+<span class="nc" id="L9">public class DistilleryDtoAssembler implements RepresentationModelAssembler&lt;Distillery, DistilleryDTO&gt; {</span>
+
+	@Override
+	public DistilleryDTO toModel(Distillery distillery) {
+<span class="nc" id="L13">		DistilleryDTO dto = new DistilleryDTO();</span>
+<span class="nc" id="L14">		dto.setId(distillery.getId());</span>
+<span class="nc" id="L15">		dto.setTitle(distillery.getTitle());</span>
+<span class="nc" id="L16">		dto.setDescription(distillery.getDescription());</span>
+<span class="nc" id="L17">		dto.setRegion(distillery.getRegion().getName());</span>
+<span class="nc" id="L18">		return dto;</span>
+	}
+
+	public DistilleryDTO[] toDtoArray(List&lt;Distillery&gt; items) {
+<span class="nc" id="L22">		return toCollectionModel(items).getContent().toArray(new DistilleryDTO[items.size()]);</span>
+	}
+
+	public Distillery toDomain(DistilleryDTO dto) {
+<span class="nc" id="L26">		return new Distillery.Builder()</span>
+<span class="nc" id="L27">			.setTitle(dto.getTitle())</span>
+<span class="nc" id="L28">			.setDescription(dto.getDescription())</span>
+<span class="nc" id="L29">			.build();</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

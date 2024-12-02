@@ -1,0 +1,458 @@
+Correct the test code delimited by ***** according to the error messages delimited by ##### and generate another complete code in JUnit 4 format. The response must contain only Java code in JUnit 4 format.
+
+Keep these five instructions for this generated test code:
+
+Instruction 1: Keet this package line to generated test code file:
+package org.restscs;
+
+Instruction 2: Keep the following Java imports to generated test code file:
+import  org.junit.AfterClass;
+import  org.junit.BeforeClass;
+import  org.junit.Before;
+import  org.junit.Test;
+import static org.junit.Assert.*;
+import  java.util.Map;
+import  java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import  org.evomaster.client.java.controller.SutHandler;
+import  io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import  io.restassured.response.ValidatableResponse;
+import static org.hamcrest.Matchers.*;
+import  io.restassured.config.JsonConfig;
+import  io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import  org.evomaster.client.java.controller.expect.ExpectationHandler;
+import  io.restassured.path.json.JsonPath;
+import  java.util.Arrays;
+
+Instruction 3: Keep the same class name in this point (between the imports at instruction 2 and instruction 4)
+
+Instruction 4: Keep these variables in the generated test code:
+private static final SutHandler controller = new em.embedded.org.restscs.EmbeddedEvoMasterController();
+private static String baseUrlOfSut;
+
+Instruction 5: Keep the following setup and teardown methods in generated test code file:
+@BeforeClass
+public static void initClass() {
+    controller.setupForGeneratedTest();
+    baseUrlOfSut = controller.startSut();
+    controller.registerOrExecuteInitSqlCommandsIfNeeded();
+    assertNotNull(baseUrlOfSut);
+    RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+    RestAssured.useRelaxedHTTPSValidation();
+    RestAssured.urlEncodingEnabled = false;
+    RestAssured.config = RestAssured.config()
+        .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+        .redirect(redirectConfig().followRedirects(false));
+}
+
+
+@AfterClass
+public static void tearDown() {
+    controller.stopSut();
+}
+
+
+@Before
+public void initTest() {
+    controller.resetStateOfSUT();
+}
+
+
+*****
+
+package org.restscs;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.Map;
+import java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import org.evomaster.client.java.controller.SutHandler;
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import io.restassured.response.ValidatableResponse;
+import static org.hamcrest.Matchers.*;
+import io.restassured.config.JsonConfig;
+import io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import org.evomaster.client.java.controller.expect.ExpectationHandler;
+import io.restassured.path.json.JsonPath;
+import java.util.Arrays;
+
+public class v2_gpt4o_run02_CookieTest {
+
+    private static final SutHandler controller = new em.embedded.org.restscs.EmbeddedEvoMasterController();
+    private static String baseUrlOfSut;
+
+    @BeforeClass
+    public static void initClass() {
+        controller.setupForGeneratedTest();
+        baseUrlOfSut = controller.startSut();
+        controller.registerOrExecuteInitSqlCommandsIfNeeded();
+        assertNotNull(baseUrlOfSut);
+        RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+        RestAssured.useRelaxedHTTPSValidation();
+        RestAssured.urlEncodingEnabled = false;
+        RestAssured.config = RestAssured.config()
+            .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+            .redirect(redirectConfig().followRedirects(false));
+    }
+
+    @AfterClass
+    public static void tearDown() {
+        controller.stopSut();
+    }
+
+    @Before
+    public void initTest() {
+        controller.resetStateOfSUT();
+    }
+
+    @Test
+    public void testGetCookieValidUserId() {
+        ValidatableResponse response = given()
+            .pathParam("name", "userid")
+            .pathParam("val", "user12345")
+            .pathParam("site", "example.com")
+            .when()
+            .get(baseUrlOfSut + "/api/cookie/{name}/{val}/{site}")
+            .then()
+            .statusCode(200)
+            .body(equalTo("1"));
+
+        response.assertThat().body(matchesJsonSchemaInClasspath("cookie-schema.json"));
+    }
+
+    @Test
+    public void testGetCookieInvalidUserId() {
+        ValidatableResponse response = given()
+            .pathParam("name", "userid")
+            .pathParam("val", "us12345")
+            .pathParam("site", "example.com")
+            .when()
+            .get(baseUrlOfSut + "/api/cookie/{name}/{val}/{site}")
+            .then()
+            .statusCode(200)
+            .body(equalTo("0"));
+
+        response.assertThat().body(matchesJsonSchemaInClasspath("cookie-schema.json"));
+    }
+
+    @Test
+    public void testGetCookieValidSession() {
+        ValidatableResponse response = given()
+            .pathParam("name", "session")
+            .pathParam("val", "am")
+            .pathParam("site", "abc.com")
+            .when()
+            .get(baseUrlOfSut + "/api/cookie/{name}/{val}/{site}")
+            .then()
+            .statusCode(200)
+            .body(equalTo("1"));
+
+        response.assertThat().body(matchesJsonSchemaInClasspath("cookie-schema.json"));
+    }
+
+    @Test
+    public void testGetCookieInvalidSession() {
+        ValidatableResponse response = given()
+            .pathParam("name", "session")
+            .pathParam("val", "pm")
+            .pathParam("site", "abc.com")
+            .when()
+            .get(baseUrlOfSut + "/api/cookie/{name}/{val}/{site}")
+            .then()
+            .statusCode(200)
+            .body(equalTo("2"));
+
+        response.assertThat().body(matchesJsonSchemaInClasspath("cookie-schema.json"));
+    }
+
+    @Test
+    public void testGetCookieWithInternalServerError() {
+        given()
+            .pathParam("name", "session")
+            .pathParam("val", "am")
+            .pathParam("site", "error.com")
+            .when()
+            .get(baseUrlOfSut + "/api/cookie/{name}/{val}/{site}")
+            .then()
+            .statusCode(500);
+    }
+
+    @Test
+    public void testCalcOperation() {
+        given()
+            .pathParam("op", "add")
+            .pathParam("arg1", 5)
+            .pathParam("arg2", 3)
+            .when()
+            .get(baseUrlOfSut + "/api/calc/{op}/{arg1}/{arg2}")
+            .then()
+            .statusCode(200)
+            .body(equalTo("8"));
+    }
+
+    @Test
+    public void testCostfuns() {
+        given()
+            .pathParam("i", 1)
+            .pathParam("s", "test")
+            .when()
+            .get(baseUrlOfSut + "/api/costfuns/{i}/{s}")
+            .then()
+            .statusCode(200)
+            .body(matchesJsonSchemaInClasspath("costfuns-schema.json"));
+    }
+
+    @Test
+    public void testDateParse() {
+        given()
+            .pathParam("dayname", "monday")
+            .pathParam("monthname", "january")
+            .when()
+            .get(baseUrlOfSut + "/api/dateparse/{dayname}/{monthname}")
+            .then()
+            .statusCode(200)
+            .body(matchesJsonSchemaInClasspath("dateparse-schema.json"));
+    }
+
+    @Test
+    public void testFileSuffix() {
+        given()
+            .pathParam("directory", "docs")
+            .pathParam("file", "report.txt")
+            .when()
+            .get(baseUrlOfSut + "/api/filesuffix/{directory}/{file}")
+            .then()
+            .statusCode(200)
+            .body(matchesJsonSchemaInClasspath("filesuffix-schema.json"));
+    }
+
+    @Test
+    public void testNotyPevar() {
+        given()
+            .pathParam("i", 42)
+            .pathParam("s", "example")
+            .when()
+            .get(baseUrlOfSut + "/api/notypevar/{i}/{s}")
+            .then()
+            .statusCode(200)
+            .body(matchesJsonSchemaInClasspath("notypevar-schema.json"));
+    }
+
+    @Test
+    public void testOrdered4() {
+        given()
+            .pathParam("w", "one")
+            .pathParam("x", "two")
+            .pathParam("y", "three")
+            .pathParam("z", "four")
+            .when()
+            .get(baseUrlOfSut + "/api/ordered4/{w}/{x}/{z}/{y}")
+            .then()
+            .statusCode(200)
+            .body(matchesJsonSchemaInClasspath("ordered4-schema.json"));
+    }
+
+    @Test
+    public void testRegex() {
+        given()
+            .pathParam("txt", "test")
+            .when()
+            .get(baseUrlOfSut + "/api/pat/{txt}")
+            .then()
+            .statusCode(200)
+            .body(matchesJsonSchemaInClasspath("regex-schema.json"));
+    }
+
+    @Test
+    public void testPat() {
+        given()
+            .pathParam("txt", "test")
+            .pathParam("pat", "pattern")
+            .when()
+            .get(baseUrlOfSut + "/api/pat/{txt}/{pat}")
+            .then()
+            .statusCode(200)
+            .body(matchesJsonSchemaInClasspath("pat-schema.json"));
+    }
+
+    @Test
+    public void testText2Txt() {
+        given()
+            .pathParam("word1", "one")
+            .pathParam("word2", "two")
+            .pathParam("word3", "three")
+            .when()
+            .get(baseUrlOfSut + "/api/text2txt/{word1}/{word2}/{word3}")
+            .then()
+            .statusCode(200)
+            .body(matchesJsonSchemaInClasspath("text2txt-schema.json"));
+    }
+
+    @Test
+    public void testTitle() {
+        given()
+            .pathParam("sex", "male")
+            .pathParam("title", "mr")
+            .when()
+            .get(baseUrlOfSut + "/api/title/{sex}/{title}")
+            .then()
+            .statusCode(200)
+            .body(matchesJsonSchemaInClasspath("title-schema.json"));
+    }
+}
+
+*****
+#####
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------< [0;36morg.evomaster:evomaster-benchmark-cs-rest-artificial-scs[0;1m >------[m
+[[1;34mINFO[m] [1mBuilding evomaster-benchmark-cs-rest-artificial-scs 3.0.0[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Deleting /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 14 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 14 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/test-classes
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[69,36] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[84,36] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[99,36] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[114,36] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[151,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[163,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[175,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[187,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[201,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[212,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[224,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[237,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[249,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;34mINFO[m] 13 errors 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  1.920 s
+[[1;34mINFO[m] Finished at: 2024-09-09T19:45:41-03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m on project [36mevomaster-benchmark-cs-rest-artificial-scs[m: [1;31mCompilation failure[m: Compilation failure: 
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[69,36] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[84,36] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[99,36] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[114,36] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[151,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[163,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[175,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[187,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[201,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[212,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[224,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[237,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_CookieTest.java:[249,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_CookieTest
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+#####

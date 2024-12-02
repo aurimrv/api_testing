@@ -1,0 +1,58 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_RestErrorResponseTest
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 6, Errors: 2, Skipped: 0, Time elapsed: 17.428 s <<< FAILURE! - in market.run01_RestErrorResponseTest
+testGetCustomer_NotFound  Time elapsed: 0.513 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal character in query at index 18: /customer?name=Non Existent User
+	at market.run01_RestErrorResponseTest.testGetCustomer_NotFound(run01_RestErrorResponseTest.java:81)
+Caused by: java.net.URISyntaxException: Illegal character in query at index 18: /customer?name=Non Existent User
+	at market.run01_RestErrorResponseTest.testGetCustomer_NotFound(run01_RestErrorResponseTest.java:81)
+
+testUpdateContacts_Success  Time elapsed: 0.129 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testUpdateContacts_Success(run01_RestErrorResponseTest.java:240)
+
+testGetCustomer_Success  Time elapsed: 0.018 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal character in query at index 19: /customer?name=Ivan Petrov
+	at market.run01_RestErrorResponseTest.testGetCustomer_Success(run01_RestErrorResponseTest.java:66)
+Caused by: java.net.URISyntaxException: Illegal character in query at index 19: /customer?name=Ivan Petrov
+	at market.run01_RestErrorResponseTest.testGetCustomer_Success(run01_RestErrorResponseTest.java:66)
+
+testAddItemToCart_Success  Time elapsed: 0.05 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testAddItemToCart_Success(run01_RestErrorResponseTest.java:96)
+
+testClearCart_Success  Time elapsed: 0.05 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testClearCart_Success(run01_RestErrorResponseTest.java:121)
+
+testCreateCustomer_Success  Time elapsed: 0.422 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.run01_RestErrorResponseTest.testCreateCustomer_Success(run01_RestErrorResponseTest.java:201)
+
+testSetDelivery_Success  Time elapsed: 0.029 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testSetDelivery_Success(run01_RestErrorResponseTest.java:133)
+
+testPayByCard_Success  Time elapsed: 0.044 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testPayByCard_Success(run01_RestErrorResponseTest.java:147)
+

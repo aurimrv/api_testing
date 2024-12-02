@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>ProductServiceImpl.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market.service.impl</a> &gt; <span class="el_source">ProductServiceImpl.java</span></div><h1>ProductServiceImpl.java</h1><pre class="source lang-java linenums">package market.service.impl;
+
+import market.dao.ProductDAO;
+import market.domain.Distillery;
+import market.domain.Product;
+import market.domain.Region;
+import market.exception.UnknownEntityException;
+import market.service.DistilleryService;
+import market.service.ProductService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+
+	private final ProductDAO productDAO;
+	private final DistilleryService distilleryService;
+
+<span class="nc" id="L27">	public ProductServiceImpl(ProductDAO productDAO, DistilleryService distilleryService) {</span>
+<span class="nc" id="L28">		this.productDAO = productDAO;</span>
+<span class="nc" id="L29">		this.distilleryService = distilleryService;</span>
+<span class="nc" id="L30">	}</span>
+
+	@Transactional(readOnly = true)
+	@Override
+	public List&lt;Product&gt; findAll() {
+<span class="nc" id="L35">		return productDAO.findAll().stream()</span>
+<span class="nc" id="L36">			.sorted(Comparator.comparing(Product::getName))</span>
+<span class="nc" id="L37">			.collect(Collectors.toList());</span>
+	}
+
+	@Transactional(readOnly = true)
+	@Override
+	public Page&lt;Product&gt; findAll(PageRequest request) {
+<span class="nc" id="L43">		return productDAO.findAll(request);</span>
+	}
+
+	@Transactional(readOnly = true)
+	@Override
+	public Page&lt;Product&gt; findByDistillery(Distillery distillery, PageRequest request) {
+<span class="nc" id="L49">		return productDAO.findByDistilleryOrderByName(distillery, request);</span>
+	}
+
+	@Transactional(readOnly = true)
+	@Override
+	public Page&lt;Product&gt; findByRegion(Region region, PageRequest request) {
+<span class="nc" id="L55">		return productDAO.findByRegionOrderByName(region, request);</span>
+	}
+
+	@Transactional(readOnly = true)
+	@Override
+	public Page&lt;Product&gt; findByAvailability(String available, PageRequest request) {
+		Page&lt;Product&gt; pagedList;
+<span class="nc bnc" id="L62" title="All 2 branches missed.">		if (&quot;all&quot;.equals(available)) {</span>
+<span class="nc" id="L63">			pagedList = productDAO.findAll(request);</span>
+		} else {
+<span class="nc" id="L65">			boolean availability = Boolean.parseBoolean(available);</span>
+<span class="nc" id="L66">			pagedList = productDAO.findByAvailableOrderByName(availability, request);</span>
+		}
+<span class="nc" id="L68">		return pagedList;</span>
+	}
+
+	@Transactional(readOnly = true)
+	@Override
+	public Product getProduct(long productId) {
+<span class="nc" id="L74">		return productDAO.findById(productId)</span>
+<span class="nc" id="L75">			.orElseThrow(() -&gt; new UnknownEntityException(Product.class, productId));</span>
+	}
+
+	@Transactional(readOnly = true)
+	@Override
+	public Optional&lt;Product&gt; findById(long productId) {
+<span class="nc" id="L81">		return productDAO.findById(productId);</span>
+	}
+
+	@Transactional
+	@Override
+	public void create(Product product, String distilleryTitle) {
+<span class="nc" id="L87">		saveInternal(product, distilleryTitle, true);</span>
+<span class="nc" id="L88">	}</span>
+
+	@Transactional
+	@Override
+	public void update(long productId, Product product, String distilleryTitle) {
+<span class="nc" id="L93">		Product original = getProduct(productId);</span>
+<span class="nc" id="L94">		product.setId(original.getId());</span>
+<span class="nc" id="L95">		saveInternal(product, distilleryTitle, original.isAvailable()); // keep original availability</span>
+<span class="nc" id="L96">	}</span>
+
+	private void saveInternal(Product changed, String distilleryTitle, boolean available) {
+<span class="nc" id="L99">		Distillery distillery = distilleryService.findByTitle(distilleryTitle);</span>
+<span class="nc bnc" id="L100" title="All 2 branches missed.">		if (distillery != null) {</span>
+<span class="nc" id="L101">			changed.setDistillery(distillery);</span>
+<span class="nc" id="L102">			changed.setAvailable(available);</span>
+<span class="nc" id="L103">			productDAO.save(changed);</span>
+		}
+<span class="nc" id="L105">	}</span>
+
+	@Override
+	public void updateAvailability(Map&lt;Boolean, List&lt;Long&gt;&gt; productIdsByAvailability) {
+<span class="nc bnc" id="L109" title="All 2 branches missed.">		for (Map.Entry&lt;Boolean, List&lt;Long&gt;&gt; e : productIdsByAvailability.entrySet()) {</span>
+<span class="nc" id="L110">			Boolean targetAvailability = e.getKey();</span>
+<span class="nc" id="L111">			List&lt;Product&gt; productsToUpdate = e.getValue().stream()</span>
+<span class="nc" id="L112">				.map(this::findById)</span>
+<span class="nc" id="L113">				.filter(Optional::isPresent)</span>
+<span class="nc" id="L114">				.map(Optional::get)</span>
+<span class="nc bnc" id="L115" title="All 2 branches missed.">				.filter(product -&gt; product.isAvailable() != targetAvailability)</span>
+<span class="nc" id="L116">				.collect(Collectors.toList());</span>
+<span class="nc bnc" id="L117" title="All 2 branches missed.">			for (Product product : productsToUpdate) {</span>
+<span class="nc" id="L118">				product.setAvailable(targetAvailability);</span>
+<span class="nc" id="L119">				productDAO.save(product);</span>
+<span class="nc" id="L120">			}</span>
+<span class="nc" id="L121">		}</span>
+<span class="nc" id="L122">	}</span>
+
+	@Transactional
+	@Override
+	public void delete(long product) {
+<span class="nc" id="L127">		productDAO.deleteById(product);</span>
+<span class="nc" id="L128">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

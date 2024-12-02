@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt35_run01_TitleTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.411 s <<< FAILURE! - in org.restscs.v3_gpt35_run01_TitleTest
+testTitleEndpoint_ServerError_ReturnsInternalServerError(org.restscs.v3_gpt35_run01_TitleTest)  Time elapsed: 0.059 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run01_TitleTest.testTitleEndpoint_ServerError_ReturnsInternalServerError(v3_gpt35_run01_TitleTest.java:84)
+
+testTitleEndpoint_InvalidInput_ReturnsNotFound(org.restscs.v3_gpt35_run01_TitleTest)  Time elapsed: 0.033 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v3_gpt35_run01_TitleTest.testTitleEndpoint_InvalidInput_ReturnsNotFound(v3_gpt35_run01_TitleTest.java:74)
+

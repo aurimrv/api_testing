@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run01_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.857 s <<< FAILURE! - in org.restscs.v1_gpt4o_run01_RegexTest
+testCalcEndpoint(org.restscs.v1_gpt4o_run01_RegexTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "3.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run01_RegexTest.testCalcEndpoint(v1_gpt4o_run01_RegexTest.java:67)
+
+testFileSuffixEndpoint(org.restscs.v1_gpt4o_run01_RegexTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is ".txt"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run01_RegexTest.testFileSuffixEndpoint(v1_gpt4o_run01_RegexTest.java:116)
+
+testText2txtEndpoint(org.restscs.v1_gpt4o_run01_RegexTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: not an empty string
+  Actual: 
+
+	at org.restscs.v1_gpt4o_run01_RegexTest.testText2txtEndpoint(v1_gpt4o_run01_RegexTest.java:178)
+

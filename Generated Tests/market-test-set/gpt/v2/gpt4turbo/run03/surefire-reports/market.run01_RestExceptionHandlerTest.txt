@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.21 s <<< FAILURE! - in market.run01_RestExceptionHandlerTest
+testUnknownEntityException  Time elapsed: 0.053 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is (null or an empty string)
+  Actual: {"timestamp":"2024-08-30T20:26:23.230+00:00","status":404,"error":"Not Found","message":"","path":"/entity/notExist"}
+
+	at market.run01_RestExceptionHandlerTest.testUnknownEntityException(run01_RestExceptionHandlerTest.java:85)
+

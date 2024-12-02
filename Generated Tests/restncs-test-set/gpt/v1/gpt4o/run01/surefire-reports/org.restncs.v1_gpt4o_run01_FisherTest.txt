@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v1_gpt4o_run01_FisherTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 10.505 s <<< FAILURE! - in org.restncs.v1_gpt4o_run01_FisherTest
+testFisherEndpoint(org.restncs.v1_gpt4o_run01_FisherTest)  Time elapsed: 2.917 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: is <0.0>
+  Actual: 0.5383722765254043
+
+	at org.restncs.v1_gpt4o_run01_FisherTest.testFisherEndpoint(v1_gpt4o_run01_FisherTest.java:73)
+
+testBessjEndpoint(org.restncs.v1_gpt4o_run01_FisherTest)  Time elapsed: 0.111 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v1_gpt4o_run01_FisherTest.testBessjEndpoint(v1_gpt4o_run01_FisherTest.java:97)
+
+testExpintEndpoint(org.restncs.v1_gpt4o_run01_FisherTest)  Time elapsed: 0.081 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v1_gpt4o_run01_FisherTest.testExpintEndpoint(v1_gpt4o_run01_FisherTest.java:117)
+
+testGammqEndpoint(org.restncs.v1_gpt4o_run01_FisherTest)  Time elapsed: 0.082 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v1_gpt4o_run01_FisherTest.testGammqEndpoint(v1_gpt4o_run01_FisherTest.java:137)
+
+testRemainderEndpoint(org.restncs.v1_gpt4o_run01_FisherTest)  Time elapsed: 0.139 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsInt doesn't match.
+Expected: is <0>
+  Actual: 1
+
+	at org.restncs.v1_gpt4o_run01_FisherTest.testRemainderEndpoint(v1_gpt4o_run01_FisherTest.java:163)
+
+testTriangleEndpoint(org.restncs.v1_gpt4o_run01_FisherTest)  Time elapsed: 0.045 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsString doesn't match.
+Expected: not null
+  Actual: null
+
+	at org.restncs.v1_gpt4o_run01_FisherTest.testTriangleEndpoint(v1_gpt4o_run01_FisherTest.java:177)
+

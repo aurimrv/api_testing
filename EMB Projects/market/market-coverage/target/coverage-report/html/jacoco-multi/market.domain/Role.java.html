@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>Role.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market.domain</a> &gt; <span class="el_source">Role.java</span></div><h1>Role.java</h1><pre class="source lang-java linenums">package market.domain;
+
+import javax.persistence.*;
+import java.io.*;
+import java.util.*;
+
+/**
+ * Role of a {@link UserAccount}.
+ */
+@Entity
+@Table(name = &quot;role&quot;)
+<span class="nc" id="L12">public class Role implements Serializable {</span>
+	private static final long serialVersionUID = -1387354647838847103L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = &quot;id&quot;, insertable = false, updatable = false, nullable = false)
+	private Long id;
+
+	@Column(name = &quot;title&quot;, nullable = false)
+	private String title;
+<span class="nc" id="L22">	@ManyToMany(mappedBy = &quot;roles&quot;)</span>
+	private Set&lt;UserAccount&gt; users = new HashSet&lt;&gt;();
+
+	public Long getId() {
+<span class="nc" id="L26">		return id;</span>
+	}
+
+	public void setId(Long id) {
+<span class="nc" id="L30">		this.id = id;</span>
+<span class="nc" id="L31">	}</span>
+
+	public String getTitle() {
+<span class="nc" id="L34">		return title;</span>
+	}
+
+	public void setTitle(String title) {
+<span class="nc" id="L38">		this.title = title;</span>
+<span class="nc" id="L39">	}</span>
+
+	public Set&lt;UserAccount&gt; getUsers() {
+<span class="nc" id="L42">		return users;</span>
+	}
+
+	public void setUsers(Set&lt;UserAccount&gt; users) {
+<span class="nc" id="L46">		this.users = users;</span>
+<span class="nc" id="L47">	}</span>
+
+<span class="nc" id="L49">	enum Roles {</span>
+<span class="nc" id="L50">		ROLE_ADMIN,</span>
+<span class="nc" id="L51">		ROLE_STAFF,</span>
+<span class="nc" id="L52">		ROLE_USER</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

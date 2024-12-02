@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 2.174 s <<< FAILURE! - in market.run01_RestExceptionHandlerTest
+testGetNonExistentCustomer  Time elapsed: 0.075 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run01_RestExceptionHandlerTest.testGetNonExistentCustomer(run01_RestExceptionHandlerTest.java:94)
+
+testPayByCardUnauthorized  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <406>.
+
+	at market.run01_RestExceptionHandlerTest.testPayByCardUnauthorized(run01_RestExceptionHandlerTest.java:152)
+
+testGetCustomer  Time elapsed: 0.062 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run01_RestExceptionHandlerTest.testGetCustomer(run01_RestExceptionHandlerTest.java:76)
+

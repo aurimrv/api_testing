@@ -1,0 +1,89 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run03_CostfunsTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 11, Errors: 0, Skipped: 0, Time elapsed: 1.112 s <<< FAILURE! - in org.restscs.v1_gpt4o_run03_CostfunsTest
+testFileSuffixEndpoint(org.restscs.v1_gpt4o_run03_CostfunsTest)  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: a string containing ".txt"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run03_CostfunsTest.testFileSuffixEndpoint(v1_gpt4o_run03_CostfunsTest.java:232)
+
+testDateParseEndpoint(org.restscs.v1_gpt4o_run03_CostfunsTest)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v1_gpt4o_run03_CostfunsTest.testDateParseEndpoint(v1_gpt4o_run03_CostfunsTest.java:221)
+
+testCookieEndpoint(org.restscs.v1_gpt4o_run03_CostfunsTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Cookie set"
+  Actual: 2
+
+	at org.restscs.v1_gpt4o_run03_CostfunsTest.testCookieEndpoint(v1_gpt4o_run03_CostfunsTest.java:112)
+
+testText2txtEndpoint(org.restscs.v1_gpt4o_run03_CostfunsTest)  Time elapsed: 0.127 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v1_gpt4o_run03_CostfunsTest.testText2txtEndpoint(v1_gpt4o_run03_CostfunsTest.java:333)
+
+testRegexEndpoint(org.restscs.v1_gpt4o_run03_CostfunsTest)  Time elapsed: 0.028 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v1_gpt4o_run03_CostfunsTest.testRegexEndpoint(v1_gpt4o_run03_CostfunsTest.java:295)
+
+testCalcEndpoint(org.restscs.v1_gpt4o_run03_CostfunsTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run03_CostfunsTest.testCalcEndpoint(v1_gpt4o_run03_CostfunsTest.java:65)
+
+testCostfunsEndpoint(org.restscs.v1_gpt4o_run03_CostfunsTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "1"
+  Actual: 10
+
+	at org.restscs.v1_gpt4o_run03_CostfunsTest.testCostfunsEndpoint(v1_gpt4o_run03_CostfunsTest.java:131)
+
+testTitleEndpoint(org.restscs.v1_gpt4o_run03_CostfunsTest)  Time elapsed: 0.027 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v1_gpt4o_run03_CostfunsTest.testTitleEndpoint(v1_gpt4o_run03_CostfunsTest.java:351)
+
+testOrdered4Endpoint(org.restscs.v1_gpt4o_run03_CostfunsTest)  Time elapsed: 0.029 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v1_gpt4o_run03_CostfunsTest.testOrdered4Endpoint(v1_gpt4o_run03_CostfunsTest.java:279)
+
+testPatEndpoint(org.restscs.v1_gpt4o_run03_CostfunsTest)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v1_gpt4o_run03_CostfunsTest.testPatEndpoint(v1_gpt4o_run03_CostfunsTest.java:313)
+
+testNotypevarEndpoint(org.restscs.v1_gpt4o_run03_CostfunsTest)  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v1_gpt4o_run03_CostfunsTest.testNotypevarEndpoint(v1_gpt4o_run03_CostfunsTest.java:257)
+

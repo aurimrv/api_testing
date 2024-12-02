@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_CustomerRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 5, Skipped: 0, Time elapsed: 2.095 s <<< FAILURE! - in market.run01_CustomerRestControllerTest
+testSchemaValidation  Time elapsed: 0.105 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run01_CustomerRestControllerTest.testSchemaValidation(run01_CustomerRestControllerTest.java:166)
+
+testInternalServerError  Time elapsed: 0.045 s  <<< ERROR!
+java.net.ConnectException: Conexão recusada (Connection refused)
+	at market.run01_CustomerRestControllerTest.testInternalServerError(run01_CustomerRestControllerTest.java:149)
+
+testCreateCustomer  Time elapsed: 0.024 s  <<< ERROR!
+java.net.ConnectException: Conexão recusada (Connection refused)
+	at market.run01_CustomerRestControllerTest.testCreateCustomer(run01_CustomerRestControllerTest.java:70)
+
+testCreateCustomerWithExistingEmail  Time elapsed: 0.027 s  <<< ERROR!
+java.net.ConnectException: Conexão recusada (Connection refused)
+	at market.run01_CustomerRestControllerTest.testCreateCustomerWithExistingEmail(run01_CustomerRestControllerTest.java:87)
+
+testCreateCustomerWithInvalidData  Time elapsed: 0.022 s  <<< ERROR!
+java.net.ConnectException: Conexão recusada (Connection refused)
+	at market.run01_CustomerRestControllerTest.testCreateCustomerWithInvalidData(run01_CustomerRestControllerTest.java:133)
+
+testGetCustomer  Time elapsed: 0.023 s  <<< ERROR!
+java.net.ConnectException: Conexão recusada (Connection refused)
+	at market.run01_CustomerRestControllerTest.testGetCustomer(run01_CustomerRestControllerTest.java:109)
+

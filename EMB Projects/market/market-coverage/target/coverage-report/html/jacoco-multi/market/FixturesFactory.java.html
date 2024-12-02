@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>FixturesFactory.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market</a> &gt; <span class="el_source">FixturesFactory.java</span></div><h1>FixturesFactory.java</h1><pre class="source lang-java linenums">package market;
+
+import market.domain.*;
+
+import java.util.Date;
+
+<span class="nc" id="L7">public class FixturesFactory {</span>
+	private static final String DISTILLERY_TITLE = &quot;distillery_title&quot;;
+	private static final String DISTILLERY_DESCRIPTION = &quot;distillery_description&quot;;
+
+	private static final String REGION_NAME = &quot;region name&quot;;
+	private static final String REGION_SUBTITLE = &quot;region subtitle&quot;;
+	private static final String REGION_DESCRIPTION = &quot;region description&quot;;
+	private static final String REGION_COLOR = &quot;#ffffff&quot;;
+
+	private static final double PRODUCT_PRICE = 100.0;
+	private static final String PRODUCT_NAME = &quot;product_name&quot;;
+	private static final int PRODUCT_AGE = 10;
+	private static final float PRODUCT_ALCOHOL = 40;
+	private static final int PRODUCT_VOLUME = 700;
+	private static final String PRODUCT_DESCRIPTION = &quot;product_description&quot;;
+	private static final boolean PRODUCT_AVAILABLE = true;
+
+	private static final String ACCOUNT_EMAIL = &quot;email@domain.com&quot;;
+	private static final String ACCOUNT_PASSWORD = &quot;password&quot;;
+	private static final String ACCOUNT_NAME = &quot;Name&quot;;
+	private static final boolean ACCOUNT_ACTIVE = true;
+
+	private static final String CONTACTS_PHONE = &quot;+97211234567&quot;;
+	private static final String CONTACTS_ADDRESS = &quot;some_address&quot;;
+
+	private static final int ORDERED_PRODUCT_QUANTITY = 3;
+
+	private static final String BILL_CARD_NUMBER = &quot;1111222233334444&quot;;
+
+<span class="nc" id="L36">	private static long regionId = 123L;</span>
+<span class="nc" id="L37">	private static long distilleryId = 234L;</span>
+<span class="nc" id="L38">	private static long productId = 10L;</span>
+<span class="nc" id="L39">	private static long accountId = 50L;</span>
+<span class="nc" id="L40">	private static long orderId = 3000L;</span>
+<span class="nc" id="L41">	private static int billId = 400;</span>
+
+	public static Region.Builder region() {
+<span class="nc" id="L44">		return new Region.Builder()</span>
+<span class="nc" id="L45">			.setId(++regionId)</span>
+<span class="nc" id="L46">			.setName(REGION_NAME + regionId)</span>
+<span class="nc" id="L47">			.setSubtitle(REGION_SUBTITLE)</span>
+<span class="nc" id="L48">			.setDescription(REGION_DESCRIPTION)</span>
+<span class="nc" id="L49">			.setColor(REGION_COLOR);</span>
+	}
+
+	public static Distillery.Builder distillery(Region region) {
+<span class="nc" id="L53">		return new Distillery.Builder()</span>
+<span class="nc" id="L54">			.setId(++distilleryId)</span>
+<span class="nc" id="L55">			.setRegion(region)</span>
+<span class="nc" id="L56">			.setTitle(DISTILLERY_TITLE + distilleryId)</span>
+<span class="nc" id="L57">			.setDescription(DISTILLERY_DESCRIPTION);</span>
+	}
+
+	public static Product.Builder product(Distillery distillery) {
+<span class="nc" id="L61">		return new Product.Builder()</span>
+<span class="nc" id="L62">			.setId(++productId)</span>
+<span class="nc" id="L63">			.setDistillery(distillery)</span>
+<span class="nc" id="L64">			.setName(PRODUCT_NAME + productId)</span>
+<span class="nc" id="L65">			.setAge(PRODUCT_AGE)</span>
+<span class="nc" id="L66">			.setAlcohol(PRODUCT_ALCOHOL)</span>
+<span class="nc" id="L67">			.setPrice(PRODUCT_PRICE)</span>
+<span class="nc" id="L68">			.setVolume(PRODUCT_VOLUME)</span>
+<span class="nc" id="L69">			.setDescription(PRODUCT_DESCRIPTION)</span>
+<span class="nc" id="L70">			.setAvailable(PRODUCT_AVAILABLE);</span>
+	}
+
+	public static UserAccount.Builder account(Cart cart) {
+<span class="nc" id="L74">		return account()</span>
+<span class="nc" id="L75">			.setCart(cart);</span>
+	}
+
+	public static UserAccount.Builder account() {
+<span class="nc" id="L79">		return new UserAccount.Builder()</span>
+<span class="nc" id="L80">			.setId(++accountId)</span>
+<span class="nc" id="L81">			.setEmail(ACCOUNT_EMAIL)</span>
+<span class="nc" id="L82">			.setPassword(ACCOUNT_PASSWORD)</span>
+<span class="nc" id="L83">			.setName(ACCOUNT_NAME)</span>
+<span class="nc" id="L84">			.setActive(ACCOUNT_ACTIVE);</span>
+	}
+
+	public static Contacts.Builder contacts() {
+<span class="nc" id="L88">		return new Contacts.Builder()</span>
+<span class="nc" id="L89">			.setPhone(CONTACTS_PHONE)</span>
+<span class="nc" id="L90">			.setAddress(CONTACTS_ADDRESS);</span>
+	}
+
+	public static Order.Builder order(UserAccount userAccount) {
+<span class="nc" id="L94">		return new Order.Builder()</span>
+<span class="nc" id="L95">			.setId(++orderId)</span>
+<span class="nc" id="L96">			.setUserAccount(userAccount)</span>
+<span class="nc" id="L97">			.setDateCreated(new Date());</span>
+	}
+
+	public static OrderedProduct.Builder orderedProduct(Order order, Product product) {
+<span class="nc" id="L101">		return new OrderedProduct.Builder()</span>
+<span class="nc" id="L102">			.setProduct(product)</span>
+<span class="nc" id="L103">			.setOrder(order)</span>
+<span class="nc" id="L104">			.setQuantity(ORDERED_PRODUCT_QUANTITY);</span>
+	}
+
+	public static Bill.Builder bill(Order order) {
+<span class="nc" id="L108">		return new Bill.Builder()</span>
+<span class="nc" id="L109">			.setOrder(order)</span>
+<span class="nc" id="L110">			.setNumber(++billId)</span>
+<span class="nc" id="L111">			.setTotalCost(order.getProductsCost() + order.getDeliveryCost())</span>
+<span class="nc" id="L112">			.setPayed(true)</span>
+<span class="nc" id="L113">			.setDateCreated(new Date())</span>
+<span class="nc" id="L114">			.setCcNumber(BILL_CARD_NUMBER);</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

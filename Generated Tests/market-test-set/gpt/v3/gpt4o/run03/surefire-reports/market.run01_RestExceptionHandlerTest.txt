@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 2.055 s <<< FAILURE! - in market.run01_RestExceptionHandlerTest
+testGetCustomerNotFound  Time elapsed: 0.037 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.run01_RestExceptionHandlerTest.testGetCustomerNotFound(run01_RestExceptionHandlerTest.java:77)
+
+testCreateCustomer  Time elapsed: 0.075 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run01_RestExceptionHandlerTest.testCreateCustomer(run01_RestExceptionHandlerTest.java:193)
+
+testGetCartNotFound  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.run01_RestExceptionHandlerTest.testGetCartNotFound(run01_RestExceptionHandlerTest.java:87)
+

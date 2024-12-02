@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.run04_CalcTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.676 s <<< FAILURE! - in org.restscs.run04_CalcTest
+testCalcTangent(org.restscs.run04_CalcTest)  Time elapsed: 0.135 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "0.9999999999999999"
+  Actual: 1.6197751905438615
+
+	at org.restscs.run04_CalcTest.testCalcTangent(run04_CalcTest.java:74)
+
+testCalcCosine(org.restscs.run04_CalcTest)  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "-1.0"
+  Actual: -0.5984600690578581
+
+	at org.restscs.run04_CalcTest.testCalcCosine(run04_CalcTest.java:67)
+
+testCalcSine(org.restscs.run04_CalcTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "1.0"
+  Actual: 0.8939966636005579
+
+	at org.restscs.run04_CalcTest.testCalcSine(run04_CalcTest.java:60)
+

@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v1_gpt4o_run02_FisherTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 1.36 s <<< FAILURE! - in org.restncs.v1_gpt4o_run02_FisherTest
+testBessjEndpoint(org.restncs.v1_gpt4o_run02_FisherTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v1_gpt4o_run02_FisherTest.testBessjEndpoint(v1_gpt4o_run02_FisherTest.java:97)
+
+testFisherEndpoint(org.restncs.v1_gpt4o_run02_FisherTest)  Time elapsed: 0.082 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restncs.v1_gpt4o_run02_FisherTest.testFisherEndpoint(v1_gpt4o_run02_FisherTest.java:86)
+
+testRemainderEndpoint(org.restncs.v1_gpt4o_run02_FisherTest)  Time elapsed: 0.063 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restncs.v1_gpt4o_run02_FisherTest.testRemainderEndpoint(v1_gpt4o_run02_FisherTest.java:166)
+
+testTriangleEndpoint(org.restncs.v1_gpt4o_run02_FisherTest)  Time elapsed: 0.055 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restncs.v1_gpt4o_run02_FisherTest.testTriangleEndpoint(v1_gpt4o_run02_FisherTest.java:188)
+

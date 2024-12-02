@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run03_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.82 s <<< FAILURE! - in org.restscs.v3_gpt4o_run03_RegexTest
+testCalcUsingGET(org.restscs.v3_gpt4o_run03_RegexTest)  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run03_RegexTest.testCalcUsingGET(v3_gpt4o_run03_RegexTest.java:65)
+
+testPatUsingGET(org.restscs.v3_gpt4o_run03_RegexTest)  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "none"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run03_RegexTest.testPatUsingGET(v3_gpt4o_run03_RegexTest.java:206)
+
+testDateParseUsingGET(org.restscs.v3_gpt4o_run03_RegexTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_RegexTest.testDateParseUsingGET(v3_gpt4o_run03_RegexTest.java:122)
+

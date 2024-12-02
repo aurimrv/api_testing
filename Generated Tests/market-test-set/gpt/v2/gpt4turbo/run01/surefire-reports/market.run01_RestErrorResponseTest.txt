@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_RestErrorResponseTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 17.98 s <<< FAILURE! - in market.run01_RestErrorResponseTest
+testInternalServerError  Time elapsed: 1.86 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at market.run01_RestErrorResponseTest.testInternalServerError(run01_RestErrorResponseTest.java:68)
+
+testSchemaValidationOnCartItemDTOReq  Time elapsed: 0.347 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testSchemaValidationOnCartItemDTOReq(run01_RestErrorResponseTest.java:84)
+
+testAddingItemToCartEnforcesBusinessRules  Time elapsed: 0.069 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testAddingItemToCartEnforcesBusinessRules(run01_RestErrorResponseTest.java:100)
+

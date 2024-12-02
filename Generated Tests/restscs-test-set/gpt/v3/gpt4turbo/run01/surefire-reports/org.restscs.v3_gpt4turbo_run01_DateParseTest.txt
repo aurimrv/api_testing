@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4turbo_run01_DateParseTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 1.467 s <<< FAILURE! - in org.restscs.v3_gpt4turbo_run01_DateParseTest
+testDateParseEmptyInputs(org.restscs.v3_gpt4turbo_run01_DateParseTest)  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v3_gpt4turbo_run01_DateParseTest.testDateParseEmptyInputs(v3_gpt4turbo_run01_DateParseTest.java:92)
+
+testDateParseNullInputHandling(org.restscs.v3_gpt4turbo_run01_DateParseTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.IllegalArgumentException: Unnamed path parameter cannot be null (path parameters at indices 0,1 are null)
+	at org.restscs.v3_gpt4turbo_run01_DateParseTest.testDateParseNullInputHandling(v3_gpt4turbo_run01_DateParseTest.java:100)
+

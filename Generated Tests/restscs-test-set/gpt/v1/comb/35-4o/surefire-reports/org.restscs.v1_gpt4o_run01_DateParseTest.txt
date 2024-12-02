@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run01_DateParseTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.93 s <<< FAILURE! - in org.restscs.v1_gpt4o_run01_DateParseTest
+testCalcEndpoint(org.restscs.v1_gpt4o_run01_DateParseTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "3.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run01_DateParseTest.testCalcEndpoint(v1_gpt4o_run01_DateParseTest.java:67)
+

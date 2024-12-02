@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.run08_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.12 s <<< FAILURE! - in org.restscs.run08_RegexTest
+testRegexUrl(org.restscs.run08_RegexTest)  Time elapsed: 0.026 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.run08_RegexTest.testRegexUrl(run08_RegexTest.java:65)
+

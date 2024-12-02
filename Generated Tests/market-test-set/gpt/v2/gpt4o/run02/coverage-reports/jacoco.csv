@@ -1,0 +1,11 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+market-rest,market,RestApplication,5,3,0,0,2,1,1,1,1,1
+market-rest,market,RestConfig,0,15,0,0,0,6,0,2,0,2
+market-rest,market,RestSecurityConfig,0,39,0,0,0,10,0,2,0,2
+market-rest,market.rest.exception,RestErrorResponse,0,65,0,0,0,17,0,9,0,9
+market-rest,market.rest.exception,RestExceptionHandler,9,155,3,3,3,39,2,11,0,10
+market-rest,market.rest,ProductsRestController,0,89,0,0,0,17,0,6,0,6
+market-rest,market.rest,OrdersRestController,0,54,0,0,0,11,0,4,0,4
+market-rest,market.rest,CartRestController,143,24,2,0,24,7,8,1,7,1
+market-rest,market.rest,CustomerRestController,49,19,0,0,9,6,2,2,2,2
+market-rest,market.rest,ContactsRestController,0,53,0,0,0,13,0,4,0,4

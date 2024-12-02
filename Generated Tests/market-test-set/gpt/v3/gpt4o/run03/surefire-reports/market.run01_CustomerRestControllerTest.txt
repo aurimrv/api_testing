@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_CustomerRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 2.397 s <<< FAILURE! - in market.run01_CustomerRestControllerTest
+testCreateCustomerEmailExists  Time elapsed: 0.006 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run01_CustomerRestControllerTest.testCreateCustomerEmailExists(run01_CustomerRestControllerTest.java:111)
+
+testCreateCustomer  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run01_CustomerRestControllerTest.testCreateCustomer(run01_CustomerRestControllerTest.java:87)
+
+testGetCustomerAfterRegistration  Time elapsed: 0.033 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.run01_CustomerRestControllerTest.testGetCustomerAfterRegistration(run01_CustomerRestControllerTest.java:159)
+

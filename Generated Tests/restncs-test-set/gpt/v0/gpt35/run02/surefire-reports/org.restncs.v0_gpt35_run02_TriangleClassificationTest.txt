@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v0_gpt35_run02_TriangleClassificationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.219 s <<< FAILURE! - in org.restncs.v0_gpt35_run02_TriangleClassificationTest
+testTriangleClassification(org.restncs.v0_gpt35_run02_TriangleClassificationTest)  Time elapsed: 0.227 s  <<< FAILURE!
+java.lang.AssertionError: expected:<2> but was:<1>
+	at org.restncs.v0_gpt35_run02_TriangleClassificationTest.testTriangleClassification(v0_gpt35_run02_TriangleClassificationTest.java:71)
+

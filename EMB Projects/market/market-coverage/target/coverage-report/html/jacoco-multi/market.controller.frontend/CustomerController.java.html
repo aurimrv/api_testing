@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>CustomerController.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market.controller.frontend</a> &gt; <span class="el_source">CustomerController.java</span></div><h1>CustomerController.java</h1><pre class="source lang-java linenums">package market.controller.frontend;
+
+import market.controller.CartModelHelper;
+import market.domain.Cart;
+import market.domain.Order;
+import market.domain.OrderedProduct;
+import market.domain.UserAccount;
+import market.dto.CartDTO;
+import market.dto.OrderDTO;
+import market.dto.OrderedProductDTO;
+import market.dto.ProductDTO;
+import market.dto.UserDTO;
+import market.dto.assembler.CartDtoAssembler;
+import market.dto.assembler.OrderDtoAssembler;
+import market.dto.assembler.OrderedProductDtoAssembler;
+import market.dto.assembler.ProductDtoAssembler;
+import market.dto.assembler.UserAccountDtoAssembler;
+import market.exception.EmailExistsException;
+import market.properties.MarketProperties;
+import market.security.AuthenticationService;
+import market.service.CartService;
+import market.service.OrderService;
+import market.service.ProductService;
+import market.service.UserAccountService;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+import java.security.Principal;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.toMap;
+
+@Controller
+@RequestMapping(&quot;/customer&quot;)
+@SessionAttributes({&quot;cart&quot;})
+public class CustomerController {
+	private static final String CUSTOMER_ORDERS = &quot;customer/orders&quot;;
+	private static final String CUSTOMER_NEW = &quot;customer/new&quot;;
+	private static final String ROOT = &quot;/&quot;;
+
+	private final UserAccountService userAccountService;
+	private final CartService cartService;
+	private final OrderService orderService;
+	private final ProductService productService;
+	private final AuthenticationService authenticationService;
+
+<span class="nc" id="L59">	private final UserAccountDtoAssembler userAccountDtoAssembler = new UserAccountDtoAssembler();</span>
+<span class="nc" id="L60">	private final OrderDtoAssembler orderDtoAssembler = new OrderDtoAssembler();</span>
+<span class="nc" id="L61">	private final OrderedProductDtoAssembler orderedProductDtoAssembler = new OrderedProductDtoAssembler();</span>
+<span class="nc" id="L62">	private final ProductDtoAssembler productDtoAssembler = new ProductDtoAssembler();</span>
+	private final CartDtoAssembler cartDtoAssembler;
+	private final CartModelHelper cartModelHelper;
+
+	public CustomerController(UserAccountService userAccountService, OrderService orderService,
+	    AuthenticationService authenticationService, CartService cartService, ProductService productService,
+	    MarketProperties marketProperties)
+<span class="nc" id="L69">	{</span>
+<span class="nc" id="L70">		this.userAccountService = userAccountService;</span>
+<span class="nc" id="L71">		this.orderService = orderService;</span>
+<span class="nc" id="L72">		this.authenticationService = authenticationService;</span>
+<span class="nc" id="L73">		this.cartService = cartService;</span>
+<span class="nc" id="L74">		this.productService = productService;</span>
+<span class="nc" id="L75">		cartDtoAssembler = new CartDtoAssembler(marketProperties);</span>
+<span class="nc" id="L76">		cartModelHelper = new CartModelHelper(cartDtoAssembler);</span>
+<span class="nc" id="L77">	}</span>
+
+	@Secured({&quot;ROLE_USER&quot;})
+	@RequestMapping(value = &quot;/orders&quot;, method = RequestMethod.GET)
+	public String orders(Principal principal, Model model) {
+<span class="nc bnc" id="L82" title="All 2 branches missed.">		if (!isAuthorized(principal))</span>
+<span class="nc" id="L83">			return &quot;redirect:&quot; + ROOT;</span>
+
+<span class="nc" id="L85">		List&lt;Order&gt; orders = orderService.getUserOrders(principal.getName());</span>
+<span class="nc" id="L86">		List&lt;OrderDTO&gt; ordersDto = orders.stream()</span>
+<span class="nc" id="L87">			.map(orderDtoAssembler::toModel)</span>
+<span class="nc" id="L88">			.collect(toList());</span>
+<span class="nc" id="L89">		model.addAttribute(&quot;userOrders&quot;, ordersDto);</span>
+
+<span class="nc" id="L91">		Map&lt;Long, List&lt;OrderedProductDTO&gt;&gt; orderedProductsByOrderId = new HashMap&lt;&gt;();</span>
+<span class="nc bnc" id="L92" title="All 2 branches missed.">		for (Order order : orders) {</span>
+<span class="nc" id="L93">			List&lt;OrderedProductDTO&gt; productsDto = order.getOrderedProducts().stream()</span>
+<span class="nc" id="L94">				.map(orderedProductDtoAssembler::toModel)</span>
+<span class="nc" id="L95">				.collect(toList());</span>
+<span class="nc" id="L96">			orderedProductsByOrderId.put(order.getId(), productsDto);</span>
+<span class="nc" id="L97">		}</span>
+<span class="nc" id="L98">		model.addAttribute(&quot;orderedProductsByOrderId&quot;, orderedProductsByOrderId);</span>
+
+<span class="nc" id="L100">		Map&lt;Long, ProductDTO&gt; productsById = orders.stream()</span>
+<span class="nc" id="L101">			.map(Order::getOrderedProducts)</span>
+<span class="nc" id="L102">			.flatMap(Collection::stream)</span>
+<span class="nc" id="L103">			.map(OrderedProduct::getProduct)</span>
+<span class="nc" id="L104">			.distinct()</span>
+<span class="nc" id="L105">			.map(productDtoAssembler::toModel)</span>
+<span class="nc" id="L106">			.collect(toMap(ProductDTO::getProductId, p -&gt; p));</span>
+<span class="nc" id="L107">		model.addAttribute(&quot;productsById&quot;, productsById);</span>
+
+<span class="nc" id="L109">		return CUSTOMER_ORDERS;</span>
+	}
+
+	private boolean isAuthorized(Principal principal) {
+<span class="nc bnc" id="L113" title="All 2 branches missed.">		return principal != null;</span>
+	}
+
+	//----------------------------------------- Registering new account
+
+	@RequestMapping(value = &quot;/new&quot;, method = RequestMethod.GET)
+	public String getRegistrationPage(Model model) {
+<span class="nc" id="L120">		model.addAttribute(&quot;userAccount&quot;, new UserDTO());</span>
+<span class="nc" id="L121">		return CUSTOMER_NEW;</span>
+	}
+
+	@RequestMapping(value = &quot;/new&quot;, method = RequestMethod.POST)
+	public String postRegistrationForm(
+		Model model, HttpServletRequest request,
+		@Valid UserDTO user, BindingResult bindingResult,
+		@ModelAttribute(value = &quot;cart&quot;) CartDTO cartDto
+	) {
+<span class="nc" id="L130">		model.addAttribute(&quot;userAccount&quot;, user); // place user data back to redirect him back to pre-filled registration form</span>
+<span class="nc bnc" id="L131" title="All 2 branches missed.">		if (bindingResult.hasErrors())</span>
+<span class="nc" id="L132">			return CUSTOMER_NEW;</span>
+
+<span class="nc" id="L134">		UserAccount account = userAccountDtoAssembler.toDomain(user);</span>
+		UserAccount newAccount;
+		try {
+<span class="nc" id="L137">			newAccount = userAccountService.create(account);</span>
+<span class="nc" id="L138">		} catch (EmailExistsException e) {</span>
+<span class="nc" id="L139">			bindingResult.addError(e.getFieldError());</span>
+<span class="nc" id="L140">			return CUSTOMER_NEW;</span>
+<span class="nc" id="L141">		}</span>
+<span class="nc" id="L142">		boolean authenticated = authenticationService.authenticate(account.getEmail(), user.getPassword());</span>
+<span class="nc bnc" id="L143" title="All 2 branches missed.">		if (!authenticated)</span>
+<span class="nc" id="L144">			return CUSTOMER_NEW;</span>
+
+<span class="nc" id="L146">		model.addAttribute(&quot;userAccount&quot;, userAccountDtoAssembler.toModel(newAccount)); // now add the authorized data</span>
+
+<span class="nc" id="L148">		Cart unauthorisedCart = cartDtoAssembler.toDomain(cartDto, productService);</span>
+<span class="nc" id="L149">		Cart updatedCart = cartService.addAllToCart(newAccount.getEmail(), unauthorisedCart.getCartItems());</span>
+<span class="nc" id="L150">		cartModelHelper.convertAndUpdateAttributes(updatedCart, model, request);</span>
+
+<span class="nc" id="L152">		return &quot;redirect:&quot; + ROOT;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

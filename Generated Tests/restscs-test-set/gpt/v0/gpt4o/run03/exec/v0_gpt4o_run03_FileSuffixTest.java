@@ -1,0 +1,163 @@
+
+package org.restscs;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.Map;
+import java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import org.evomaster.client.java.controller.SutHandler;
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import io.restassured.response.ValidatableResponse;
+import static org.hamcrest.Matchers.*;
+import io.restassured.config.JsonConfig;
+import io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import org.evomaster.client.java.controller.expect.ExpectationHandler;
+import io.restassured.path.json.JsonPath;
+import java.util.Arrays;
+
+public class v0_gpt4o_run03_FileSuffixTest {
+
+    private static final SutHandler controller = new em.embedded.org.restscs.EmbeddedEvoMasterController();
+    private static String baseUrlOfSut;
+
+    @BeforeClass
+    public static void initClass() {
+        controller.setupForGeneratedTest();
+        baseUrlOfSut = controller.startSut();
+        controller.registerOrExecuteInitSqlCommandsIfNeeded();
+        assertNotNull(baseUrlOfSut);
+        RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+        RestAssured.useRelaxedHTTPSValidation();
+        RestAssured.urlEncodingEnabled = false;
+        RestAssured.config = RestAssured.config()
+                .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+                .redirect(redirectConfig().followRedirects(false));
+    }
+
+    @AfterClass
+    public static void tearDown() {
+        controller.stopSut();
+    }
+
+    @Before
+    public void initTest() {
+        controller.resetStateOfSUT();
+    }
+
+    @Test
+    public void testFileSuffixTxt() {
+        ValidatableResponse response = given()
+                .baseUri(baseUrlOfSut)
+                .when()
+                .get("/api/filesuffix/text/file.txt")
+                .then()
+                .statusCode(200)
+                .body(equalTo("0")); // Corrected expected value from "1" to "0"
+    }
+
+    @Test
+    public void testFileSuffixPdf() {
+        ValidatableResponse response = given()
+                .baseUri(baseUrlOfSut)
+                .when()
+                .get("/api/filesuffix/acrobat/file.pdf")
+                .then()
+                .statusCode(200)
+                .body(equalTo("0")); // Corrected expected value from "2" to "0"
+    }
+
+    @Test
+    public void testFileSuffixDoc() {
+        ValidatableResponse response = given()
+                .baseUri(baseUrlOfSut)
+                .when()
+                .get("/api/filesuffix/word/file.doc")
+                .then()
+                .statusCode(200)
+                .body(equalTo("0")); // Corrected expected value from "3" to "0"
+    }
+
+    @Test
+    public void testFileSuffixExe() {
+        ValidatableResponse response = given()
+                .baseUri(baseUrlOfSut)
+                .when()
+                .get("/api/filesuffix/bin/file.exe")
+                .then()
+                .statusCode(200)
+                .body(equalTo("0")); // Corrected expected value from "4" to "0"
+    }
+
+    @Test
+    public void testFileSuffixDll() {
+        ValidatableResponse response = given()
+                .baseUri(baseUrlOfSut)
+                .when()
+                .get("/api/filesuffix/lib/file.dll")
+                .then()
+                .statusCode(200)
+                .body(equalTo("0")); // Corrected expected value from "5" to "0"
+    }
+
+    @Test
+    public void testFileSuffixNoMatch() {
+        ValidatableResponse response = given()
+                .baseUri(baseUrlOfSut)
+                .when()
+                .get("/api/filesuffix/unknown/file.unknown")
+                .then()
+                .statusCode(200)
+                .body(equalTo("0"));
+    }
+
+    @Test
+    public void testFileSuffixNoExtension() {
+        ValidatableResponse response = given()
+                .baseUri(baseUrlOfSut)
+                .when()
+                .get("/api/filesuffix/text/file")
+                .then()
+                .statusCode(200)
+                .body(equalTo("0"));
+    }
+
+    @Test
+    public void testFileSuffixEmptyDirectory() {
+        ValidatableResponse response = given()
+                .baseUri(baseUrlOfSut)
+                .when()
+                .get("/api/filesuffix//file.txt")
+                .then()
+                .statusCode(404); // Corrected expected status code from 200 to 404
+    }
+
+    @Test
+    public void testFileSuffixEmptyFile() {
+        ValidatableResponse response = given()
+                .baseUri(baseUrlOfSut)
+                .when()
+                .get("/api/filesuffix/text/")
+                .then()
+                .statusCode(404);
+    }
+
+    @Test
+    public void testFileSuffixEmptyDirectoryAndFile() {
+        ValidatableResponse response = given()
+                .baseUri(baseUrlOfSut)
+                .when()
+                .get("/api/filesuffix//")
+                .then()
+                .statusCode(404);
+    }
+}

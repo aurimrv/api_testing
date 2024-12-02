@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>CustomNotValidException.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market.exception</a> &gt; <span class="el_source">CustomNotValidException.java</span></div><h1>CustomNotValidException.java</h1><pre class="source lang-java linenums">package market.exception;
+
+import org.springframework.validation.FieldError;
+
+import java.util.Collections;
+import java.util.List;
+
+/**
+ *
+ */
+public class CustomNotValidException extends RuntimeException {
+	private static final long serialVersionUID = 4461435547254498698L;
+
+	private final String eventType;
+	private final String entityType;
+	private final String field;
+
+	public CustomNotValidException(String eventType, String entityType, String field) {
+<span class="nc" id="L19">		super();</span>
+<span class="nc" id="L20">		this.eventType = eventType;</span>
+<span class="nc" id="L21">		this.entityType = entityType;</span>
+<span class="nc" id="L22">		this.field = field;</span>
+<span class="nc" id="L23">	}</span>
+
+	public FieldError getFieldError() {
+<span class="nc" id="L26">		String[] codes = {eventType + &quot;.&quot; + field, eventType + &quot;.&quot; + entityType + &quot;.&quot; + field};</span>
+<span class="nc" id="L27">		Object[] arguments = {field};</span>
+<span class="nc" id="L28">		return new FieldError(entityType, field, &quot;&quot;, false, codes, arguments, &quot;&quot;);</span>
+	}
+
+	public List&lt;FieldError&gt; getFieldErrors() {
+<span class="nc" id="L32">		return Collections.singletonList(getFieldError());</span>
+	}
+
+	public String getEntityType() {
+<span class="nc" id="L36">		return entityType;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

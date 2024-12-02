@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <echo message="Generating JaCoCo Reports"/>
+  <taskdef classname="org.jacoco.ant.ReportTask" name="report">
+    <classpath path="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-coverage/target/jacoco-jars/org.jacoco.ant.jar"/>
+  </taskdef>
+  <mkdir dir="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-coverage/target/coverage-report"/>
+  <report>
+    <executiondata>
+      <fileset dir="../market-core/target">
+        <include name="jacoco.exec"/>
+      </fileset>
+      <fileset dir="../market-web/target">
+        <include name="jacoco.exec"/>
+      </fileset>
+      <fileset dir="../market-rest/target">
+        <include name="jacoco.exec"/>
+      </fileset>
+    </executiondata>
+    <structure name="jacoco-multi Coverage Project">
+      <group name="jacoco-multi">
+        <classfiles>
+          <fileset dir="../market-core/target/classes"/>
+          <fileset dir="../market-web/target/classes"/>
+          <fileset dir="../market-rest/target/classes"/>
+        </classfiles>
+        <sourcefiles encoding="UTF-8">
+          <fileset dir="../market-core/src/main/java"/>
+          <fileset dir="../market-web/src/main/java"/>
+          <fileset dir="../market-rest/src/main/java"/>
+        </sourcefiles>
+      </group>
+    </structure>
+    <html destdir="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-coverage/target/coverage-report/html"/>
+    <xml destfile="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-coverage/target/coverage-report/coverage-report.xml"/>
+    <csv destfile="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-coverage/target/coverage-report/coverage-report.csv"/>
+  </report>
+</target>
+</project>

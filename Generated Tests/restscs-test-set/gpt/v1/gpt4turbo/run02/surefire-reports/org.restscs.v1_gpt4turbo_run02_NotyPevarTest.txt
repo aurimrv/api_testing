@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4turbo_run02_NotyPevarTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.924 s <<< FAILURE! - in org.restscs.v1_gpt4turbo_run02_NotyPevarTest
+testCalcUsingGET(org.restscs.v1_gpt4turbo_run02_NotyPevarTest)  Time elapsed: 0.072 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "56.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4turbo_run02_NotyPevarTest.testCalcUsingGET(v1_gpt4turbo_run02_NotyPevarTest.java:67)
+

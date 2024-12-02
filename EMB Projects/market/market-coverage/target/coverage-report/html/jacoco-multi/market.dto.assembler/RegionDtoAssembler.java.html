@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>RegionDtoAssembler.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market.dto.assembler</a> &gt; <span class="el_source">RegionDtoAssembler.java</span></div><h1>RegionDtoAssembler.java</h1><pre class="source lang-java linenums">package market.dto.assembler;
+
+import market.domain.Region;
+import market.dto.RegionDTO;
+import org.springframework.hateoas.server.RepresentationModelAssembler;
+
+import java.util.List;
+
+<span class="nc" id="L9">public class RegionDtoAssembler implements RepresentationModelAssembler&lt;Region, RegionDTO&gt; {</span>
+
+	@Override
+	public RegionDTO toModel(Region region) {
+<span class="nc" id="L13">		RegionDTO dto = new RegionDTO();</span>
+<span class="nc" id="L14">		dto.setId(region.getId());</span>
+<span class="nc" id="L15">		dto.setName(region.getName());</span>
+<span class="nc" id="L16">		dto.setSubtitle(region.getSubtitle());</span>
+<span class="nc" id="L17">		dto.setColor(region.getColor());</span>
+<span class="nc" id="L18">		dto.setDescription(region.getDescription());</span>
+<span class="nc" id="L19">		return dto;</span>
+	}
+
+	public RegionDTO[] toDtoArray(List&lt;Region&gt; items) {
+<span class="nc" id="L23">		return toCollectionModel(items).getContent().toArray(new RegionDTO[items.size()]);</span>
+	}
+
+	public Region toDomain(RegionDTO dto) {
+<span class="nc" id="L27">		return new Region.Builder()</span>
+<span class="nc" id="L28">			.setId(dto.getId())</span>
+<span class="nc" id="L29">			.setName(dto.getName())</span>
+<span class="nc" id="L30">			.setSubtitle(dto.getSubtitle())</span>
+<span class="nc" id="L31">			.setColor(dto.getColor())</span>
+<span class="nc" id="L32">			.setDescription(dto.getDescription())</span>
+<span class="nc" id="L33">			.build();</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

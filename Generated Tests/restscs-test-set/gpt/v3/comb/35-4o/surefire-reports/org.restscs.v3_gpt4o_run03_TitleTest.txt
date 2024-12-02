@@ -1,0 +1,33 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run03_TitleTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 3, Errors: 2, Skipped: 0, Time elapsed: 1.398 s <<< FAILURE! - in org.restscs.v3_gpt4o_run03_TitleTest
+testInternalServerError(org.restscs.v3_gpt4o_run03_TitleTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.net.URISyntaxException: Malformed escape pair at index 38: http://localhost:37155/api/title/male/%INVALID%
+	at org.restscs.v3_gpt4o_run03_TitleTest.testInternalServerError(v3_gpt4o_run03_TitleTest.java:126)
+
+testSchemaValidation(org.restscs.v3_gpt4o_run03_TitleTest)  Time elapsed: 0.033 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restscs.v3_gpt4o_run03_TitleTest.testSchemaValidation(v3_gpt4o_run03_TitleTest.java:120)
+
+testUnauthorized(org.restscs.v3_gpt4o_run03_TitleTest)  Time elapsed: 0.027 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_TitleTest.testUnauthorized(v3_gpt4o_run03_TitleTest.java:134)
+
+testForbidden(org.restscs.v3_gpt4o_run03_TitleTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_TitleTest.testForbidden(v3_gpt4o_run03_TitleTest.java:141)
+
+testNotFound(org.restscs.v3_gpt4o_run03_TitleTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_TitleTest.testNotFound(v3_gpt4o_run03_TitleTest.java:147)
+

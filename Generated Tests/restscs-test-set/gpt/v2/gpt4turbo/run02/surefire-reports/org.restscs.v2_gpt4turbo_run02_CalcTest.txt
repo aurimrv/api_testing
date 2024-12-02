@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4turbo_run02_CalcTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 1.381 s <<< FAILURE! - in org.restscs.v2_gpt4turbo_run02_CalcTest
+testCalcUsingGetWithInvalidOperator(org.restscs.v2_gpt4turbo_run02_CalcTest)  Time elapsed: 0.039 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v2_gpt4turbo_run02_CalcTest.testCalcUsingGetWithInvalidOperator(v2_gpt4turbo_run02_CalcTest.java:83)
+
+testCalcUsingGetDivideByZero(org.restscs.v2_gpt4turbo_run02_CalcTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4turbo_run02_CalcTest.testCalcUsingGetDivideByZero(v2_gpt4turbo_run02_CalcTest.java:97)
+
+testCalcUsingGetSchemaValidation(org.restscs.v2_gpt4turbo_run02_CalcTest)  Time elapsed: 0.171 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.restscs.v2_gpt4turbo_run02_CalcTest.testCalcUsingGetSchemaValidation(v2_gpt4turbo_run02_CalcTest.java:114)
+

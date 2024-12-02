@@ -1,0 +1,399 @@
+Correct the test code delimited by ***** according to the error messages delimited by ##### and generate another complete code in JUnit 4 format. The response must contain only Java code in JUnit 4 format.
+
+Keep these five instructions for this generated test code:
+
+Instruction 1: Keet this package line to generated test code file:
+package org.restscs;
+
+Instruction 2: Keep the following Java imports to generated test code file:
+import  org.junit.AfterClass;
+import  org.junit.BeforeClass;
+import  org.junit.Before;
+import  org.junit.Test;
+import static org.junit.Assert.*;
+import  java.util.Map;
+import  java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import  org.evomaster.client.java.controller.SutHandler;
+import  io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import  io.restassured.response.ValidatableResponse;
+import static org.hamcrest.Matchers.*;
+import  io.restassured.config.JsonConfig;
+import  io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import  org.evomaster.client.java.controller.expect.ExpectationHandler;
+import  io.restassured.path.json.JsonPath;
+import  java.util.Arrays;
+
+Instruction 3: Keep the same class name in this point (between the imports at instruction 2 and instruction 4)
+
+Instruction 4: Keep these variables in the generated test code:
+private static final SutHandler controller = new em.embedded.org.restscs.EmbeddedEvoMasterController();
+private static String baseUrlOfSut;
+
+Instruction 5: Keep the following setup and teardown methods in generated test code file:
+@BeforeClass
+public static void initClass() {
+    controller.setupForGeneratedTest();
+    baseUrlOfSut = controller.startSut();
+    controller.registerOrExecuteInitSqlCommandsIfNeeded();
+    assertNotNull(baseUrlOfSut);
+    RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+    RestAssured.useRelaxedHTTPSValidation();
+    RestAssured.urlEncodingEnabled = false;
+    RestAssured.config = RestAssured.config()
+        .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+        .redirect(redirectConfig().followRedirects(false));
+}
+
+
+@AfterClass
+public static void tearDown() {
+    controller.stopSut();
+}
+
+
+@Before
+public void initTest() {
+    controller.resetStateOfSUT();
+}
+
+
+*****
+
+package org.restscs;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import java.util.Map;
+import java.util.List;
+import static org.evomaster.client.java.controller.api.EMTestUtils.*;
+import org.evomaster.client.java.controller.SutHandler;
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.given;
+import io.restassured.response.ValidatableResponse;
+import static org.hamcrest.Matchers.*;
+import io.restassured.config.JsonConfig;
+import io.restassured.path.json.config.JsonPathConfig;
+import static io.restassured.config.RedirectConfig.redirectConfig;
+import static org.evomaster.client.java.controller.contentMatchers.NumberMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.StringMatcher.*;
+import static org.evomaster.client.java.controller.contentMatchers.SubStringMatcher.*;
+import static org.evomaster.client.java.controller.expect.ExpectationHandler.expectationHandler;
+import org.evomaster.client.java.controller.expect.ExpectationHandler;
+import io.restassured.path.json.JsonPath;
+import java.util.Arrays;
+
+public class v2_gpt4o_run02_Text2TxtTest {
+
+    private static final SutHandler controller = new em.embedded.org.restscs.EmbeddedEvoMasterController();
+    private static String baseUrlOfSut;
+
+    @BeforeClass
+    public static void initClass() {
+        controller.setupForGeneratedTest();
+        baseUrlOfSut = controller.startSut();
+        controller.registerOrExecuteInitSqlCommandsIfNeeded();
+        assertNotNull(baseUrlOfSut);
+        RestAssured.enableLoggingOfRequestAndResponseIfValidationFails();
+        RestAssured.useRelaxedHTTPSValidation();
+        RestAssured.urlEncodingEnabled = false;
+        RestAssured.config = RestAssured.config()
+            .jsonConfig(JsonConfig.jsonConfig().numberReturnType(JsonPathConfig.NumberReturnType.DOUBLE))
+            .redirect(redirectConfig().followRedirects(false));
+    }
+
+    @AfterClass
+    public static void tearDown() {
+        controller.stopSut();
+    }
+
+    @Before
+    public void initTest() {
+        controller.resetStateOfSUT();
+    }
+
+    @Test
+    public void testCalcOperation() {
+        ValidatableResponse response = given().baseUri(baseUrlOfSut)
+            .pathParam("op", "add")
+            .pathParam("arg1", 5)
+            .pathParam("arg2", 3)
+            .when().get("/api/calc/{op}/{arg1}/{arg2}")
+            .then().statusCode(200)
+            .body(matchesJsonSchemaInClasspath("calc_schema.json"));
+
+        String result = response.extract().body().asString();
+        assertEquals("8.0", result);
+    }
+
+    @Test
+    public void testCalcInvalidOperation() {
+        given().baseUri(baseUrlOfSut)
+            .pathParam("op", "invalid")
+            .pathParam("arg1", 5)
+            .pathParam("arg2", 3)
+            .when().get("/api/calc/{op}/{arg1}/{arg2}")
+            .then().statusCode(500);
+    }
+
+    @Test
+    public void testCookie() {
+        ValidatableResponse response = given().baseUri(baseUrlOfSut)
+            .pathParam("name", "session")
+            .pathParam("val", "123")
+            .pathParam("site", "example.com")
+            .when().get("/api/cookie/{name}/{val}/{site}")
+            .then().statusCode(200)
+            .body(matchesJsonSchemaInClasspath("cookie_schema.json"));
+
+        String result = response.extract().body().asString();
+        assertEquals("Cookie set: session=123 for site example.com", result);
+    }
+
+    @Test
+    public void testCostFuns() {
+        ValidatableResponse response = given().baseUri(baseUrlOfSut)
+            .pathParam("i", 1)
+            .pathParam("s", "test")
+            .when().get("/api/costfuns/{i}/{s}")
+            .then().statusCode(200)
+            .body(matchesJsonSchemaInClasspath("costfuns_schema.json"));
+
+        String result = response.extract().body().asString();
+        assertNotNull(result);
+    }
+
+    @Test
+    public void testDateParse() {
+        ValidatableResponse response = given().baseUri(baseUrlOfSut)
+            .pathParam("dayname", "Monday")
+            .pathParam("monthname", "January")
+            .when().get("/api/dateparse/{dayname}/{monthname}")
+            .then().statusCode(200)
+            .body(matchesJsonSchemaInClasspath("dateparse_schema.json"));
+
+        String result = response.extract().body().asString();
+        assertNotNull(result);
+    }
+
+    @Test
+    public void testFileSuffix() {
+        ValidatableResponse response = given().baseUri(baseUrlOfSut)
+            .pathParam("directory", "home")
+            .pathParam("file", "document.txt")
+            .when().get("/api/filesuffix/{directory}/{file}")
+            .then().statusCode(200)
+            .body(matchesJsonSchemaInClasspath("filesuffix_schema.json"));
+
+        String result = response.extract().body().asString();
+        assertNotNull(result);
+    }
+
+    @Test
+    public void testNoTypeVar() {
+        ValidatableResponse response = given().baseUri(baseUrlOfSut)
+            .pathParam("i", 1)
+            .pathParam("s", "test")
+            .when().get("/api/notypevar/{i}/{s}")
+            .then().statusCode(200)
+            .body(matchesJsonSchemaInClasspath("notypevar_schema.json"));
+
+        String result = response.extract().body().asString();
+        assertNotNull(result);
+    }
+
+    @Test
+    public void testOrdered4() {
+        ValidatableResponse response = given().baseUri(baseUrlOfSut)
+            .pathParam("w", "one")
+            .pathParam("x", "two")
+            .pathParam("y", "three")
+            .pathParam("z", "four")
+            .when().get("/api/ordered4/{w}/{x}/{z}/{y}")
+            .then().statusCode(200)
+            .body(matchesJsonSchemaInClasspath("ordered4_schema.json"));
+
+        String result = response.extract().body().asString();
+        assertNotNull(result);
+    }
+
+    @Test
+    public void testRegex() {
+        ValidatableResponse response = given().baseUri(baseUrlOfSut)
+            .pathParam("txt", "hello")
+            .when().get("/api/pat/{txt}")
+            .then().statusCode(200)
+            .body(matchesJsonSchemaInClasspath("regex_schema.json"));
+
+        String result = response.extract().body().asString();
+        assertNotNull(result);
+    }
+
+    @Test
+    public void testPat() {
+        ValidatableResponse response = given().baseUri(baseUrlOfSut)
+            .pathParam("txt", "hello")
+            .pathParam("pat", "h.*o")
+            .when().get("/api/pat/{txt}/{pat}")
+            .then().statusCode(200)
+            .body(matchesJsonSchemaInClasspath("pat_schema.json"));
+
+        String result = response.extract().body().asString();
+        assertNotNull(result);
+    }
+
+    @Test
+    public void testText2Txt() {
+        ValidatableResponse response = given().baseUri(baseUrlOfSut)
+            .pathParam("word1", "see")
+            .pathParam("word2", "you")
+            .pathParam("word3", "")
+            .when().get("/api/text2txt/{word1}/{word2}/{word3}")
+            .then().statusCode(200)
+            .body(matchesJsonSchemaInClasspath("text2txt_schema.json"));
+
+        String result = response.extract().body().asString();
+        assertEquals("cu", result);
+    }
+
+    @Test
+    public void testText2TxtInvalid() {
+        given().baseUri(baseUrlOfSut)
+            .pathParam("word1", "")
+            .pathParam("word2", "")
+            .pathParam("word3", "")
+            .when().get("/api/text2txt/{word1}/{word2}/{word3}")
+            .then().statusCode(500);
+    }
+}
+
+*****
+#####
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------< [0;36morg.evomaster:evomaster-benchmark-cs-rest-artificial-scs[0;1m >------[m
+[[1;34mINFO[m] [1mBuilding evomaster-benchmark-cs-rest-artificial-scs 3.0.0[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Deleting /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 14 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 14 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mevomaster-benchmark-cs-rest-artificial-scs[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 1 source file to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/test-classes
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[65,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[89,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[102,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[115,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[128,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[141,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[156,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[168,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[181,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[195,19] cannot find symbol
+  symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+  location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;34mINFO[m] 10 errors 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  2.212 s
+[[1;34mINFO[m] Finished at: 2024-09-09T19:49:46-03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m on project [36mevomaster-benchmark-cs-rest-artificial-scs[m: [1;31mCompilation failure[m: Compilation failure: 
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[65,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[89,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[102,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[115,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[128,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[141,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[156,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[168,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[181,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/src/test/java/org/restscs/v2_gpt4o_run02_Text2TxtTest.java:[195,19] cannot find symbol
+[[1;31mERROR[m]   symbol:   method matchesJsonSchemaInClasspath(java.lang.String)
+[[1;31mERROR[m]   location: class org.restscs.v2_gpt4o_run02_Text2TxtTest
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+#####

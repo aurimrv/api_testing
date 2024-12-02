@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt35_run01_TitleTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.335 s <<< FAILURE! - in org.restscs.v0_gpt35_run01_TitleTest
+testTitleEndpoint(org.restscs.v0_gpt35_run01_TitleTest)  Time elapsed: 0.007 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 33: http://localhost:43023/api/title/{sex}/{title}
+	at org.restscs.v0_gpt35_run01_TitleTest.testTitleEndpoint(v0_gpt35_run01_TitleTest.java:67)
+

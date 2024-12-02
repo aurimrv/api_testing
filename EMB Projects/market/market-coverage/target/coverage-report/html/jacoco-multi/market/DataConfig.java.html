@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>DataConfig.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">jacoco-multi Coverage Project</a> &gt; <a href="../index.html" class="el_bundle">jacoco-multi</a> &gt; <a href="index.source.html" class="el_package">market</a> &gt; <span class="el_source">DataConfig.java</span></div><h1>DataConfig.java</h1><pre class="source lang-java linenums">package market;
+
+import com.zaxxer.hikari.HikariDataSource;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
+import org.springframework.orm.jpa.JpaTransactionManager;
+import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import javax.persistence.EntityManagerFactory;
+import javax.sql.DataSource;
+
+@Configuration
+@EntityScan(basePackages=&quot;market.domain&quot;)
+@EnableTransactionManagement
+@ComponentScan(basePackages = {
+	&quot;market.properties&quot;,
+	&quot;market.service&quot;
+})
+<span class="nc" id="L28">public class DataConfig {</span>
+
+	@Bean
+	@Primary
+	@ConfigurationProperties(&quot;spring.datasource&quot;)
+	public DataSourceProperties dataSourceProperties() {
+<span class="nc" id="L34">		return new DataSourceProperties();</span>
+	}
+
+	@Bean // with Spring Boot this is actually not necessary but leaving it to note things explicitly
+	@Primary
+	@ConfigurationProperties(&quot;spring.datasource.configuration&quot;)
+	public HikariDataSource dataSource() {
+<span class="nc" id="L41">		DataSourceProperties properties = dataSourceProperties();</span>
+<span class="nc" id="L42">		return properties.initializeDataSourceBuilder().type(HikariDataSource.class).build();</span>
+	}
+
+	@Bean
+	public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
+<span class="nc" id="L47">		LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean(); // todo: EntityManagerFactoryBuilder ?</span>
+<span class="nc" id="L48">		em.setDataSource(dataSource);</span>
+<span class="nc" id="L49">		em.setPackagesToScan(&quot;market.domain&quot;);</span>
+<span class="nc" id="L50">		em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());</span>
+<span class="nc" id="L51">		return em;</span>
+	}
+
+	@Bean
+	public PlatformTransactionManager transactionManager(EntityManagerFactory emf) {
+<span class="nc" id="L56">		JpaTransactionManager transactionManager = new JpaTransactionManager();</span>
+<span class="nc" id="L57">		transactionManager.setEntityManagerFactory(emf);</span>
+<span class="nc" id="L58">		return transactionManager;</span>
+	}
+
+	@Bean
+	public PersistenceExceptionTranslationPostProcessor exceptionTranslation() {
+<span class="nc" id="L63">		return new PersistenceExceptionTranslationPostProcessor();</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

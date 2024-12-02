@@ -1,0 +1,14 @@
+org/restscs/ScsApplication.class
+org/restscs/imp/Title.class
+org/restscs/imp/NotyPevar.class
+org/restscs/imp/Pat.class
+org/restscs/imp/DateParse.class
+org/restscs/imp/Text2Txt.class
+org/restscs/imp/Calc.class
+em/embedded/org/restscs/EmbeddedEvoMasterController.class
+org/restscs/imp/Costfuns.class
+org/restscs/ScsRest.class
+org/restscs/imp/Cookie.class
+org/restscs/imp/Ordered4.class
+org/restscs/imp/Regex.class
+org/restscs/imp/FileSuffix.class

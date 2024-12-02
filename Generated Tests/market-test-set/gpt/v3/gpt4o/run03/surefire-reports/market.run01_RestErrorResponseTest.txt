@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: market.run01_RestErrorResponseTest
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 17.671 s <<< FAILURE! - in market.run01_RestErrorResponseTest
+testGetCustomerNotFound  Time elapsed: 0.528 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testGetCustomerNotFound(run01_RestErrorResponseTest.java:80)
+
+testGetCustomerValid  Time elapsed: 0.135 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.run01_RestErrorResponseTest.testGetCustomerValid(run01_RestErrorResponseTest.java:67)
+

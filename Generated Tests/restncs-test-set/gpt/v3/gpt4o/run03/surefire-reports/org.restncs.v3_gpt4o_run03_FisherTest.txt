@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v3_gpt4o_run03_FisherTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 1.236 s <<< FAILURE! - in org.restncs.v3_gpt4o_run03_FisherTest
+testFisherInvalidInput(org.restncs.v3_gpt4o_run03_FisherTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restncs.v3_gpt4o_run03_FisherTest.testFisherInvalidInput(v3_gpt4o_run03_FisherTest.java:79)
+
+testFisherEdgeCaseZeroX(org.restncs.v3_gpt4o_run03_FisherTest)  Time elapsed: 0.033 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: <0.0>
+  Actual: NaN
+
+	at org.restncs.v3_gpt4o_run03_FisherTest.testFisherEdgeCaseZeroX(v3_gpt4o_run03_FisherTest.java:92)
+
+testFisherEdgeCaseZeroM(org.restncs.v3_gpt4o_run03_FisherTest)  Time elapsed: 0.032 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: <0.0>
+  Actual: NaN
+
+	at org.restncs.v3_gpt4o_run03_FisherTest.testFisherEdgeCaseZeroM(v3_gpt4o_run03_FisherTest.java:118)
+
+testFisherEdgeCaseZeroN(org.restncs.v3_gpt4o_run03_FisherTest)  Time elapsed: 0.032 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: <0.0>
+  Actual: NaN
+
+	at org.restncs.v3_gpt4o_run03_FisherTest.testFisherEdgeCaseZeroN(v3_gpt4o_run03_FisherTest.java:131)
+
+testFisherUnauthorized(org.restncs.v3_gpt4o_run03_FisherTest)  Time elapsed: 0.033 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <200>.
+
+	at org.restncs.v3_gpt4o_run03_FisherTest.testFisherUnauthorized(v3_gpt4o_run03_FisherTest.java:160)
+
+testFisherForbidden(org.restncs.v3_gpt4o_run03_FisherTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at org.restncs.v3_gpt4o_run03_FisherTest.testFisherForbidden(v3_gpt4o_run03_FisherTest.java:185)
+
