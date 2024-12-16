@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt35_run02_RestErrorResponseTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.183 s <<< FAILURE! - in market.v3_gpt35_run02_RestErrorResponseTest
+testInvalidInput_Returns5xxStatusCode  Time elapsed: 0.05 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code a value equal to or greater than <500> but <406> was less than <500>.
+
+	at market.v3_gpt35_run02_RestErrorResponseTest.testInvalidInput_Returns5xxStatusCode(v3_gpt35_run02_RestErrorResponseTest.java:70)
+
+testSchemaValidation_CustomerRegistration  Time elapsed: 0.034 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v3_gpt35_run02_RestErrorResponseTest.testSchemaValidation_CustomerRegistration(v3_gpt35_run02_RestErrorResponseTest.java:92)
+
+testServerError_Returns5xxStatusCode  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code a value equal to or greater than <500> but <406> was less than <500>.
+
+	at market.v3_gpt35_run02_RestErrorResponseTest.testServerError_Returns5xxStatusCode(v3_gpt35_run02_RestErrorResponseTest.java:81)
+

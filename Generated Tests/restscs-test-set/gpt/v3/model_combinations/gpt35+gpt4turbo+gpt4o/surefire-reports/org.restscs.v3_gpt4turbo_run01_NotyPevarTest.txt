@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4turbo_run01_NotyPevarTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.794 s <<< FAILURE! - in org.restscs.v3_gpt4turbo_run01_NotyPevarTest
+testSubjectInternalErrorSimulation(org.restscs.v3_gpt4turbo_run01_NotyPevarTest)  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code is <500> but was <200>.
+
+	at org.restscs.v3_gpt4turbo_run01_NotyPevarTest.testSubjectInternalErrorSimulation(v3_gpt4turbo_run01_NotyPevarTest.java:63)
+
+testSubjectValidResponse(org.restscs.v3_gpt4turbo_run01_NotyPevarTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3"
+  Actual: 0
+
+	at org.restscs.v3_gpt4turbo_run01_NotyPevarTest.testSubjectValidResponse(v3_gpt4turbo_run01_NotyPevarTest.java:74)
+
+testSubjectBusinessRuleEnforcement(org.restscs.v3_gpt4turbo_run01_NotyPevarTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3"
+  Actual: 0
+
+	at org.restscs.v3_gpt4turbo_run01_NotyPevarTest.testSubjectBusinessRuleEnforcement(v3_gpt4turbo_run01_NotyPevarTest.java:96)
+

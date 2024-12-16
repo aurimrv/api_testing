@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt35_run03_CookieTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.153 s <<< FAILURE! - in org.restscs.v0_gpt35_run03_CookieTest
+testCookie(org.restscs.v0_gpt35_run03_CookieTest)  Time elapsed: 0.177 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v0_gpt35_run03_CookieTest.testCookie(v0_gpt35_run03_CookieTest.java:68)
+

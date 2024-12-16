@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4turbo_run02_PatTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.867 s <<< FAILURE! - in org.restscs.v2_gpt4turbo_run02_PatTest
+testErrorScenario(org.restscs.v2_gpt4turbo_run02_PatTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 31: http://localhost:34153/api/pat/ /
+	at org.restscs.v2_gpt4turbo_run02_PatTest.testErrorScenario(v2_gpt4turbo_run02_PatTest.java:99)
+

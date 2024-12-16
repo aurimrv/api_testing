@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4o_run03_Ordered4Test
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.78 s <<< FAILURE! - in org.restscs.v2_gpt4o_run03_Ordered4Test
+testCalcValid(org.restscs.v2_gpt4o_run03_Ordered4Test)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "3.0"
+  Actual: 0.0
+
+	at org.restscs.v2_gpt4o_run03_Ordered4Test.testCalcValid(v2_gpt4o_run03_Ordered4Test.java:122)
+
+testInvalidInputLength(org.restscs.v2_gpt4o_run03_Ordered4Test)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v2_gpt4o_run03_Ordered4Test.testInvalidInputLength(v2_gpt4o_run03_Ordered4Test.java:109)
+

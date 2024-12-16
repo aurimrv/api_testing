@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt35_run02_Text2TxtTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.733 s <<< FAILURE! - in org.restscs.v1_gpt35_run02_Text2TxtTest
+testText2TxtEndpoint(org.restscs.v1_gpt35_run02_Text2TxtTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "btw"
+  Actual: 2
+
+	at org.restscs.v1_gpt35_run02_Text2TxtTest.testText2TxtEndpoint(v1_gpt35_run02_Text2TxtTest.java:68)
+
+testTitleEndpoint(org.restscs.v1_gpt35_run02_Text2TxtTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Mr."
+  Actual: -1
+
+	at org.restscs.v1_gpt35_run02_Text2TxtTest.testTitleEndpoint(v1_gpt35_run02_Text2TxtTest.java:81)
+

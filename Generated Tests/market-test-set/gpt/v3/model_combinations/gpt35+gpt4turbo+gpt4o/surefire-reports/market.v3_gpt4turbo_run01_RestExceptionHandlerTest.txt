@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt4turbo_run01_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.267 s - in market.v3_gpt4turbo_run01_RestExceptionHandlerTest

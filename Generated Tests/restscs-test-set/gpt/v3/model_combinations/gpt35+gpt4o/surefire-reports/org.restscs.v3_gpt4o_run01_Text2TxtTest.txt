@@ -1,0 +1,152 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run01_Text2TxtTest
+-------------------------------------------------------------------------------
+Tests run: 20, Failures: 18, Errors: 0, Skipped: 0, Time elapsed: 0.871 s <<< FAILURE! - in org.restscs.v3_gpt4o_run01_Text2TxtTest
+testCalcUsingGET(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "8.0"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testCalcUsingGET(v3_gpt4o_run01_Text2TxtTest.java:68)
+
+testCalcUsingGET_InvalidOperation(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testCalcUsingGET_InvalidOperation(v3_gpt4o_run01_Text2TxtTest.java:81)
+
+testCookieUsingGET(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Set cookie: session=abc123 for example.com"
+  Actual: 2
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testCookieUsingGET(v3_gpt4o_run01_Text2TxtTest.java:123)
+
+testCookieUsingGET_MissingParameter(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testCookieUsingGET_MissingParameter(v3_gpt4o_run01_Text2TxtTest.java:136)
+
+testDateParseUsingGET(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Parsed date: Monday, January"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testDateParseUsingGET(v3_gpt4o_run01_Text2TxtTest.java:149)
+
+testDateParseUsingGET_InvalidDate(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testDateParseUsingGET_InvalidDate(v3_gpt4o_run01_Text2TxtTest.java:161)
+
+testPatUsingGET(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Pattern matched: hello"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testPatUsingGET(v3_gpt4o_run01_Text2TxtTest.java:174)
+
+testPatUsingGET_NoMatch(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "No match"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testPatUsingGET_NoMatch(v3_gpt4o_run01_Text2TxtTest.java:187)
+
+testTitleUsingGET(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Title: Mr Smith"
+  Actual: -1
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testTitleUsingGET(v3_gpt4o_run01_Text2TxtTest.java:200)
+
+testTitleUsingGET_InvalidTitle(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testTitleUsingGET_InvalidTitle(v3_gpt4o_run01_Text2TxtTest.java:212)
+
+testFileSuffixUsingGET(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "File suffix: pdf"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testFileSuffixUsingGET(v3_gpt4o_run01_Text2TxtTest.java:225)
+
+testFileSuffixUsingGET_NoSuffix(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "No suffix found"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testFileSuffixUsingGET_NoSuffix(v3_gpt4o_run01_Text2TxtTest.java:238)
+
+testCostfunsUsingGET(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Cost calculated for 123 and test"
+  Actual: 10
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testCostfunsUsingGET(v3_gpt4o_run01_Text2TxtTest.java:251)
+
+testCostfunsUsingGET_InvalidInput(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testCostfunsUsingGET_InvalidInput(v3_gpt4o_run01_Text2TxtTest.java:263)
+
+testNotyPevarUsingGET(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Variable type not specified for 456 and value"
+  Actual: 3
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testNotyPevarUsingGET(v3_gpt4o_run01_Text2TxtTest.java:276)
+
+testNotyPevarUsingGET_InvalidInput(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testNotyPevarUsingGET_InvalidInput(v3_gpt4o_run01_Text2TxtTest.java:288)
+
+testOrdered4UsingGET(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Ordered: one, two, three, four"
+  Actual: unordered
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testOrdered4UsingGET(v3_gpt4o_run01_Text2TxtTest.java:303)
+
+testOrdered4UsingGET_MissingParameter(org.restscs.v3_gpt4o_run01_Text2TxtTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v3_gpt4o_run01_Text2TxtTest.testOrdered4UsingGET_MissingParameter(v3_gpt4o_run01_Text2TxtTest.java:317)
+

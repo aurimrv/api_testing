@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4o_run02_DateParseTest
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.037 s <<< FAILURE! - in org.restscs.v2_gpt4o_run02_DateParseTest
+testCalcEndpoint(org.restscs.v2_gpt4o_run02_DateParseTest)  Time elapsed: 0.032 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "15"
+  Actual: 0.0
+
+	at org.restscs.v2_gpt4o_run02_DateParseTest.testCalcEndpoint(v2_gpt4o_run02_DateParseTest.java:127)
+
+testDateParseInternalServerError(org.restscs.v2_gpt4o_run02_DateParseTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4o_run02_DateParseTest.testDateParseInternalServerError(v2_gpt4o_run02_DateParseTest.java:114)
+

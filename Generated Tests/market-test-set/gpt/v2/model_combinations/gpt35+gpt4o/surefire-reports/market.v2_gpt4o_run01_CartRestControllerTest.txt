@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4o_run01_CartRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.424 s <<< FAILURE! - in market.v2_gpt4o_run01_CartRestControllerTest
+testGetCart  Time elapsed: 0.139 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path _links.self.href doesn't match.
+Expected: not null
+  Actual: null
+
+	at market.v2_gpt4o_run01_CartRestControllerTest.testGetCart(v2_gpt4o_run01_CartRestControllerTest.java:66)
+

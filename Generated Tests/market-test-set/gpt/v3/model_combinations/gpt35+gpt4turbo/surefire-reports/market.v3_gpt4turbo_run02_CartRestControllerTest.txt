@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt4turbo_run02_CartRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.82 s <<< FAILURE! - in market.v3_gpt4turbo_run02_CartRestControllerTest
+testAddItemSuccess  Time elapsed: 0.19 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path cartItems.productId doesn't match.
+Expected: a collection containing <1>
+  Actual: [5]
+
+	at market.v3_gpt4turbo_run02_CartRestControllerTest.testAddItemSuccess(v3_gpt4turbo_run02_CartRestControllerTest.java:74)
+
+testPayByCardSuccess  Time elapsed: 0.214 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.v3_gpt4turbo_run02_CartRestControllerTest.testPayByCardSuccess(v3_gpt4turbo_run02_CartRestControllerTest.java:101)
+

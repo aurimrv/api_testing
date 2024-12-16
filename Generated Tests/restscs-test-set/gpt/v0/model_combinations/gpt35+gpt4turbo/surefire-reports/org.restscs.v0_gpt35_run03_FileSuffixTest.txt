@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt35_run03_FileSuffixTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.674 s <<< FAILURE! - in org.restscs.v0_gpt35_run03_FileSuffixTest
+testFileSuffixEndpoint(org.restscs.v0_gpt35_run03_FileSuffixTest)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "1"
+  Actual: 0
+
+	at org.restscs.v0_gpt35_run03_FileSuffixTest.testFileSuffixEndpoint(v0_gpt35_run03_FileSuffixTest.java:66)
+

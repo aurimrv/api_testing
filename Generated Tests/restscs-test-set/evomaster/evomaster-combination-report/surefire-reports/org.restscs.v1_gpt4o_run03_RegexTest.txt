@@ -1,0 +1,76 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run03_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 1.049 s <<< FAILURE! - in org.restscs.v1_gpt4o_run03_RegexTest
+testCalcEndpoint(org.restscs.v1_gpt4o_run03_RegexTest)  Time elapsed: 0.028 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run03_RegexTest.testCalcEndpoint(v1_gpt4o_run03_RegexTest.java:67)
+
+testCookieEndpoint(org.restscs.v1_gpt4o_run03_RegexTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "cookie set"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run03_RegexTest.testCookieEndpoint(v1_gpt4o_run03_RegexTest.java:119)
+
+testDateParseEndpoint(org.restscs.v1_gpt4o_run03_RegexTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "date parsed"
+  Actual: 2
+
+	at org.restscs.v1_gpt4o_run03_RegexTest.testDateParseEndpoint(v1_gpt4o_run03_RegexTest.java:159)
+
+testFileSuffixEndpoint(org.restscs.v1_gpt4o_run03_RegexTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "txt"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run03_RegexTest.testFileSuffixEndpoint(v1_gpt4o_run03_RegexTest.java:179)
+
+testRegexEndpoint(org.restscs.v1_gpt4o_run03_RegexTest)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "url"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run03_RegexTest.testRegexEndpoint(v1_gpt4o_run03_RegexTest.java:242)
+
+testPatEndpoint(org.restscs.v1_gpt4o_run03_RegexTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "true"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run03_RegexTest.testPatEndpoint(v1_gpt4o_run03_RegexTest.java:270)
+
+testText2txtEndpoint(org.restscs.v1_gpt4o_run03_RegexTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "onetwothree"
+  Actual: 
+
+	at org.restscs.v1_gpt4o_run03_RegexTest.testText2txtEndpoint(v1_gpt4o_run03_RegexTest.java:292)
+
+testTitleEndpoint(org.restscs.v1_gpt4o_run03_RegexTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Mr."
+  Actual: 1
+
+	at org.restscs.v1_gpt4o_run03_RegexTest.testTitleEndpoint(v1_gpt4o_run03_RegexTest.java:313)
+

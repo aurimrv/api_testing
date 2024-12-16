@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt35_run03_TitleTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.058 s <<< FAILURE! - in org.restscs.v3_gpt35_run03_TitleTest
+testTitleWithInvalidSex(org.restscs.v3_gpt35_run03_TitleTest)  Time elapsed: 0.039 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run03_TitleTest.testTitleWithInvalidSex(v3_gpt35_run03_TitleTest.java:63)
+
+testTitleWithInvalidTitle(org.restscs.v3_gpt35_run03_TitleTest)  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run03_TitleTest.testTitleWithInvalidTitle(v3_gpt35_run03_TitleTest.java:72)
+
+testTitleWithNoneSexAndInvalidTitle(org.restscs.v3_gpt35_run03_TitleTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run03_TitleTest.testTitleWithNoneSexAndInvalidTitle(v3_gpt35_run03_TitleTest.java:81)
+

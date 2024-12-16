@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt4turbo_run02_CalcTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.675 s <<< FAILURE! - in org.restscs.v0_gpt4turbo_run02_CalcTest
+testCalcSine(org.restscs.v0_gpt4turbo_run02_CalcTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "1.0"
+  Actual: 0.8939966636005579
+
+	at org.restscs.v0_gpt4turbo_run02_CalcTest.testCalcSine(v0_gpt4turbo_run02_CalcTest.java:60)
+
+testCalcCosine(org.restscs.v0_gpt4turbo_run02_CalcTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "-1.0"
+  Actual: -0.5984600690578581
+
+	at org.restscs.v0_gpt4turbo_run02_CalcTest.testCalcCosine(v0_gpt4turbo_run02_CalcTest.java:67)
+
+testCalcTangent(org.restscs.v0_gpt4turbo_run02_CalcTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "0.9999999999999999"
+  Actual: 1.6197751905438615
+
+	at org.restscs.v0_gpt4turbo_run02_CalcTest.testCalcTangent(v0_gpt4turbo_run02_CalcTest.java:74)
+

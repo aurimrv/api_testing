@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: market.seed03_EvoMaster_successes_Test
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.627 s - in market.seed03_EvoMaster_successes_Test

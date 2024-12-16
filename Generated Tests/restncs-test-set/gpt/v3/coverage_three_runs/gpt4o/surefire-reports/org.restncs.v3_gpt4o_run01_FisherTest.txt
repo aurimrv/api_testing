@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v3_gpt4o_run01_FisherTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.192 s <<< FAILURE! - in org.restncs.v3_gpt4o_run01_FisherTest
+testFisherInvalidInputs(org.restncs.v3_gpt4o_run01_FisherTest)  Time elapsed: 0.037 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: <NaN>
+  Actual: NaN
+
+	at org.restncs.v3_gpt4o_run01_FisherTest.testFisherInvalidInputs(v3_gpt4o_run01_FisherTest.java:80)
+

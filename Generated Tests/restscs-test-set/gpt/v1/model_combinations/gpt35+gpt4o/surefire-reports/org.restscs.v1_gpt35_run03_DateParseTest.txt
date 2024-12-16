@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt35_run03_DateParseTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.585 s <<< FAILURE! - in org.restscs.v1_gpt35_run03_DateParseTest
+testDateParseEndpoint_InvalidInput_ReturnsNotFound(org.restscs.v1_gpt35_run03_DateParseTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v1_gpt35_run03_DateParseTest.testDateParseEndpoint_InvalidInput_ReturnsNotFound(v1_gpt35_run03_DateParseTest.java:79)
+
+testDateParseEndpoint_NullInput_ReturnsBadRequest(org.restscs.v1_gpt35_run03_DateParseTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v1_gpt35_run03_DateParseTest.testDateParseEndpoint_NullInput_ReturnsBadRequest(v1_gpt35_run03_DateParseTest.java:91)
+

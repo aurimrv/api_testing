@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4o_run03_CookieTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.898 s <<< FAILURE! - in org.restscs.v2_gpt4o_run03_CookieTest
+testBusinessRuleEnforcement(org.restscs.v2_gpt4o_run03_CookieTest)  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <404>.
+
+	at org.restscs.v2_gpt4o_run03_CookieTest.testBusinessRuleEnforcement(v2_gpt4o_run03_CookieTest.java:145)
+
+testSchemaValidationForCookie(org.restscs.v2_gpt4o_run03_CookieTest)  Time elapsed: 0.015 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+1
+
+	at org.restscs.v2_gpt4o_run03_CookieTest.testSchemaValidationForCookie(v2_gpt4o_run03_CookieTest.java:114)
+
+testServerInternalError(org.restscs.v2_gpt4o_run03_CookieTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4o_run03_CookieTest.testServerInternalError(v2_gpt4o_run03_CookieTest.java:130)
+

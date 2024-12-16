@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4turbo_run01_Text2TxtTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.618 s <<< FAILURE! - in org.restscs.v1_gpt4turbo_run01_Text2TxtTest
+testText2TxtSingleWordTransformations(org.restscs.v1_gpt4turbo_run01_Text2TxtTest)  Time elapsed: 0.004 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 40: http://localhost:45711/api/text2txt/two/{word2}/{word3}
+	at org.restscs.v1_gpt4turbo_run01_Text2TxtTest.testText2TxtSingleWordTransformations(v1_gpt4turbo_run01_Text2TxtTest.java:60)
+
+testText2TxtMultipleWordTransformations(org.restscs.v1_gpt4turbo_run01_Text2TxtTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 40: http://localhost:45711/api/text2txt/see/{word2}/{word3}
+	at org.restscs.v1_gpt4turbo_run01_Text2TxtTest.testText2TxtMultipleWordTransformations(v1_gpt4turbo_run01_Text2TxtTest.java:75)
+
+testText2TxtNonExistWordTransformations(org.restscs.v1_gpt4turbo_run01_Text2TxtTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 42: http://localhost:45711/api/text2txt/hello/{word2}/{word3}
+	at org.restscs.v1_gpt4turbo_run01_Text2TxtTest.testText2TxtNonExistWordTransformations(v1_gpt4turbo_run01_Text2TxtTest.java:86)
+

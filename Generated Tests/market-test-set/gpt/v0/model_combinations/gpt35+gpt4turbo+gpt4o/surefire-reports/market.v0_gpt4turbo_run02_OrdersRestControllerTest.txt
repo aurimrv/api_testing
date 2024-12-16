@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.v0_gpt4turbo_run02_OrdersRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.982 s <<< FAILURE! - in market.v0_gpt4turbo_run02_OrdersRestControllerTest
+testGetOrderById_authorized_existingId  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v0_gpt4turbo_run02_OrdersRestControllerTest.testGetOrderById_authorized_existingId(v0_gpt4turbo_run02_OrdersRestControllerTest.java:89)
+
+testGetOrders_authorized  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v0_gpt4turbo_run02_OrdersRestControllerTest.testGetOrders_authorized(v0_gpt4turbo_run02_OrdersRestControllerTest.java:66)
+
+testGetOrderById_authorized_nonExistingId  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.v0_gpt4turbo_run02_OrdersRestControllerTest.testGetOrderById_authorized_nonExistingId(v0_gpt4turbo_run02_OrdersRestControllerTest.java:102)
+

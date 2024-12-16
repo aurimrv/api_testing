@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt4o_run03_OrdersRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 2.265 s <<< FAILURE! - in market.v3_gpt4o_run03_OrdersRestControllerTest
+testGetOrder  Time elapsed: 0.2 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v3_gpt4o_run03_OrdersRestControllerTest.getAccessToken(v3_gpt4o_run03_OrdersRestControllerTest.java:110)
+	at market.v3_gpt4o_run03_OrdersRestControllerTest.testGetOrder(v3_gpt4o_run03_OrdersRestControllerTest.java:84)
+
+testInternalServerError  Time elapsed: 0.04 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v3_gpt4o_run03_OrdersRestControllerTest.getAccessToken(v3_gpt4o_run03_OrdersRestControllerTest.java:110)
+	at market.v3_gpt4o_run03_OrdersRestControllerTest.testInternalServerError(v3_gpt4o_run03_OrdersRestControllerTest.java:99)
+
+testGetOrders  Time elapsed: 0.054 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v3_gpt4o_run03_OrdersRestControllerTest.getAccessToken(v3_gpt4o_run03_OrdersRestControllerTest.java:110)
+	at market.v3_gpt4o_run03_OrdersRestControllerTest.testGetOrders(v3_gpt4o_run03_OrdersRestControllerTest.java:69)
+

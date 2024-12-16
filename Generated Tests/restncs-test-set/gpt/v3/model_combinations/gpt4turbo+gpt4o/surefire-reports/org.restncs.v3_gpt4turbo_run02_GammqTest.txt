@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v3_gpt4turbo_run02_GammqTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.815 s - in org.restncs.v3_gpt4turbo_run02_GammqTest

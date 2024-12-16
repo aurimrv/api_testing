@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v0_gpt35_run03_GammqTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.838 s <<< FAILURE! - in org.restncs.v0_gpt35_run03_GammqTest
+testGammq(org.restncs.v0_gpt35_run03_GammqTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0.5> but was:<0.6065306631481238>
+	at org.restncs.v0_gpt35_run03_GammqTest.testGammq(v0_gpt35_run03_GammqTest.java:62)
+

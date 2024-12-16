@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4turbo_run02_TitleTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.74 s <<< FAILURE! - in org.restscs.v2_gpt4turbo_run02_TitleTest
+testServerError(org.restscs.v2_gpt4turbo_run02_TitleTest)  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v2_gpt4turbo_run02_TitleTest.testServerError(v2_gpt4turbo_run02_TitleTest.java:93)
+

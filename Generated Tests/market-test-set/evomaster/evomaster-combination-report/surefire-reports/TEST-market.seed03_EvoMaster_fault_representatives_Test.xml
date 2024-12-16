@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="market.seed03_EvoMaster_fault_representatives_Test" time="17.596" tests="5" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/test-classes:/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/classes:/home/rincon/.m2/repository/net/lukyanets/market-core/0.1.2/market-core-0.1.2.jar:/home/rincon/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/home/rincon/.m2/repository/org/postgresql/postgresql/42.2.18/postgresql-42.2.18.jar:/home/rincon/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/home/rincon/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar:/home/rincon/.m2/repository/org/springframework/hateoas/spring-hateoas/1.2.4/spring-hateoas-1.2.4.jar:/home/rincon/.m2/repository/org/springframework/spring-aop/5.3.4/spring-aop-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-context/5.3.4/spring-context-5.3.4.jar:/home/rincon/.m2/repository/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar:/home/rincon/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar:/home/rincon/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar:/home/rincon/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.4.3/spring-boot-starter-data-jpa-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.4.3/spring-boot-starter-aop-2.4.3.jar:/home/rincon/.m2/repository/org/aspectj/aspectjweaver/1.9.6/aspectjweaver-1.9.6.jar:/home/rincon/.m2/repository/jakarta/transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar:/home/rincon/.m2/repository/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar:/home/rincon/.m2/repository/org/hibernate/hibernate-core/5.4.28.Final/hibernate-core-5.4.28.Final.jar:/home/rincon/.m2/repository/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar:/home/rincon/.m2/repository/org/javassist/javassist/3.27.0-GA/javassist-3.27.0-GA.jar:/home/rincon/.m2/repository/net/bytebuddy/byte-buddy/1.10.20/byte-buddy-1.10.20.jar:/home/rincon/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/rincon/.m2/repository/org/jboss/jandex/2.2.3.Final/jandex-2.2.3.Final.jar:/home/rincon/.m2/repository/org/dom4j/dom4j/2.1.3/dom4j-2.1.3.jar:/home/rincon/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar:/home/rincon/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.3/jaxb-runtime-2.3.3.jar:/home/rincon/.m2/repository/org/glassfish/jaxb/txw2/2.3.3/txw2-2.3.3.jar:/home/rincon/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.11/istack-commons-runtime-3.0.11.jar:/home/rincon/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/home/rincon/.m2/repository/org/springframework/data/spring-data-jpa/2.4.5/spring-data-jpa-2.4.5.jar:/home/rincon/.m2/repository/org/springframework/data/spring-data-commons/2.4.5/spring-data-commons-2.4.5.jar:/home/rincon/.m2/repository/org/springframework/spring-orm/5.3.4/spring-orm-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-tx/5.3.4/spring-tx-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-aspects/5.3.4/spring-aspects-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.4.3/spring-boot-starter-jdbc-2.4.3.jar:/home/rincon/.m2/repository/com/zaxxer/HikariCP/3.4.5/HikariCP-3.4.5.jar:/home/rincon/.m2/repository/org/springframework/spring-jdbc/5.3.4/spring-jdbc-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-security/2.4.3/spring-boot-starter-security-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/security/spring-security-config/5.4.5/spring-security-config-5.4.5.jar:/home/rincon/.m2/repository/org/springframework/security/spring-security-core/5.4.5/spring-security-core-5.4.5.jar:/home/rincon/.m2/repository/org/springframework/security/spring-security-web/5.4.5/spring-security-web-5.4.5.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-validation/2.4.3/spring-boot-starter-validation-2.4.3.jar:/home/rincon/.m2/repository/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar:/home/rincon/.m2/repository/org/hibernate/validator/hibernate-validator/6.1.7.Final/hibernate-validator-6.1.7.Final.jar:/home/rincon/.m2/repository/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.4.3/spring-boot-starter-test-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-test/2.4.3/spring-boot-test-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.4.3/spring-boot-test-autoconfigure-2.4.3.jar:/home/rincon/.m2/repository/org/assertj/assertj-core/3.18.1/assertj-core-3.18.1.jar:/home/rincon/.m2/repository/org/junit/jupiter/junit-jupiter/5.7.1/junit-jupiter-5.7.1.jar:/home/rincon/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1.jar:/home/rincon/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/rincon/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/rincon/.m2/repository/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1.jar:/home/rincon/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.7.1/junit-jupiter-params-5.7.1.jar:/home/rincon/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.1/junit-jupiter-engine-5.7.1.jar:/home/rincon/.m2/repository/org/junit/platform/junit-platform-engine/1.7.1/junit-platform-engine-1.7.1.jar:/home/rincon/.m2/repository/org/mockito/mockito-core/3.6.28/mockito-core-3.6.28.jar:/home/rincon/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.20/byte-buddy-agent-1.10.20.jar:/home/rincon/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:/home/rincon/.m2/repository/org/mockito/mockito-junit-jupiter/3.6.28/mockito-junit-jupiter-3.6.28.jar:/home/rincon/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar:/home/rincon/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/rincon/.m2/repository/org/springframework/spring-test/5.3.4/spring-test-5.3.4.jar:/home/rincon/.m2/repository/org/xmlunit/xmlunit-core/2.7.0/xmlunit-core-2.7.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-boot-starter/3.0.0/springfox-boot-starter-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-oas/3.0.0/springfox-oas-3.0.0.jar:/home/rincon/.m2/repository/io/swagger/core/v3/swagger-annotations/2.1.2/swagger-annotations-2.1.2.jar:/home/rincon/.m2/repository/io/swagger/core/v3/swagger-models/2.1.2/swagger-models-2.1.2.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.jar:/home/rincon/.m2/repository/io/springfox/springfox-spi/3.0.0/springfox-spi-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-schema/3.0.0/springfox-schema-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-core/3.0.0/springfox-core-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-spring-web/3.0.0/springfox-spring-web-3.0.0.jar:/home/rincon/.m2/repository/io/github/classgraph/classgraph/4.8.83/classgraph-4.8.83.jar:/home/rincon/.m2/repository/io/springfox/springfox-spring-webmvc/3.0.0/springfox-spring-webmvc-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-spring-webflux/3.0.0/springfox-spring-webflux-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger-common/3.0.0/springfox-swagger-common-3.0.0.jar:/home/rincon/.m2/repository/org/mapstruct/mapstruct/1.3.1.Final/mapstruct-1.3.1.Final.jar:/home/rincon/.m2/repository/io/springfox/springfox-data-rest/3.0.0/springfox-data-rest-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-bean-validators/3.0.0/springfox-bean-validators-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger2/3.0.0/springfox-swagger2-3.0.0.jar:/home/rincon/.m2/repository/io/swagger/swagger-annotations/1.5.20/swagger-annotations-1.5.20.jar:/home/rincon/.m2/repository/io/swagger/swagger-models/1.5.20/swagger-models-1.5.20.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger-ui/3.0.0/springfox-swagger-ui-3.0.0.jar:/home/rincon/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/home/rincon/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/home/rincon/.m2/repository/org/springframework/plugin/spring-plugin-core/2.0.0.RELEASE/spring-plugin-core-2.0.0.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/plugin/spring-plugin-metadata/2.0.0.RELEASE/spring-plugin-metadata-2.0.0.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.4.3/spring-boot-starter-web-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.4.3/spring-boot-starter-json-2.4.3.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.11.4/jackson-databind-2.11.4.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.11.4/jackson-core-2.11.4.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.11.4/jackson-datatype-jdk8-2.11.4.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.11.4/jackson-datatype-jsr310-2.11.4.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.4/jackson-module-parameter-names-2.11.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.4.3/spring-boot-starter-tomcat-2.4.3.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.43/tomcat-embed-core-9.0.43.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.43/tomcat-embed-websocket-9.0.43.jar:/home/rincon/.m2/repository/org/springframework/spring-web/5.3.4/spring-web-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-webmvc/5.3.4/spring-webmvc-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-expression/5.3.4/spring-expression-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter/2.4.3/spring-boot-starter-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot/2.4.3/spring-boot-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.4.3/spring-boot-autoconfigure-2.4.3.jar:/home/rincon/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/home/rincon/.m2/repository/org/springframework/spring-core/5.3.4/spring-core-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-jcl/5.3.4/spring-jcl-5.3.4.jar:/home/rincon/.m2/repository/org/yaml/snakeyaml/1.27/snakeyaml-1.27.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-log4j2/2.4.3/spring-boot-starter-log4j2-2.4.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.13.3/log4j-slf4j-impl-2.13.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-core/2.13.3/log4j-core-2.13.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-jul/2.13.3/log4j-jul-2.13.3.jar:/home/rincon/.m2/repository/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar:/home/rincon/.m2/repository/com/lmax/disruptor/3.4.2/disruptor-3.4.2.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-devtools/2.4.3/spring-boot-devtools-2.4.3.jar:/home/rincon/.m2/repository/io/rest-assured/rest-assured/4.3.0/rest-assured-4.3.0.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpcore/4.4.14/httpcore-4.4.14.jar:/home/rincon/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/rincon/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/rincon/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/rincon/.m2/repository/io/rest-assured/xml-path/4.3.0/xml-path-4.3.0.jar:/home/rincon/.m2/repository/io/rest-assured/rest-assured-common/4.3.0/rest-assured-common-4.3.0.jar:/home/rincon/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/home/rincon/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/home/rincon/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/home/rincon/.m2/repository/com/sun/xml/bind/jaxb-osgi/2.3.0.1/jaxb-osgi-2.3.0.1.jar:/home/rincon/.m2/repository/org/apache/sling/org.apache.sling.javax.activation/0.1.0/org.apache.sling.javax.activation-0.1.0.jar:/home/rincon/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/home/rincon/.m2/repository/io/rest-assured/json-path/4.3.0/json-path-4.3.0.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy-json/2.5.14/groovy-json-2.5.14.jar:/home/rincon/.m2/repository/io/rest-assured/json-schema-validator/4.3.0/json-schema-validator-4.3.0.jar:/home/rincon/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.10/json-schema-validator-2.2.10.jar:/home/rincon/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.10/json-schema-core-1.2.10.jar:/home/rincon/.m2/repository/com/github/java-json-tools/jackson-coreutils/1.9/jackson-coreutils-1.9.jar:/home/rincon/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/home/rincon/.m2/repository/com/github/fge/msg-simple/1.1/msg-simple-1.1.jar:/home/rincon/.m2/repository/com/github/fge/btf/1.2/btf-1.2.jar:/home/rincon/.m2/repository/com/github/fge/uri-template/0.9/uri-template-0.9.jar:/home/rincon/.m2/repository/org/mozilla/rhino/1.7.7.1/rhino-1.7.7.1.jar:/home/rincon/.m2/repository/javax/mail/mailapi/1.4.3/mailapi-1.4.3.jar:/home/rincon/.m2/repository/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar:/home/rincon/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.0.0/libphonenumber-8.0.0.jar:/home/rincon/.m2/repository/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar:/home/rincon/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar:/home/rincon/.m2/repository/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy/3.0.9/groovy-3.0.9.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.9/groovy-xml-3.0.9.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-controller-api/3.0.0/evomaster-client-java-controller-api-3.0.0.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-sql-dto/3.0.0/evomaster-client-java-sql-dto-3.0.0.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-controller/3.0.0/evomaster-client-java-controller-3.0.0.jar:/home/rincon/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/home/rincon/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/rincon/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar:/home/rincon/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.1.1/javax.ws.rs-api-2.1.1.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="/home/rincon/apps/java/jdk-11/lib"/>
+    <property name="sun.java.command" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/surefire/surefirebooter18284260590017337315.jar /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/surefire 2024-12-09T23-27-32_070-jvmRun1 surefire13031298739362205490tmp surefire_02139862483002347083tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/test-classes:/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/classes:/home/rincon/.m2/repository/net/lukyanets/market-core/0.1.2/market-core-0.1.2.jar:/home/rincon/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/home/rincon/.m2/repository/org/postgresql/postgresql/42.2.18/postgresql-42.2.18.jar:/home/rincon/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/home/rincon/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar:/home/rincon/.m2/repository/org/springframework/hateoas/spring-hateoas/1.2.4/spring-hateoas-1.2.4.jar:/home/rincon/.m2/repository/org/springframework/spring-aop/5.3.4/spring-aop-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-context/5.3.4/spring-context-5.3.4.jar:/home/rincon/.m2/repository/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar:/home/rincon/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar:/home/rincon/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar:/home/rincon/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.4.3/spring-boot-starter-data-jpa-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.4.3/spring-boot-starter-aop-2.4.3.jar:/home/rincon/.m2/repository/org/aspectj/aspectjweaver/1.9.6/aspectjweaver-1.9.6.jar:/home/rincon/.m2/repository/jakarta/transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar:/home/rincon/.m2/repository/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar:/home/rincon/.m2/repository/org/hibernate/hibernate-core/5.4.28.Final/hibernate-core-5.4.28.Final.jar:/home/rincon/.m2/repository/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar:/home/rincon/.m2/repository/org/javassist/javassist/3.27.0-GA/javassist-3.27.0-GA.jar:/home/rincon/.m2/repository/net/bytebuddy/byte-buddy/1.10.20/byte-buddy-1.10.20.jar:/home/rincon/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/rincon/.m2/repository/org/jboss/jandex/2.2.3.Final/jandex-2.2.3.Final.jar:/home/rincon/.m2/repository/org/dom4j/dom4j/2.1.3/dom4j-2.1.3.jar:/home/rincon/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar:/home/rincon/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.3/jaxb-runtime-2.3.3.jar:/home/rincon/.m2/repository/org/glassfish/jaxb/txw2/2.3.3/txw2-2.3.3.jar:/home/rincon/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.11/istack-commons-runtime-3.0.11.jar:/home/rincon/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/home/rincon/.m2/repository/org/springframework/data/spring-data-jpa/2.4.5/spring-data-jpa-2.4.5.jar:/home/rincon/.m2/repository/org/springframework/data/spring-data-commons/2.4.5/spring-data-commons-2.4.5.jar:/home/rincon/.m2/repository/org/springframework/spring-orm/5.3.4/spring-orm-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-tx/5.3.4/spring-tx-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-aspects/5.3.4/spring-aspects-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.4.3/spring-boot-starter-jdbc-2.4.3.jar:/home/rincon/.m2/repository/com/zaxxer/HikariCP/3.4.5/HikariCP-3.4.5.jar:/home/rincon/.m2/repository/org/springframework/spring-jdbc/5.3.4/spring-jdbc-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-security/2.4.3/spring-boot-starter-security-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/security/spring-security-config/5.4.5/spring-security-config-5.4.5.jar:/home/rincon/.m2/repository/org/springframework/security/spring-security-core/5.4.5/spring-security-core-5.4.5.jar:/home/rincon/.m2/repository/org/springframework/security/spring-security-web/5.4.5/spring-security-web-5.4.5.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-validation/2.4.3/spring-boot-starter-validation-2.4.3.jar:/home/rincon/.m2/repository/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar:/home/rincon/.m2/repository/org/hibernate/validator/hibernate-validator/6.1.7.Final/hibernate-validator-6.1.7.Final.jar:/home/rincon/.m2/repository/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.4.3/spring-boot-starter-test-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-test/2.4.3/spring-boot-test-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.4.3/spring-boot-test-autoconfigure-2.4.3.jar:/home/rincon/.m2/repository/org/assertj/assertj-core/3.18.1/assertj-core-3.18.1.jar:/home/rincon/.m2/repository/org/junit/jupiter/junit-jupiter/5.7.1/junit-jupiter-5.7.1.jar:/home/rincon/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1.jar:/home/rincon/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/rincon/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/rincon/.m2/repository/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1.jar:/home/rincon/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.7.1/junit-jupiter-params-5.7.1.jar:/home/rincon/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.1/junit-jupiter-engine-5.7.1.jar:/home/rincon/.m2/repository/org/junit/platform/junit-platform-engine/1.7.1/junit-platform-engine-1.7.1.jar:/home/rincon/.m2/repository/org/mockito/mockito-core/3.6.28/mockito-core-3.6.28.jar:/home/rincon/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.20/byte-buddy-agent-1.10.20.jar:/home/rincon/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:/home/rincon/.m2/repository/org/mockito/mockito-junit-jupiter/3.6.28/mockito-junit-jupiter-3.6.28.jar:/home/rincon/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar:/home/rincon/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/rincon/.m2/repository/org/springframework/spring-test/5.3.4/spring-test-5.3.4.jar:/home/rincon/.m2/repository/org/xmlunit/xmlunit-core/2.7.0/xmlunit-core-2.7.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-boot-starter/3.0.0/springfox-boot-starter-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-oas/3.0.0/springfox-oas-3.0.0.jar:/home/rincon/.m2/repository/io/swagger/core/v3/swagger-annotations/2.1.2/swagger-annotations-2.1.2.jar:/home/rincon/.m2/repository/io/swagger/core/v3/swagger-models/2.1.2/swagger-models-2.1.2.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.jar:/home/rincon/.m2/repository/io/springfox/springfox-spi/3.0.0/springfox-spi-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-schema/3.0.0/springfox-schema-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-core/3.0.0/springfox-core-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-spring-web/3.0.0/springfox-spring-web-3.0.0.jar:/home/rincon/.m2/repository/io/github/classgraph/classgraph/4.8.83/classgraph-4.8.83.jar:/home/rincon/.m2/repository/io/springfox/springfox-spring-webmvc/3.0.0/springfox-spring-webmvc-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-spring-webflux/3.0.0/springfox-spring-webflux-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger-common/3.0.0/springfox-swagger-common-3.0.0.jar:/home/rincon/.m2/repository/org/mapstruct/mapstruct/1.3.1.Final/mapstruct-1.3.1.Final.jar:/home/rincon/.m2/repository/io/springfox/springfox-data-rest/3.0.0/springfox-data-rest-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-bean-validators/3.0.0/springfox-bean-validators-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger2/3.0.0/springfox-swagger2-3.0.0.jar:/home/rincon/.m2/repository/io/swagger/swagger-annotations/1.5.20/swagger-annotations-1.5.20.jar:/home/rincon/.m2/repository/io/swagger/swagger-models/1.5.20/swagger-models-1.5.20.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger-ui/3.0.0/springfox-swagger-ui-3.0.0.jar:/home/rincon/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/home/rincon/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/home/rincon/.m2/repository/org/springframework/plugin/spring-plugin-core/2.0.0.RELEASE/spring-plugin-core-2.0.0.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/plugin/spring-plugin-metadata/2.0.0.RELEASE/spring-plugin-metadata-2.0.0.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.4.3/spring-boot-starter-web-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.4.3/spring-boot-starter-json-2.4.3.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.11.4/jackson-databind-2.11.4.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.11.4/jackson-core-2.11.4.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.11.4/jackson-datatype-jdk8-2.11.4.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.11.4/jackson-datatype-jsr310-2.11.4.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.4/jackson-module-parameter-names-2.11.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.4.3/spring-boot-starter-tomcat-2.4.3.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.43/tomcat-embed-core-9.0.43.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.43/tomcat-embed-websocket-9.0.43.jar:/home/rincon/.m2/repository/org/springframework/spring-web/5.3.4/spring-web-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-webmvc/5.3.4/spring-webmvc-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-expression/5.3.4/spring-expression-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter/2.4.3/spring-boot-starter-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot/2.4.3/spring-boot-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.4.3/spring-boot-autoconfigure-2.4.3.jar:/home/rincon/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/home/rincon/.m2/repository/org/springframework/spring-core/5.3.4/spring-core-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-jcl/5.3.4/spring-jcl-5.3.4.jar:/home/rincon/.m2/repository/org/yaml/snakeyaml/1.27/snakeyaml-1.27.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-log4j2/2.4.3/spring-boot-starter-log4j2-2.4.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.13.3/log4j-slf4j-impl-2.13.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-core/2.13.3/log4j-core-2.13.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-jul/2.13.3/log4j-jul-2.13.3.jar:/home/rincon/.m2/repository/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar:/home/rincon/.m2/repository/com/lmax/disruptor/3.4.2/disruptor-3.4.2.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-devtools/2.4.3/spring-boot-devtools-2.4.3.jar:/home/rincon/.m2/repository/io/rest-assured/rest-assured/4.3.0/rest-assured-4.3.0.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpcore/4.4.14/httpcore-4.4.14.jar:/home/rincon/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/rincon/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/rincon/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/rincon/.m2/repository/io/rest-assured/xml-path/4.3.0/xml-path-4.3.0.jar:/home/rincon/.m2/repository/io/rest-assured/rest-assured-common/4.3.0/rest-assured-common-4.3.0.jar:/home/rincon/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/home/rincon/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/home/rincon/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/home/rincon/.m2/repository/com/sun/xml/bind/jaxb-osgi/2.3.0.1/jaxb-osgi-2.3.0.1.jar:/home/rincon/.m2/repository/org/apache/sling/org.apache.sling.javax.activation/0.1.0/org.apache.sling.javax.activation-0.1.0.jar:/home/rincon/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/home/rincon/.m2/repository/io/rest-assured/json-path/4.3.0/json-path-4.3.0.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy-json/2.5.14/groovy-json-2.5.14.jar:/home/rincon/.m2/repository/io/rest-assured/json-schema-validator/4.3.0/json-schema-validator-4.3.0.jar:/home/rincon/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.10/json-schema-validator-2.2.10.jar:/home/rincon/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.10/json-schema-core-1.2.10.jar:/home/rincon/.m2/repository/com/github/java-json-tools/jackson-coreutils/1.9/jackson-coreutils-1.9.jar:/home/rincon/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/home/rincon/.m2/repository/com/github/fge/msg-simple/1.1/msg-simple-1.1.jar:/home/rincon/.m2/repository/com/github/fge/btf/1.2/btf-1.2.jar:/home/rincon/.m2/repository/com/github/fge/uri-template/0.9/uri-template-0.9.jar:/home/rincon/.m2/repository/org/mozilla/rhino/1.7.7.1/rhino-1.7.7.1.jar:/home/rincon/.m2/repository/javax/mail/mailapi/1.4.3/mailapi-1.4.3.jar:/home/rincon/.m2/repository/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar:/home/rincon/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.0.0/libphonenumber-8.0.0.jar:/home/rincon/.m2/repository/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar:/home/rincon/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar:/home/rincon/.m2/repository/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy/3.0.9/groovy-3.0.9.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.9/groovy-xml-3.0.9.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-controller-api/3.0.0/evomaster-client-java-controller-api-3.0.0.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-sql-dto/3.0.0/evomaster-client-java-sql-dto-3.0.0.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-controller/3.0.0/evomaster-client-java-controller-3.0.0.jar:/home/rincon/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/home/rincon/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/rincon/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar:/home/rincon/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.1.1/javax.ws.rs-api-2.1.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/rincon"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-07-18"/>
+    <property name="java.home" value="/home/rincon/apps/java/jdk-11"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/surefire/surefirebooter18284260590017337315.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.20+9-LTS-256"/>
+    <property name="user.name" value="rincon"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.0-126-generic"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="localRepository" value="/home/rincon/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.20"/>
+    <property name="user.dir" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="jacoco.append" value="true"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.20+9-LTS-256"/>
+    <property name="java.specification.maintenance.version" value="2"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="maven.test.failure.ignore" value="true"/>
+  </properties>
+  <testcase name="test_0_with500" classname="market.seed03_EvoMaster_fault_representatives_Test" time="2.94">
+    <failure message="1 expectation failed.&#10;JSON path &apos;message&apos; doesn&apos;t match.&#10;Expected: a string containing &quot;JSON parse error: Expected relation name; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Expected relation name\n at [Source: (ByteArrayInputStream); line: 1, column: 13] (through reference chain: market.dto.CartItemDTO[\&quot;_links\&quot;])&quot;&#10;  Actual: JSON parse error: Expected relation name; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Expected relation name&#10; at [Source: (PushbackInputStream); line: 1, column: 19] (through reference chain: market.dto.CartItemDTO[&quot;_links&quot;])&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'message' doesn't match.
+Expected: a string containing "JSON parse error: Expected relation name; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Expected relation name\n at [Source: (ByteArrayInputStream); line: 1, column: 13] (through reference chain: market.dto.CartItemDTO[\"_links\"])"
+  Actual: JSON parse error: Expected relation name; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Expected relation name
+ at [Source: (PushbackInputStream); line: 1, column: 19] (through reference chain: market.dto.CartItemDTO["_links"])
+
+	at market.seed03_EvoMaster_fault_representatives_Test.test_0_with500(seed03_EvoMaster_fault_representatives_Test.java:147)
+</failure>
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-09 23:27:35,685 INFO  [background-preinit] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.1.7.Final
+2024-12-09 23:27:35,803 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 239139 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-09 23:27:35,811 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-09 23:27:36,486 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-09 23:27:36,486 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-09 23:27:38,059 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-09 23:27:38,179 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 109 ms. Found 8 JPA repository interfaces.
+2024-12-09 23:27:38,751 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$4e9c2ce3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-09 23:27:38,945 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3a1828f7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-09 23:27:38,956 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-09 23:27:39,590 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-09 23:27:39,632 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2024-12-09 23:27:39,634 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-09 23:27:39,634 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-09 23:27:39,793 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-09 23:27:39,793 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3302 ms
+2024-12-09 23:27:40,023 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2024-12-09 23:27:40,452 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-09 23:27:40,704 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-09 23:27:40,817 INFO  [main] o.h.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+2024-12-09 23:27:41,029 INFO  [main] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-12-09 23:27:41,366 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-09 23:27:41,691 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-09 23:27:41,694 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-09 23:27:42,540 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-09 23:27:42,555 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-09 23:27:43,850 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-09 23:27:44,876 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2263ba7b, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ef695ee, org.springframework.security.web.header.HeaderWriterFilter@76208ea9, org.springframework.security.web.authentication.logout.LogoutFilter@37fb1ed5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4bce7724, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b52e9e6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c7be144, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62ab3aac, org.springframework.security.web.session.SessionManagementFilter@5c8853aa, org.springframework.security.web.access.ExceptionTranslationFilter@6acd6d2f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2dca8b08]
+2024-12-09 23:27:45,031 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-09 23:27:45,473 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2024-12-09 23:27:45,506 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 41451 (http) with context path ''
+2024-12-09 23:27:46,188 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 11.358 seconds (JVM running for 13.906)
+2024-12-09 23:27:48,306 INFO  [http-nio-auto-1-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 23:27:48,306 INFO  [http-nio-auto-1-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-09 23:27:48,309 INFO  [http-nio-auto-1-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 3 ms
+2024-12-09 23:27:48,868 ERROR [http-nio-auto-1-exec-1] m.r.e.RestExceptionHandler - RestErrorResponse{message='JSON parse error: Expected relation name; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Expected relation name
+ at [Source: (PushbackInputStream); line: 1, column: 19] (through reference chain: market.dto.CartItemDTO["_links"])', entityName='null', description='uri=/customer/cart', fieldErrors=[]}
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Expected relation name; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Expected relation name
+ at [Source: (PushbackInputStream); line: 1, column: 19] (through reference chain: market.dto.CartItemDTO["_links"])
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:387)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:342)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:186)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:158)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:131)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:178)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: Expected relation name
+ at [Source: (PushbackInputStream); line: 1, column: 19] (through reference chain: market.dto.CartItemDTO["_links"])
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:397)
+	at com.fasterxml.jackson.databind.JsonMappingException.wrapWithPath(JsonMappingException.java:356)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.wrapAndThrow(BeanDeserializerBase.java:1726)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:373)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:164)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4526)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3521)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:376)
+	... 89 more
+Caused by: com.fasterxml.jackson.core.JsonParseException: Expected relation name
+ at [Source: (PushbackInputStream); line: 1, column: 19]
+	at org.springframework.hateoas.mediatype.hal.Jackson2HalModule$HalLinkListDeserializer.deserialize(Jackson2HalModule.java:597)
+	at org.springframework.hateoas.mediatype.hal.Jackson2HalModule$HalLinkListDeserializer.deserialize(Jackson2HalModule.java:553)
+	at com.fasterxml.jackson.databind.deser.impl.FieldProperty.deserializeAndSet(FieldProperty.java:138)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:371)
+	... 93 more
+Request method:	PUT
+Request URI:	http://localhost:41451/customer/cart?name=_EM_470_XYZ_
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				x-EMextraHeader123=_EM_517_XYZ_
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "_links": [
+        {
+            "hreflang": "_EM_473_XYZ_",
+            "profile": "_EM_476_XYZ_",
+            "rel": {
+                "_EM_477_XYZ_": "_EM_478_XYZ_"
+            }
+        },
+        {
+            "media": "h6_QQFFiM",
+            "name": "_EM_484_XYZ_",
+            "profile": "_EM_485_XYZ_",
+            "title": "_EM_492_XYZ_"
+        },
+        {
+            "deprecation": "_EM_494_XYZ_",
+            "hreflang": "_EM_496_XYZ_",
+            "media": "_EM_497_XYZ_",
+            "name": "_EM_498_XYZ_",
+            "title": "_EM_500_XYZ_",
+            "type": "_EM_501_XYZ_"
+        },
+        {
+            "hreflang": "_EM_503_XYZ_",
+            "media": "_EM_504_XYZ_",
+            "profile": "_EM_506_XYZ_",
+            "title": "_EM_514_XYZ_"
+        }
+    ],
+    "productId": 134,
+    "quantity": 674
+}
+
+HTTP/1.1 500 
+Set-Cookie: JSESSIONID=5A0417E4C99892FD1B86B62A55AD914E; Path=/; HttpOnly
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Tue, 10 Dec 2024 02:27:48 GMT
+Connection: close
+
+{
+    "message": "JSON parse error: Expected relation name; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Expected relation name\n at [Source: (PushbackInputStream); line: 1, column: 19] (through reference chain: market.dto.CartItemDTO[\"_links\"])",
+    "description": "uri=/customer/cart",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+]]></system-out>
+  </testcase>
+  <testcase name="test_4" classname="market.seed03_EvoMaster_fault_representatives_Test" time="0.495"/>
+  <testcase name="test_2_with500" classname="market.seed03_EvoMaster_fault_representatives_Test" time="0.196"/>
+  <testcase name="test_1_with500" classname="market.seed03_EvoMaster_fault_representatives_Test" time="0.199"/>
+  <testcase name="test_3_with500" classname="market.seed03_EvoMaster_fault_representatives_Test" time="0.214"/>
+</testsuite>

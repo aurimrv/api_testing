@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v1_gpt4o_run02_ExpintTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.015 s <<< FAILURE! - in org.restncs.v1_gpt4o_run02_ExpintTest
+testFisherEndpoint(org.restncs.v1_gpt4o_run02_ExpintTest)  Time elapsed: 0.1 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restncs.v1_gpt4o_run02_ExpintTest.testFisherEndpoint(v1_gpt4o_run02_ExpintTest.java:150)
+
+testBessjEndpoint(org.restncs.v1_gpt4o_run02_ExpintTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v1_gpt4o_run02_ExpintTest.testBessjEndpoint(v1_gpt4o_run02_ExpintTest.java:101)
+
+testTriangleEndpoint(org.restncs.v1_gpt4o_run02_ExpintTest)  Time elapsed: 0.027 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsString doesn't match.
+Expected: not null
+  Actual: null
+
+	at org.restncs.v1_gpt4o_run02_ExpintTest.testTriangleEndpoint(v1_gpt4o_run02_ExpintTest.java:221)
+

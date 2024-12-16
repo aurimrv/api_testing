@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt4o_run02_OrdersRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 1.671 s <<< FAILURE! - in market.v3_gpt4o_run02_OrdersRestControllerTest
+testGetOrder  Time elapsed: 0.265 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.v3_gpt4o_run02_OrdersRestControllerTest.testGetOrder(v3_gpt4o_run02_OrdersRestControllerTest.java:82)
+
+testGetOrders  Time elapsed: 0.116 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.v3_gpt4o_run02_OrdersRestControllerTest.testGetOrders(v3_gpt4o_run02_OrdersRestControllerTest.java:68)
+

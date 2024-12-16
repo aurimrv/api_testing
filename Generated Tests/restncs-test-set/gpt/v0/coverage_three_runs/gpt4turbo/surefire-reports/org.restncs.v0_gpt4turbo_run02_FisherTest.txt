@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v0_gpt4turbo_run02_FisherTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 8.491 s <<< FAILURE! - in org.restncs.v0_gpt4turbo_run02_FisherTest
+testFisherEndpoint_m0_n0_x0(org.restncs.v0_gpt4turbo_run02_FisherTest)  Time elapsed: 0.076 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: is <NaN>
+  Actual: NaN
+
+	at org.restncs.v0_gpt4turbo_run02_FisherTest.testFisherEndpoint_m0_n0_x0(v0_gpt4turbo_run02_FisherTest.java:82)
+
+testFisherEndpoint_mNegative_nNegative_xNegative(org.restncs.v0_gpt4turbo_run02_FisherTest)  Time elapsed: 0.046 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: is <NaN>
+  Actual: NaN
+
+	at org.restncs.v0_gpt4turbo_run02_FisherTest.testFisherEndpoint_mNegative_nNegative_xNegative(v0_gpt4turbo_run02_FisherTest.java:89)
+

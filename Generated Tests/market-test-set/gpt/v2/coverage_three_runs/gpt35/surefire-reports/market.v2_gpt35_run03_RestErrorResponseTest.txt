@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt35_run03_RestErrorResponseTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 2.002 s <<< FAILURE! - in market.v2_gpt35_run03_RestErrorResponseTest
+testSchemaValidation  Time elapsed: 0.082 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path schemaField doesn't match.
+Expected: not null
+  Actual: null
+
+	at market.v2_gpt35_run03_RestErrorResponseTest.testSchemaValidation(v2_gpt35_run03_RestErrorResponseTest.java:82)
+
+testInvalidInputReturns500Error  Time elapsed: 0.042 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at market.v2_gpt35_run03_RestErrorResponseTest.testInvalidInputReturns500Error(v2_gpt35_run03_RestErrorResponseTest.java:70)
+
+testBusinessRuleEnforcement  Time elapsed: 0.046 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v2_gpt35_run03_RestErrorResponseTest.testBusinessRuleEnforcement(v2_gpt35_run03_RestErrorResponseTest.java:96)
+

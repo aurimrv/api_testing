@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4turbo_run02_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.597 s <<< FAILURE! - in org.restscs.v3_gpt4turbo_run02_RegexTest
+testSubjectWithUrl(org.restscs.v3_gpt4turbo_run02_RegexTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "url"
+  Actual: {"timestamp":"2024-12-08T19:17:23.541+0000","status":404,"error":"Not Found","message":"No message available","path":"/api/pat/http://example.com/path/to/resource"}
+
+	at org.restscs.v3_gpt4turbo_run02_RegexTest.testSubjectWithUrl(v3_gpt4turbo_run02_RegexTest.java:64)
+

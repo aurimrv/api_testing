@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v3_gpt4o_run02_BessjTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.128 s <<< FAILURE! - in org.restncs.v3_gpt4o_run02_BessjTest
+testBessjWithInvalidN(org.restncs.v3_gpt4o_run02_BessjTest)  Time elapsed: 0.028 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but no content-type was defined in the response.
+Try registering a default parser using:
+   RestAssured.defaultParser(<parser type>);
+Content was:
+
+
+	at org.restncs.v3_gpt4o_run02_BessjTest.testBessjWithInvalidN(v3_gpt4o_run02_BessjTest.java:77)
+

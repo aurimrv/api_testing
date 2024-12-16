@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt4o_run03_ProductsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 2, Errors: 2, Skipped: 0, Time elapsed: 1.741 s <<< FAILURE! - in market.v3_gpt4o_run03_ProductsRestControllerTest
+testSchemaValidationGetSingleProduct  Time elapsed: 0.052 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.v3_gpt4o_run03_ProductsRestControllerTest.testSchemaValidationGetSingleProduct(v3_gpt4o_run03_ProductsRestControllerTest.java:172)
+
+testCreateProduct  Time elapsed: 0.027 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <405>.
+
+	at market.v3_gpt4o_run03_ProductsRestControllerTest.testCreateProduct(v3_gpt4o_run03_ProductsRestControllerTest.java:120)
+
+testCreateProductWithInvalidData  Time elapsed: 0.029 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <405>.
+
+	at market.v3_gpt4o_run03_ProductsRestControllerTest.testCreateProductWithInvalidData(v3_gpt4o_run03_ProductsRestControllerTest.java:142)
+
+testSchemaValidationGetProducts  Time elapsed: 0.039 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.v3_gpt4o_run03_ProductsRestControllerTest.testSchemaValidationGetProducts(v3_gpt4o_run03_ProductsRestControllerTest.java:159)
+

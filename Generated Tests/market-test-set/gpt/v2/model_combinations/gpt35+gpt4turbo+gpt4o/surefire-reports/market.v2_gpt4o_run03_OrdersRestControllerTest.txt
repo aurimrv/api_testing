@@ -1,0 +1,41 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4o_run03_OrdersRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 2.947 s <<< FAILURE! - in market.v2_gpt4o_run03_OrdersRestControllerTest
+testGetOrder_Forbidden  Time elapsed: 0.102 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <401>.
+
+	at market.v2_gpt4o_run03_OrdersRestControllerTest.testGetOrder_Forbidden(v2_gpt4o_run03_OrdersRestControllerTest.java:185)
+
+testGetOrders_InternalServerError  Time elapsed: 0.141 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at market.v2_gpt4o_run03_OrdersRestControllerTest.testGetOrders_InternalServerError(v2_gpt4o_run03_OrdersRestControllerTest.java:121)
+
+testGetOrder_SchemaValidation  Time elapsed: 0.166 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path $ doesn't match.
+Expected: map containing ["_links"->ANYTHING]
+  Actual: {userAccount=ivan.petrov@yandex.ru, id=1, billNumber=271320540, dateCreated=2019-12-27T03:00:00.000+00:00, productsCost=8127.0, deliveryCost=400, deliveryIncluded=true, totalCost=8527.0, payed=true, executed=false}
+
+	at market.v2_gpt4o_run03_OrdersRestControllerTest.testGetOrder_SchemaValidation(v2_gpt4o_run03_OrdersRestControllerTest.java:158)
+
+testGetOrders_Forbidden  Time elapsed: 0.106 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <401>.
+
+	at market.v2_gpt4o_run03_OrdersRestControllerTest.testGetOrders_Forbidden(v2_gpt4o_run03_OrdersRestControllerTest.java:175)
+
+testGetOrder_InternalServerError  Time elapsed: 0.121 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at market.v2_gpt4o_run03_OrdersRestControllerTest.testGetOrder_InternalServerError(v2_gpt4o_run03_OrdersRestControllerTest.java:133)
+

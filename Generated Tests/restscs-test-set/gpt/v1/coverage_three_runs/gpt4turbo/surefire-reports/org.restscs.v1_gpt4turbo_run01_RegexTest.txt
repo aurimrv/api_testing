@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4turbo_run01_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.713 s <<< FAILURE! - in org.restscs.v1_gpt4turbo_run01_RegexTest
+testRegexUrlMatch(org.restscs.v1_gpt4turbo_run01_RegexTest)  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restscs.v1_gpt4turbo_run01_RegexTest.testRegexUrlMatch(v1_gpt4turbo_run01_RegexTest.java:68)
+

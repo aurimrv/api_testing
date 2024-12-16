@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt35_run03_TitleTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.621 s <<< FAILURE! - in org.restscs.v1_gpt35_run03_TitleTest
+testIncorrectTitleEndpoint(org.restscs.v1_gpt35_run03_TitleTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "0"
+  Actual: -1
+
+	at org.restscs.v1_gpt35_run03_TitleTest.testIncorrectTitleEndpoint(v1_gpt35_run03_TitleTest.java:78)
+
+testNoSexTitleEndpoint(org.restscs.v1_gpt35_run03_TitleTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: -1
+
+	at org.restscs.v1_gpt35_run03_TitleTest.testNoSexTitleEndpoint(v1_gpt35_run03_TitleTest.java:90)
+

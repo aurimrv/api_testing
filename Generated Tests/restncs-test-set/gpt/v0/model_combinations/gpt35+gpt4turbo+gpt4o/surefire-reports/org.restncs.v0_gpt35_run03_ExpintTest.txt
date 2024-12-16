@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v0_gpt35_run03_ExpintTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.81 s <<< FAILURE! - in org.restncs.v0_gpt35_run03_ExpintTest
+testExpintEndpoint(org.restncs.v0_gpt35_run03_ExpintTest)  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0.339515> but was:<0.0731007776718873>
+	at org.restncs.v0_gpt35_run03_ExpintTest.testExpintEndpoint(v0_gpt35_run03_ExpintTest.java:71)
+
+testExpintNegativeInput(org.restncs.v0_gpt35_run03_ExpintTest)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <400>.
+
+	at org.restncs.v0_gpt35_run03_ExpintTest.testExpintNegativeInput(v0_gpt35_run03_ExpintTest.java:84)
+
+testExpintZeroInput(org.restncs.v0_gpt35_run03_ExpintTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v0_gpt35_run03_ExpintTest.testExpintZeroInput(v0_gpt35_run03_ExpintTest.java:98)
+

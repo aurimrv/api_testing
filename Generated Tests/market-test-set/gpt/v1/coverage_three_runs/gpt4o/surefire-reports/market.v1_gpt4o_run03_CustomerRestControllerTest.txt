@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: market.v1_gpt4o_run03_CustomerRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.536 s <<< FAILURE! - in market.v1_gpt4o_run03_CustomerRestControllerTest
+testRegisterCustomer  Time elapsed: 0.063 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v1_gpt4o_run03_CustomerRestControllerTest.testRegisterCustomer(v1_gpt4o_run03_CustomerRestControllerTest.java:71)
+
+testGetCustomer  Time elapsed: 0.032 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v1_gpt4o_run03_CustomerRestControllerTest.testGetCustomer(v1_gpt4o_run03_CustomerRestControllerTest.java:98)
+

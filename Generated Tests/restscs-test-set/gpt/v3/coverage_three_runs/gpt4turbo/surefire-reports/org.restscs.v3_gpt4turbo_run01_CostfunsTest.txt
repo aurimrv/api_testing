@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4turbo_run01_CostfunsTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.739 s <<< FAILURE! - in org.restscs.v3_gpt4turbo_run01_CostfunsTest
+testSubjectWithSpecialCharactersInString(org.restscs.v3_gpt4turbo_run01_CostfunsTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.net.URISyntaxException: Malformed escape pair at index 44: http://localhost:37045/api/costfuns/5/ba@#$$%^&*()ab
+	at org.restscs.v3_gpt4turbo_run01_CostfunsTest.testSubjectWithSpecialCharactersInString(v3_gpt4turbo_run01_CostfunsTest.java:107)
+

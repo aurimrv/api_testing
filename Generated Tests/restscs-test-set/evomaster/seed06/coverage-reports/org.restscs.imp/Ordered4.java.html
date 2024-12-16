@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Ordered4.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">evomaster-benchmark-cs-rest-artificial-scs</a> &gt; <a href="index.source.html" class="el_package">org.restscs.imp</a> &gt; <span class="el_source">Ordered4.java</span></div><h1>Ordered4.java</h1><pre class="source lang-java linenums">//! futname = Subject      //NAME OF FUNCTION UNDER TEST
+//! mutation = false        //SPECIFY MUTATION COVERAGE
+//! textout = true        //WRITE INSTRUMENTED SUBJECT TO FILE
+//! maxchildren = 500000  //MAX LENGTH OF SEARCH
+//! totalpopsize = 100    //TOTAL SIZE OF POPULATIONS 
+//! mutationpercent = 50  //REL FREQUENCY OF GENETIC MUTATION TO CROSSOVER
+//! samefitcountmax = 100 //NUMBER OF CONSECUTIVE TESTS IN A POP 
+//THAT MUST HAVE THE SAME COST FOR POP TO BE STAGNANT
+//! verbose = false        //PRINT MESSAGES SHOWING PROGRESS OF SEARCH
+//! showevery = 3000      //NUMBER OF CANDIDATE INPUTS GENERATED BETWEEN EACH SHOW
+//! numbins = 0           //GRANULARITY OF CANDIDATE INPUT HISTOGRAM, SET TO 0 TO NOT COLLECT STATS
+//! trialfirst = 1        //EACH TRIAL USES A DIFFERENT RANDOM SEED
+//! triallast = 1         //NUMBER OF TRIALS = triallast - trialfirst + 1
+package org.restscs.imp;
+
+<span class="nc" id="L16">public class Ordered4</span>
+{
+
+	public static String subject(String w,  String x,  String z, String y)
+	{
+<span class="fc" id="L21">		String  result = &quot;unordered&quot;;</span>
+<span class="fc bfc" id="L22" title="All 4 branches covered.">		if (w.length() &gt;= 5 &amp;&amp; w.length() &lt;= 6 &amp;&amp;  //LIMIT LENGTH TO LIMIT PROB OF RANDOM SATISFACTION</span>
+<span class="fc bfc" id="L23" title="All 4 branches covered.">				x.length() &gt;= 5 &amp;&amp; x.length() &lt;= 6 &amp;&amp;</span>
+<span class="fc bfc" id="L24" title="All 4 branches covered.">				y.length() &gt;= 5 &amp;&amp; y.length() &lt;= 6 &amp;&amp;</span>
+<span class="fc bfc" id="L25" title="All 4 branches covered.">				z.length() &gt;= 5 &amp;&amp; z.length() &lt;= 6) {</span>
+<span class="fc bfc" id="L26" title="All 6 branches covered.">			if (z.compareTo(y) &gt; 0 &amp;&amp; y.compareTo(x) &gt; 0 &amp;&amp; x.compareTo(w) &gt; 0) {</span>
+<span class="fc" id="L27">				result = &quot;increasing&quot;;</span>
+			}
+<span class="fc bfc" id="L29" title="All 6 branches covered.">			else if (w.compareTo(x) &gt; 0 &amp;&amp; x.compareTo(y) &gt; 0 &amp;&amp; y.compareTo(z) &gt; 0) {</span>
+<span class="fc" id="L30">				result = &quot;decreasing&quot;;</span>
+			}
+		}
+<span class="fc" id="L33">		return result;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

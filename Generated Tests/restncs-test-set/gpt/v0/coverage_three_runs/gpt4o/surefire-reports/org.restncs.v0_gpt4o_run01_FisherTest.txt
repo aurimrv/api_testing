@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v0_gpt4o_run01_FisherTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.812 s - in org.restncs.v0_gpt4o_run01_FisherTest

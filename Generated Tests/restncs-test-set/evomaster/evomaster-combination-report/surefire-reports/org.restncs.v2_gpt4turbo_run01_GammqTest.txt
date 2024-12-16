@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v2_gpt4turbo_run01_GammqTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.052 s <<< FAILURE! - in org.restncs.v2_gpt4turbo_run01_GammqTest
+testGammqValidResponse(org.restncs.v2_gpt4turbo_run01_GammqTest)  Time elapsed: 0.021 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restncs.v2_gpt4turbo_run01_GammqTest.testGammqValidResponse(v2_gpt4turbo_run01_GammqTest.java:74)
+

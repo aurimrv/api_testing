@@ -1,0 +1,150 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run02_NotyPevarTest
+-------------------------------------------------------------------------------
+Tests run: 23, Failures: 18, Errors: 0, Skipped: 0, Time elapsed: 0.825 s <<< FAILURE! - in org.restscs.v1_gpt4o_run02_NotyPevarTest
+testCalcAdd(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "8.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testCalcAdd(v1_gpt4o_run02_NotyPevarTest.java:68)
+
+testCookieValid(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Cookie set"
+  Actual: 2
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testCookieValid(v1_gpt4o_run02_NotyPevarTest.java:108)
+
+testCookieNotFound(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testCookieNotFound(v1_gpt4o_run02_NotyPevarTest.java:120)
+
+testCostfunsResult0(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "0"
+  Actual: 10
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testCostfunsResult0(v1_gpt4o_run02_NotyPevarTest.java:133)
+
+testDateParseValid(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Parsed date"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testDateParseValid(v1_gpt4o_run02_NotyPevarTest.java:158)
+
+testDateParseNotFound(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testDateParseNotFound(v1_gpt4o_run02_NotyPevarTest.java:169)
+
+testFileSuffixValid(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "txt"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testFileSuffixValid(v1_gpt4o_run02_NotyPevarTest.java:182)
+
+testFileSuffixNotFound(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testFileSuffixNotFound(v1_gpt4o_run02_NotyPevarTest.java:193)
+
+testOrdered4Valid(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Ordered"
+  Actual: unordered
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testOrdered4Valid(v1_gpt4o_run02_NotyPevarTest.java:233)
+
+testOrdered4NotFound(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testOrdered4NotFound(v1_gpt4o_run02_NotyPevarTest.java:246)
+
+testRegexValid(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Pattern matched"
+  Actual: none
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testRegexValid(v1_gpt4o_run02_NotyPevarTest.java:258)
+
+testRegexNotFound(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testRegexNotFound(v1_gpt4o_run02_NotyPevarTest.java:268)
+
+testPatValid(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Pattern matched"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testPatValid(v1_gpt4o_run02_NotyPevarTest.java:281)
+
+testPatNotFound(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testPatNotFound(v1_gpt4o_run02_NotyPevarTest.java:292)
+
+testText2TxtValid(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Text concatenated"
+  Actual: 
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testText2TxtValid(v1_gpt4o_run02_NotyPevarTest.java:306)
+
+testText2TxtNotFound(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testText2TxtNotFound(v1_gpt4o_run02_NotyPevarTest.java:318)
+
+testTitleValid(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Title matched"
+  Actual: 1
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testTitleValid(v1_gpt4o_run02_NotyPevarTest.java:331)
+
+testTitleNotFound(org.restscs.v1_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v1_gpt4o_run02_NotyPevarTest.testTitleNotFound(v1_gpt4o_run02_NotyPevarTest.java:342)
+

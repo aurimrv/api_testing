@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run01_PatTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.636 s <<< FAILURE! - in org.restscs.v3_gpt4o_run01_PatTest
+testCalcUsingGET(org.restscs.v3_gpt4o_run01_PatTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run01_PatTest.testCalcUsingGET(v3_gpt4o_run01_PatTest.java:63)
+
+testPatUsingGET(org.restscs.v3_gpt4o_run01_PatTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "0"
+  Actual: 2
+
+	at org.restscs.v3_gpt4o_run01_PatTest.testPatUsingGET(v3_gpt4o_run01_PatTest.java:133)
+
+testCookieUsingGET(org.restscs.v3_gpt4o_run01_PatTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "test=value; Domain=example.com"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run01_PatTest.testCookieUsingGET(v3_gpt4o_run01_PatTest.java:78)
+
+testFileSuffixUsingGET(org.restscs.v3_gpt4o_run01_PatTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "txt"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run01_PatTest.testFileSuffixUsingGET(v3_gpt4o_run01_PatTest.java:102)
+

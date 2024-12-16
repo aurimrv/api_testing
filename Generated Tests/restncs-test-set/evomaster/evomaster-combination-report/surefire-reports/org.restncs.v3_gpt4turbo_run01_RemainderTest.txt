@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v3_gpt4turbo_run01_RemainderTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.096 s <<< FAILURE! - in org.restncs.v3_gpt4turbo_run01_RemainderTest
+testRemainderZeroDividend(org.restncs.v3_gpt4turbo_run01_RemainderTest)  Time elapsed: 0.066 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsInt doesn't match.
+Expected: <0>
+  Actual: -1
+
+	at org.restncs.v3_gpt4turbo_run01_RemainderTest.testRemainderZeroDividend(v3_gpt4turbo_run01_RemainderTest.java:92)
+
+testRemainderNegativeNumbers(org.restncs.v3_gpt4turbo_run01_RemainderTest)  Time elapsed: 0.033 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsInt doesn't match.
+Expected: <-1>
+  Actual: 1
+
+	at org.restncs.v3_gpt4turbo_run01_RemainderTest.testRemainderNegativeNumbers(v3_gpt4turbo_run01_RemainderTest.java:105)
+
+testRemainderZeroDivisor(org.restncs.v3_gpt4turbo_run01_RemainderTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restncs.v3_gpt4turbo_run01_RemainderTest.testRemainderZeroDivisor(v3_gpt4turbo_run01_RemainderTest.java:79)
+

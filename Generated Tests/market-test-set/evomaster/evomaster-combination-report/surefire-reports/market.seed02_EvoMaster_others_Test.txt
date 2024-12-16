@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: market.seed02_EvoMaster_others_Test
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 4.428 s <<< FAILURE! - in market.seed02_EvoMaster_others_Test
+test_10  Time elapsed: 0.217 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'fieldErrors'[0].'field' doesn't match.
+Expected: a string containing "phone"
+  Actual: address
+
+	at market.seed02_EvoMaster_others_Test.test_10(seed02_EvoMaster_others_Test.java:431)
+
+test_13  Time elapsed: 0.254 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'fieldErrors'[0].'field' doesn't match.
+Expected: a string containing "phone"
+  Actual: address
+
+	at market.seed02_EvoMaster_others_Test.test_13(seed02_EvoMaster_others_Test.java:725)
+

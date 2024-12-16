@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run02_FileSuffixTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.714 s <<< FAILURE! - in org.restscs.v3_gpt4o_run02_FileSuffixTest
+testSchemaValidation(org.restscs.v3_gpt4o_run02_FileSuffixTest)  Time elapsed: 0.023 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+0
+
+	at org.restscs.v3_gpt4o_run02_FileSuffixTest.testSchemaValidation(v3_gpt4o_run02_FileSuffixTest.java:157)
+
+testFileSuffixValidInputs(org.restscs.v3_gpt4o_run02_FileSuffixTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "1"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run02_FileSuffixTest.testFileSuffixValidInputs(v3_gpt4o_run02_FileSuffixTest.java:67)
+
+testFileSuffixForceServerError(org.restscs.v3_gpt4o_run02_FileSuffixTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run02_FileSuffixTest.testFileSuffixForceServerError(v3_gpt4o_run02_FileSuffixTest.java:143)
+

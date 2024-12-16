@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4o_run03_CartRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.397 s <<< FAILURE! - in market.v2_gpt4o_run03_CartRestControllerTest
+testSchemaValidation  Time elapsed: 0.112 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.v2_gpt4o_run03_CartRestControllerTest.testSchemaValidation(v2_gpt4o_run03_CartRestControllerTest.java:153)
+

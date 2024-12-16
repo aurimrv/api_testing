@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v0_gpt4o_run03_RemainderTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.119 s <<< FAILURE! - in org.restncs.v0_gpt4o_run03_RemainderTest
+testRemainder(org.restncs.v0_gpt4o_run03_RemainderTest)  Time elapsed: 0.172 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsInt doesn't match.
+Expected: <-1>
+  Actual: 1
+
+	at org.restncs.v0_gpt4o_run03_RemainderTest.testRemainder(v0_gpt4o_run03_RemainderTest.java:93)
+

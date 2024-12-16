@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt4o_run02_ContactsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.18 s <<< FAILURE! - in market.v3_gpt4o_run02_ContactsRestControllerTest
+testUpdateContacts  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v3_gpt4o_run02_ContactsRestControllerTest.getAuthToken(v3_gpt4o_run02_ContactsRestControllerTest.java:160)
+	at market.v3_gpt4o_run02_ContactsRestControllerTest.testUpdateContacts(v3_gpt4o_run02_ContactsRestControllerTest.java:104)
+
+testGetContacts  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v3_gpt4o_run02_ContactsRestControllerTest.getAuthToken(v3_gpt4o_run02_ContactsRestControllerTest.java:160)
+	at market.v3_gpt4o_run02_ContactsRestControllerTest.testGetContacts(v3_gpt4o_run02_ContactsRestControllerTest.java:90)
+
+testUpdateContactsInvalidPhone  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v3_gpt4o_run02_ContactsRestControllerTest.getAuthToken(v3_gpt4o_run02_ContactsRestControllerTest.java:160)
+	at market.v3_gpt4o_run02_ContactsRestControllerTest.testUpdateContactsInvalidPhone(v3_gpt4o_run02_ContactsRestControllerTest.java:125)
+

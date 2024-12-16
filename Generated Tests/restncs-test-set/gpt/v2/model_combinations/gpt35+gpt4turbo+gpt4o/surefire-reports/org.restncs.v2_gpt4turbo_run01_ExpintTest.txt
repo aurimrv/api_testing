@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v2_gpt4turbo_run01_ExpintTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.855 s <<< FAILURE! - in org.restncs.v2_gpt4turbo_run01_ExpintTest
+testExpintSchemaValidation(org.restncs.v2_gpt4turbo_run01_ExpintTest)  Time elapsed: 0.015 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restncs.v2_gpt4turbo_run01_ExpintTest.testExpintSchemaValidation(v2_gpt4turbo_run01_ExpintTest.java:94)
+

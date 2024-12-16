@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v1_gpt4turbo_run03_GammqTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.131 s <<< FAILURE! - in org.restncs.v1_gpt4turbo_run03_GammqTest
+testGammqUsingGetBoundaryInput(org.restncs.v1_gpt4turbo_run03_GammqTest)  Time elapsed: 0.051 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but no content-type was defined in the response.
+Try registering a default parser using:
+   RestAssured.defaultParser(<parser type>);
+Content was:
+
+
+	at org.restncs.v1_gpt4turbo_run03_GammqTest.testGammqUsingGetBoundaryInput(v1_gpt4turbo_run03_GammqTest.java:91)
+

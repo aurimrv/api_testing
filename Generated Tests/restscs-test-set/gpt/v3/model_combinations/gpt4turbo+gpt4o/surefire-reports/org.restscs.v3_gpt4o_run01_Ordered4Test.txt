@@ -1,0 +1,117 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run01_Ordered4Test
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 13, Errors: 0, Skipped: 0, Time elapsed: 1.046 s <<< FAILURE! - in org.restscs.v3_gpt4o_run01_Ordered4Test
+testCalcInvalidOperation(org.restscs.v3_gpt4o_run01_Ordered4Test)  Time elapsed: 0.032 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_Ordered4Test.testCalcInvalidOperation(v3_gpt4o_run01_Ordered4Test.java:135)
+
+testCostfuns(org.restscs.v3_gpt4o_run01_Ordered4Test)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Cost function result"
+  Actual: 10
+
+	at org.restscs.v3_gpt4o_run01_Ordered4Test.testCostfuns(v3_gpt4o_run01_Ordered4Test.java:160)
+
+testCookie(org.restscs.v3_gpt4o_run01_Ordered4Test)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Cookie set"
+  Actual: 2
+
+	at org.restscs.v3_gpt4o_run01_Ordered4Test.testCookie(v3_gpt4o_run01_Ordered4Test.java:148)
+
+testDateParse(org.restscs.v3_gpt4o_run01_Ordered4Test)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Parsed date"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run01_Ordered4Test.testDateParse(v3_gpt4o_run01_Ordered4Test.java:172)
+
+testFileSuffix(org.restscs.v3_gpt4o_run01_Ordered4Test)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "File suffix"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run01_Ordered4Test.testFileSuffix(v3_gpt4o_run01_Ordered4Test.java:184)
+
+testTitle(org.restscs.v3_gpt4o_run01_Ordered4Test)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Title result"
+  Actual: 1
+
+	at org.restscs.v3_gpt4o_run01_Ordered4Test.testTitle(v3_gpt4o_run01_Ordered4Test.java:232)
+
+testCalcSuccess(org.restscs.v3_gpt4o_run01_Ordered4Test)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "8.0"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run01_Ordered4Test.testCalcSuccess(v3_gpt4o_run01_Ordered4Test.java:123)
+
+testOrdered4Increasing(org.restscs.v3_gpt4o_run01_Ordered4Test)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "increasing"
+  Actual: unordered
+
+	at org.restscs.v3_gpt4o_run01_Ordered4Test.testOrdered4Increasing(v3_gpt4o_run01_Ordered4Test.java:68)
+
+testOrdered4Decreasing(org.restscs.v3_gpt4o_run01_Ordered4Test)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "decreasing"
+  Actual: unordered
+
+	at org.restscs.v3_gpt4o_run01_Ordered4Test.testOrdered4Decreasing(v3_gpt4o_run01_Ordered4Test.java:82)
+
+testRegex(org.restscs.v3_gpt4o_run01_Ordered4Test)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Regex result"
+  Actual: none
+
+	at org.restscs.v3_gpt4o_run01_Ordered4Test.testRegex(v3_gpt4o_run01_Ordered4Test.java:195)
+
+testPat(org.restscs.v3_gpt4o_run01_Ordered4Test)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Pattern result"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run01_Ordered4Test.testPat(v3_gpt4o_run01_Ordered4Test.java:207)
+
+testText2Txt(org.restscs.v3_gpt4o_run01_Ordered4Test)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Text to text result"
+  Actual: 
+
+	at org.restscs.v3_gpt4o_run01_Ordered4Test.testText2Txt(v3_gpt4o_run01_Ordered4Test.java:220)
+
+testInternalError(org.restscs.v3_gpt4o_run01_Ordered4Test)  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_Ordered4Test.testInternalError(v3_gpt4o_run01_Ordered4Test.java:245)
+

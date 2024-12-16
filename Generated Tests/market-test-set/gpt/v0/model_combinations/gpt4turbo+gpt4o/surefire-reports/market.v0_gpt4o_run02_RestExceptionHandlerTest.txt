@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.v0_gpt4o_run02_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.141 s <<< FAILURE! - in market.v0_gpt4o_run02_RestExceptionHandlerTest
+testGetNonExistentCustomer  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v0_gpt4o_run02_RestExceptionHandlerTest.testGetNonExistentCustomer(v0_gpt4o_run02_RestExceptionHandlerTest.java:94)
+
+testPayByCardUnauthorized  Time elapsed: 0.028 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <406>.
+
+	at market.v0_gpt4o_run02_RestExceptionHandlerTest.testPayByCardUnauthorized(v0_gpt4o_run02_RestExceptionHandlerTest.java:152)
+
+testGetCustomer  Time elapsed: 0.033 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v0_gpt4o_run02_RestExceptionHandlerTest.testGetCustomer(v0_gpt4o_run02_RestExceptionHandlerTest.java:76)
+

@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run03_CookieTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 7.999 s <<< FAILURE! - in org.restscs.v1_gpt4o_run03_CookieTest
+testCalcEndpoint(org.restscs.v1_gpt4o_run03_CookieTest)  Time elapsed: 1.538 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run03_CookieTest.testCalcEndpoint(v1_gpt4o_run03_CookieTest.java:64)
+
+testCostfunsEndpoint(org.restscs.v1_gpt4o_run03_CookieTest)  Time elapsed: 0.06 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v1_gpt4o_run03_CookieTest.testCostfunsEndpoint(v1_gpt4o_run03_CookieTest.java:136)
+
+testTitleEndpoint(org.restscs.v1_gpt4o_run03_CookieTest)  Time elapsed: 0.075 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Ms."
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run03_CookieTest.testTitleEndpoint(v1_gpt4o_run03_CookieTest.java:216)
+

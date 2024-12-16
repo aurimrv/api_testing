@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v1_gpt4o_run02_RemainderTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.592 s <<< FAILURE! - in org.restncs.v1_gpt4o_run02_RemainderTest
+testBessjEndpoint(org.restncs.v1_gpt4o_run02_RemainderTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v1_gpt4o_run02_RemainderTest.testBessjEndpoint(v1_gpt4o_run02_RemainderTest.java:97)
+

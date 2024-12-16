@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.restscs.v1_gpt4turbo_run03_FileSuffixTest
--------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.742 s - in org.restscs.v1_gpt4turbo_run03_FileSuffixTest

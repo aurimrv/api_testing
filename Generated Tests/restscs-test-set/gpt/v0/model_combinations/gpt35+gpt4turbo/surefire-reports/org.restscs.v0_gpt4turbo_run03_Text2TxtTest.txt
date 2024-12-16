@@ -1,0 +1,39 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt4turbo_run03_Text2TxtTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 1.074 s <<< FAILURE! - in org.restscs.v0_gpt4turbo_run03_Text2TxtTest
+testSubjectWithTwo(org.restscs.v0_gpt4turbo_run03_Text2TxtTest)  Time elapsed: 0.043 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v0_gpt4turbo_run03_Text2TxtTest.testSubjectWithTwo(v0_gpt4turbo_run03_Text2TxtTest.java:61)
+
+testSubjectWithYou(org.restscs.v0_gpt4turbo_run03_Text2TxtTest)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v0_gpt4turbo_run03_Text2TxtTest.testSubjectWithYou(v0_gpt4turbo_run03_Text2TxtTest.java:70)
+
+testSubjectWithForAndFour(org.restscs.v0_gpt4turbo_run03_Text2TxtTest)  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v0_gpt4turbo_run03_Text2TxtTest.testSubjectWithForAndFour(v0_gpt4turbo_run03_Text2TxtTest.java:79)
+
+testSubjectWithAnd(org.restscs.v0_gpt4turbo_run03_Text2TxtTest)  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v0_gpt4turbo_run03_Text2TxtTest.testSubjectWithAnd(v0_gpt4turbo_run03_Text2TxtTest.java:94)
+
+testSubjectWithSeeYou(org.restscs.v0_gpt4turbo_run03_Text2TxtTest)  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v0_gpt4turbo_run03_Text2TxtTest.testSubjectWithSeeYou(v0_gpt4turbo_run03_Text2TxtTest.java:105)
+

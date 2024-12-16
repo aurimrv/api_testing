@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4o_run01_CustomerRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 5, Skipped: 0, Time elapsed: 2.105 s <<< FAILURE! - in market.v2_gpt4o_run01_CustomerRestControllerTest
+testSchemaValidation  Time elapsed: 0.093 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v2_gpt4o_run01_CustomerRestControllerTest.testSchemaValidation(v2_gpt4o_run01_CustomerRestControllerTest.java:166)
+
+testInternalServerError  Time elapsed: 0.044 s  <<< ERROR!
+java.net.ConnectException: Conexão recusada (Connection refused)
+	at market.v2_gpt4o_run01_CustomerRestControllerTest.testInternalServerError(v2_gpt4o_run01_CustomerRestControllerTest.java:149)
+
+testCreateCustomer  Time elapsed: 0.026 s  <<< ERROR!
+java.net.ConnectException: Conexão recusada (Connection refused)
+	at market.v2_gpt4o_run01_CustomerRestControllerTest.testCreateCustomer(v2_gpt4o_run01_CustomerRestControllerTest.java:70)
+
+testCreateCustomerWithExistingEmail  Time elapsed: 0.041 s  <<< ERROR!
+java.net.ConnectException: Conexão recusada (Connection refused)
+	at market.v2_gpt4o_run01_CustomerRestControllerTest.testCreateCustomerWithExistingEmail(v2_gpt4o_run01_CustomerRestControllerTest.java:87)
+
+testCreateCustomerWithInvalidData  Time elapsed: 0.024 s  <<< ERROR!
+java.net.ConnectException: Conexão recusada (Connection refused)
+	at market.v2_gpt4o_run01_CustomerRestControllerTest.testCreateCustomerWithInvalidData(v2_gpt4o_run01_CustomerRestControllerTest.java:133)
+
+testGetCustomer  Time elapsed: 0.017 s  <<< ERROR!
+java.net.ConnectException: Conexão recusada (Connection refused)
+	at market.v2_gpt4o_run01_CustomerRestControllerTest.testGetCustomer(v2_gpt4o_run01_CustomerRestControllerTest.java:109)
+

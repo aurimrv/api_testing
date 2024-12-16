@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v3_gpt35_run03_GammqTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.536 s <<< FAILURE! - in org.restncs.v3_gpt35_run03_GammqTest
+testGammq_invalidInput_expect500(org.restncs.v3_gpt35_run03_GammqTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at org.restncs.v3_gpt35_run03_GammqTest.testGammq_invalidInput_expect500(v3_gpt35_run03_GammqTest.java:68)
+
+testGammq_serverFailure_expect500(org.restncs.v3_gpt35_run03_GammqTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at org.restncs.v3_gpt35_run03_GammqTest.testGammq_serverFailure_expect500(v3_gpt35_run03_GammqTest.java:96)
+

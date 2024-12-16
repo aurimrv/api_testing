@@ -1,0 +1,109 @@
+-------------------------------------------------------------------------------
+Test set: market.v1_gpt4o_run02_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 27, Failures: 15, Errors: 0, Skipped: 0, Time elapsed: 2.811 s <<< FAILURE! - in market.v1_gpt4o_run02_RestExceptionHandlerTest
+testGetCustomer_200  Time elapsed: 0.086 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run02_RestExceptionHandlerTest.testGetCustomer_200(v1_gpt4o_run02_RestExceptionHandlerTest.java:70)
+
+testGetCustomer_404  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.v1_gpt4o_run02_RestExceptionHandlerTest.testGetCustomer_404(v1_gpt4o_run02_RestExceptionHandlerTest.java:93)
+
+testGetOrders_200  Time elapsed: 0.032 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run02_RestExceptionHandlerTest.testGetOrders_200(v1_gpt4o_run02_RestExceptionHandlerTest.java:285)
+
+testAddItemToCart_200  Time elapsed: 0.047 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run02_RestExceptionHandlerTest.testAddItemToCart_200(v1_gpt4o_run02_RestExceptionHandlerTest.java:142)
+
+testAddItemToCart_404  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.v1_gpt4o_run02_RestExceptionHandlerTest.testAddItemToCart_404(v1_gpt4o_run02_RestExceptionHandlerTest.java:173)
+
+testGetContacts_200  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run02_RestExceptionHandlerTest.testGetContacts_200(v1_gpt4o_run02_RestExceptionHandlerTest.java:262)
+
+testSetDelivery_200  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run02_RestExceptionHandlerTest.testSetDelivery_200(v1_gpt4o_run02_RestExceptionHandlerTest.java:208)
+
+testGetOrder_200  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run02_RestExceptionHandlerTest.testGetOrder_200(v1_gpt4o_run02_RestExceptionHandlerTest.java:308)
+
+testGetOrder_404  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.v1_gpt4o_run02_RestExceptionHandlerTest.testGetOrder_404(v1_gpt4o_run02_RestExceptionHandlerTest.java:332)
+
+testPayByCard_201  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <401>.
+
+	at market.v1_gpt4o_run02_RestExceptionHandlerTest.testPayByCard_201(v1_gpt4o_run02_RestExceptionHandlerTest.java:236)
+
+testClearCart_200  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run02_RestExceptionHandlerTest.testClearCart_200(v1_gpt4o_run02_RestExceptionHandlerTest.java:184)
+
+testCreateCustomer_201  Time elapsed: 0.046 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v1_gpt4o_run02_RestExceptionHandlerTest.testCreateCustomer_201(v1_gpt4o_run02_RestExceptionHandlerTest.java:378)
+
+testCreateCustomer_409  Time elapsed: 0.209 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <409> but was <500>.
+
+	at market.v1_gpt4o_run02_RestExceptionHandlerTest.testCreateCustomer_409(v1_gpt4o_run02_RestExceptionHandlerTest.java:393)
+
+testGetCart_200  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run02_RestExceptionHandlerTest.testGetCart_200(v1_gpt4o_run02_RestExceptionHandlerTest.java:104)
+
+testGetCart_404  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.v1_gpt4o_run02_RestExceptionHandlerTest.testGetCart_404(v1_gpt4o_run02_RestExceptionHandlerTest.java:127)
+

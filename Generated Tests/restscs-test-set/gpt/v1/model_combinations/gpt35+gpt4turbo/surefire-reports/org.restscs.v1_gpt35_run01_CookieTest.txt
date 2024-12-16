@@ -1,0 +1,85 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt35_run01_CookieTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 0.809 s <<< FAILURE! - in org.restscs.v1_gpt35_run01_CookieTest
+testPatEndpoint(org.restscs.v1_gpt35_run01_CookieTest)  Time elapsed: 0.033 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "1"
+  Actual: none
+
+	at org.restscs.v1_gpt35_run01_CookieTest.testPatEndpoint(v1_gpt35_run01_CookieTest.java:124)
+
+testFileSuffixEndpoint(org.restscs.v1_gpt35_run01_CookieTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "1"
+  Actual: 0
+
+	at org.restscs.v1_gpt35_run01_CookieTest.testFileSuffixEndpoint(v1_gpt35_run01_CookieTest.java:94)
+
+testCostfunsEndpoint(org.restscs.v1_gpt35_run01_CookieTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "1"
+  Actual: 10
+
+	at org.restscs.v1_gpt35_run01_CookieTest.testCostfunsEndpoint(v1_gpt35_run01_CookieTest.java:74)
+
+testDateParseEndpoint(org.restscs.v1_gpt35_run01_CookieTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "1"
+  Actual: 0
+
+	at org.restscs.v1_gpt35_run01_CookieTest.testDateParseEndpoint(v1_gpt35_run01_CookieTest.java:84)
+
+testNotypevarEndpoint(org.restscs.v1_gpt35_run01_CookieTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "1"
+  Actual: 2
+
+	at org.restscs.v1_gpt35_run01_CookieTest.testNotypevarEndpoint(v1_gpt35_run01_CookieTest.java:104)
+
+testOrdered4Endpoint(org.restscs.v1_gpt35_run01_CookieTest)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "1"
+  Actual: unordered
+
+	at org.restscs.v1_gpt35_run01_CookieTest.testOrdered4Endpoint(v1_gpt35_run01_CookieTest.java:114)
+
+testText2txtEndpoint(org.restscs.v1_gpt35_run01_CookieTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "1"
+  Actual: 
+
+	at org.restscs.v1_gpt35_run01_CookieTest.testText2txtEndpoint(v1_gpt35_run01_CookieTest.java:134)
+
+testTitleEndpoint(org.restscs.v1_gpt35_run01_CookieTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "1"
+  Actual: -1
+
+	at org.restscs.v1_gpt35_run01_CookieTest.testTitleEndpoint(v1_gpt35_run01_CookieTest.java:144)
+
+testCookieEndpoint(org.restscs.v1_gpt35_run01_CookieTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "1"
+  Actual: 0
+
+	at org.restscs.v1_gpt35_run01_CookieTest.testCookieEndpoint(v1_gpt35_run01_CookieTest.java:64)
+

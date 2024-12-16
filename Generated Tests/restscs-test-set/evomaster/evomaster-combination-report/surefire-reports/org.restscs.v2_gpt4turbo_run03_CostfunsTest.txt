@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4turbo_run03_CostfunsTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.968 s <<< FAILURE! - in org.restscs.v2_gpt4turbo_run03_CostfunsTest
+testSchemaConformance(org.restscs.v2_gpt4turbo_run03_CostfunsTest)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+	at org.restscs.v2_gpt4turbo_run03_CostfunsTest.testSchemaConformance(v2_gpt4turbo_run03_CostfunsTest.java:125)
+

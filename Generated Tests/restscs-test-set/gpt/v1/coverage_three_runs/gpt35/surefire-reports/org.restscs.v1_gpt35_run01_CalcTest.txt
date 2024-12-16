@@ -1,0 +1,85 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt35_run01_CalcTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 1.131 s <<< FAILURE! - in org.restscs.v1_gpt35_run01_CalcTest
+testTitleEndpoint(org.restscs.v1_gpt35_run01_CalcTest)  Time elapsed: 0.043 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Title: Mr"
+  Actual: 1
+
+	at org.restscs.v1_gpt35_run01_CalcTest.testTitleEndpoint(v1_gpt35_run01_CalcTest.java:154)
+
+testCookieEndpoint(org.restscs.v1_gpt35_run01_CalcTest)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Cookie set successfully"
+  Actual: 0
+
+	at org.restscs.v1_gpt35_run01_CalcTest.testCookieEndpoint(v1_gpt35_run01_CalcTest.java:74)
+
+testDateParseEndpoint(org.restscs.v1_gpt35_run01_CalcTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Parsed date: Monday, January"
+  Actual: 0
+
+	at org.restscs.v1_gpt35_run01_CalcTest.testDateParseEndpoint(v1_gpt35_run01_CalcTest.java:94)
+
+testOrdered4Endpoint(org.restscs.v1_gpt35_run01_CalcTest)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Order: a, b, c, d"
+  Actual: unordered
+
+	at org.restscs.v1_gpt35_run01_CalcTest.testOrdered4Endpoint(v1_gpt35_run01_CalcTest.java:124)
+
+testCostFunsEndpoint(org.restscs.v1_gpt35_run01_CalcTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Cost function calculated successfully"
+  Actual: 10
+
+	at org.restscs.v1_gpt35_run01_CalcTest.testCostFunsEndpoint(v1_gpt35_run01_CalcTest.java:84)
+
+testNoTypeVarEndpoint(org.restscs.v1_gpt35_run01_CalcTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "No type variable endpoint successfully called"
+  Actual: 3
+
+	at org.restscs.v1_gpt35_run01_CalcTest.testNoTypeVarEndpoint(v1_gpt35_run01_CalcTest.java:114)
+
+testText2TxtEndpoint(org.restscs.v1_gpt35_run01_CalcTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Text transformed successfully"
+  Actual: 
+
+	at org.restscs.v1_gpt35_run01_CalcTest.testText2TxtEndpoint(v1_gpt35_run01_CalcTest.java:144)
+
+testPatEndpoint(org.restscs.v1_gpt35_run01_CalcTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Pattern matched successfully"
+  Actual: none
+
+	at org.restscs.v1_gpt35_run01_CalcTest.testPatEndpoint(v1_gpt35_run01_CalcTest.java:134)
+
+testFileSuffixEndpoint(org.restscs.v1_gpt35_run01_CalcTest)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "File suffix is jpg"
+  Actual: 0
+
+	at org.restscs.v1_gpt35_run01_CalcTest.testFileSuffixEndpoint(v1_gpt35_run01_CalcTest.java:104)
+

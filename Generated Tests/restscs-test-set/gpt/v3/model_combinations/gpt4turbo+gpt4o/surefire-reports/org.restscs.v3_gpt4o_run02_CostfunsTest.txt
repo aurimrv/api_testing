@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run02_CostfunsTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.751 s <<< FAILURE! - in org.restscs.v3_gpt4o_run02_CostfunsTest
+testCalcEndpoint(org.restscs.v3_gpt4o_run02_CostfunsTest)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run02_CostfunsTest.testCalcEndpoint(v3_gpt4o_run02_CostfunsTest.java:103)
+
+testCostfuns(org.restscs.v3_gpt4o_run02_CostfunsTest)  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 10
+
+	at org.restscs.v3_gpt4o_run02_CostfunsTest.testCostfuns(v3_gpt4o_run02_CostfunsTest.java:64)
+

@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt35_run02_FileSuffixTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.647 s <<< FAILURE! - in org.restscs.v2_gpt35_run02_FileSuffixTest
+testSchemaValidation(org.restscs.v2_gpt35_run02_FileSuffixTest)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected content-type "application/json" doesn't match actual content-type "text/plain;charset=UTF-8".
+
+	at org.restscs.v2_gpt35_run02_FileSuffixTest.testSchemaValidation(v2_gpt35_run02_FileSuffixTest.java:78)
+
+testBusinessRuleEnforcement(org.restscs.v2_gpt35_run02_FileSuffixTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected content-type "application/json" doesn't match actual content-type "text/plain;charset=UTF-8".
+
+	at org.restscs.v2_gpt35_run02_FileSuffixTest.testBusinessRuleEnforcement(v2_gpt35_run02_FileSuffixTest.java:92)
+
+testInvalidInputsReturn500Error(org.restscs.v2_gpt35_run02_FileSuffixTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt35_run02_FileSuffixTest.testInvalidInputsReturn500Error(v2_gpt35_run02_FileSuffixTest.java:66)
+

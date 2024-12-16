@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt4turbo_run03_CustomerRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.368 s <<< FAILURE! - in market.v3_gpt4turbo_run03_CustomerRestControllerTest
+testGetCustomerAsAdmin  Time elapsed: 0.21 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v3_gpt4turbo_run03_CustomerRestControllerTest.testGetCustomerAsAdmin(v3_gpt4turbo_run03_CustomerRestControllerTest.java:96)
+
+testCreateCustomerExistingEmail  Time elapsed: 0.038 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v3_gpt4turbo_run03_CustomerRestControllerTest.testCreateCustomerExistingEmail(v3_gpt4turbo_run03_CustomerRestControllerTest.java:72)
+
+testCreateCustomerValidData  Time elapsed: 0.168 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.v3_gpt4turbo_run03_CustomerRestControllerTest.testCreateCustomerValidData(v3_gpt4turbo_run03_CustomerRestControllerTest.java:89)
+

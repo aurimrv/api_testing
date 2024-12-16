@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v1_gpt35_run01_BessjTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 1.124 s <<< FAILURE! - in org.restncs.v1_gpt35_run01_BessjTest
+testFisherEndpoint(org.restncs.v1_gpt35_run01_BessjTest)  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsInt doesn't match.
+Expected: <3>
+  Actual: null
+
+	at org.restncs.v1_gpt35_run01_BessjTest.testFisherEndpoint(v1_gpt35_run01_BessjTest.java:84)
+
+testBessjEndpoint(org.restncs.v1_gpt35_run01_BessjTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: <0.5983833205316426>
+  Actual: 0.21660039114156904
+
+	at org.restncs.v1_gpt35_run01_BessjTest.testBessjEndpoint(v1_gpt35_run01_BessjTest.java:64)
+
+testExpintEndpoint(org.restncs.v1_gpt35_run01_BessjTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: <2.193281148229865>
+  Actual: 0.0731007776718873
+
+	at org.restncs.v1_gpt35_run01_BessjTest.testExpintEndpoint(v1_gpt35_run01_BessjTest.java:74)
+
+testGammqEndpoint(org.restncs.v1_gpt35_run01_BessjTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: <0.10907039064601497>
+  Actual: 0.261464140687786
+
+	at org.restncs.v1_gpt35_run01_BessjTest.testGammqEndpoint(v1_gpt35_run01_BessjTest.java:94)
+

@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: market.v0_gpt4o_run02_OrdersRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.813 s <<< FAILURE! - in market.v0_gpt4o_run02_OrdersRestControllerTest
+testGetOrdersSuccess  Time elapsed: 0.191 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.v0_gpt4o_run02_OrdersRestControllerTest.registerAndLoginUser(v0_gpt4o_run02_OrdersRestControllerTest.java:166)
+	at market.v0_gpt4o_run02_OrdersRestControllerTest.testGetOrdersSuccess(v0_gpt4o_run02_OrdersRestControllerTest.java:90)
+
+testGetOrderSuccess  Time elapsed: 0.166 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.v0_gpt4o_run02_OrdersRestControllerTest.registerAndLoginUser(v0_gpt4o_run02_OrdersRestControllerTest.java:166)
+	at market.v0_gpt4o_run02_OrdersRestControllerTest.testGetOrderSuccess(v0_gpt4o_run02_OrdersRestControllerTest.java:144)
+
+testGetOrderNotFound  Time elapsed: 0.122 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.v0_gpt4o_run02_OrdersRestControllerTest.registerAndLoginUser(v0_gpt4o_run02_OrdersRestControllerTest.java:166)
+	at market.v0_gpt4o_run02_OrdersRestControllerTest.testGetOrderNotFound(v0_gpt4o_run02_OrdersRestControllerTest.java:130)
+

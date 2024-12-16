@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4turbo_run01_CookieTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.712 s <<< FAILURE! - in org.restscs.v3_gpt4turbo_run01_CookieTest
+testInternalErrorSimulation(org.restscs.v3_gpt4turbo_run01_CookieTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code (is <500> or is <501> or is <502> or is <503> or is <504>) but was <200>.
+
+	at org.restscs.v3_gpt4turbo_run01_CookieTest.testInternalErrorSimulation(v3_gpt4turbo_run01_CookieTest.java:119)
+

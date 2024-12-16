@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt35_run01_CostfunsTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.603 s <<< FAILURE! - in org.restscs.v0_gpt35_run01_CostfunsTest
+testCostfuns(org.restscs.v0_gpt35_run01_CostfunsTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "1"
+  Actual: 10
+
+	at org.restscs.v0_gpt35_run01_CostfunsTest.testCostfuns(v0_gpt35_run01_CostfunsTest.java:65)
+

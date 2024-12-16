@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v2_gpt4o_run02_BessjTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.828 s <<< FAILURE! - in org.restncs.v2_gpt4o_run02_BessjTest
+testBessjSchemaValidation(org.restncs.v2_gpt4o_run02_BessjTest)  Time elapsed: 0.021 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restncs.v2_gpt4o_run02_BessjTest.testBessjSchemaValidation(v2_gpt4o_run02_BessjTest.java:79)
+
+testBessjInvalidParameters(org.restncs.v2_gpt4o_run02_BessjTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: a string containing "Index n less than 2 in bessj"
+  Actual: 
+
+	at org.restncs.v2_gpt4o_run02_BessjTest.testBessjInvalidParameters(v2_gpt4o_run02_BessjTest.java:71)
+

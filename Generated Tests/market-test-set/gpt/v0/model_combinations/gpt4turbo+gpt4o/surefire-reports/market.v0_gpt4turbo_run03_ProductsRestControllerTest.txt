@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: market.v0_gpt4turbo_run03_ProductsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.036 s <<< FAILURE! - in market.v0_gpt4turbo_run03_ProductsRestControllerTest
+testGetProduct  Time elapsed: 0.057 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path id doesn't match.
+Expected: <1>
+  Actual: null
+
+	at market.v0_gpt4turbo_run03_ProductsRestControllerTest.testGetProduct(v0_gpt4turbo_run03_ProductsRestControllerTest.java:81)
+

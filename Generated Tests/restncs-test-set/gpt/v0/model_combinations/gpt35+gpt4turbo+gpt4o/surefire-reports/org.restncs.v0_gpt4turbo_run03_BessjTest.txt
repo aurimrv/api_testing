@@ -1,0 +1,42 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v0_gpt4turbo_run03_BessjTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 1.055 s <<< FAILURE! - in org.restncs.v0_gpt4turbo_run03_BessjTest
+testBessjWithInvalidN(org.restncs.v0_gpt4turbo_run03_BessjTest)  Time elapsed: 0.027 s  <<< FAILURE!
+java.lang.AssertionError: Expected exception: java.lang.IllegalArgumentException
+
+testBessjAtZeroPoint(org.restncs.v0_gpt4turbo_run03_BessjTest)  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v0_gpt4turbo_run03_BessjTest.testBessjAtZeroPoint(v0_gpt4turbo_run03_BessjTest.java:68)
+
+testBessjWithNormalValues(org.restncs.v0_gpt4turbo_run03_BessjTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v0_gpt4turbo_run03_BessjTest.testBessjWithNormalValues(v0_gpt4turbo_run03_BessjTest.java:80)
+
+testBessjWithLargeX(org.restncs.v0_gpt4turbo_run03_BessjTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v0_gpt4turbo_run03_BessjTest.testBessjWithLargeX(v0_gpt4turbo_run03_BessjTest.java:92)
+
+testBessjWithNegativeX(org.restncs.v0_gpt4turbo_run03_BessjTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v0_gpt4turbo_run03_BessjTest.testBessjWithNegativeX(v0_gpt4turbo_run03_BessjTest.java:104)
+
+testBessjWithHighNLowX(org.restncs.v0_gpt4turbo_run03_BessjTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v0_gpt4turbo_run03_BessjTest.testBessjWithHighNLowX(v0_gpt4turbo_run03_BessjTest.java:116)
+

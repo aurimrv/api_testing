@@ -1,0 +1,72 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run01_NotyPevarTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 0.757 s <<< FAILURE! - in org.restscs.v3_gpt4o_run01_NotyPevarTest
+testCalcEndpoint(org.restscs.v3_gpt4o_run01_NotyPevarTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_NotyPevarTest.testCalcEndpoint(v3_gpt4o_run01_NotyPevarTest.java:99)
+
+testCookieEndpoint(org.restscs.v3_gpt4o_run01_NotyPevarTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "OK"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run01_NotyPevarTest.testCookieEndpoint(v3_gpt4o_run01_NotyPevarTest.java:130)
+
+testDateParseEndpoint(org.restscs.v3_gpt4o_run01_NotyPevarTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "OK"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run01_NotyPevarTest.testDateParseEndpoint(v3_gpt4o_run01_NotyPevarTest.java:155)
+
+testNotyPevar(org.restscs.v3_gpt4o_run01_NotyPevarTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <400>.
+
+	at org.restscs.v3_gpt4o_run01_NotyPevarTest.testNotyPevar(v3_gpt4o_run01_NotyPevarTest.java:68)
+
+testFileSuffixEndpoint(org.restscs.v3_gpt4o_run01_NotyPevarTest)  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: ""
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run01_NotyPevarTest.testFileSuffixEndpoint(v3_gpt4o_run01_NotyPevarTest.java:180)
+
+testOrdered4Endpoint(org.restscs.v3_gpt4o_run01_NotyPevarTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "OK"
+  Actual: unordered
+
+	at org.restscs.v3_gpt4o_run01_NotyPevarTest.testOrdered4Endpoint(v3_gpt4o_run01_NotyPevarTest.java:205)
+
+testRegexEndpoint(org.restscs.v3_gpt4o_run01_NotyPevarTest)  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "OK"
+  Actual: none
+
+	at org.restscs.v3_gpt4o_run01_NotyPevarTest.testRegexEndpoint(v3_gpt4o_run01_NotyPevarTest.java:230)
+
+testTitleEndpoint(org.restscs.v3_gpt4o_run01_NotyPevarTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "OK"
+  Actual: -1
+
+	at org.restscs.v3_gpt4o_run01_NotyPevarTest.testTitleEndpoint(v3_gpt4o_run01_NotyPevarTest.java:255)
+

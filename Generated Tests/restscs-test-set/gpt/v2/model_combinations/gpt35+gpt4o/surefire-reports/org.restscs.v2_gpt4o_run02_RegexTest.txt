@@ -1,0 +1,61 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4o_run02_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 0.696 s <<< FAILURE! - in org.restscs.v2_gpt4o_run02_RegexTest
+testCalcEndpoint(org.restscs.v2_gpt4o_run02_RegexTest)  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v2_gpt4o_run02_RegexTest.testCalcEndpoint(v2_gpt4o_run02_RegexTest.java:62)
+
+testDateParseEndpoint(org.restscs.v2_gpt4o_run02_RegexTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "mon mar"
+  Actual: 4
+
+	at org.restscs.v2_gpt4o_run02_RegexTest.testDateParseEndpoint(v2_gpt4o_run02_RegexTest.java:109)
+
+testFileSuffixEndpoint(org.restscs.v2_gpt4o_run02_RegexTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "file.txt"
+  Actual: 0
+
+	at org.restscs.v2_gpt4o_run02_RegexTest.testFileSuffixEndpoint(v2_gpt4o_run02_RegexTest.java:124)
+
+testCalcEndpointWithInvalidOperation(org.restscs.v2_gpt4o_run02_RegexTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4o_run02_RegexTest.testCalcEndpointWithInvalidOperation(v2_gpt4o_run02_RegexTest.java:69)
+
+testRegexEndpointForUrl(org.restscs.v2_gpt4o_run02_RegexTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "url"
+  Actual: 0
+
+	at org.restscs.v2_gpt4o_run02_RegexTest.testRegexEndpointForUrl(v2_gpt4o_run02_RegexTest.java:77)
+
+testDateParseEndpointWithInvalidData(org.restscs.v2_gpt4o_run02_RegexTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4o_run02_RegexTest.testDateParseEndpointWithInvalidData(v2_gpt4o_run02_RegexTest.java:116)
+
+testFileSuffixEndpointWithInvalidData(org.restscs.v2_gpt4o_run02_RegexTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4o_run02_RegexTest.testFileSuffixEndpointWithInvalidData(v2_gpt4o_run02_RegexTest.java:131)
+

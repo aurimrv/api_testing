@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt4turbo_run01_Text2TxtTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.099 s - in org.restscs.v0_gpt4turbo_run01_Text2TxtTest

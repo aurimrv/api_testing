@@ -1,0 +1,1713 @@
+Processando o modelo gpt35...
+Limpando o diretório de destino para testes combinados...
+Copiando arquivos de /home/rincon/ar_benchmark/artigo/estudos-prompts/market-test-set/gpt/v3/gpt35/run01/exec para /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market...
+Copiando arquivos de /home/rincon/ar_benchmark/artigo/estudos-prompts/market-test-set/gpt/v3/gpt35/run02/exec para /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market...
+Copiando arquivos de /home/rincon/ar_benchmark/artigo/estudos-prompts/market-test-set/gpt/v3/gpt35/run03/exec para /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/java/market...
+Executando Maven para o modelo gpt35...
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------------------< [0;36mnet.lukyanets:market-rest[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding market-rest 0.1.2[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;33mWARNING[m] The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Deleting /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 11 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;34mINFO[m] Compiling 21 source files to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:prepare-agent[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar=destfile=/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot-maven-plugin:2.4.3:build-info[m [1m(default)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:resources[m [1m(default-resources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] Copying 3 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:compile[m [1m(default-compile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.6:testResources[m [1m(default-testResources)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Using 'UTF-8' encoding to copy filtered resources.
+[[1;34mINFO[m] skip non existing resourceDirectory /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.8.0:testCompile[m [1m(default-testCompile)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Nothing to compile - all classes are up to date
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:2.22.0:test[m [1m(default-test)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running market.[1mv3_gpt35_run03_ProductsRestControllerTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-08 14:46:51,214 INFO  [background-preinit] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.1.7.Final
+2024-12-08 14:46:51,346 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 36846 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-08 14:46:51,354 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-08 14:46:51,986 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-08 14:46:51,986 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-08 14:46:53,491 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 14:46:53,641 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 138 ms. Found 8 JPA repository interfaces.
+2024-12-08 14:46:54,153 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$1efb2a9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:46:54,340 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5a727ed9' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:46:54,351 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:46:54,905 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-08 14:46:54,925 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2024-12-08 14:46:54,926 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-08 14:46:54,926 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-08 14:46:55,077 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 14:46:55,078 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3088 ms
+2024-12-08 14:46:55,299 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+2024-12-08 14:46:55,701 INFO  [main] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-08 14:46:55,927 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 14:46:56,030 INFO  [main] o.h.Version - HHH000412: Hibernate ORM core version 5.4.28.Final
+2024-12-08 14:46:56,235 INFO  [main] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-12-08 14:46:56,545 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 14:46:56,859 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:46:56,863 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:46:57,696 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 14:46:57,709 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:46:58,936 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08 14:47:00,002 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ee2f050, org.springframework.security.web.context.SecurityContextPersistenceFilter@125305d0, org.springframework.security.web.header.HeaderWriterFilter@29ff99a7, org.springframework.security.web.authentication.logout.LogoutFilter@7f57519f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@47247f75, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47cb4464, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4555af70, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@579ec588, org.springframework.security.web.session.SessionManagementFilter@26114a72, org.springframework.security.web.access.ExceptionTranslationFilter@4b9ecff1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@32d14fa0]
+2024-12-08 14:47:00,163 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:00,632 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2024-12-08 14:47:00,667 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 33751 (http) with context path ''
+2024-12-08 14:47:01,304 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 10.94 seconds (JVM running for 13.371)
+2024-12-08 14:47:03,235 INFO  [http-nio-auto-1-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08 14:47:03,235 INFO  [http-nio-auto-1-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-08 14:47:03,237 INFO  [http-nio-auto-1-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+2024-12-08 14:47:03,415 WARN  [http-nio-auto-1-exec-1] m.r.e.RestExceptionHandler - RestErrorResponse{message='Requested entity doesn't exist', entityName='ProductDTO', description='uri=/products/999', fieldErrors=[{field='id', message='No instance with this id'}]}
+2024-12-08 14:47:04,081 ERROR [http-nio-auto-1-exec-5] m.r.e.RestExceptionHandler - RestErrorResponse{message='Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "error"', entityName='null', description='uri=/products/error', fieldErrors=[]}
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "error"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:645)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NumberFormatException: For input string: "error"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.base/java.lang.Long.parseLong(Long.java:692)
+	at java.base/java.lang.Long.valueOf(Long.java:1144)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:696)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 85 more
+2024-12-08 14:47:04,099 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-1"]
+2024-12-08 14:47:04,099 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-12-08 14:47:04,102 INFO  [main] o.a.c.c.C.[.[.[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-12-08 14:47:04,107 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-1"]
+2024-12-08 14:47:04,113 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-1"]
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m4[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.003 s - in market.[1mv3_gpt35_run03_ProductsRestControllerTest[m
+[[1;34mINFO[m] Running market.[1mv3_gpt35_run01_RestErrorResponseTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-08 14:47:04,175 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 36846 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-08 14:47:04,176 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-08 14:47:04,178 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-08 14:47:04,179 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-08 14:47:04,546 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 14:47:04,586 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 8 JPA repository interfaces.
+2024-12-08 14:47:04,657 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$1efb2a9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:04,684 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5554d201' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:04,686 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:04,765 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-08 14:47:04,767 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-2"]
+2024-12-08 14:47:04,767 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-08 14:47:04,768 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-08 14:47:04,786 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 14:47:04,786 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 607 ms
+2024-12-08 14:47:04,833 INFO  [main] c.z.h.HikariDataSource - HikariPool-2 - Starting...
+2024-12-08 14:47:04,834 INFO  [main] c.z.h.HikariDataSource - HikariPool-2 - Start completed.
+2024-12-08 14:47:04,888 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 14:47:04,922 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 14:47:04,950 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:04,954 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:05,155 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 14:47:05,155 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:05,412 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08 14:47:05,635 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3638ce6, org.springframework.security.web.context.SecurityContextPersistenceFilter@3a59e634, org.springframework.security.web.header.HeaderWriterFilter@2bc7eb58, org.springframework.security.web.authentication.logout.LogoutFilter@378b4096, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1735d1b4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71e64b8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1397d228, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75c0d413, org.springframework.security.web.session.SessionManagementFilter@54e0b60a, org.springframework.security.web.access.ExceptionTranslationFilter@4872fa8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@725f4185]
+2024-12-08 14:47:05,674 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:05,817 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-2"]
+2024-12-08 14:47:05,820 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 35891 (http) with context path ''
+2024-12-08 14:47:06,078 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 1.957 seconds (JVM running for 18.145)
+2024-12-08 14:47:06,265 INFO  [http-nio-auto-2-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08 14:47:06,265 INFO  [http-nio-auto-2-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-08 14:47:06,267 INFO  [http-nio-auto-2-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+2024-12-08 14:47:06,431 WARN  [http-nio-auto-2-exec-1] m.r.e.RestExceptionHandler - RestErrorResponse{message='Argument validation error', entityName='userDTO', description='uri=/register', fieldErrors=[{field='phone', message='The value shall not be empty'}, {field='password', message='Length shall be between 6 and 50 characters'}, {field='address', message='The value shall not be empty'}]}
+Request method:	POST
+Request URI:	http://localhost:35891/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "test@example.com",
+    "password": "test",
+    "name": "Test User"
+}
+
+HTTP/1.1 406 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:47:06 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Argument validation error",
+    "description": "uri=/register",
+    "entityName": "userDTO",
+    "fieldErrors": [
+        {
+            "field": "phone",
+            "message": "The value shall not be empty"
+        },
+        {
+            "field": "password",
+            "message": "Length shall be between 6 and 50 characters"
+        },
+        {
+            "field": "address",
+            "message": "The value shall not be empty"
+        }
+    ]
+}
+2024-12-08 14:47:06,542 WARN  [http-nio-auto-2-exec-2] m.r.e.RestExceptionHandler - RestErrorResponse{message='Argument validation error', entityName='userDTO', description='uri=/register', fieldErrors=[{field='phone', message='The value shall not be empty'}, {field='name', message='The value shall not be empty'}, {field='email', message='The value shall not be empty'}, {field='address', message='The value shall not be empty'}]}
+Request method:	POST
+Request URI:	http://localhost:35891/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "invalid_field": "value"
+}
+
+HTTP/1.1 406 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:47:06 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Argument validation error",
+    "description": "uri=/register",
+    "entityName": "userDTO",
+    "fieldErrors": [
+        {
+            "field": "phone",
+            "message": "The value shall not be empty"
+        },
+        {
+            "field": "name",
+            "message": "The value shall not be empty"
+        },
+        {
+            "field": "email",
+            "message": "The value shall not be empty"
+        },
+        {
+            "field": "address",
+            "message": "The value shall not be empty"
+        }
+    ]
+}
+2024-12-08 14:47:06,554 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-2"]
+2024-12-08 14:47:06,555 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-12-08 14:47:06,555 INFO  [main] o.a.c.c.C.[.[.[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-12-08 14:47:06,558 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-2"]
+2024-12-08 14:47:06,562 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-2"]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m2[m, [1;31mFailures: [0;1;31m2[m, Errors: 0, Skipped: 0, Time elapsed: 2.395 s[1;31m <<< FAILURE![m - in market.[1mv3_gpt35_run01_RestErrorResponseTest[m
+[[1;31mERROR[m] testServerErrorReturns5xx  Time elapsed: 0.322 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <406>.
+
+	at market.v3_gpt35_run01_RestErrorResponseTest.testServerErrorReturns5xx(v3_gpt35_run01_RestErrorResponseTest.java:82)
+
+[[1;31mERROR[m] testInvalidInputReturns5xx  Time elapsed: 0.056 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <406>.
+
+	at market.v3_gpt35_run01_RestErrorResponseTest.testInvalidInputReturns5xx(v3_gpt35_run01_RestErrorResponseTest.java:71)
+
+[[1;34mINFO[m] Running market.[1mv3_gpt35_run03_OrdersRestControllerTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-08 14:47:06,612 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 36846 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-08 14:47:06,613 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-08 14:47:06,616 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-08 14:47:06,616 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-08 14:47:06,953 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 14:47:06,989 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 8 JPA repository interfaces.
+2024-12-08 14:47:07,048 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$1efb2a9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:07,071 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4a5a0ec8' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:07,073 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:07,126 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-08 14:47:07,127 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-3"]
+2024-12-08 14:47:07,128 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-08 14:47:07,128 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-08 14:47:07,148 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 14:47:07,148 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 532 ms
+2024-12-08 14:47:07,189 INFO  [main] c.z.h.HikariDataSource - HikariPool-3 - Starting...
+2024-12-08 14:47:07,190 INFO  [main] c.z.h.HikariDataSource - HikariPool-3 - Start completed.
+2024-12-08 14:47:07,230 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 14:47:07,258 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 14:47:07,281 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:07,284 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:07,465 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 14:47:07,466 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:07,691 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08 14:47:07,923 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16323811, org.springframework.security.web.context.SecurityContextPersistenceFilter@6cf49a6c, org.springframework.security.web.header.HeaderWriterFilter@6c0ccf97, org.springframework.security.web.authentication.logout.LogoutFilter@4faca6fb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@507f893, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@23915994, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@296b5a06, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f560ef, org.springframework.security.web.session.SessionManagementFilter@1c96421c, org.springframework.security.web.access.ExceptionTranslationFilter@188ae412, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@23226c97]
+2024-12-08 14:47:07,953 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:08,066 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-3"]
+2024-12-08 14:47:08,068 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 45161 (http) with context path ''
+2024-12-08 14:47:08,252 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 1.684 seconds (JVM running for 20.319)
+2024-12-08 14:47:08,451 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-3"]
+2024-12-08 14:47:08,451 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-12-08 14:47:08,454 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-3"]
+2024-12-08 14:47:08,457 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-3"]
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m11[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.87 s - in market.[1mv3_gpt35_run03_OrdersRestControllerTest[m
+[[1;34mINFO[m] Running market.[1mv3_gpt35_run03_ContactsRestControllerTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-08 14:47:08,495 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 36846 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-08 14:47:08,496 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-08 14:47:08,498 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-08 14:47:08,498 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-08 14:47:08,758 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 14:47:08,791 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 8 JPA repository interfaces.
+2024-12-08 14:47:08,851 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$1efb2a9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:08,873 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@683515dc' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:08,877 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:08,929 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-08 14:47:08,930 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-4"]
+2024-12-08 14:47:08,931 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-08 14:47:08,931 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-08 14:47:08,948 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 14:47:08,949 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 450 ms
+2024-12-08 14:47:08,984 INFO  [main] c.z.h.HikariDataSource - HikariPool-4 - Starting...
+2024-12-08 14:47:08,986 INFO  [main] c.z.h.HikariDataSource - HikariPool-4 - Start completed.
+2024-12-08 14:47:09,014 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 14:47:09,038 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 14:47:09,059 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:09,061 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:09,227 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 14:47:09,227 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:09,446 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08 14:47:09,631 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18db9c3e, org.springframework.security.web.context.SecurityContextPersistenceFilter@27677bf, org.springframework.security.web.header.HeaderWriterFilter@7b7f4447, org.springframework.security.web.authentication.logout.LogoutFilter@6aa8f3f5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@58a4805c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64eb0a75, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@653727d3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59c9b635, org.springframework.security.web.session.SessionManagementFilter@453f7c86, org.springframework.security.web.access.ExceptionTranslationFilter@3a4b9602, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@699ade44]
+2024-12-08 14:47:09,663 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:09,773 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-4"]
+2024-12-08 14:47:09,775 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 33131 (http) with context path ''
+2024-12-08 14:47:09,954 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 1.492 seconds (JVM running for 22.021)
+2024-12-08 14:47:10,073 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-4"]
+2024-12-08 14:47:10,074 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-12-08 14:47:10,076 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-4"]
+2024-12-08 14:47:10,080 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-4"]
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m7[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.612 s - in market.[1mv3_gpt35_run03_ContactsRestControllerTest[m
+[[1;34mINFO[m] Running market.[1mv3_gpt35_run02_RestErrorResponseTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-08 14:47:10,123 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 36846 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-08 14:47:10,123 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-08 14:47:10,125 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-08 14:47:10,125 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-08 14:47:10,448 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 14:47:10,480 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 8 JPA repository interfaces.
+2024-12-08 14:47:10,532 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$1efb2a9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:10,553 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7fc61c76' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:10,555 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:10,601 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-08 14:47:10,601 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-5"]
+2024-12-08 14:47:10,602 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-08 14:47:10,603 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-08 14:47:10,619 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 14:47:10,620 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 495 ms
+2024-12-08 14:47:10,658 INFO  [main] c.z.h.HikariDataSource - HikariPool-5 - Starting...
+2024-12-08 14:47:10,660 INFO  [main] c.z.h.HikariDataSource - HikariPool-5 - Start completed.
+2024-12-08 14:47:10,691 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 14:47:10,718 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 14:47:10,736 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:10,738 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:10,860 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 14:47:10,860 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:11,063 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08 14:47:11,267 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59f1c85e, org.springframework.security.web.context.SecurityContextPersistenceFilter@74aa7e2d, org.springframework.security.web.header.HeaderWriterFilter@a0d0de0, org.springframework.security.web.authentication.logout.LogoutFilter@22d1233c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7c5a6dbc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@23b42f92, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41345409, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2746180e, org.springframework.security.web.session.SessionManagementFilter@57226fe2, org.springframework.security.web.access.ExceptionTranslationFilter@347c76bc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6397c28]
+2024-12-08 14:47:11,301 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:11,406 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-5"]
+2024-12-08 14:47:11,408 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 43675 (http) with context path ''
+2024-12-08 14:47:11,552 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 1.467 seconds (JVM running for 23.619)
+2024-12-08 14:47:11,612 INFO  [http-nio-auto-5-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08 14:47:11,612 INFO  [http-nio-auto-5-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-08 14:47:11,614 INFO  [http-nio-auto-5-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+2024-12-08 14:47:11,654 WARN  [http-nio-auto-5-exec-1] m.r.e.RestExceptionHandler - RestErrorResponse{message='Argument validation error', entityName='userDTO', description='uri=/register', fieldErrors=[{field='email', message='The value shall not be empty'}, {field='name', message='The value shall not be empty'}, {field='address', message='The value shall not be empty'}, {field='phone', message='The value shall not be empty'}]}
+Request method:	POST
+Request URI:	http://localhost:43675/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "invalidField": "invalidValue"
+}
+
+HTTP/1.1 406 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:47:11 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Argument validation error",
+    "description": "uri=/register",
+    "entityName": "userDTO",
+    "fieldErrors": [
+        {
+            "field": "email",
+            "message": "The value shall not be empty"
+        },
+        {
+            "field": "name",
+            "message": "The value shall not be empty"
+        },
+        {
+            "field": "address",
+            "message": "The value shall not be empty"
+        },
+        {
+            "field": "phone",
+            "message": "The value shall not be empty"
+        }
+    ]
+}
+2024-12-08 14:47:11,793 WARN  [http-nio-auto-5-exec-2] m.r.e.RestExceptionHandler - RestErrorResponse{message='Argument validation error', entityName='UserAccount', description='uri=/register', fieldErrors=[{field='email', message='Account with this email already exists'}]}
+Request method:	POST
+Request URI:	http://localhost:43675/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "ivan.petrov@yandex.ru",
+    "password": "petrov",
+    "name": "Ivan Petrov",
+    "phone": "+7 123 456 78 90",
+    "address": "Riesstrasse 18"
+}
+
+HTTP/1.1 406 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:47:11 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Argument validation error",
+    "description": "uri=/register",
+    "entityName": "UserAccount",
+    "fieldErrors": [
+        {
+            "field": "email",
+            "message": "Account with this email already exists"
+        }
+    ]
+}
+2024-12-08 14:47:11,852 WARN  [http-nio-auto-5-exec-3] m.r.e.RestExceptionHandler - RestErrorResponse{message='Argument validation error', entityName='UserAccount', description='uri=/register', fieldErrors=[{field='email', message='Account with this email already exists'}]}
+Request method:	POST
+Request URI:	http://localhost:43675/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "ivan.petrov@yandex.ru",
+    "password": "petrov",
+    "name": "Ivan Petrov",
+    "phone": "+7 123 456 78 90",
+    "address": "Riesstrasse 18"
+}
+
+HTTP/1.1 406 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:47:11 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Argument validation error",
+    "description": "uri=/register",
+    "entityName": "UserAccount",
+    "fieldErrors": [
+        {
+            "field": "email",
+            "message": "Account with this email already exists"
+        }
+    ]
+}
+2024-12-08 14:47:11,866 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-5"]
+2024-12-08 14:47:11,867 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-12-08 14:47:11,869 INFO  [main] o.a.c.c.C.[.[.[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-12-08 14:47:11,872 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-5"]
+2024-12-08 14:47:11,878 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-5"]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m5[m, [1;31mFailures: [0;1;31m3[m, Errors: 0, Skipped: 0, Time elapsed: 1.79 s[1;31m <<< FAILURE![m - in market.[1mv3_gpt35_run02_RestErrorResponseTest[m
+[[1;31mERROR[m] testInvalidInput_Returns5xxStatusCode  Time elapsed: 0.093 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code a value equal to or greater than <500> but <406> was less than <500>.
+
+	at market.v3_gpt35_run02_RestErrorResponseTest.testInvalidInput_Returns5xxStatusCode(v3_gpt35_run02_RestErrorResponseTest.java:70)
+
+[[1;31mERROR[m] testSchemaValidation_CustomerRegistration  Time elapsed: 0.118 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v3_gpt35_run02_RestErrorResponseTest.testSchemaValidation_CustomerRegistration(v3_gpt35_run02_RestErrorResponseTest.java:92)
+
+[[1;31mERROR[m] testServerError_Returns5xxStatusCode  Time elapsed: 0.048 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code a value equal to or greater than <500> but <406> was less than <500>.
+
+	at market.v3_gpt35_run02_RestErrorResponseTest.testServerError_Returns5xxStatusCode(v3_gpt35_run02_RestErrorResponseTest.java:81)
+
+[[1;34mINFO[m] Running market.[1mv3_gpt35_run03_RestErrorResponseTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-08 14:47:11,919 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 36846 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-08 14:47:11,919 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-08 14:47:11,922 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-08 14:47:11,923 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-08 14:47:12,176 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 14:47:12,229 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 8 JPA repository interfaces.
+2024-12-08 14:47:12,296 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$1efb2a9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:12,324 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2acfd86a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:12,326 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:12,389 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-08 14:47:12,390 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-6"]
+2024-12-08 14:47:12,391 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-08 14:47:12,391 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-08 14:47:12,408 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 14:47:12,408 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 485 ms
+2024-12-08 14:47:12,458 INFO  [main] c.z.h.HikariDataSource - HikariPool-6 - Starting...
+2024-12-08 14:47:12,460 INFO  [main] c.z.h.HikariDataSource - HikariPool-6 - Start completed.
+2024-12-08 14:47:12,490 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 14:47:12,521 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 14:47:12,548 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:12,551 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:12,706 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 14:47:12,706 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:12,924 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08 14:47:13,093 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27982e7f, org.springframework.security.web.context.SecurityContextPersistenceFilter@7e5dfabb, org.springframework.security.web.header.HeaderWriterFilter@48fc6a4f, org.springframework.security.web.authentication.logout.LogoutFilter@441e959e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7082fa3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@43242fe2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@68a18bdb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e68451b, org.springframework.security.web.session.SessionManagementFilter@54dd38d0, org.springframework.security.web.access.ExceptionTranslationFilter@3e307e8c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1ef83c55]
+2024-12-08 14:47:13,124 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:13,235 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-6"]
+2024-12-08 14:47:13,237 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 33775 (http) with context path ''
+2024-12-08 14:47:13,395 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 1.512 seconds (JVM running for 25.462)
+2024-12-08 14:47:13,448 INFO  [http-nio-auto-6-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08 14:47:13,448 INFO  [http-nio-auto-6-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-08 14:47:13,450 INFO  [http-nio-auto-6-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+Request method:	POST
+Request URI:	http://localhost:33775/customer
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "key": "value"
+}
+
+HTTP/1.1 401 
+Set-Cookie: JSESSIONID=0A0037EED06F36526DFAC604DD12062F; Path=/; HttpOnly
+WWW-Authenticate: Basic realm="Realm"
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:47:13 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "timestamp": "2024-12-08T17:47:13.500+00:00",
+    "status": 401,
+    "error": "Unauthorized",
+    "message": "",
+    "path": "/customer"
+}
+Request method:	POST
+Request URI:	http://localhost:33775/invalidEndpoint
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "message": "Invalid input",
+    "description": "Description",
+    "entityName": "EntityName",
+    "fieldErrors": [
+        {
+            "field": "path",
+            "message": "message"
+        }
+    ]
+
+HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:47:13 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "timestamp": "2024-12-08T17:47:13.580+00:00",
+    "status": 404,
+    "error": "Not Found",
+    "message": "",
+    "path": "/invalidEndpoint"
+}
+2024-12-08 14:47:13,594 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-6"]
+2024-12-08 14:47:13,594 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-12-08 14:47:13,595 INFO  [main] o.a.c.c.C.[.[.[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-12-08 14:47:13,597 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-6"]
+2024-12-08 14:47:13,600 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-6"]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m2[m, [1;31mFailures: [0;1;31m2[m, Errors: 0, Skipped: 0, Time elapsed: 1.708 s[1;31m <<< FAILURE![m - in market.[1mv3_gpt35_run03_RestErrorResponseTest[m
+[[1;31mERROR[m] testServerErrorReturns5xxError  Time elapsed: 0.119 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <401>.
+
+	at market.v3_gpt35_run03_RestErrorResponseTest.testServerErrorReturns5xxError(v3_gpt35_run03_RestErrorResponseTest.java:61)
+
+[[1;31mERROR[m] testInvalidInputReturns5xxError  Time elapsed: 0.04 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at market.v3_gpt35_run03_RestErrorResponseTest.testInvalidInputReturns5xxError(v3_gpt35_run03_RestErrorResponseTest.java:50)
+
+[[1;34mINFO[m] Running market.[1mv3_gpt35_run02_RestExceptionHandlerTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-08 14:47:13,634 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 36846 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-08 14:47:13,634 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-08 14:47:13,636 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-08 14:47:13,636 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-08 14:47:13,868 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 14:47:13,895 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 8 JPA repository interfaces.
+2024-12-08 14:47:13,947 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$1efb2a9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:13,969 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@524855c1' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:13,971 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:14,020 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-08 14:47:14,021 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-7"]
+2024-12-08 14:47:14,022 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-08 14:47:14,022 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-08 14:47:14,036 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 14:47:14,036 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 400 ms
+2024-12-08 14:47:14,073 INFO  [main] c.z.h.HikariDataSource - HikariPool-7 - Starting...
+2024-12-08 14:47:14,075 INFO  [main] c.z.h.HikariDataSource - HikariPool-7 - Start completed.
+2024-12-08 14:47:14,097 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 14:47:14,144 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 14:47:14,168 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:14,170 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:14,322 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 14:47:14,323 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:14,545 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08 14:47:14,742 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16985ab2, org.springframework.security.web.context.SecurityContextPersistenceFilter@68fc4279, org.springframework.security.web.header.HeaderWriterFilter@64b0917d, org.springframework.security.web.authentication.logout.LogoutFilter@337cd333, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@ab1562f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ffd439e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5fa61665, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b419a88, org.springframework.security.web.session.SessionManagementFilter@6cb14d07, org.springframework.security.web.access.ExceptionTranslationFilter@6987ca22, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2860af5d]
+2024-12-08 14:47:14,774 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:14,882 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-7"]
+2024-12-08 14:47:14,885 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 37091 (http) with context path ''
+2024-12-08 14:47:15,047 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 1.443 seconds (JVM running for 27.114)
+2024-12-08 14:47:15,117 INFO  [http-nio-auto-7-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08 14:47:15,117 INFO  [http-nio-auto-7-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-08 14:47:15,119 INFO  [http-nio-auto-7-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+2024-12-08 14:47:15,285 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-7"]
+2024-12-08 14:47:15,285 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-12-08 14:47:15,286 INFO  [main] o.a.c.c.C.[.[.[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-12-08 14:47:15,289 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-7"]
+2024-12-08 14:47:15,292 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-7"]
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.684 s - in market.[1mv3_gpt35_run02_RestExceptionHandlerTest[m
+[[1;34mINFO[m] Running market.[1mv3_gpt35_run01_RestExceptionHandlerTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-08 14:47:15,338 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 36846 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-08 14:47:15,338 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-08 14:47:15,340 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-08 14:47:15,340 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-08 14:47:15,599 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 14:47:15,628 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 8 JPA repository interfaces.
+2024-12-08 14:47:15,679 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$1efb2a9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:15,701 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@51507bb2' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:15,703 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:15,752 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-08 14:47:15,753 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-8"]
+2024-12-08 14:47:15,754 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-08 14:47:15,754 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-08 14:47:15,774 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 14:47:15,774 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 434 ms
+2024-12-08 14:47:15,815 INFO  [main] c.z.h.HikariDataSource - HikariPool-8 - Starting...
+2024-12-08 14:47:15,817 INFO  [main] c.z.h.HikariDataSource - HikariPool-8 - Start completed.
+2024-12-08 14:47:15,842 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 14:47:15,868 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 14:47:15,892 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:15,895 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:16,034 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 14:47:16,035 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:16,231 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08 14:47:16,408 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@19295e02, org.springframework.security.web.context.SecurityContextPersistenceFilter@76e2860, org.springframework.security.web.header.HeaderWriterFilter@7c037a3d, org.springframework.security.web.authentication.logout.LogoutFilter@231e94c5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6c03b1a5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50a969d2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@379c2368, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ca07ef2, org.springframework.security.web.session.SessionManagementFilter@54d6cdbb, org.springframework.security.web.access.ExceptionTranslationFilter@1298b11e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@40b949c9]
+2024-12-08 14:47:16,438 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:16,560 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-8"]
+2024-12-08 14:47:16,563 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 36187 (http) with context path ''
+2024-12-08 14:47:16,688 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 1.392 seconds (JVM running for 28.754)
+2024-12-08 14:47:16,738 INFO  [http-nio-auto-8-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08 14:47:16,738 INFO  [http-nio-auto-8-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-08 14:47:16,740 INFO  [http-nio-auto-8-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+Request method:	GET
+Request URI:	http://localhost:36187/customer
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+Set-Cookie: JSESSIONID=F6279A93FF6942C07D53D2BFF2EF4329; Path=/; HttpOnly
+WWW-Authenticate: Basic realm="Realm"
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:47:16 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "timestamp": "2024-12-08T17:47:16.745+00:00",
+    "status": 401,
+    "error": "Unauthorized",
+    "message": "",
+    "path": "/customer"
+}
+Request method:	GET
+Request URI:	http://localhost:36187/customer
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+Set-Cookie: JSESSIONID=DDEBB706228B7AC41C44772032B5EC50; Path=/; HttpOnly
+WWW-Authenticate: Basic realm="Realm"
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:47:16 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "timestamp": "2024-12-08T17:47:16.777+00:00",
+    "status": 401,
+    "error": "Unauthorized",
+    "message": "",
+    "path": "/customer"
+}
+2024-12-08 14:47:16,821 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-8"]
+2024-12-08 14:47:16,821 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-12-08 14:47:16,822 INFO  [main] o.a.c.c.C.[.[.[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-12-08 14:47:16,825 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-8"]
+2024-12-08 14:47:16,830 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-8"]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m3[m, [1;31mFailures: [0;1;31m2[m, Errors: 0, Skipped: 0, Time elapsed: 1.528 s[1;31m <<< FAILURE![m - in market.[1mv3_gpt35_run01_RestExceptionHandlerTest[m
+[[1;31mERROR[m] testNotFound  Time elapsed: 0.037 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.v3_gpt35_run01_RestExceptionHandlerTest.testNotFound(v3_gpt35_run01_RestExceptionHandlerTest.java:85)
+
+[[1;31mERROR[m] testInternalServerError  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <401>.
+
+	at market.v3_gpt35_run01_RestExceptionHandlerTest.testInternalServerError(v3_gpt35_run01_RestExceptionHandlerTest.java:67)
+
+[[1;34mINFO[m] Running market.[1mv3_gpt35_run01_CustomerRestControllerTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-08 14:47:16,864 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 36846 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-08 14:47:16,864 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-08 14:47:16,866 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-08 14:47:16,866 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-08 14:47:17,114 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 14:47:17,142 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 8 JPA repository interfaces.
+2024-12-08 14:47:17,189 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$1efb2a9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:17,206 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@53166bcf' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:17,208 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:17,250 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-08 14:47:17,252 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-9"]
+2024-12-08 14:47:17,252 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-08 14:47:17,252 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-08 14:47:17,265 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 14:47:17,265 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 399 ms
+2024-12-08 14:47:17,297 INFO  [main] c.z.h.HikariDataSource - HikariPool-9 - Starting...
+2024-12-08 14:47:17,299 INFO  [main] c.z.h.HikariDataSource - HikariPool-9 - Start completed.
+2024-12-08 14:47:17,317 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 14:47:17,336 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 14:47:17,350 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:17,352 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:17,454 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 14:47:17,454 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:17,636 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08 14:47:17,783 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16f0516b, org.springframework.security.web.context.SecurityContextPersistenceFilter@576a3044, org.springframework.security.web.header.HeaderWriterFilter@12541340, org.springframework.security.web.authentication.logout.LogoutFilter@2bfc94ef, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3ab11778, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@744747f0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@463b942b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@236aacdd, org.springframework.security.web.session.SessionManagementFilter@2ef8b742, org.springframework.security.web.access.ExceptionTranslationFilter@3a1333ba, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e3a2f1e]
+2024-12-08 14:47:17,812 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:17,913 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-9"]
+2024-12-08 14:47:17,915 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 43291 (http) with context path ''
+2024-12-08 14:47:18,033 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 1.199 seconds (JVM running for 30.1)
+2024-12-08 14:47:18,104 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-9"]
+2024-12-08 14:47:18,105 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-12-08 14:47:18,108 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-9"]
+2024-12-08 14:47:18,109 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-9"]
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m8[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.267 s - in market.[1mv3_gpt35_run01_CustomerRestControllerTest[m
+[[1;34mINFO[m] Running market.[1mv3_gpt35_run02_CartRestControllerTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-08 14:47:18,141 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 36846 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-08 14:47:18,142 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-08 14:47:18,143 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-08 14:47:18,143 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-08 14:47:18,392 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 14:47:18,417 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 8 JPA repository interfaces.
+2024-12-08 14:47:18,461 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$1efb2a9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:18,480 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@437a772f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:18,481 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:18,523 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-08 14:47:18,524 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-10"]
+2024-12-08 14:47:18,525 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-08 14:47:18,525 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-08 14:47:18,541 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 14:47:18,541 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 398 ms
+2024-12-08 14:47:18,577 INFO  [main] c.z.h.HikariDataSource - HikariPool-10 - Starting...
+2024-12-08 14:47:18,579 INFO  [main] c.z.h.HikariDataSource - HikariPool-10 - Start completed.
+2024-12-08 14:47:18,600 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 14:47:18,621 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 14:47:18,638 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:18,640 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:18,752 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 14:47:18,752 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:18,945 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08 14:47:19,082 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@593329c, org.springframework.security.web.context.SecurityContextPersistenceFilter@60c61c23, org.springframework.security.web.header.HeaderWriterFilter@60dbf603, org.springframework.security.web.authentication.logout.LogoutFilter@38dc55b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2beae64c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b4636af, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7412aa2a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c68e305, org.springframework.security.web.session.SessionManagementFilter@1076f72c, org.springframework.security.web.access.ExceptionTranslationFilter@3503d509, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@71721a99]
+2024-12-08 14:47:19,111 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:19,199 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-10"]
+2024-12-08 14:47:19,202 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 43769 (http) with context path ''
+2024-12-08 14:47:19,310 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 1.197 seconds (JVM running for 31.377)
+2024-12-08 14:47:19,383 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-10"]
+2024-12-08 14:47:19,383 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-12-08 14:47:19,386 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-10"]
+2024-12-08 14:47:19,388 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-10"]
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m10[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.273 s - in market.[1mv3_gpt35_run02_CartRestControllerTest[m
+[[1;34mINFO[m] Running market.[1mv3_gpt35_run02_ProductsRestControllerTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-08 14:47:19,417 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 36846 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-08 14:47:19,417 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-08 14:47:19,419 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-08 14:47:19,419 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-08 14:47:19,647 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 14:47:19,671 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 8 JPA repository interfaces.
+2024-12-08 14:47:19,714 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$1efb2a9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:19,734 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@788b9489' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:19,735 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:19,777 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-08 14:47:19,778 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-11"]
+2024-12-08 14:47:19,778 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-08 14:47:19,778 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-08 14:47:19,790 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 14:47:19,790 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 371 ms
+2024-12-08 14:47:19,825 INFO  [main] c.z.h.HikariDataSource - HikariPool-11 - Starting...
+2024-12-08 14:47:19,826 INFO  [main] c.z.h.HikariDataSource - HikariPool-11 - Start completed.
+2024-12-08 14:47:19,843 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 14:47:19,860 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 14:47:19,872 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:19,874 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:19,965 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 14:47:19,965 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:20,179 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08 14:47:20,322 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@262366af, org.springframework.security.web.context.SecurityContextPersistenceFilter@5318d3de, org.springframework.security.web.header.HeaderWriterFilter@47187061, org.springframework.security.web.authentication.logout.LogoutFilter@21e93a3d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2d76033f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f97184a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b08fca1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b93132c, org.springframework.security.web.session.SessionManagementFilter@3018f90, org.springframework.security.web.access.ExceptionTranslationFilter@40b58ad5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@522a094b]
+2024-12-08 14:47:20,350 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:20,463 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-11"]
+2024-12-08 14:47:20,466 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 33627 (http) with context path ''
+2024-12-08 14:47:20,606 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 1.214 seconds (JVM running for 32.673)
+2024-12-08 14:47:20,664 INFO  [http-nio-auto-11-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08 14:47:20,664 INFO  [http-nio-auto-11-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-08 14:47:20,666 INFO  [http-nio-auto-11-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+2024-12-08 14:47:20,673 WARN  [http-nio-auto-11-exec-1] m.r.e.RestExceptionHandler - RestErrorResponse{message='Requested entity doesn't exist', entityName='ProductDTO', description='uri=/products/9999', fieldErrors=[{field='id', message='No instance with this id'}]}
+Request method:	GET
+Request URI:	http://localhost:33627/products/1
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	productId=1
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/hal+json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:47:20 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "productId": 1,
+    "distillery": "Ardbeg",
+    "name": "Ten",
+    "price": 4420.0,
+    "age": 10,
+    "volume": 700,
+    "alcohol": 46.0,
+    "description": "Ten Years Old is the basis of the Ardbeg range. After 10 years of maturation in ex-bourbon casks, the whiskey bottled at 46% ABV without cold filtering. The characteristic peat, although clearly present but in perfect balance with the natural sweetness and not predominant in the taste.",
+    "available": false,
+    "_links": {
+        "All products": {
+            "href": "http://localhost:33627/products"
+        }
+    }
+}
+2024-12-08 14:47:20,779 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-11"]
+2024-12-08 14:47:20,779 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-12-08 14:47:20,780 INFO  [main] o.a.c.c.C.[.[.[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-12-08 14:47:20,782 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-11"]
+2024-12-08 14:47:20,785 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-11"]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m3[m, [1;31mFailures: [0;1;31m1[m, Errors: 0, Skipped: 0, Time elapsed: 1.391 s[1;31m <<< FAILURE![m - in market.[1mv3_gpt35_run02_ProductsRestControllerTest[m
+[[1;31mERROR[m] testGetProduct_InternalServerError  Time elapsed: 0.04 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at market.v3_gpt35_run02_ProductsRestControllerTest.testGetProduct_InternalServerError(v3_gpt35_run02_ProductsRestControllerTest.java:88)
+
+[[1;34mINFO[m] Running market.[1mv3_gpt35_run02_ContactsRestControllerTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-08 14:47:20,815 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 36846 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-08 14:47:20,827 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-08 14:47:20,828 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-08 14:47:20,828 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-08 14:47:21,049 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 14:47:21,074 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 8 JPA repository interfaces.
+2024-12-08 14:47:21,116 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$1efb2a9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:21,137 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4af6afef' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:21,138 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:21,179 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-08 14:47:21,180 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-12"]
+2024-12-08 14:47:21,181 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-08 14:47:21,181 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-08 14:47:21,194 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 14:47:21,194 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 366 ms
+2024-12-08 14:47:21,225 INFO  [main] c.z.h.HikariDataSource - HikariPool-12 - Starting...
+2024-12-08 14:47:21,226 INFO  [main] c.z.h.HikariDataSource - HikariPool-12 - Start completed.
+2024-12-08 14:47:21,240 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 14:47:21,256 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 14:47:21,270 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:21,272 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:21,428 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 14:47:21,428 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:21,688 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08 14:47:21,857 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d97db8f, org.springframework.security.web.context.SecurityContextPersistenceFilter@483560ef, org.springframework.security.web.header.HeaderWriterFilter@153b8be2, org.springframework.security.web.authentication.logout.LogoutFilter@67165e9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6b86ad80, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3534791, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a7eb882, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5dbbd209, org.springframework.security.web.session.SessionManagementFilter@7e6a3364, org.springframework.security.web.access.ExceptionTranslationFilter@5df2cbeb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a8b95b5]
+2024-12-08 14:47:21,887 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:21,993 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-12"]
+2024-12-08 14:47:21,996 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 43065 (http) with context path ''
+2024-12-08 14:47:22,104 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 1.315 seconds (JVM running for 34.171)
+2024-12-08 14:47:22,161 INFO  [http-nio-auto-12-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08 14:47:22,162 INFO  [http-nio-auto-12-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-08 14:47:22,163 INFO  [http-nio-auto-12-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+2024-12-08 14:47:22,181 WARN  [http-nio-auto-12-exec-1] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/contacts', fieldErrors=[]}
+Request method:	PUT
+Request URI:	http://localhost:43065/customer/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "address": "Updated Address",
+    "phone": "+7 123 456 78 90"
+}
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:47:22 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/contacts",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-12-08 14:47:22,204 WARN  [http-nio-auto-12-exec-2] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/contacts', fieldErrors=[]}
+Request method:	GET
+Request URI:	http://localhost:43065/customer/contacts
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:47:22 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/contacts",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+2024-12-08 14:47:22,217 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-12"]
+2024-12-08 14:47:22,217 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-12-08 14:47:22,218 INFO  [main] o.a.c.c.C.[.[.[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-12-08 14:47:22,220 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-12"]
+2024-12-08 14:47:22,223 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-12"]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m2[m, [1;31mFailures: [0;1;31m2[m, Errors: 0, Skipped: 0, Time elapsed: 1.424 s[1;31m <<< FAILURE![m - in market.[1mv3_gpt35_run02_ContactsRestControllerTest[m
+[[1;31mERROR[m] testUpdateContactsEndpoint  Time elapsed: 0.058 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v3_gpt35_run02_ContactsRestControllerTest.testUpdateContactsEndpoint(v3_gpt35_run02_ContactsRestControllerTest.java:81)
+
+[[1;31mERROR[m] testGetContactsEndpoint  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v3_gpt35_run02_ContactsRestControllerTest.testGetContactsEndpoint(v3_gpt35_run02_ContactsRestControllerTest.java:69)
+
+[[1;34mINFO[m] Running market.[1mv3_gpt35_run03_CartRestControllerTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-08 14:47:22,256 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 36846 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-08 14:47:22,256 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-08 14:47:22,258 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-08 14:47:22,258 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-08 14:47:22,514 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 14:47:22,546 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 8 JPA repository interfaces.
+2024-12-08 14:47:22,593 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$1efb2a9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:22,618 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@29e151d9' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:22,619 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:22,669 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-08 14:47:22,670 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-13"]
+2024-12-08 14:47:22,671 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-08 14:47:22,671 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-08 14:47:22,686 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 14:47:22,686 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 428 ms
+2024-12-08 14:47:22,763 INFO  [main] c.z.h.HikariDataSource - HikariPool-13 - Starting...
+2024-12-08 14:47:22,765 INFO  [main] c.z.h.HikariDataSource - HikariPool-13 - Start completed.
+2024-12-08 14:47:22,786 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 14:47:22,807 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 14:47:22,823 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:22,825 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:22,930 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 14:47:22,930 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:23,118 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08 14:47:23,255 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1cc4b785, org.springframework.security.web.context.SecurityContextPersistenceFilter@623a9b14, org.springframework.security.web.header.HeaderWriterFilter@3a524341, org.springframework.security.web.authentication.logout.LogoutFilter@2a3310bc, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@34c5cd4b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26403637, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@e2031f5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3a71cf03, org.springframework.security.web.session.SessionManagementFilter@5fe9b781, org.springframework.security.web.access.ExceptionTranslationFilter@6e05576b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@12549a20]
+2024-12-08 14:47:23,276 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:23,364 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-13"]
+2024-12-08 14:47:23,366 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 44147 (http) with context path ''
+2024-12-08 14:47:23,467 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 1.24 seconds (JVM running for 35.534)
+2024-12-08 14:47:23,539 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-13"]
+2024-12-08 14:47:23,540 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-12-08 14:47:23,542 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-13"]
+2024-12-08 14:47:23,545 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-13"]
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m5[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.311 s - in market.[1mv3_gpt35_run03_CartRestControllerTest[m
+[[1;34mINFO[m] Running market.[1mv3_gpt35_run03_CustomerRestControllerTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-08 14:47:23,575 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 36846 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-08 14:47:23,576 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-08 14:47:23,577 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-08 14:47:23,577 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-08 14:47:23,858 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 14:47:23,909 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50 ms. Found 8 JPA repository interfaces.
+2024-12-08 14:47:23,968 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$1efb2a9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:23,993 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@62057c1' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:23,995 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:24,060 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-08 14:47:24,062 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-14"]
+2024-12-08 14:47:24,062 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-08 14:47:24,063 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-08 14:47:24,077 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 14:47:24,077 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 499 ms
+2024-12-08 14:47:24,110 INFO  [main] c.z.h.HikariDataSource - HikariPool-14 - Starting...
+2024-12-08 14:47:24,111 INFO  [main] c.z.h.HikariDataSource - HikariPool-14 - Start completed.
+2024-12-08 14:47:24,124 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 14:47:24,161 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 14:47:24,178 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:24,179 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:24,305 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 14:47:24,306 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:24,472 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08 14:47:24,626 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61e6af5f, org.springframework.security.web.context.SecurityContextPersistenceFilter@2c95e809, org.springframework.security.web.header.HeaderWriterFilter@1f9c5705, org.springframework.security.web.authentication.logout.LogoutFilter@3141ee3e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@47d905aa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70047e80, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d5d3bfa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77ff5b11, org.springframework.security.web.session.SessionManagementFilter@246372c6, org.springframework.security.web.access.ExceptionTranslationFilter@3fbf6c5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@367de0bb]
+2024-12-08 14:47:24,654 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:24,760 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-14"]
+2024-12-08 14:47:24,763 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 38897 (http) with context path ''
+2024-12-08 14:47:24,896 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 1.347 seconds (JVM running for 36.963)
+2024-12-08 14:47:24,964 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-14"]
+2024-12-08 14:47:24,964 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-12-08 14:47:24,967 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-14"]
+2024-12-08 14:47:24,969 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-14"]
+[[1;34mINFO[m] [1;32mTests run: [0;1;32m2[m, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.417 s - in market.[1mv3_gpt35_run03_CustomerRestControllerTest[m
+[[1;34mINFO[m] Running market.[1mv3_gpt35_run03_RestExceptionHandlerTest[m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-08 14:47:24,992 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 36846 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-08 14:47:24,993 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-08 14:47:24,994 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-08 14:47:24,994 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-08 14:47:25,216 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 14:47:25,244 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 8 JPA repository interfaces.
+2024-12-08 14:47:25,291 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$1efb2a9d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:25,309 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@16b67cf4' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:25,311 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:47:25,356 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-08 14:47:25,357 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-15"]
+2024-12-08 14:47:25,358 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-08 14:47:25,358 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-08 14:47:25,372 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 14:47:25,372 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 378 ms
+2024-12-08 14:47:25,406 INFO  [main] c.z.h.HikariDataSource - HikariPool-15 - Starting...
+2024-12-08 14:47:25,408 INFO  [main] c.z.h.HikariDataSource - HikariPool-15 - Start completed.
+2024-12-08 14:47:25,422 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 14:47:25,438 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 14:47:25,451 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:25,452 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:47:25,568 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 14:47:25,569 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:25,738 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08 14:47:25,886 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@23c4fee5, org.springframework.security.web.context.SecurityContextPersistenceFilter@2c17e30d, org.springframework.security.web.header.HeaderWriterFilter@8cb11e1, org.springframework.security.web.authentication.logout.LogoutFilter@498ae608, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3f3c1717, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@771577fd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@278134e7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@585b1a2d, org.springframework.security.web.session.SessionManagementFilter@72f1e368, org.springframework.security.web.access.ExceptionTranslationFilter@3f1c88aa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4c6122d2]
+2024-12-08 14:47:25,915 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:26,076 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-15"]
+2024-12-08 14:47:26,081 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 40219 (http) with context path ''
+2024-12-08 14:47:26,240 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 1.267 seconds (JVM running for 38.306)
+2024-12-08 14:47:26,291 INFO  [http-nio-auto-15-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08 14:47:26,292 INFO  [http-nio-auto-15-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-08 14:47:26,293 INFO  [http-nio-auto-15-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+Request method:	GET
+Request URI:	http://localhost:40219/customer
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+Set-Cookie: JSESSIONID=B27F54F5B2E037C8D2DAC4FAB84A1462; Path=/; HttpOnly
+WWW-Authenticate: Basic realm="Realm"
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:47:26 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "timestamp": "2024-12-08T17:47:26.299+00:00",
+    "status": 401,
+    "error": "Unauthorized",
+    "message": "",
+    "path": "/customer"
+}
+2024-12-08 14:47:26,402 ERROR [http-nio-auto-15-exec-4] m.r.e.RestExceptionHandler - RestErrorResponse{message='Content type 'application/x-www-form-urlencoded;charset=ISO-8859-1' not supported', entityName='null', description='uri=/register', fieldErrors=[]}
+org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=ISO-8859-1' not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:207)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:158)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:131)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:665)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:750)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:327)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:113)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2024-12-08 14:47:26,460 INFO  [main] o.a.c.h.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-auto-15"]
+2024-12-08 14:47:26,460 INFO  [main] o.a.c.c.StandardService - Stopping service [Tomcat]
+2024-12-08 14:47:26,461 INFO  [main] o.a.c.c.C.[.[.[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-12-08 14:47:26,464 INFO  [main] o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-auto-15"]
+2024-12-08 14:47:26,468 INFO  [main] o.a.c.h.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-auto-15"]
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m5[m, [1;31mFailures: [0;1;31m1[m, Errors: 0, Skipped: 0, Time elapsed: 1.492 s[1;31m <<< FAILURE![m - in market.[1mv3_gpt35_run03_RestExceptionHandlerTest[m
+[[1;31mERROR[m] testCustomNotValidException_NotAcceptable  Time elapsed: 0.038 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <406> but was <401>.
+
+	at market.v3_gpt35_run03_RestExceptionHandlerTest.testCustomNotValidException_NotAcceptable(v3_gpt35_run03_RestExceptionHandlerTest.java:96)
+
+2024-12-08 14:47:26,502 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:26,516 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:26,519 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:26,520 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:26,522 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:26,531 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:26,531 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:26,535 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:26,536 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:26,540 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:26,543 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:26,549 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:26,552 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:26,554 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:26,555 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:26,556 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:26,557 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:26,558 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:26,564 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:26,569 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:26,572 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-8 - Shutdown initiated...
+2024-12-08 14:47:26,576 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:26,576 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:26,580 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:26,581 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2024-12-08 14:47:26,581 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-08 14:47:26,582 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:26,582 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:26,587 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:26,589 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2024-12-08 14:47:26,590 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-11 - Shutdown initiated...
+2024-12-08 14:47:26,590 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-7 - Shutdown initiated...
+2024-12-08 14:47:26,590 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2024-12-08 14:47:26,591 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:26,591 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:47:26,592 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-9 - Shutdown initiated...
+2024-12-08 14:47:26,597 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:26,601 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-15 - Shutdown initiated...
+2024-12-08 14:47:26,601 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-14 - Shutdown initiated...
+2024-12-08 14:47:26,601 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2024-12-08 14:47:26,601 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-10 - Shutdown initiated...
+2024-12-08 14:47:26,605 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-6 - Shutdown initiated...
+2024-12-08 14:47:26,605 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-13 - Shutdown initiated...
+2024-12-08 14:47:26,606 INFO  [SpringContextShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:47:26,608 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-12 - Shutdown initiated...
+2024-12-08 14:47:26,625 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-2 - Shutdown completed.
+2024-12-08 14:47:26,625 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-12 - Shutdown completed.
+2024-12-08 14:47:26,625 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-9 - Shutdown completed.
+2024-12-08 14:47:26,625 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-15 - Shutdown completed.
+2024-12-08 14:47:26,625 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-3 - Shutdown completed.
+2024-12-08 14:47:26,629 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-13 - Shutdown completed.
+2024-12-08 14:47:26,629 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-5 - Shutdown completed.
+2024-12-08 14:47:26,629 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-8 - Shutdown completed.
+2024-12-08 14:47:26,630 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-11 - Shutdown completed.
+2024-12-08 14:47:26,631 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-14 - Shutdown completed.
+2024-12-08 14:47:26,631 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-6 - Shutdown completed.
+2024-12-08 14:47:26,631 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-7 - Shutdown completed.
+2024-12-08 14:47:26,631 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-4 - Shutdown completed.
+2024-12-08 14:47:26,632 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-12-08 14:47:26,633 INFO  [SpringContextShutdownHook] c.z.h.HikariDataSource - HikariPool-10 - Shutdown completed.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  v3_gpt35_run01_RestErrorResponseTest.testInvalidInputReturns5xx:71 1 expectation failed.
+Expected status code <500> but was <406>.
+[m
+[[1;31mERROR[m] [1;31m  v3_gpt35_run01_RestErrorResponseTest.testServerErrorReturns5xx:82 1 expectation failed.
+Expected status code <500> but was <406>.
+[m
+[[1;31mERROR[m] [1;31m  v3_gpt35_run01_RestExceptionHandlerTest.testInternalServerError:67 1 expectation failed.
+Expected status code <500> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  v3_gpt35_run01_RestExceptionHandlerTest.testNotFound:85 1 expectation failed.
+Expected status code <404> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  v3_gpt35_run02_ContactsRestControllerTest.testGetContactsEndpoint:69 1 expectation failed.
+Expected status code <200> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  v3_gpt35_run02_ContactsRestControllerTest.testUpdateContactsEndpoint:81 1 expectation failed.
+Expected status code <200> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  v3_gpt35_run02_ProductsRestControllerTest.testGetProduct_InternalServerError:88 1 expectation failed.
+Expected status code <500> but was <200>.
+[m
+[[1;31mERROR[m] [1;31m  v3_gpt35_run02_RestErrorResponseTest.testInvalidInput_Returns5xxStatusCode:70 1 expectation failed.
+Expected status code a value equal to or greater than <500> but <406> was less than <500>.
+[m
+[[1;31mERROR[m] [1;31m  v3_gpt35_run02_RestErrorResponseTest.testSchemaValidation_CustomerRegistration:92 1 expectation failed.
+Expected status code <201> but was <406>.
+[m
+[[1;31mERROR[m] [1;31m  v3_gpt35_run02_RestErrorResponseTest.testServerError_Returns5xxStatusCode:81 1 expectation failed.
+Expected status code a value equal to or greater than <500> but <406> was less than <500>.
+[m
+[[1;31mERROR[m] [1;31m  v3_gpt35_run03_RestErrorResponseTest.testInvalidInputReturns5xxError:50 1 expectation failed.
+Expected status code <500> but was <404>.
+[m
+[[1;31mERROR[m] [1;31m  v3_gpt35_run03_RestErrorResponseTest.testServerErrorReturns5xxError:61 1 expectation failed.
+Expected status code <500> but was <401>.
+[m
+[[1;31mERROR[m] [1;31m  v3_gpt35_run03_RestExceptionHandlerTest.testCustomNotValidException_NotAcceptable:96 1 expectation failed.
+Expected status code <406> but was <401>.
+[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 74, Failures: 13, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] There are test failures.
+
+Please refer to /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/surefire-reports for the individual test results.
+Please refer to dump files (if any exist) [date]-jvmRun[N].dump, [date].dumpstream and [date]-jvmRun[N].dumpstream.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco-maven-plugin:0.8.7:report[m [1m(report)[m @ [36mmarket-rest[0;1m ---[m
+[[1;34mINFO[m] Loading execution data file /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/jacoco.exec
+[[1;34mINFO[m] Analyzed bundle 'market-rest' with 10 classes
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  43.571 s
+[[1;34mINFO[m] Finished at: 2024-12-08T14:47:27-03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+Copiando relatórios para /home/rincon/ar_benchmark/artigo/estudos-prompts/market-test-set/gpt/v3/coverage_three_runs/gpt35...
+Execução concluída com sucesso para o modelo gpt35.

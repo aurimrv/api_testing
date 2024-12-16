@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v1_gpt4o_run02_TriangleClassificationTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.377 s <<< FAILURE! - in org.restncs.v1_gpt4o_run02_TriangleClassificationTest
+testBessjEndpoint(org.restncs.v1_gpt4o_run02_TriangleClassificationTest)  Time elapsed: 0.038 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v1_gpt4o_run02_TriangleClassificationTest.testBessjEndpoint(v1_gpt4o_run02_TriangleClassificationTest.java:64)
+

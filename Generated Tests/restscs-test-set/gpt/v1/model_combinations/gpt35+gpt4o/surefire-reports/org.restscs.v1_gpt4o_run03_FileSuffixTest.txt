@@ -1,0 +1,103 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run03_FileSuffixTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 11, Errors: 0, Skipped: 0, Time elapsed: 1.133 s <<< FAILURE! - in org.restscs.v1_gpt4o_run03_FileSuffixTest
+testCalcUsingGET(org.restscs.v1_gpt4o_run03_FileSuffixTest)  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run03_FileSuffixTest.testCalcUsingGET(v1_gpt4o_run03_FileSuffixTest.java:67)
+
+testCookieUsingGET(org.restscs.v1_gpt4o_run03_FileSuffixTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "cookie set"
+  Actual: 2
+
+	at org.restscs.v1_gpt4o_run03_FileSuffixTest.testCookieUsingGET(v1_gpt4o_run03_FileSuffixTest.java:90)
+
+testCostfunsUsingGET(org.restscs.v1_gpt4o_run03_FileSuffixTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "cost calculated"
+  Actual: 10
+
+	at org.restscs.v1_gpt4o_run03_FileSuffixTest.testCostfunsUsingGET(v1_gpt4o_run03_FileSuffixTest.java:112)
+
+testDateParseUsingGET(org.restscs.v1_gpt4o_run03_FileSuffixTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "date parsed"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run03_FileSuffixTest.testDateParseUsingGET(v1_gpt4o_run03_FileSuffixTest.java:133)
+
+testFileSuffixUsingGET(org.restscs.v1_gpt4o_run03_FileSuffixTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "1"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run03_FileSuffixTest.testFileSuffixUsingGET(v1_gpt4o_run03_FileSuffixTest.java:154)
+
+testNotyPevarUsingGET(org.restscs.v1_gpt4o_run03_FileSuffixTest)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "variable processed"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run03_FileSuffixTest.testNotyPevarUsingGET(v1_gpt4o_run03_FileSuffixTest.java:175)
+
+testOrdered4UsingGET(org.restscs.v1_gpt4o_run03_FileSuffixTest)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "order processed"
+  Actual: unordered
+
+	at org.restscs.v1_gpt4o_run03_FileSuffixTest.testOrdered4UsingGET(v1_gpt4o_run03_FileSuffixTest.java:198)
+
+testRegexUsingGET(org.restscs.v1_gpt4o_run03_FileSuffixTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "pattern matched"
+  Actual: none
+
+	at org.restscs.v1_gpt4o_run03_FileSuffixTest.testRegexUsingGET(v1_gpt4o_run03_FileSuffixTest.java:220)
+
+testPatUsingGET(org.restscs.v1_gpt4o_run03_FileSuffixTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "pattern matched"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run03_FileSuffixTest.testPatUsingGET(v1_gpt4o_run03_FileSuffixTest.java:240)
+
+testText2txtUsingGET(org.restscs.v1_gpt4o_run03_FileSuffixTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "text processed"
+  Actual: 
+
+	at org.restscs.v1_gpt4o_run03_FileSuffixTest.testText2txtUsingGET(v1_gpt4o_run03_FileSuffixTest.java:262)
+
+testTitleUsingGET(org.restscs.v1_gpt4o_run03_FileSuffixTest)  Time elapsed: 0.031 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "title processed"
+  Actual: -1
+
+	at org.restscs.v1_gpt4o_run03_FileSuffixTest.testTitleUsingGET(v1_gpt4o_run03_FileSuffixTest.java:284)
+

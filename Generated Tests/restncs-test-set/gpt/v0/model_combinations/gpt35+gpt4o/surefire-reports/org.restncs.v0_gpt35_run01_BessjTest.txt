@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v0_gpt35_run01_BessjTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.397 s <<< FAILURE! - in org.restncs.v0_gpt35_run01_BessjTest
+testBessj(org.restncs.v0_gpt35_run01_BessjTest)  Time elapsed: 0.044 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0.341051924612724> but was:<0.12894324947718078>
+	at org.restncs.v0_gpt35_run01_BessjTest.testBessj(v0_gpt35_run01_BessjTest.java:70)
+

@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt35_run03_CookieTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 9, Skipped: 0, Time elapsed: 0.563 s <<< FAILURE! - in org.restscs.v1_gpt35_run03_CookieTest
+testPatEndpoint(org.restscs.v1_gpt35_run03_CookieTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 31: http://localhost:34411/api/pat/{txt}
+	at org.restscs.v1_gpt35_run03_CookieTest.testPatEndpoint(v1_gpt35_run03_CookieTest.java:115)
+
+testCostFunsEndpoint(org.restscs.v1_gpt35_run03_CookieTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 36: http://localhost:34411/api/costfuns/{i}/{s}
+	at org.restscs.v1_gpt35_run03_CookieTest.testCostFunsEndpoint(v1_gpt35_run03_CookieTest.java:70)
+
+testNoTypeVarEndpoint(org.restscs.v1_gpt35_run03_CookieTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 37: http://localhost:34411/api/notypevar/{i}/{s}
+	at org.restscs.v1_gpt35_run03_CookieTest.testNoTypeVarEndpoint(v1_gpt35_run03_CookieTest.java:97)
+
+testText2TxtEndpoint(org.restscs.v1_gpt35_run03_CookieTest)  Time elapsed: 0 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 36: http://localhost:34411/api/text2txt/{word1}/{word2}/{word3}
+	at org.restscs.v1_gpt35_run03_CookieTest.testText2TxtEndpoint(v1_gpt35_run03_CookieTest.java:124)
+
+testFileSuffixEndpoint(org.restscs.v1_gpt35_run03_CookieTest)  Time elapsed: 0 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 38: http://localhost:34411/api/filesuffix/{directory}/{file}
+	at org.restscs.v1_gpt35_run03_CookieTest.testFileSuffixEndpoint(v1_gpt35_run03_CookieTest.java:88)
+
+testDateParseEndpoint(org.restscs.v1_gpt35_run03_CookieTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 37: http://localhost:34411/api/dateparse/{dayname}/{monthname}
+	at org.restscs.v1_gpt35_run03_CookieTest.testDateParseEndpoint(v1_gpt35_run03_CookieTest.java:79)
+
+testOrdered4Endpoint(org.restscs.v1_gpt35_run03_CookieTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 36: http://localhost:34411/api/ordered4/{w}/{x}/{z}/{y}
+	at org.restscs.v1_gpt35_run03_CookieTest.testOrdered4Endpoint(v1_gpt35_run03_CookieTest.java:106)
+
+testTitleEndpoint(org.restscs.v1_gpt35_run03_CookieTest)  Time elapsed: 0 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 33: http://localhost:34411/api/title/{sex}/{title}
+	at org.restscs.v1_gpt35_run03_CookieTest.testTitleEndpoint(v1_gpt35_run03_CookieTest.java:133)
+
+testCookieEndpoint(org.restscs.v1_gpt35_run03_CookieTest)  Time elapsed: 0 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 34: http://localhost:34411/api/cookie/{name}/{val}/{site}
+	at org.restscs.v1_gpt35_run03_CookieTest.testCookieEndpoint(v1_gpt35_run03_CookieTest.java:61)
+

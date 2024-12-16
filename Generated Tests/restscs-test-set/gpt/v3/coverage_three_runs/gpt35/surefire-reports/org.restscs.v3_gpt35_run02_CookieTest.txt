@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt35_run02_CookieTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.881 s <<< FAILURE! - in org.restscs.v3_gpt35_run02_CookieTest
+testCookieEndpoint_ValidInput_ReturnsExpectedResult(org.restscs.v3_gpt35_run02_CookieTest)  Time elapsed: 0.04 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "1"
+  Actual: 0
+
+	at org.restscs.v3_gpt35_run02_CookieTest.testCookieEndpoint_ValidInput_ReturnsExpectedResult(v3_gpt35_run02_CookieTest.java:64)
+
+testCookieEndpoint_ServerError_Returns500(org.restscs.v3_gpt35_run02_CookieTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_CookieTest.testCookieEndpoint_ServerError_Returns500(v3_gpt35_run02_CookieTest.java:83)
+

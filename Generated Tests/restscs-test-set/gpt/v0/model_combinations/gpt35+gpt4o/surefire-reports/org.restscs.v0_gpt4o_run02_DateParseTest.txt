@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt4o_run02_DateParseTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 3.059 s <<< FAILURE! - in org.restscs.v0_gpt4o_run02_DateParseTest
+testDateParseEmptyDayAndMonth(org.restscs.v0_gpt4o_run02_DateParseTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 37: http://localhost:33979/api/dateparse/ /
+	at org.restscs.v0_gpt4o_run02_DateParseTest.testDateParseEmptyDayAndMonth(v0_gpt4o_run02_DateParseTest.java:142)
+
+testDateParseInvalidAndEmptyDayAndMonth(org.restscs.v0_gpt4o_run02_DateParseTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 37: http://localhost:33979/api/dateparse/ /
+	at org.restscs.v0_gpt4o_run02_DateParseTest.testDateParseInvalidAndEmptyDayAndMonth(v0_gpt4o_run02_DateParseTest.java:160)
+

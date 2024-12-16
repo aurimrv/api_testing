@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4o_run03_FileSuffixTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.288 s <<< FAILURE! - in org.restscs.v2_gpt4o_run03_FileSuffixTest
+testInternalServerError(org.restscs.v2_gpt4o_run03_FileSuffixTest)  Time elapsed: 0.041 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4o_run03_FileSuffixTest.testInternalServerError(v2_gpt4o_run03_FileSuffixTest.java:67)
+
+testFileSuffixBusinessRule(org.restscs.v2_gpt4o_run03_FileSuffixTest)  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "1"
+  Actual: 0
+
+	at org.restscs.v2_gpt4o_run03_FileSuffixTest.testFileSuffixBusinessRule(v2_gpt4o_run03_FileSuffixTest.java:98)
+
+testFileSuffixSchemaValidation(org.restscs.v2_gpt4o_run03_FileSuffixTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3"
+  Actual: 0
+
+	at org.restscs.v2_gpt4o_run03_FileSuffixTest.testFileSuffixSchemaValidation(v2_gpt4o_run03_FileSuffixTest.java:83)
+

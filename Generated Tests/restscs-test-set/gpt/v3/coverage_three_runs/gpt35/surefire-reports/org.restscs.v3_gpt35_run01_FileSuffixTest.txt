@@ -1,0 +1,56 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt35_run01_FileSuffixTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 1.245 s <<< FAILURE! - in org.restscs.v3_gpt35_run01_FileSuffixTest
+testFileSuffix_validInput_acrobatPdf_shouldReturn2(org.restscs.v3_gpt35_run01_FileSuffixTest)  Time elapsed: 0.044 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 0
+
+	at org.restscs.v3_gpt35_run01_FileSuffixTest.testFileSuffix_validInput_acrobatPdf_shouldReturn2(v3_gpt35_run01_FileSuffixTest.java:93)
+
+testFileSuffix_validInput_binExe_shouldReturn4(org.restscs.v3_gpt35_run01_FileSuffixTest)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "4"
+  Actual: 0
+
+	at org.restscs.v3_gpt35_run01_FileSuffixTest.testFileSuffix_validInput_binExe_shouldReturn4(v3_gpt35_run01_FileSuffixTest.java:103)
+
+testFileSuffix_validInput_libDll_shouldReturn5(org.restscs.v3_gpt35_run01_FileSuffixTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "5"
+  Actual: 0
+
+	at org.restscs.v3_gpt35_run01_FileSuffixTest.testFileSuffix_validInput_libDll_shouldReturn5(v3_gpt35_run01_FileSuffixTest.java:113)
+
+testFileSuffix_invalidInput_shouldReturn500(org.restscs.v3_gpt35_run01_FileSuffixTest)  Time elapsed: 0.049 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run01_FileSuffixTest.testFileSuffix_invalidInput_shouldReturn500(v3_gpt35_run01_FileSuffixTest.java:63)
+
+testFileSuffix_validInput_textTxt_shouldReturn1(org.restscs.v3_gpt35_run01_FileSuffixTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "1"
+  Actual: 0
+
+	at org.restscs.v3_gpt35_run01_FileSuffixTest.testFileSuffix_validInput_textTxt_shouldReturn1(v3_gpt35_run01_FileSuffixTest.java:73)
+
+testFileSuffix_validInput_wordDoc_shouldReturn3(org.restscs.v3_gpt35_run01_FileSuffixTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3"
+  Actual: 0
+
+	at org.restscs.v3_gpt35_run01_FileSuffixTest.testFileSuffix_validInput_wordDoc_shouldReturn3(v3_gpt35_run01_FileSuffixTest.java:83)
+

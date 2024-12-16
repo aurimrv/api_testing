@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v0_gpt4o_run03_BessjTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.695 s <<< FAILURE! - in org.restncs.v0_gpt4o_run03_BessjTest
+testBessj200(org.restncs.v0_gpt4o_run03_BessjTest)  Time elapsed: 0.026 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v0_gpt4o_run03_BessjTest.testBessj200(v0_gpt4o_run03_BessjTest.java:65)
+
+testBessj401(org.restncs.v0_gpt4o_run03_BessjTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <400>.
+
+	at org.restncs.v0_gpt4o_run03_BessjTest.testBessj401(v0_gpt4o_run03_BessjTest.java:79)
+
+testBessj403(org.restncs.v0_gpt4o_run03_BessjTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <400>.
+
+	at org.restncs.v0_gpt4o_run03_BessjTest.testBessj403(v0_gpt4o_run03_BessjTest.java:92)
+

@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt4o_run03_CustomerRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.954 s <<< FAILURE! - in market.v3_gpt4o_run03_CustomerRestControllerTest
+testCreateCustomerEmailExists  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v3_gpt4o_run03_CustomerRestControllerTest.testCreateCustomerEmailExists(v3_gpt4o_run03_CustomerRestControllerTest.java:111)
+
+testCreateCustomer  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v3_gpt4o_run03_CustomerRestControllerTest.testCreateCustomer(v3_gpt4o_run03_CustomerRestControllerTest.java:87)
+
+testGetCustomerAfterRegistration  Time elapsed: 0.034 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v3_gpt4o_run03_CustomerRestControllerTest.testGetCustomerAfterRegistration(v3_gpt4o_run03_CustomerRestControllerTest.java:159)
+

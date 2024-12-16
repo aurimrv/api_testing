@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v1_gpt35_run02_GammqTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.138 s <<< FAILURE! - in org.restncs.v1_gpt35_run02_GammqTest
+testGammqEndpoint(org.restncs.v1_gpt35_run02_GammqTest)  Time elapsed: 0.877 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: <0.21823461315721243>
+  Actual: 0.8012519576771389
+
+	at org.restncs.v1_gpt35_run02_GammqTest.testGammqEndpoint(v1_gpt35_run02_GammqTest.java:67)
+

@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run01_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.881 s <<< FAILURE! - in org.restscs.v3_gpt4o_run01_RegexTest
+testGetCalc(org.restscs.v3_gpt4o_run01_RegexTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "5.0"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run01_RegexTest.testGetCalc(v3_gpt4o_run01_RegexTest.java:61)
+

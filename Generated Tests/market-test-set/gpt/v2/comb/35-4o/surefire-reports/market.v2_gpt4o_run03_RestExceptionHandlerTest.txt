@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: market.v2_gpt4o_run03_RestExceptionHandlerTest
--------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.044 s - in market.v2_gpt4o_run03_RestExceptionHandlerTest

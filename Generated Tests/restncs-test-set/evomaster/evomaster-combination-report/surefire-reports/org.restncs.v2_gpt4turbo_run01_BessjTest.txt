@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v2_gpt4turbo_run01_BessjTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.161 s <<< FAILURE! - in org.restncs.v2_gpt4turbo_run01_BessjTest
+test_bessjError500(org.restncs.v2_gpt4turbo_run01_BessjTest)  Time elapsed: 0.09 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at org.restncs.v2_gpt4turbo_run01_BessjTest.test_bessjError500(v2_gpt4turbo_run01_BessjTest.java:62)
+
+test_bessjBoundaryCondition(org.restncs.v2_gpt4turbo_run01_BessjTest)  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v2_gpt4turbo_run01_BessjTest.test_bessjBoundaryCondition(v2_gpt4turbo_run01_BessjTest.java:83)
+

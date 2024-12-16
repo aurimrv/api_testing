@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4turbo_run01_ProductsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 2.225 s <<< FAILURE! - in market.v2_gpt4turbo_run01_ProductsRestControllerTest
+testProductSchemaValidation  Time elapsed: 0.261 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.v2_gpt4turbo_run01_ProductsRestControllerTest.testProductSchemaValidation(v2_gpt4turbo_run01_ProductsRestControllerTest.java:109)
+
+testGetProduct  Time elapsed: 0.145 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path _links.self.href doesn't match.
+Expected: a string containing "/products/1"
+  Actual: null
+
+	at market.v2_gpt4turbo_run01_ProductsRestControllerTest.testGetProduct(v2_gpt4turbo_run01_ProductsRestControllerTest.java:84)
+

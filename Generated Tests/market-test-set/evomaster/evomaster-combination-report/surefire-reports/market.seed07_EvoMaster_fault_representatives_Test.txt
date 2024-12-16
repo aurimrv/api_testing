@@ -1,0 +1,33 @@
+-------------------------------------------------------------------------------
+Test set: market.seed07_EvoMaster_fault_representatives_Test
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 17.304 s <<< FAILURE! - in market.seed07_EvoMaster_fault_representatives_Test
+test_0_with500  Time elapsed: 2.827 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'message' doesn't match.
+Expected: a string containing "JSON parse error: Expected relation name; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Expected relation name\n at [Source: (ByteArrayInputStream); line: 1, column: 13] (through reference chain: market.dto.UserDTO[\"_links\"])"
+  Actual: JSON parse error: Expected relation name; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Expected relation name
+ at [Source: (PushbackInputStream); line: 1, column: 19] (through reference chain: market.dto.UserDTO["_links"])
+
+	at market.seed07_EvoMaster_fault_representatives_Test.test_0_with500(seed07_EvoMaster_fault_representatives_Test.java:145)
+
+test_4  Time elapsed: 0.289 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'fieldErrors'[0].'field' doesn't match.
+Expected: a string containing "quantity"
+  Actual: productId
+
+	at market.seed07_EvoMaster_fault_representatives_Test.test_4(seed07_EvoMaster_fault_representatives_Test.java:267)
+
+test_1_with500  Time elapsed: 0.14 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'message' doesn't match.
+Expected: a string containing "JSON parse error: Expected relation name; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Expected relation name\n at [Source: (ByteArrayInputStream); line: 1, column: 13] (through reference chain: market.dto.ContactsDTO[\"_links\"])"
+  Actual: JSON parse error: Expected relation name; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Expected relation name
+ at [Source: (PushbackInputStream); line: 1, column: 19] (through reference chain: market.dto.ContactsDTO["_links"])
+
+	at market.seed07_EvoMaster_fault_representatives_Test.test_1_with500(seed07_EvoMaster_fault_representatives_Test.java:183)
+

@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt35_run03_Ordered4Test
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.755 s <<< FAILURE! - in org.restscs.v1_gpt35_run03_Ordered4Test
+testOrdered4Endpoint(org.restscs.v1_gpt35_run03_Ordered4Test)  Time elapsed: 0.034 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "increasing"
+  Actual: unordered
+
+	at org.restscs.v1_gpt35_run03_Ordered4Test.testOrdered4Endpoint(v1_gpt35_run03_Ordered4Test.java:64)
+
+testOrdered4EndpointWithDecreasingOrder(org.restscs.v1_gpt35_run03_Ordered4Test)  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 0, was 4. Redundant path parameters are: w=100, x=50, z=30, y=10.
+	at org.restscs.v1_gpt35_run03_Ordered4Test.testOrdered4EndpointWithDecreasingOrder(v1_gpt35_run03_Ordered4Test.java:75)
+

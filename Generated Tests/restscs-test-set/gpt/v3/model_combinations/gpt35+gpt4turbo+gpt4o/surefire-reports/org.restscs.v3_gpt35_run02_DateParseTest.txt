@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt35_run02_DateParseTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.638 s <<< FAILURE! - in org.restscs.v3_gpt35_run02_DateParseTest
+testDateParse_invalidDay_shouldReturnInternalServerError(org.restscs.v3_gpt35_run02_DateParseTest)  Time elapsed: 0.006 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_DateParseTest.testDateParse_invalidDay_shouldReturnInternalServerError(v3_gpt35_run02_DateParseTest.java:84)
+
+testDateParse_invalidMonth_shouldReturnInternalServerError(org.restscs.v3_gpt35_run02_DateParseTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_DateParseTest.testDateParse_invalidMonth_shouldReturnInternalServerError(v3_gpt35_run02_DateParseTest.java:98)
+

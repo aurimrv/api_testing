@@ -1,0 +1,58 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run03_TitleTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 1.063 s <<< FAILURE! - in org.restscs.v1_gpt4o_run03_TitleTest
+testCookieEndpoint(org.restscs.v1_gpt4o_run03_TitleTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "cookie set"
+  Actual: 2
+
+	at org.restscs.v1_gpt4o_run03_TitleTest.testCookieEndpoint(v1_gpt4o_run03_TitleTest.java:184)
+
+testCalcEndpoint(org.restscs.v1_gpt4o_run03_TitleTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run03_TitleTest.testCalcEndpoint(v1_gpt4o_run03_TitleTest.java:66)
+
+testDateParseEndpoint(org.restscs.v1_gpt4o_run03_TitleTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2-4"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run03_TitleTest.testDateParseEndpoint(v1_gpt4o_run03_TitleTest.java:159)
+
+testFileSuffixEndpoint(org.restscs.v1_gpt4o_run03_TitleTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: ".txt"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run03_TitleTest.testFileSuffixEndpoint(v1_gpt4o_run03_TitleTest.java:147)
+
+testRegexEndpoint(org.restscs.v1_gpt4o_run03_TitleTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "matched"
+  Actual: none
+
+	at org.restscs.v1_gpt4o_run03_TitleTest.testRegexEndpoint(v1_gpt4o_run03_TitleTest.java:195)
+
+testText2TxtEndpoint(org.restscs.v1_gpt4o_run03_TitleTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "hello world test"
+  Actual: 
+
+	at org.restscs.v1_gpt4o_run03_TitleTest.testText2TxtEndpoint(v1_gpt4o_run03_TitleTest.java:217)
+

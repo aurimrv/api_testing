@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.seed07_EvoMaster_successes_Test
+-------------------------------------------------------------------------------
+Tests run: 44, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.191 s - in org.restncs.seed07_EvoMaster_successes_Test

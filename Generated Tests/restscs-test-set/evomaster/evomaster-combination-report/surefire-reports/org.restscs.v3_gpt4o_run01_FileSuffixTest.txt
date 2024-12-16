@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run01_FileSuffixTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.953 s <<< FAILURE! - in org.restscs.v3_gpt4o_run01_FileSuffixTest
+testSchemaValidation(org.restscs.v3_gpt4o_run01_FileSuffixTest)  Time elapsed: 0.029 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restscs.v3_gpt4o_run01_FileSuffixTest.testSchemaValidation(v3_gpt4o_run01_FileSuffixTest.java:134)
+

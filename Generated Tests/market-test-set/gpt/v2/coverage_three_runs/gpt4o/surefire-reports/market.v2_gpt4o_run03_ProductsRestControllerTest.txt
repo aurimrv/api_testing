@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4o_run03_ProductsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.271 s <<< FAILURE! - in market.v2_gpt4o_run03_ProductsRestControllerTest
+testBusinessRuleEnforcement  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <405>.
+
+	at market.v2_gpt4o_run03_ProductsRestControllerTest.testBusinessRuleEnforcement(v2_gpt4o_run03_ProductsRestControllerTest.java:111)
+

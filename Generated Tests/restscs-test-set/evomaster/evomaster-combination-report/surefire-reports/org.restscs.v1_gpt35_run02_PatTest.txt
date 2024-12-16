@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt35_run02_PatTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.808 s <<< FAILURE! - in org.restscs.v1_gpt35_run02_PatTest
+testRegexEndpoint(org.restscs.v1_gpt35_run02_PatTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 31: http://localhost:43093/api/pat/{txt}
+	at org.restscs.v1_gpt35_run02_PatTest.testRegexEndpoint(v1_gpt35_run02_PatTest.java:61)
+
+testTitleEndpoint(org.restscs.v1_gpt35_run02_PatTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 33: http://localhost:43093/api/title/{sex}/{title}
+	at org.restscs.v1_gpt35_run02_PatTest.testTitleEndpoint(v1_gpt35_run02_PatTest.java:88)
+
+testText2txtEndpoint(org.restscs.v1_gpt35_run02_PatTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 36: http://localhost:43093/api/text2txt/{word1}/{word2}/{word3}
+	at org.restscs.v1_gpt35_run02_PatTest.testText2txtEndpoint(v1_gpt35_run02_PatTest.java:79)
+
+testPatEndpoint(org.restscs.v1_gpt35_run02_PatTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 31: http://localhost:43093/api/pat/{txt}/{pat}
+	at org.restscs.v1_gpt35_run02_PatTest.testPatEndpoint(v1_gpt35_run02_PatTest.java:70)
+

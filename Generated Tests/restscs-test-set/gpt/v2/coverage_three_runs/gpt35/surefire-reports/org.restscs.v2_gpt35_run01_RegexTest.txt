@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt35_run01_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.753 s <<< FAILURE! - in org.restscs.v2_gpt35_run01_RegexTest
+testInvalidInputForRegex(org.restscs.v2_gpt35_run01_RegexTest)  Time elapsed: 0.033 s  <<< ERROR!
+java.net.ConnectException: Conexão recusada (Connection refused)
+	at org.restscs.v2_gpt35_run01_RegexTest.testInvalidInputForRegex(v2_gpt35_run01_RegexTest.java:63)
+
+testSchemaValidationForRegex(org.restscs.v2_gpt35_run01_RegexTest)  Time elapsed: 0.013 s  <<< ERROR!
+java.net.ConnectException: Conexão recusada (Connection refused)
+	at org.restscs.v2_gpt35_run01_RegexTest.testSchemaValidationForRegex(v2_gpt35_run01_RegexTest.java:74)
+
+testBusinessRuleForRegex(org.restscs.v2_gpt35_run01_RegexTest)  Time elapsed: 0.009 s  <<< ERROR!
+java.net.ConnectException: Conexão recusada (Connection refused)
+	at org.restscs.v2_gpt35_run01_RegexTest.testBusinessRuleForRegex(v2_gpt35_run01_RegexTest.java:87)
+

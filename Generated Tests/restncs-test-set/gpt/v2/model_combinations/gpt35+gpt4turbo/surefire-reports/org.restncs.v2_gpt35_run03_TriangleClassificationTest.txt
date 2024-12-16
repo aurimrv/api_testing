@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v2_gpt35_run03_TriangleClassificationTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.754 s <<< FAILURE! - in org.restncs.v2_gpt35_run03_TriangleClassificationTest
+testInvalidTriangleEdges(org.restncs.v2_gpt35_run03_TriangleClassificationTest)  Time elapsed: 0.028 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restncs.v2_gpt35_run03_TriangleClassificationTest.testInvalidTriangleEdges(v2_gpt35_run03_TriangleClassificationTest.java:63)
+
+testSchemaValidationForTriangleClassification(org.restncs.v2_gpt35_run03_TriangleClassificationTest)  Time elapsed: 0.027 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsInt doesn't match.
+Expected: <2>
+  Actual: 1
+
+	at org.restncs.v2_gpt35_run03_TriangleClassificationTest.testSchemaValidationForTriangleClassification(v2_gpt35_run03_TriangleClassificationTest.java:73)
+
+testBusinessRuleEnforcementForTriangleClassification(org.restncs.v2_gpt35_run03_TriangleClassificationTest)  Time elapsed: 0.049 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsInt doesn't match.
+Expected: <2>
+  Actual: 1
+
+	at org.restncs.v2_gpt35_run03_TriangleClassificationTest.testBusinessRuleEnforcementForTriangleClassification(v2_gpt35_run03_TriangleClassificationTest.java:90)
+

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt35_run03_PatTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.928 s - in org.restscs.v3_gpt35_run03_PatTest

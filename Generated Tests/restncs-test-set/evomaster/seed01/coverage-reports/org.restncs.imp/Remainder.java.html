@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Remainder.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">evomaster-benchmark-cs-rest-artificial-ncs</a> &gt; <a href="index.source.html" class="el_package">org.restncs.imp</a> &gt; <span class="el_source">Remainder.java</span></div><h1>Remainder.java</h1><pre class="source lang-java linenums">package org.restncs.imp;
+
+<span class="nc" id="L3">public class Remainder {</span>
+    public static int exe(int a, int b) {
+<span class="fc" id="L5">        int r = 0 - 1;</span>
+<span class="fc" id="L6">        int cy = 0;</span>
+<span class="fc" id="L7">        int ny = 0;</span>
+
+<span class="fc bfc" id="L9" title="All 2 branches covered.">        if (a == 0) ;</span>
+<span class="fc bfc" id="L10" title="All 2 branches covered.">        else if (b == 0) ;</span>
+<span class="fc bfc" id="L11" title="All 2 branches covered.">        else if (a &gt; 0)</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">            if (b &gt; 0)</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">                while ((a - ny) &gt;= b) {</span>
+<span class="fc" id="L14">                    ny = ny + b;</span>
+<span class="fc" id="L15">                    r = a - ny;</span>
+<span class="fc" id="L16">                    cy = cy + 1;</span>
+                }
+            else    // b&lt;0
+                //while((a+ny)&gt;=Math.abs(b))
+<span class="pc bpc" id="L20" title="1 of 4 branches missed.">                while ((a + ny) &gt;= ((b &gt;= 0) ? b : -b)) {</span>
+<span class="fc" id="L21">                    ny = ny + b;</span>
+<span class="fc" id="L22">                    r = a + ny;</span>
+<span class="fc" id="L23">                    cy = cy - 1;</span>
+                }
+        else    // a&lt;0
+<span class="fc bfc" id="L26" title="All 2 branches covered.">            if (b &gt; 0)</span>
+                //while(Math.abs(a+ny)&gt;=b)
+<span class="fc bfc" id="L28" title="All 4 branches covered.">                while (((a + ny) &gt;= 0 ? (a + ny) : -(a + ny)) &gt;= b) {</span>
+<span class="fc" id="L29">                    ny = ny + b;</span>
+<span class="fc" id="L30">                    r = a + ny;</span>
+<span class="fc" id="L31">                    cy = cy - 1;</span>
+                }
+            else
+<span class="fc bfc" id="L34" title="All 2 branches covered.">                while (b &gt;= (a - ny)) {</span>
+<span class="fc" id="L35">                    ny = ny + b;</span>
+                    //r=Math.abs(a-ny);
+<span class="fc bfc" id="L37" title="All 2 branches covered.">                    r = ((a - ny) &gt;= 0 ? (a - ny) : -(a - ny));</span>
+<span class="fc" id="L38">                    cy = cy + 1;</span>
+                }
+<span class="fc" id="L40">        return r;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

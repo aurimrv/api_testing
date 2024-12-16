@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: market.v0_gpt4o_run02_RestErrorResponseTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.401 s <<< FAILURE! - in market.v0_gpt4o_run02_RestErrorResponseTest
+testRegisterCustomer  Time elapsed: 0.175 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code (is <201> or is <401> or is <403> or is <404> or is <406>) but was <500>.
+
+	at market.v0_gpt4o_run02_RestErrorResponseTest.testRegisterCustomer(v0_gpt4o_run02_RestErrorResponseTest.java:189)
+

@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v0_gpt35_run03_BessjTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.939 s <<< FAILURE! - in org.restncs.v0_gpt35_run03_BessjTest
+testBessj(org.restncs.v0_gpt35_run03_BessjTest)  Time elapsed: 0.052 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: <0.16040622>
+  Actual: 0.21660039114156904
+
+	at org.restncs.v0_gpt35_run03_BessjTest.testBessj(v0_gpt35_run03_BessjTest.java:67)
+

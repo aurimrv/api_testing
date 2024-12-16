@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v3_gpt4o_run03_GammqTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.413 s <<< FAILURE! - in org.restncs.v3_gpt4o_run03_GammqTest
+testBessjValidArgs(org.restncs.v3_gpt4o_run03_GammqTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v3_gpt4o_run03_GammqTest.testBessjValidArgs(v3_gpt4o_run03_GammqTest.java:122)
+

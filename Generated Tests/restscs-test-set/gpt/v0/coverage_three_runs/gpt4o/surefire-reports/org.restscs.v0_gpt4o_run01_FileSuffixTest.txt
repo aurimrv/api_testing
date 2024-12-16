@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt4o_run01_FileSuffixTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 1.11 s <<< FAILURE! - in org.restscs.v0_gpt4o_run01_FileSuffixTest
+testFileSuffix(org.restscs.v0_gpt4o_run01_FileSuffixTest)  Time elapsed: 0.026 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "1"
+  Actual: 0
+
+	at org.restscs.v0_gpt4o_run01_FileSuffixTest.testFileSuffix(v0_gpt4o_run01_FileSuffixTest.java:92)
+	at org.restscs.v0_gpt4o_run01_FileSuffixTest.testFileSuffix(v0_gpt4o_run01_FileSuffixTest.java:60)
+
+testFileSuffixInvalidPaths(org.restscs.v0_gpt4o_run01_FileSuffixTest)  Time elapsed: 0.012 s  <<< ERROR!
+java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 0, was 2. Redundant path parameters are: directory=text, file=file.txt.
+	at org.restscs.v0_gpt4o_run01_FileSuffixTest.testFileSuffixInvalidPaths(v0_gpt4o_run01_FileSuffixTest.java:118)
+

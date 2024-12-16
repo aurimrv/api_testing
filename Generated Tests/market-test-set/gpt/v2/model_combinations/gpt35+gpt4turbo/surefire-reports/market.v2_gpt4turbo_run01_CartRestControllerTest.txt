@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4turbo_run01_CartRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.682 s <<< FAILURE! - in market.v2_gpt4turbo_run01_CartRestControllerTest
+testAddItem  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v2_gpt4turbo_run01_CartRestControllerTest.testAddItem(v2_gpt4turbo_run01_CartRestControllerTest.java:78)
+
+testPayByCard  Time elapsed: 0.053 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <401>.
+
+	at market.v2_gpt4turbo_run01_CartRestControllerTest.testPayByCard(v2_gpt4turbo_run01_CartRestControllerTest.java:115)
+
+testInvalidInputCausingError  Time elapsed: 0.049 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code (is <400> or is <500>) but was <406>.
+
+	at market.v2_gpt4turbo_run01_CartRestControllerTest.testInvalidInputCausingError(v2_gpt4turbo_run01_CartRestControllerTest.java:130)
+

@@ -1,0 +1,60 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt4o_run03_CartRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 2.595 s <<< FAILURE! - in market.v3_gpt4o_run03_CartRestControllerTest
+testSetDelivery  Time elapsed: 0.077 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v3_gpt4o_run03_CartRestControllerTest.testSetDelivery(v3_gpt4o_run03_CartRestControllerTest.java:106)
+
+testAddItemToCartInvalidQuantity  Time elapsed: 0.089 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <406>.
+
+	at market.v3_gpt4o_run03_CartRestControllerTest.testAddItemToCartInvalidQuantity(v3_gpt4o_run03_CartRestControllerTest.java:233)
+
+testPayByCard  Time elapsed: 0.06 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <401>.
+
+	at market.v3_gpt4o_run03_CartRestControllerTest.testPayByCard(v3_gpt4o_run03_CartRestControllerTest.java:123)
+
+testClearCart  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v3_gpt4o_run03_CartRestControllerTest.testClearCart(v3_gpt4o_run03_CartRestControllerTest.java:94)
+
+testGetCart  Time elapsed: 0.028 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v3_gpt4o_run03_CartRestControllerTest.testGetCart(v3_gpt4o_run03_CartRestControllerTest.java:65)
+
+testPayByCardEmptyCart  Time elapsed: 0.033 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <401>.
+
+	at market.v3_gpt4o_run03_CartRestControllerTest.testPayByCardEmptyCart(v3_gpt4o_run03_CartRestControllerTest.java:216)
+
+testAddItemToCart  Time elapsed: 0.041 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v3_gpt4o_run03_CartRestControllerTest.testAddItemToCart(v3_gpt4o_run03_CartRestControllerTest.java:83)
+
+testAddItemToCartInvalidProduct  Time elapsed: 0.056 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.v3_gpt4o_run03_CartRestControllerTest.testAddItemToCartInvalidProduct(v3_gpt4o_run03_CartRestControllerTest.java:200)
+

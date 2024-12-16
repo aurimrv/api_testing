@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v2_gpt4o_run02_TriangleClassificationTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.983 s <<< FAILURE! - in org.restncs.v2_gpt4o_run02_TriangleClassificationTest
+testTriangleClassificationSchemaValidation(org.restncs.v2_gpt4o_run02_TriangleClassificationTest)  Time elapsed: 0.033 s  <<< FAILURE!
+java.lang.AssertionError: 
+	at org.restncs.v2_gpt4o_run02_TriangleClassificationTest.testTriangleClassificationSchemaValidation(v2_gpt4o_run02_TriangleClassificationTest.java:139)
+
+testTriangleClassificationServerError(org.restncs.v2_gpt4o_run02_TriangleClassificationTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restncs.v2_gpt4o_run02_TriangleClassificationTest.testTriangleClassificationServerError(v2_gpt4o_run02_TriangleClassificationTest.java:123)
+

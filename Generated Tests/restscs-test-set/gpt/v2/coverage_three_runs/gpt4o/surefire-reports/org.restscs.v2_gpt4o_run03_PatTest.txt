@@ -1,0 +1,94 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4o_run03_PatTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 10, Errors: 0, Skipped: 0, Time elapsed: 1.002 s <<< FAILURE! - in org.restscs.v2_gpt4o_run03_PatTest
+testCookieEndpoint(org.restscs.v2_gpt4o_run03_PatTest)  Time elapsed: 0.028 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Cookie set"
+  Actual: 0
+
+	at org.restscs.v2_gpt4o_run03_PatTest.testCookieEndpoint(v2_gpt4o_run03_PatTest.java:75)
+
+testCostfunsEndpoint(org.restscs.v2_gpt4o_run03_PatTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Cost calculated"
+  Actual: 10
+
+	at org.restscs.v2_gpt4o_run03_PatTest.testCostfunsEndpoint(v2_gpt4o_run03_PatTest.java:88)
+
+testDateParseEndpoint(org.restscs.v2_gpt4o_run03_PatTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Date parsed"
+  Actual: 0
+
+	at org.restscs.v2_gpt4o_run03_PatTest.testDateParseEndpoint(v2_gpt4o_run03_PatTest.java:101)
+
+testFileSuffixEndpoint(org.restscs.v2_gpt4o_run03_PatTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Suffix found"
+  Actual: 0
+
+	at org.restscs.v2_gpt4o_run03_PatTest.testFileSuffixEndpoint(v2_gpt4o_run03_PatTest.java:114)
+
+testNotypevarEndpoint(org.restscs.v2_gpt4o_run03_PatTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Type var processed"
+  Actual: 2
+
+	at org.restscs.v2_gpt4o_run03_PatTest.testNotypevarEndpoint(v2_gpt4o_run03_PatTest.java:127)
+
+testText2txtEndpoint(org.restscs.v2_gpt4o_run03_PatTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Text processed"
+  Actual: 
+
+	at org.restscs.v2_gpt4o_run03_PatTest.testText2txtEndpoint(v2_gpt4o_run03_PatTest.java:166)
+
+testTitleEndpoint(org.restscs.v2_gpt4o_run03_PatTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Title processed"
+  Actual: 1
+
+	at org.restscs.v2_gpt4o_run03_PatTest.testTitleEndpoint(v2_gpt4o_run03_PatTest.java:179)
+
+testCalcEndpoint(org.restscs.v2_gpt4o_run03_PatTest)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "8.0"
+  Actual: 0.0
+
+	at org.restscs.v2_gpt4o_run03_PatTest.testCalcEndpoint(v2_gpt4o_run03_PatTest.java:62)
+
+testPatEndpoint(org.restscs.v2_gpt4o_run03_PatTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Pattern found"
+  Actual: 1
+
+	at org.restscs.v2_gpt4o_run03_PatTest.testPatEndpoint(v2_gpt4o_run03_PatTest.java:153)
+
+testOrdered4Endpoint(org.restscs.v2_gpt4o_run03_PatTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "Ordered"
+  Actual: unordered
+
+	at org.restscs.v2_gpt4o_run03_PatTest.testOrdered4Endpoint(v2_gpt4o_run03_PatTest.java:140)
+

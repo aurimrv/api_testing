@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v1_gpt35_run02_TriangleClassificationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.546 s - in org.restncs.v1_gpt35_run02_TriangleClassificationTest

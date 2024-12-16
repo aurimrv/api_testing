@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: market.v1_gpt4o_run03_CartRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 1.263 s <<< FAILURE! - in market.v1_gpt4o_run03_CartRestControllerTest
+testSetDelivery  Time elapsed: 0.031 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v1_gpt4o_run03_CartRestControllerTest.login(v1_gpt4o_run03_CartRestControllerTest.java:159)
+	at market.v1_gpt4o_run03_CartRestControllerTest.testSetDelivery(v1_gpt4o_run03_CartRestControllerTest.java:118)
+
+testAddItem  Time elapsed: 0.026 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v1_gpt4o_run03_CartRestControllerTest.login(v1_gpt4o_run03_CartRestControllerTest.java:159)
+	at market.v1_gpt4o_run03_CartRestControllerTest.testAddItem(v1_gpt4o_run03_CartRestControllerTest.java:77)
+
+testPayByCard  Time elapsed: 0.029 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v1_gpt4o_run03_CartRestControllerTest.login(v1_gpt4o_run03_CartRestControllerTest.java:159)
+	at market.v1_gpt4o_run03_CartRestControllerTest.testPayByCard(v1_gpt4o_run03_CartRestControllerTest.java:134)
+
+testClearCart  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v1_gpt4o_run03_CartRestControllerTest.login(v1_gpt4o_run03_CartRestControllerTest.java:159)
+	at market.v1_gpt4o_run03_CartRestControllerTest.testClearCart(v1_gpt4o_run03_CartRestControllerTest.java:97)
+
+testGetCart  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v1_gpt4o_run03_CartRestControllerTest.login(v1_gpt4o_run03_CartRestControllerTest.java:159)
+	at market.v1_gpt4o_run03_CartRestControllerTest.testGetCart(v1_gpt4o_run03_CartRestControllerTest.java:64)
+

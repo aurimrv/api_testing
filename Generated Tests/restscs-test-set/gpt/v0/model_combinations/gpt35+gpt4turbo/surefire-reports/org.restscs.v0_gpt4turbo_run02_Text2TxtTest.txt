@@ -1,0 +1,53 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt4turbo_run02_Text2TxtTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 0.688 s <<< FAILURE! - in org.restscs.v0_gpt4turbo_run02_Text2TxtTest
+testText2TxtFor(org.restscs.v0_gpt4turbo_run02_Text2TxtTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v0_gpt4turbo_run02_Text2TxtTest.testText2TxtFor(v0_gpt4turbo_run02_Text2TxtTest.java:72)
+
+testText2TxtFour(org.restscs.v0_gpt4turbo_run02_Text2TxtTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v0_gpt4turbo_run02_Text2TxtTest.testText2TxtFour(v0_gpt4turbo_run02_Text2TxtTest.java:82)
+
+testText2TxtTwo(org.restscs.v0_gpt4turbo_run02_Text2TxtTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v0_gpt4turbo_run02_Text2TxtTest.testText2TxtTwo(v0_gpt4turbo_run02_Text2TxtTest.java:62)
+
+testText2TxtYou(org.restscs.v0_gpt4turbo_run02_Text2TxtTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v0_gpt4turbo_run02_Text2TxtTest.testText2TxtYou(v0_gpt4turbo_run02_Text2TxtTest.java:92)
+
+testText2TxtAnd(org.restscs.v0_gpt4turbo_run02_Text2TxtTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v0_gpt4turbo_run02_Text2TxtTest.testText2TxtAnd(v0_gpt4turbo_run02_Text2TxtTest.java:102)
+
+testText2TxtAre(org.restscs.v0_gpt4turbo_run02_Text2TxtTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v0_gpt4turbo_run02_Text2TxtTest.testText2TxtAre(v0_gpt4turbo_run02_Text2TxtTest.java:112)
+
+testText2TxtSeeYou(org.restscs.v0_gpt4turbo_run02_Text2TxtTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v0_gpt4turbo_run02_Text2TxtTest.testText2TxtSeeYou(v0_gpt4turbo_run02_Text2TxtTest.java:123)
+

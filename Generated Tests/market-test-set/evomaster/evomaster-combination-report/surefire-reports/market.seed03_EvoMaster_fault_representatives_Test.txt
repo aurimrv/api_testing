@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: market.seed03_EvoMaster_fault_representatives_Test
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 17.596 s <<< FAILURE! - in market.seed03_EvoMaster_fault_representatives_Test
+test_0_with500  Time elapsed: 2.94 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'message' doesn't match.
+Expected: a string containing "JSON parse error: Expected relation name; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Expected relation name\n at [Source: (ByteArrayInputStream); line: 1, column: 13] (through reference chain: market.dto.CartItemDTO[\"_links\"])"
+  Actual: JSON parse error: Expected relation name; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Expected relation name
+ at [Source: (PushbackInputStream); line: 1, column: 19] (through reference chain: market.dto.CartItemDTO["_links"])
+
+	at market.seed03_EvoMaster_fault_representatives_Test.test_0_with500(seed03_EvoMaster_fault_representatives_Test.java:147)
+

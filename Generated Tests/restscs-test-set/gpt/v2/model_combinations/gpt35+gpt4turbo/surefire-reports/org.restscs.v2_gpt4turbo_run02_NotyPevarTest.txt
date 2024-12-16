@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4turbo_run02_NotyPevarTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.632 s <<< FAILURE! - in org.restscs.v2_gpt4turbo_run02_NotyPevarTest
+testSchemaValidation(org.restscs.v2_gpt4turbo_run02_NotyPevarTest)  Time elapsed: 0.022 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restscs.v2_gpt4turbo_run02_NotyPevarTest.testSchemaValidation(v2_gpt4turbo_run02_NotyPevarTest.java:74)
+
+testBusinessRuleEnforcement(org.restscs.v2_gpt4turbo_run02_NotyPevarTest)  Time elapsed: 0.017 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+10
+
+	at org.restscs.v2_gpt4turbo_run02_NotyPevarTest.testBusinessRuleEnforcement(v2_gpt4turbo_run02_NotyPevarTest.java:87)
+

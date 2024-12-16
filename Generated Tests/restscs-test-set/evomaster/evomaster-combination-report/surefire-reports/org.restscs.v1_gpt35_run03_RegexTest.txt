@@ -1,0 +1,85 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt35_run03_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 1.162 s <<< FAILURE! - in org.restscs.v1_gpt35_run03_RegexTest
+testTitleEndpoint(org.restscs.v1_gpt35_run03_RegexTest)  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Mr male"
+  Actual: 1
+
+	at org.restscs.v1_gpt35_run03_RegexTest.testTitleEndpoint(v1_gpt35_run03_RegexTest.java:191)
+
+testOrdered4Endpoint(org.restscs.v1_gpt35_run03_RegexTest)  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "OK"
+  Actual: unordered
+
+	at org.restscs.v1_gpt35_run03_RegexTest.testOrdered4Endpoint(v1_gpt35_run03_RegexTest.java:154)
+
+testCookieEndpoint(org.restscs.v1_gpt35_run03_RegexTest)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "OK"
+  Actual: 0
+
+	at org.restscs.v1_gpt35_run03_RegexTest.testCookieEndpoint(v1_gpt35_run03_RegexTest.java:92)
+
+testCalcEndpoint(org.restscs.v1_gpt35_run03_RegexTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "15.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt35_run03_RegexTest.testCalcEndpoint(v1_gpt35_run03_RegexTest.java:79)
+
+testText2TxtEndpoint(org.restscs.v1_gpt35_run03_RegexTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Hello World !"
+  Actual: 
+
+	at org.restscs.v1_gpt35_run03_RegexTest.testText2TxtEndpoint(v1_gpt35_run03_RegexTest.java:179)
+
+testCostFunsEndpoint(org.restscs.v1_gpt35_run03_RegexTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "OK"
+  Actual: 10
+
+	at org.restscs.v1_gpt35_run03_RegexTest.testCostFunsEndpoint(v1_gpt35_run03_RegexTest.java:104)
+
+testDateParseEndpoint(org.restscs.v1_gpt35_run03_RegexTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "OK"
+  Actual: 2
+
+	at org.restscs.v1_gpt35_run03_RegexTest.testDateParseEndpoint(v1_gpt35_run03_RegexTest.java:116)
+
+testNoTypeVarEndpoint(org.restscs.v1_gpt35_run03_RegexTest)  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "OK"
+  Actual: 3
+
+	at org.restscs.v1_gpt35_run03_RegexTest.testNoTypeVarEndpoint(v1_gpt35_run03_RegexTest.java:140)
+
+testFileSuffixEndpoint(org.restscs.v1_gpt35_run03_RegexTest)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "OK"
+  Actual: 0
+
+	at org.restscs.v1_gpt35_run03_RegexTest.testFileSuffixEndpoint(v1_gpt35_run03_RegexTest.java:128)
+

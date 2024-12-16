@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4o_run01_CookieTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.626 s <<< FAILURE! - in org.restscs.v2_gpt4o_run01_CookieTest
+testCookieEndpoint_SchemaValidation(org.restscs.v2_gpt4o_run01_CookieTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+	at org.restscs.v2_gpt4o_run01_CookieTest.testCookieEndpoint_SchemaValidation(v2_gpt4o_run01_CookieTest.java:109)
+
+testCookieEndpoint_InternalServerError(org.restscs.v2_gpt4o_run01_CookieTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4o_run01_CookieTest.testCookieEndpoint_InternalServerError(v2_gpt4o_run01_CookieTest.java:138)
+

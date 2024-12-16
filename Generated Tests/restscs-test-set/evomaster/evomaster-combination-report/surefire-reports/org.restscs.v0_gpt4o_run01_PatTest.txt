@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt4o_run01_PatTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.897 s <<< FAILURE! - in org.restscs.v0_gpt4o_run01_PatTest
+testPatEndpoint(org.restscs.v0_gpt4o_run01_PatTest)  Time elapsed: 0.054 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3"
+  Actual: 0
+
+	at org.restscs.v0_gpt4o_run01_PatTest.testPatEndpoint(v0_gpt4o_run01_PatTest.java:72)
+

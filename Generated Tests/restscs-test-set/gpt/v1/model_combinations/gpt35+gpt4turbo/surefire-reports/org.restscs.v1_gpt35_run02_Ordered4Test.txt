@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt35_run02_Ordered4Test
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.665 s <<< FAILURE! - in org.restscs.v1_gpt35_run02_Ordered4Test
+testOrdered4Endpoint_withIncreasingOrder(org.restscs.v1_gpt35_run02_Ordered4Test)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "increasing"
+  Actual: unordered
+
+	at org.restscs.v1_gpt35_run02_Ordered4Test.testOrdered4Endpoint_withIncreasingOrder(v1_gpt35_run02_Ordered4Test.java:64)
+
+testOrdered4Endpoint_withDecreasingOrder(org.restscs.v1_gpt35_run02_Ordered4Test)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "decreasing"
+  Actual: unordered
+
+	at org.restscs.v1_gpt35_run02_Ordered4Test.testOrdered4Endpoint_withDecreasingOrder(v1_gpt35_run02_Ordered4Test.java:74)
+

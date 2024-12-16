@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NcsRest.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">evomaster-benchmark-cs-rest-artificial-ncs</a> &gt; <a href="index.source.html" class="el_package">org.restncs</a> &gt; <span class="el_source">NcsRest.java</span></div><h1>NcsRest.java</h1><pre class="source lang-java linenums">package org.restncs;
+
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import org.restncs.imp.*;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping(path = &quot;/api&quot;)
+<span class="fc" id="L12">public class NcsRest {</span>
+
+    @ApiOperation(&quot;Check the triangle type of the given three edges&quot;)
+    @GetMapping(
+            value = &quot;/triangle/{a}/{b}/{c}&quot;,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity&lt;Dto&gt; checkTriangle(
+            @ApiParam(&quot;First edge&quot;)
+            @PathVariable(&quot;a&quot;) Integer a,
+            @ApiParam(&quot;Second edge&quot;)
+            @PathVariable(&quot;b&quot;) Integer b,
+            @ApiParam(&quot;Third edge&quot;)
+            @PathVariable(&quot;c&quot;) Integer c
+    ){
+
+<span class="fc" id="L28">        Dto dto = new Dto();</span>
+<span class="fc" id="L29">        dto.resultAsInt = TriangleClassification.classify(a,b,c);</span>
+
+<span class="fc" id="L31">        return ResponseEntity.ok(dto);</span>
+    }
+
+
+    @GetMapping(
+            value = &quot;/bessj/{n}/{x}&quot;,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity&lt;Dto&gt; bessj(
+            @PathVariable(&quot;n&quot;) Integer n,
+            @PathVariable(&quot;x&quot;) Double x
+    ){
+<span class="fc bfc" id="L43" title="All 4 branches covered.">        if(n &lt;= 2 || n &gt; 1000){</span>
+<span class="fc" id="L44">            return ResponseEntity.status(400).build();</span>
+        }
+
+<span class="fc" id="L47">        Dto dto = new Dto();</span>
+<span class="fc" id="L48">        Bessj bessj = new Bessj();</span>
+<span class="fc" id="L49">        dto.resultAsDouble = bessj.bessj(n, x);</span>
+
+<span class="fc" id="L51">        return ResponseEntity.ok(dto);</span>
+    }
+
+
+    @GetMapping(
+            value = &quot;/expint/{n}/{x}&quot;,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity&lt;Dto&gt; expint(
+            @PathVariable(&quot;n&quot;) Integer n,
+            @PathVariable(&quot;x&quot;) Double x
+    ){
+
+        try{
+<span class="fc" id="L65">            Dto dto = new Dto();</span>
+<span class="fc" id="L66">            dto.resultAsDouble = Expint.exe(n,x);</span>
+<span class="fc" id="L67">            return ResponseEntity.ok(dto);</span>
+<span class="fc" id="L68">        }catch (RuntimeException e){</span>
+<span class="fc" id="L69">            return ResponseEntity.status(400).build();</span>
+        }
+    }
+
+
+    @GetMapping(
+            value = &quot;/fisher/{m}/{n}/{x}&quot;,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity&lt;Dto&gt; fisher(
+            @PathVariable(&quot;m&quot;) Integer m,
+            @PathVariable(&quot;n&quot;) Integer n,
+            @PathVariable(&quot;x&quot;) Double x
+    ){
+
+<span class="fc bfc" id="L84" title="All 4 branches covered.">        if(m &gt; 1000 || n &gt; 1000){</span>
+<span class="fc" id="L85">            return ResponseEntity.status(400).build();</span>
+        }
+
+        try{
+<span class="fc" id="L89">            Dto dto = new Dto();</span>
+<span class="fc" id="L90">            dto.resultAsDouble = Fisher.exe(m, n, x);</span>
+<span class="fc" id="L91">            return ResponseEntity.ok(dto);</span>
+<span class="nc" id="L92">        }catch (RuntimeException e){</span>
+<span class="nc" id="L93">            return ResponseEntity.status(400).build();</span>
+        }
+    }
+
+
+    @GetMapping(
+            value = &quot;/gammq/{a}/{x}&quot;,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity&lt;Dto&gt; gammq(
+            @PathVariable(&quot;a&quot;) Double a,
+            @PathVariable(&quot;x&quot;) Double x
+    ){
+
+        try{
+<span class="fc" id="L108">            Dto dto = new Dto();</span>
+<span class="fc" id="L109">            Gammq gammq = new Gammq();</span>
+<span class="fc" id="L110">            dto.resultAsDouble = gammq.exe(a, x);</span>
+<span class="fc" id="L111">            return ResponseEntity.ok(dto);</span>
+<span class="fc" id="L112">        }catch (RuntimeException e){</span>
+<span class="fc" id="L113">            return ResponseEntity.status(400).build();</span>
+        }
+    }
+
+
+    @GetMapping(
+            value = &quot;/remainder/{a}/{b}&quot;,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity&lt;Dto&gt; remainder(
+            @PathVariable(&quot;a&quot;) Integer a,
+            @PathVariable(&quot;b&quot;) Integer b
+    ){
+<span class="fc" id="L126">        int lim = 10_000;</span>
+<span class="fc bfc" id="L127" title="All 8 branches covered.">        if(a &gt; lim || a &lt; -lim || b &gt; lim || b &lt; -lim){</span>
+<span class="fc" id="L128">            return ResponseEntity.status(400).build();</span>
+        }
+
+<span class="fc" id="L131">        Dto dto = new Dto();</span>
+<span class="fc" id="L132">        dto.resultAsInt = Remainder.exe(a,b);</span>
+
+<span class="fc" id="L134">        return ResponseEntity.ok(dto);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

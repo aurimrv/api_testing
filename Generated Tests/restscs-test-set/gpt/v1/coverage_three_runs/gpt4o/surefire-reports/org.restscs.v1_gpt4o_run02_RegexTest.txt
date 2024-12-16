@@ -1,0 +1,67 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run02_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 1.214 s <<< FAILURE! - in org.restscs.v1_gpt4o_run02_RegexTest
+testCalcEndpoint(org.restscs.v1_gpt4o_run02_RegexTest)  Time elapsed: 0.032 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run02_RegexTest.testCalcEndpoint(v1_gpt4o_run02_RegexTest.java:65)
+
+testDateParseEndpoint(org.restscs.v1_gpt4o_run02_RegexTest)  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 3
+
+	at org.restscs.v1_gpt4o_run02_RegexTest.testDateParseEndpoint(v1_gpt4o_run02_RegexTest.java:134)
+
+testOrdered4Endpoint(org.restscs.v1_gpt4o_run02_RegexTest)  Time elapsed: 0.026 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "increasing"
+  Actual: unordered
+
+	at org.restscs.v1_gpt4o_run02_RegexTest.testOrdered4Endpoint(v1_gpt4o_run02_RegexTest.java:189)
+
+testPatEndpoint(org.restscs.v1_gpt4o_run02_RegexTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Pattern matched"
+  Actual: 1
+
+	at org.restscs.v1_gpt4o_run02_RegexTest.testPatEndpoint(v1_gpt4o_run02_RegexTest.java:226)
+
+testTitleEndpoint(org.restscs.v1_gpt4o_run02_RegexTest)  Time elapsed: 0.026 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "1"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run02_RegexTest.testTitleEndpoint(v1_gpt4o_run02_RegexTest.java:269)
+
+testNotypevarEndpoint(org.restscs.v1_gpt4o_run02_RegexTest)  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run02_RegexTest.testNotypevarEndpoint(v1_gpt4o_run02_RegexTest.java:168)
+
+testRegexEndpoint(org.restscs.v1_gpt4o_run02_RegexTest)  Time elapsed: 0.026 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "0"
+  Actual: date
+
+	at org.restscs.v1_gpt4o_run02_RegexTest.testRegexEndpoint(v1_gpt4o_run02_RegexTest.java:204)
+

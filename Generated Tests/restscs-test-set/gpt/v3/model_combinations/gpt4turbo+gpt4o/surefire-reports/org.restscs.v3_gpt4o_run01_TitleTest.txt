@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run01_TitleTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.987 s <<< FAILURE! - in org.restscs.v3_gpt4o_run01_TitleTest
+testTitleEndpointInternalServerError(org.restscs.v3_gpt4o_run01_TitleTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_TitleTest.testTitleEndpointInternalServerError(v3_gpt4o_run01_TitleTest.java:96)
+
+testTitleEndpointUnauthorized(org.restscs.v3_gpt4o_run01_TitleTest)  Time elapsed: 0.034 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_TitleTest.testTitleEndpointUnauthorized(v3_gpt4o_run01_TitleTest.java:111)
+
+testTitleEndpointForbidden(org.restscs.v3_gpt4o_run01_TitleTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_TitleTest.testTitleEndpointForbidden(v3_gpt4o_run01_TitleTest.java:119)
+
+testTitleEndpointNotFound(org.restscs.v3_gpt4o_run01_TitleTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_TitleTest.testTitleEndpointNotFound(v3_gpt4o_run01_TitleTest.java:126)
+

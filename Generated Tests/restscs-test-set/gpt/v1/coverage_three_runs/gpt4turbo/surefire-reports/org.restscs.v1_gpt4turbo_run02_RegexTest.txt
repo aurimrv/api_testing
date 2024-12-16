@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4turbo_run02_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.141 s <<< FAILURE! - in org.restscs.v1_gpt4turbo_run02_RegexTest
+testRegexSubjectWithUrl(org.restscs.v1_gpt4turbo_run02_RegexTest)  Time elapsed: 0.055 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 31: http://localhost:38901/api/pat/{txt}
+	at org.restscs.v1_gpt4turbo_run02_RegexTest.testRegexSubjectWithUrl(v1_gpt4turbo_run02_RegexTest.java:63)
+

@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt4o_run03_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.259 s <<< FAILURE! - in market.v3_gpt4o_run03_RestExceptionHandlerTest
+testGetCustomerNotFound  Time elapsed: 0.029 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.v3_gpt4o_run03_RestExceptionHandlerTest.testGetCustomerNotFound(v3_gpt4o_run03_RestExceptionHandlerTest.java:77)
+
+testCreateCustomer  Time elapsed: 0.043 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v3_gpt4o_run03_RestExceptionHandlerTest.testCreateCustomer(v3_gpt4o_run03_RestExceptionHandlerTest.java:193)
+
+testGetCartNotFound  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.v3_gpt4o_run03_RestExceptionHandlerTest.testGetCartNotFound(v3_gpt4o_run03_RestExceptionHandlerTest.java:87)
+

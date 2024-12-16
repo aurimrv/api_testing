@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4turbo_run03_FileSuffixTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.913 s <<< FAILURE! - in org.restscs.v2_gpt4turbo_run03_FileSuffixTest
+testFileSuffixValidInput(org.restscs.v2_gpt4turbo_run03_FileSuffixTest)  Time elapsed: 1.434 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3"
+  Actual: 0
+
+	at org.restscs.v2_gpt4turbo_run03_FileSuffixTest.testFileSuffixValidInput(v2_gpt4turbo_run03_FileSuffixTest.java:64)
+
+testFileSuffixSchemaValidation(org.restscs.v2_gpt4turbo_run03_FileSuffixTest)  Time elapsed: 0.139 s  <<< FAILURE!
+java.lang.AssertionError: 
+	at org.restscs.v2_gpt4turbo_run03_FileSuffixTest.testFileSuffixSchemaValidation(v2_gpt4turbo_run03_FileSuffixTest.java:104)
+

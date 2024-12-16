@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4turbo_run03_TitleTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.912 s <<< FAILURE! - in org.restscs.v2_gpt4turbo_run03_TitleTest
+testSchemaValidationForTitleEndpoint(org.restscs.v2_gpt4turbo_run03_TitleTest)  Time elapsed: 0.018 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restscs.v2_gpt4turbo_run03_TitleTest.testSchemaValidationForTitleEndpoint(v2_gpt4turbo_run03_TitleTest.java:118)
+

@@ -1,0 +1,101 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4o_run02_Text2TxtTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 1, Errors: 9, Skipped: 0, Time elapsed: 1.564 s <<< FAILURE! - in org.restscs.v2_gpt4o_run02_Text2TxtTest
+testCalcOperation(org.restscs.v2_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.138 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+0.0
+
+	at org.restscs.v2_gpt4o_run02_Text2TxtTest.testCalcOperation(v2_gpt4o_run02_Text2TxtTest.java:65)
+
+testDateParse(org.restscs.v2_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.024 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+0
+
+	at org.restscs.v2_gpt4o_run02_Text2TxtTest.testDateParse(v2_gpt4o_run02_Text2TxtTest.java:115)
+
+testFileSuffix(org.restscs.v2_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.022 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+0
+
+	at org.restscs.v2_gpt4o_run02_Text2TxtTest.testFileSuffix(v2_gpt4o_run02_Text2TxtTest.java:128)
+
+testOrdered4(org.restscs.v2_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.023 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+unordered
+
+	at org.restscs.v2_gpt4o_run02_Text2TxtTest.testOrdered4(v2_gpt4o_run02_Text2TxtTest.java:156)
+
+testRegex(org.restscs.v2_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.022 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+none
+
+	at org.restscs.v2_gpt4o_run02_Text2TxtTest.testRegex(v2_gpt4o_run02_Text2TxtTest.java:168)
+
+testPat(org.restscs.v2_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.019 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+0
+
+	at org.restscs.v2_gpt4o_run02_Text2TxtTest.testPat(v2_gpt4o_run02_Text2TxtTest.java:181)
+
+testNoTypeVar(org.restscs.v2_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.022 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+2
+
+	at org.restscs.v2_gpt4o_run02_Text2TxtTest.testNoTypeVar(v2_gpt4o_run02_Text2TxtTest.java:141)
+
+testCalcInvalidOperation(org.restscs.v2_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.028 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4o_run02_Text2TxtTest.testCalcInvalidOperation(v2_gpt4o_run02_Text2TxtTest.java:78)
+
+testCostFuns(org.restscs.v2_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.021 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+10
+
+	at org.restscs.v2_gpt4o_run02_Text2TxtTest.testCostFuns(v2_gpt4o_run02_Text2TxtTest.java:102)
+
+testCookie(org.restscs.v2_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.022 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+2
+
+	at org.restscs.v2_gpt4o_run02_Text2TxtTest.testCookie(v2_gpt4o_run02_Text2TxtTest.java:89)
+

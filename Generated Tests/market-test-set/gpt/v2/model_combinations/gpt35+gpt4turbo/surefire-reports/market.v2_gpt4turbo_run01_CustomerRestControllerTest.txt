@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4turbo_run01_CustomerRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 1.15 s <<< FAILURE! - in market.v2_gpt4turbo_run01_CustomerRestControllerTest
+testCreateCustomerSuccess  Time elapsed: 0.164 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.v2_gpt4turbo_run01_CustomerRestControllerTest.testCreateCustomerSuccess(v2_gpt4turbo_run01_CustomerRestControllerTest.java:81)
+
+testCreateCustomerWithExistingEmail  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v2_gpt4turbo_run01_CustomerRestControllerTest.testCreateCustomerWithExistingEmail(v2_gpt4turbo_run01_CustomerRestControllerTest.java:63)
+
+testGetCustomerSuccessful  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v2_gpt4turbo_run01_CustomerRestControllerTest.testGetCustomerSuccessful(v2_gpt4turbo_run01_CustomerRestControllerTest.java:102)
+
+testRegisterCustomerInvalidData  Time elapsed: 0.029 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <406>.
+
+	at market.v2_gpt4turbo_run01_CustomerRestControllerTest.testRegisterCustomerInvalidData(v2_gpt4turbo_run01_CustomerRestControllerTest.java:95)
+

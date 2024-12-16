@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt35_run02_CalcTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.047 s - in org.restscs.v2_gpt35_run02_CalcTest

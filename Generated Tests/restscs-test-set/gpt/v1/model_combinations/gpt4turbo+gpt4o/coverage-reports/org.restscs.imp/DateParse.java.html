@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DateParse.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">evomaster-benchmark-cs-rest-artificial-scs</a> &gt; <a href="index.source.html" class="el_package">org.restscs.imp</a> &gt; <span class="el_source">DateParse.java</span></div><h1>DateParse.java</h1><pre class="source lang-java linenums">//! futname = Subject      //NAME OF FUNCTION UNDER TEST
+//! mutation = false        //SPECIFY MUTATION COVERAGE
+//! textout = true        //WRITE INSTRUMENTED SUBJECT TO FILE
+//! maxchildren = 500000  //MAX LENGTH OF SEARCH
+//! totalpopsize = 100    //TOTAL SIZE OF POPULATIONS 
+//! mutationpercent = 50  //REL FREQUENCY OF GENETIC MUTATION TO CROSSOVER
+//! samefitcountmax = 100 //NUMBER OF CONSECUTIVE TESTS IN A POP 
+//THAT MUST HAVE THE SAME COST FOR POP TO BE STAGNANT
+//! verbose = false        //PRINT MESSAGES SHOWING PROGRESS OF SEARCH
+//! showevery = 3000      //NUMBER OF CANDIDATE INPUTS GENERATED BETWEEN EACH SHOW
+//! numbins = 0           //GRANULARITY OF CANDIDATE INPUT HISTOGRAM, SET TO 0 TO NOT COLLECT STATS
+//! trialfirst = 1        //EACH TRIAL USES A DIFFERENT RANDOM SEED
+//! triallast = 1         //NUMBER OF TRIALS = triallast - trialfirst + 1
+
+
+package org.restscs.imp;
+
+<span class="nc" id="L18">public class DateParse</span>
+{
+	public static String subject(String dayname , String monthname)
+	{
+<span class="fc" id="L22">		int result = 0;</span>
+		//int month = -1;
+<span class="fc" id="L24">		dayname = dayname.toLowerCase();</span>
+<span class="fc" id="L25">		monthname = monthname.toLowerCase();</span>
+
+<span class="fc bfc" id="L27" title="All 2 branches covered.">		if (&quot;mon&quot;.equals(dayname) || </span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">				&quot;tue&quot;.equals(dayname) || </span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">				&quot;wed&quot;.equals(dayname) || </span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">				&quot;thur&quot;.equals(dayname) || </span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">				&quot;fri&quot;.equals(dayname) || </span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">				&quot;sat&quot;.equals(dayname) || </span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">				&quot;sun&quot;.equals(dayname)) {</span>
+<span class="fc" id="L34">			result = 1; </span>
+		}       
+<span class="fc bfc" id="L36" title="All 2 branches covered.">		if (&quot;jan&quot;.equals(monthname)) {</span>
+<span class="fc" id="L37">			result += 1;</span>
+		}
+<span class="fc bfc" id="L39" title="All 2 branches covered.">		if (&quot;feb&quot;.equals(monthname)) {</span>
+<span class="fc" id="L40">			result += 2;</span>
+		}
+<span class="fc bfc" id="L42" title="All 2 branches covered.">		if (&quot;mar&quot;.equals(monthname)) {</span>
+<span class="fc" id="L43">			result += 3;</span>
+		}
+<span class="fc bfc" id="L45" title="All 2 branches covered.">		if (&quot;apr&quot;.equals(monthname)) {</span>
+<span class="fc" id="L46">			result += 4;</span>
+		}
+<span class="fc bfc" id="L48" title="All 2 branches covered.">		if (&quot;may&quot;.equals(monthname)) {</span>
+<span class="fc" id="L49">			result += 5;</span>
+		}
+<span class="fc bfc" id="L51" title="All 2 branches covered.">		if (&quot;jun&quot;.equals(monthname)) {</span>
+<span class="fc" id="L52">			result += 6;</span>
+		}
+<span class="fc bfc" id="L54" title="All 2 branches covered.">		if (&quot;jul&quot;.equals(monthname)) {</span>
+<span class="fc" id="L55">			result += 7;</span>
+		}
+<span class="fc bfc" id="L57" title="All 2 branches covered.">		if (&quot;aug&quot;.equals(monthname)) {</span>
+<span class="fc" id="L58">			result += 8;</span>
+		}
+<span class="fc bfc" id="L60" title="All 2 branches covered.">		if (&quot;sep&quot;.equals(monthname)) {</span>
+<span class="fc" id="L61">			result += 9;</span>
+		}
+<span class="fc bfc" id="L63" title="All 2 branches covered.">		if (&quot;oct&quot;.equals(monthname)) {</span>
+<span class="fc" id="L64">			result += 10;</span>
+		}
+<span class="fc bfc" id="L66" title="All 2 branches covered.">		if (&quot;nov&quot;.equals(monthname)) {</span>
+<span class="fc" id="L67">			result += 11;</span>
+		}
+<span class="fc bfc" id="L69" title="All 2 branches covered.">		if (&quot;dec&quot;.equals(monthname)) {</span>
+<span class="fc" id="L70">			result += 12;</span>
+		}
+
+<span class="fc" id="L73">		return &quot;&quot; + result;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

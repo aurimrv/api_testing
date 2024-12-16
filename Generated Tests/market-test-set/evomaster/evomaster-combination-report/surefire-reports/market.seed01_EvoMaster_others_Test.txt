@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: market.seed01_EvoMaster_others_Test
+-------------------------------------------------------------------------------
+Tests run: 18, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.802 s <<< FAILURE! - in market.seed01_EvoMaster_others_Test
+test_16  Time elapsed: 0.191 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'fieldErrors'[0].'message' doesn't match.
+Expected: a string containing "Card number shall consist of 13-16 digits"
+  Actual: The value shall not be empty
+
+	at market.seed01_EvoMaster_others_Test.test_16(seed01_EvoMaster_others_Test.java:865)
+
+test_6  Time elapsed: 0.192 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <200>.
+
+	at market.seed01_EvoMaster_others_Test.test_6(seed01_EvoMaster_others_Test.java:264)
+

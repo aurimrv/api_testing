@@ -1,0 +1,119 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run03_DateParseTest
+-------------------------------------------------------------------------------
+Tests run: 18, Failures: 13, Errors: 0, Skipped: 0, Time elapsed: 1.159 s <<< FAILURE! - in org.restscs.v1_gpt4o_run03_DateParseTest
+testCookie(org.restscs.v1_gpt4o_run03_DateParseTest)  Time elapsed: 0.032 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: a string containing "session=12345"
+  Actual: 2
+
+	at org.restscs.v1_gpt4o_run03_DateParseTest.testCookie(v1_gpt4o_run03_DateParseTest.java:179)
+
+testCalc_Addition(org.restscs.v1_gpt4o_run03_DateParseTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run03_DateParseTest.testCalc_Addition(v1_gpt4o_run03_DateParseTest.java:115)
+
+testCalc_Subtraction(org.restscs.v1_gpt4o_run03_DateParseTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run03_DateParseTest.testCalc_Subtraction(v1_gpt4o_run03_DateParseTest.java:128)
+
+testCalc_Multiplication(org.restscs.v1_gpt4o_run03_DateParseTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "6.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run03_DateParseTest.testCalc_Multiplication(v1_gpt4o_run03_DateParseTest.java:141)
+
+testCalc_Division(org.restscs.v1_gpt4o_run03_DateParseTest)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run03_DateParseTest.testCalc_Division(v1_gpt4o_run03_DateParseTest.java:154)
+
+testCalc_InvalidOperation(org.restscs.v1_gpt4o_run03_DateParseTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v1_gpt4o_run03_DateParseTest.testCalc_InvalidOperation(v1_gpt4o_run03_DateParseTest.java:166)
+
+testCostfuns(org.restscs.v1_gpt4o_run03_DateParseTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: a string containing "cost"
+  Actual: 10
+
+	at org.restscs.v1_gpt4o_run03_DateParseTest.testCostfuns(v1_gpt4o_run03_DateParseTest.java:191)
+
+testFileSuffix(org.restscs.v1_gpt4o_run03_DateParseTest)  Time elapsed: 0.006 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: a string containing ".txt"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run03_DateParseTest.testFileSuffix(v1_gpt4o_run03_DateParseTest.java:203)
+
+testNotyPevar(org.restscs.v1_gpt4o_run03_DateParseTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: a string containing "notypevar"
+  Actual: 2
+
+	at org.restscs.v1_gpt4o_run03_DateParseTest.testNotyPevar(v1_gpt4o_run03_DateParseTest.java:215)
+
+testRegex(org.restscs.v1_gpt4o_run03_DateParseTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: a string containing "regex"
+  Actual: none
+
+	at org.restscs.v1_gpt4o_run03_DateParseTest.testRegex(v1_gpt4o_run03_DateParseTest.java:240)
+
+testPat(org.restscs.v1_gpt4o_run03_DateParseTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: a string containing "pattern"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run03_DateParseTest.testPat(v1_gpt4o_run03_DateParseTest.java:252)
+
+testText2txt(org.restscs.v1_gpt4o_run03_DateParseTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: a string containing "text2txt"
+  Actual: 
+
+	at org.restscs.v1_gpt4o_run03_DateParseTest.testText2txt(v1_gpt4o_run03_DateParseTest.java:265)
+
+testTitle(org.restscs.v1_gpt4o_run03_DateParseTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: a string containing "title"
+  Actual: 1
+
+	at org.restscs.v1_gpt4o_run03_DateParseTest.testTitle(v1_gpt4o_run03_DateParseTest.java:277)
+

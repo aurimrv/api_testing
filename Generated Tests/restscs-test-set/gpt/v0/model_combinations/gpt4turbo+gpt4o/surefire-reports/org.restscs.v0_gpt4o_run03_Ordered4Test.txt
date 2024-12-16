@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt4o_run03_Ordered4Test
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.004 s <<< FAILURE! - in org.restscs.v0_gpt4o_run03_Ordered4Test
+testOrdered4Increasing(org.restscs.v0_gpt4o_run03_Ordered4Test)  Time elapsed: 0.031 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "increasing"
+  Actual: unordered
+
+	at org.restscs.v0_gpt4o_run03_Ordered4Test.testOrdered4Increasing(v0_gpt4o_run03_Ordered4Test.java:68)
+
+testOrdered4Decreasing(org.restscs.v0_gpt4o_run03_Ordered4Test)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "decreasing"
+  Actual: unordered
+
+	at org.restscs.v0_gpt4o_run03_Ordered4Test.testOrdered4Decreasing(v0_gpt4o_run03_Ordered4Test.java:84)
+

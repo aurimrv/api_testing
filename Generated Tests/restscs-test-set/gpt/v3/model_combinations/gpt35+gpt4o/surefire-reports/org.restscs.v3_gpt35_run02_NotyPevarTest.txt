@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt35_run02_NotyPevarTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.679 s <<< FAILURE! - in org.restscs.v3_gpt35_run02_NotyPevarTest
+testInvalidInputForNotyPevar(org.restscs.v3_gpt35_run02_NotyPevarTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_NotyPevarTest.testInvalidInputForNotyPevar(v3_gpt35_run02_NotyPevarTest.java:65)
+
+testSchemaValidationForNotyPevar(org.restscs.v3_gpt35_run02_NotyPevarTest)  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+0
+
+	at org.restscs.v3_gpt35_run02_NotyPevarTest.testSchemaValidationForNotyPevar(v3_gpt35_run02_NotyPevarTest.java:77)
+
+testBusinessRuleForNotyPevar(org.restscs.v3_gpt35_run02_NotyPevarTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 3
+
+	at org.restscs.v3_gpt35_run02_NotyPevarTest.testBusinessRuleForNotyPevar(v3_gpt35_run02_NotyPevarTest.java:89)
+

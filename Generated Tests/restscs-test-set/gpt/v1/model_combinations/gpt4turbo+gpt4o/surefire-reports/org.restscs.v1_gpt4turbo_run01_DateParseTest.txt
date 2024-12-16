@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4turbo_run01_DateParseTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.153 s <<< FAILURE! - in org.restscs.v1_gpt4turbo_run01_DateParseTest
+testDateParseEndpointInvalidDayname(org.restscs.v1_gpt4turbo_run01_DateParseTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v1_gpt4turbo_run01_DateParseTest.testDateParseEndpointInvalidDayname(v1_gpt4turbo_run01_DateParseTest.java:74)
+
+testDateParseEndpointInvalidMonthname(org.restscs.v1_gpt4turbo_run01_DateParseTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v1_gpt4turbo_run01_DateParseTest.testDateParseEndpointInvalidMonthname(v1_gpt4turbo_run01_DateParseTest.java:85)
+

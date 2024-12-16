@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run02_DateParseTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.989 s <<< FAILURE! - in org.restscs.v3_gpt4o_run02_DateParseTest
+testDateParseSchemaValidation(org.restscs.v3_gpt4o_run02_DateParseTest)  Time elapsed: 0.017 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restscs.v3_gpt4o_run02_DateParseTest.testDateParseSchemaValidation(v3_gpt4o_run02_DateParseTest.java:161)
+

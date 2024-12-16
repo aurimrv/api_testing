@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4turbo_run03_CustomerRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.516 s <<< FAILURE! - in market.v2_gpt4turbo_run03_CustomerRestControllerTest
+testCreateCustomer_schemaValidation  Time elapsed: 0.074 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.v2_gpt4turbo_run03_CustomerRestControllerTest.testCreateCustomer_schemaValidation(v2_gpt4turbo_run03_CustomerRestControllerTest.java:86)
+

@@ -1,0 +1,47 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4turbo_run02_CostfunsTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.944 s <<< FAILURE! - in org.restscs.v3_gpt4turbo_run02_CostfunsTest
+testSubject_withValidInputs(org.restscs.v3_gpt4turbo_run02_CostfunsTest)  Time elapsed: 0.032 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "1"
+  Actual: 10
+
+	at org.restscs.v3_gpt4turbo_run02_CostfunsTest.testSubject_withValidInputs(v3_gpt4turbo_run02_CostfunsTest.java:69)
+
+testSubject_withNegativeIndex(org.restscs.v3_gpt4turbo_run02_CostfunsTest)  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 10
+
+	at org.restscs.v3_gpt4turbo_run02_CostfunsTest.testSubject_withNegativeIndex(v3_gpt4turbo_run02_CostfunsTest.java:84)
+
+testSubject_withHighIndex(org.restscs.v3_gpt4turbo_run02_CostfunsTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "4"
+  Actual: 10
+
+	at org.restscs.v3_gpt4turbo_run02_CostfunsTest.testSubject_withHighIndex(v3_gpt4turbo_run02_CostfunsTest.java:99)
+
+testSubject_withStringComparison(org.restscs.v3_gpt4turbo_run02_CostfunsTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "8"
+  Actual: 10
+
+	at org.restscs.v3_gpt4turbo_run02_CostfunsTest.testSubject_withStringComparison(v3_gpt4turbo_run02_CostfunsTest.java:114)
+
+testSubject_internalServerErrorSimulation(org.restscs.v3_gpt4turbo_run02_CostfunsTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at org.restscs.v3_gpt4turbo_run02_CostfunsTest.testSubject_internalServerErrorSimulation(v3_gpt4turbo_run02_CostfunsTest.java:128)
+

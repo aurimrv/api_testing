@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v2_gpt4o_run03_FisherTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.775 s <<< FAILURE! - in org.restncs.v2_gpt4o_run03_FisherTest
+testBessjSchemaValidation(org.restncs.v2_gpt4o_run03_FisherTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v2_gpt4o_run03_FisherTest.testBessjSchemaValidation(v2_gpt4o_run03_FisherTest.java:130)
+
+testFisherInternalServerError(org.restncs.v2_gpt4o_run03_FisherTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restncs.v2_gpt4o_run03_FisherTest.testFisherInternalServerError(v2_gpt4o_run03_FisherTest.java:67)
+

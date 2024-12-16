@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt35_run03_Text2TxtTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.971 s <<< FAILURE! - in org.restscs.v1_gpt35_run03_Text2TxtTest
+testText2TxtEndpointInvalidInput(org.restscs.v1_gpt35_run03_Text2TxtTest)  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v1_gpt35_run03_Text2TxtTest.testText2TxtEndpointInvalidInput(v1_gpt35_run03_Text2TxtTest.java:81)
+
+testText2TxtEndpoint(org.restscs.v1_gpt35_run03_Text2TxtTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "btw"
+  Actual: 2
+
+	at org.restscs.v1_gpt35_run03_Text2TxtTest.testText2TxtEndpoint(v1_gpt35_run03_Text2TxtTest.java:68)
+

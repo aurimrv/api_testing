@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4turbo_run03_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.779 s <<< FAILURE! - in org.restscs.v3_gpt4turbo_run03_RegexTest
+testSubject_withServerErrorSimulation(org.restscs.v3_gpt4turbo_run03_RegexTest)  Time elapsed: 0.056 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4turbo_run03_RegexTest.testSubject_withServerErrorSimulation(v3_gpt4turbo_run03_RegexTest.java:102)
+
+testSubject_withValidUrl(org.restscs.v3_gpt4turbo_run03_RegexTest)  Time elapsed: 0.212 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v3_gpt4turbo_run03_RegexTest.testSubject_withValidUrl(v3_gpt4turbo_run03_RegexTest.java:62)
+

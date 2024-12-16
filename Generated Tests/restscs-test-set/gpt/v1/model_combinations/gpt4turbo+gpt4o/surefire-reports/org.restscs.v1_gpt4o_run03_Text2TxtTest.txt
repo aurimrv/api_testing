@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run03_Text2TxtTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.687 s <<< FAILURE! - in org.restscs.v1_gpt4o_run03_Text2TxtTest
+testPatUsingGET(org.restscs.v1_gpt4o_run03_Text2TxtTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Pattern match result"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run03_Text2TxtTest.testPatUsingGET(v1_gpt4o_run03_Text2TxtTest.java:146)
+
+testCalcUsingGET(org.restscs.v1_gpt4o_run03_Text2TxtTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run03_Text2TxtTest.testCalcUsingGET(v1_gpt4o_run03_Text2TxtTest.java:64)
+
+testCookieUsingGET(org.restscs.v1_gpt4o_run03_Text2TxtTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "session=12345; Domain=example.com; Path=/"
+  Actual: 2
+
+	at org.restscs.v1_gpt4o_run03_Text2TxtTest.testCookieUsingGET(v1_gpt4o_run03_Text2TxtTest.java:75)
+
+testRegexUsingGET(org.restscs.v1_gpt4o_run03_Text2TxtTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Regex match result"
+  Actual: none
+
+	at org.restscs.v1_gpt4o_run03_Text2TxtTest.testRegexUsingGET(v1_gpt4o_run03_Text2TxtTest.java:136)
+

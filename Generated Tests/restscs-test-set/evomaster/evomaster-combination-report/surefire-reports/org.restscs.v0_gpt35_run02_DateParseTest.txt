@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt35_run02_DateParseTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.957 s <<< FAILURE! - in org.restscs.v0_gpt35_run02_DateParseTest
+testDateParseValidInputs(org.restscs.v0_gpt35_run02_DateParseTest)  Time elapsed: 0.039 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[1]> but was:<[2]>
+	at org.restscs.v0_gpt35_run02_DateParseTest.testDateParseValidInputs(v0_gpt35_run02_DateParseTest.java:71)
+
+testDateParseInvalidDay(org.restscs.v0_gpt35_run02_DateParseTest)  Time elapsed: 0.048 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v0_gpt35_run02_DateParseTest.testDateParseInvalidDay(v0_gpt35_run02_DateParseTest.java:85)
+
+testDateParseInvalidMonth(org.restscs.v0_gpt35_run02_DateParseTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v0_gpt35_run02_DateParseTest.testDateParseInvalidMonth(v0_gpt35_run02_DateParseTest.java:99)
+

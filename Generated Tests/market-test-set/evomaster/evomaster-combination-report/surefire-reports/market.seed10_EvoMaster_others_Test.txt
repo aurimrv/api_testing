@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: market.seed10_EvoMaster_others_Test
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 4.659 s <<< FAILURE! - in market.seed10_EvoMaster_others_Test
+test_13  Time elapsed: 0.221 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'fieldErrors'[0].'message' doesn't match.
+Expected: a string containing "Not a valid credit card number"
+  Actual: Card number shall consist of 13-16 digits
+
+	at market.seed10_EvoMaster_others_Test.test_13(seed10_EvoMaster_others_Test.java:501)
+
+test_15  Time elapsed: 0.202 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'fieldErrors'[1].'field' doesn't match.
+Expected: a string containing "password"
+  Actual: name
+
+	at market.seed10_EvoMaster_others_Test.test_15(seed10_EvoMaster_others_Test.java:720)
+

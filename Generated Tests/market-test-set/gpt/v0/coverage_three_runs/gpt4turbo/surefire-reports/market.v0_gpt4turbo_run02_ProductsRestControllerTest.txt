@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: market.v0_gpt4turbo_run02_ProductsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.663 s <<< FAILURE! - in market.v0_gpt4turbo_run02_ProductsRestControllerTest
+testGetProductValidId  Time elapsed: 0.078 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path _links.self.href doesn't match.
+Expected: a string containing "http://localhost:45181/products/1"
+  Actual: null
+
+	at market.v0_gpt4turbo_run02_ProductsRestControllerTest.testGetProductValidId(v0_gpt4turbo_run02_ProductsRestControllerTest.java:78)
+

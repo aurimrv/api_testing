@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v3_gpt35_run03_FisherTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.834 s <<< FAILURE! - in org.restncs.v3_gpt35_run03_FisherTest
+testFisherSchemaValidation(org.restncs.v3_gpt35_run03_FisherTest)  Time elapsed: 0.062 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsInt doesn't match.
+Expected: not null
+  Actual: null
+
+	at org.restncs.v3_gpt35_run03_FisherTest.testFisherSchemaValidation(v3_gpt35_run03_FisherTest.java:74)
+
+testFisherBusinessRuleEnforcement(org.restncs.v3_gpt35_run03_FisherTest)  Time elapsed: 0.039 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: <0.3085375387259869>
+  Actual: 0.35048094716167105
+
+	at org.restncs.v3_gpt35_run03_FisherTest.testFisherBusinessRuleEnforcement(v3_gpt35_run03_FisherTest.java:86)
+
+testFisherWithInvalidInputs(org.restncs.v3_gpt35_run03_FisherTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restncs.v3_gpt35_run03_FisherTest.testFisherWithInvalidInputs(v3_gpt35_run03_FisherTest.java:63)
+

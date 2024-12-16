@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt4turbo_run01_ProductsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.422 s <<< FAILURE! - in market.v3_gpt4turbo_run01_ProductsRestControllerTest
+testGetProduct_internalServerError  Time elapsed: 0.054 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <500>.
+
+	at market.v3_gpt4turbo_run01_ProductsRestControllerTest.testGetProduct_internalServerError(v3_gpt4turbo_run01_ProductsRestControllerTest.java:104)
+

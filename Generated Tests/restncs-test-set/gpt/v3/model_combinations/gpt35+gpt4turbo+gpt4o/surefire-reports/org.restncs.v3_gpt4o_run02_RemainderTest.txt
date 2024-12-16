@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v3_gpt4o_run02_RemainderTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.805 s <<< FAILURE! - in org.restncs.v3_gpt4o_run02_RemainderTest
+testRemainderSchemaValidation(org.restncs.v3_gpt4o_run02_RemainderTest)  Time elapsed: 0.014 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restncs.v3_gpt4o_run02_RemainderTest.testRemainderSchemaValidation(v3_gpt4o_run02_RemainderTest.java:102)
+
+testRemainderByZero(org.restncs.v3_gpt4o_run02_RemainderTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restncs.v3_gpt4o_run02_RemainderTest.testRemainderByZero(v3_gpt4o_run02_RemainderTest.java:78)
+
+testRemainderLargeNumbers(org.restncs.v3_gpt4o_run02_RemainderTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v3_gpt4o_run02_RemainderTest.testRemainderLargeNumbers(v3_gpt4o_run02_RemainderTest.java:124)
+

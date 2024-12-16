@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt35_run02_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.66 s <<< FAILURE! - in org.restscs.v3_gpt35_run02_RegexTest
+testRegexWithValidInputUrl(org.restscs.v3_gpt35_run02_RegexTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "url"
+  Actual: 0
+
+	at org.restscs.v3_gpt35_run02_RegexTest.testRegexWithValidInputUrl(v3_gpt35_run02_RegexTest.java:64)
+

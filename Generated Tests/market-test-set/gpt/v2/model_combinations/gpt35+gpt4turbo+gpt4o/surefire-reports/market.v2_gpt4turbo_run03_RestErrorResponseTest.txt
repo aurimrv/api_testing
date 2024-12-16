@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4turbo_run03_RestErrorResponseTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.154 s <<< FAILURE! - in market.v2_gpt4turbo_run03_RestErrorResponseTest
+testValidResponseSchemaCustomer  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.IllegalArgumentException: Illegal character in query at index 19: /customer?name=Ivan Petrov
+	at market.v2_gpt4turbo_run03_RestErrorResponseTest.testValidResponseSchemaCustomer(v2_gpt4turbo_run03_RestErrorResponseTest.java:76)
+Caused by: java.net.URISyntaxException: Illegal character in query at index 19: /customer?name=Ivan Petrov
+	at market.v2_gpt4turbo_run03_RestErrorResponseTest.testValidResponseSchemaCustomer(v2_gpt4turbo_run03_RestErrorResponseTest.java:76)
+

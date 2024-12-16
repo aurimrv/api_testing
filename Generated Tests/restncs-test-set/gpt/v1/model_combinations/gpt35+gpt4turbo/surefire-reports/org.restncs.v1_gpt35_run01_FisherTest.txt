@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v1_gpt35_run01_FisherTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.672 s <<< FAILURE! - in org.restncs.v1_gpt35_run01_FisherTest
+testFisherEndpoint(org.restncs.v1_gpt35_run01_FisherTest)  Time elapsed: 0.029 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0.04999999999999999> but was:<0.89799772335573>
+	at org.restncs.v1_gpt35_run01_FisherTest.testFisherEndpoint(v1_gpt35_run01_FisherTest.java:72)
+
+testFisherEndpointWithZeroValues(org.restncs.v1_gpt35_run01_FisherTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restncs.v1_gpt35_run01_FisherTest.testFisherEndpointWithZeroValues(v1_gpt35_run01_FisherTest.java:100)
+
+testFisherEndpointWithNegativeValues(org.restncs.v1_gpt35_run01_FisherTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restncs.v1_gpt35_run01_FisherTest.testFisherEndpointWithNegativeValues(v1_gpt35_run01_FisherTest.java:86)
+

@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4turbo_run02_CostfunsTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.656 s <<< FAILURE! - in org.restscs.v2_gpt4turbo_run02_CostfunsTest
+testCostFunsBusinessRule(org.restscs.v2_gpt4turbo_run02_CostfunsTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: not is "10"
+  Actual: 10
+
+	at org.restscs.v2_gpt4turbo_run02_CostfunsTest.testCostFunsBusinessRule(v2_gpt4turbo_run02_CostfunsTest.java:85)
+

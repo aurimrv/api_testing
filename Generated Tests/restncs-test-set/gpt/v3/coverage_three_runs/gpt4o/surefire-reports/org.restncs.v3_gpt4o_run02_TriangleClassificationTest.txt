@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v3_gpt4o_run02_TriangleClassificationTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 1.068 s <<< FAILURE! - in org.restncs.v3_gpt4o_run02_TriangleClassificationTest
+testClassifyInternalServerError(org.restncs.v3_gpt4o_run02_TriangleClassificationTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restncs.v3_gpt4o_run02_TriangleClassificationTest.testClassifyInternalServerError(v3_gpt4o_run02_TriangleClassificationTest.java:131)
+
+testSchemaValidation(org.restncs.v3_gpt4o_run02_TriangleClassificationTest)  Time elapsed: 0.021 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restncs.v3_gpt4o_run02_TriangleClassificationTest.testSchemaValidation(v3_gpt4o_run02_TriangleClassificationTest.java:144)
+

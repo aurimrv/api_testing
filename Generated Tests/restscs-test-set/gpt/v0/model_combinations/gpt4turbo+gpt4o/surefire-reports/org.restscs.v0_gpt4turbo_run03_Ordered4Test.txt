@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt4turbo_run03_Ordered4Test
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.737 s <<< FAILURE! - in org.restscs.v0_gpt4turbo_run03_Ordered4Test
+testOrdered4Increasing(org.restscs.v0_gpt4turbo_run03_Ordered4Test)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "increasing"
+  Actual: unordered
+
+	at org.restscs.v0_gpt4turbo_run03_Ordered4Test.testOrdered4Increasing(v0_gpt4turbo_run03_Ordered4Test.java:66)
+
+testOrdered4Decreasing(org.restscs.v0_gpt4turbo_run03_Ordered4Test)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "decreasing"
+  Actual: unordered
+
+	at org.restscs.v0_gpt4turbo_run03_Ordered4Test.testOrdered4Decreasing(v0_gpt4turbo_run03_Ordered4Test.java:79)
+
+testOrdered4BadRequest(org.restscs.v0_gpt4turbo_run03_Ordered4Test)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v0_gpt4turbo_run03_Ordered4Test.testOrdered4BadRequest(v0_gpt4turbo_run03_Ordered4Test.java:104)
+

@@ -1,0 +1,74 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt35_run02_CostfunsTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 10, Errors: 0, Skipped: 0, Time elapsed: 0.734 s <<< FAILURE! - in org.restscs.v3_gpt35_run02_CostfunsTest
+testCostfuns_invalidInput_i0(org.restscs.v3_gpt35_run02_CostfunsTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_CostfunsTest.testCostfuns_invalidInput_i0(v3_gpt35_run02_CostfunsTest.java:64)
+
+testCostfuns_invalidInput_i1(org.restscs.v3_gpt35_run02_CostfunsTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_CostfunsTest.testCostfuns_invalidInput_i1(v3_gpt35_run02_CostfunsTest.java:74)
+
+testCostfuns_invalidInput_i2(org.restscs.v3_gpt35_run02_CostfunsTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_CostfunsTest.testCostfuns_invalidInput_i2(v3_gpt35_run02_CostfunsTest.java:84)
+
+testCostfuns_invalidInput_i3(org.restscs.v3_gpt35_run02_CostfunsTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_CostfunsTest.testCostfuns_invalidInput_i3(v3_gpt35_run02_CostfunsTest.java:94)
+
+testCostfuns_invalidInput_i4(org.restscs.v3_gpt35_run02_CostfunsTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_CostfunsTest.testCostfuns_invalidInput_i4(v3_gpt35_run02_CostfunsTest.java:104)
+
+testCostfuns_invalidInput_i5(org.restscs.v3_gpt35_run02_CostfunsTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_CostfunsTest.testCostfuns_invalidInput_i5(v3_gpt35_run02_CostfunsTest.java:114)
+
+testCostfuns_invalidInput_i6(org.restscs.v3_gpt35_run02_CostfunsTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_CostfunsTest.testCostfuns_invalidInput_i6(v3_gpt35_run02_CostfunsTest.java:124)
+
+testCostfuns_invalidInput_i9(org.restscs.v3_gpt35_run02_CostfunsTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_CostfunsTest.testCostfuns_invalidInput_i9(v3_gpt35_run02_CostfunsTest.java:134)
+
+testCostfuns_invalidInput_i10(org.restscs.v3_gpt35_run02_CostfunsTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_CostfunsTest.testCostfuns_invalidInput_i10(v3_gpt35_run02_CostfunsTest.java:144)
+
+testCostfuns_invalidInput_i11(org.restscs.v3_gpt35_run02_CostfunsTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_CostfunsTest.testCostfuns_invalidInput_i11(v3_gpt35_run02_CostfunsTest.java:154)
+

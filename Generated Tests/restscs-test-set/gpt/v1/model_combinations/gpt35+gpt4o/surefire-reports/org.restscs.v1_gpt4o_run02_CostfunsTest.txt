@@ -1,0 +1,94 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run02_CostfunsTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 10, Errors: 0, Skipped: 0, Time elapsed: 0.851 s <<< FAILURE! - in org.restscs.v1_gpt4o_run02_CostfunsTest
+testCostfunsEndpoint(org.restscs.v1_gpt4o_run02_CostfunsTest)  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 10
+
+	at org.restscs.v1_gpt4o_run02_CostfunsTest.testCostfunsEndpoint(v1_gpt4o_run02_CostfunsTest.java:103)
+
+testCookieEndpoint(org.restscs.v1_gpt4o_run02_CostfunsTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Cookie set: sessionid=12345; Domain=example.com; Path=/"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run02_CostfunsTest.testCookieEndpoint(v1_gpt4o_run02_CostfunsTest.java:90)
+
+testCalcEndpoint(org.restscs.v1_gpt4o_run02_CostfunsTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run02_CostfunsTest.testCalcEndpoint(v1_gpt4o_run02_CostfunsTest.java:63)
+
+testDateParseEndpoint(org.restscs.v1_gpt4o_run02_CostfunsTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Parsed date: Monday, January"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run02_CostfunsTest.testDateParseEndpoint(v1_gpt4o_run02_CostfunsTest.java:151)
+
+testFileSuffixEndpoint(org.restscs.v1_gpt4o_run02_CostfunsTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "File suffix: .pdf"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run02_CostfunsTest.testFileSuffixEndpoint(v1_gpt4o_run02_CostfunsTest.java:159)
+
+testOrdered4Endpoint(org.restscs.v1_gpt4o_run02_CostfunsTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Ordered: word1, word2, word4, word3"
+  Actual: increasing
+
+	at org.restscs.v1_gpt4o_run02_CostfunsTest.testOrdered4Endpoint(v1_gpt4o_run02_CostfunsTest.java:177)
+
+testTitleEndpoint(org.restscs.v1_gpt4o_run02_CostfunsTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Title: Mr Smith"
+  Actual: -1
+
+	at org.restscs.v1_gpt4o_run02_CostfunsTest.testTitleEndpoint(v1_gpt4o_run02_CostfunsTest.java:206)
+
+testRegexEndpoint(org.restscs.v1_gpt4o_run02_CostfunsTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Pattern matched: example"
+  Actual: none
+
+	at org.restscs.v1_gpt4o_run02_CostfunsTest.testRegexEndpoint(v1_gpt4o_run02_CostfunsTest.java:184)
+
+testText2TxtEndpoint(org.restscs.v1_gpt4o_run02_CostfunsTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Concatenated: hello, world, java"
+  Actual: 
+
+	at org.restscs.v1_gpt4o_run02_CostfunsTest.testText2TxtEndpoint(v1_gpt4o_run02_CostfunsTest.java:198)
+
+testNotTypeVarEndpoint(org.restscs.v1_gpt4o_run02_CostfunsTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Processed: 5, test"
+  Actual: 2
+
+	at org.restscs.v1_gpt4o_run02_CostfunsTest.testNotTypeVarEndpoint(v1_gpt4o_run02_CostfunsTest.java:167)
+

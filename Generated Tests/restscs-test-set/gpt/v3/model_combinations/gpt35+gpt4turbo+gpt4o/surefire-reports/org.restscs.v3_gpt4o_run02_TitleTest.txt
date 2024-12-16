@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run02_TitleTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.692 s <<< FAILURE! - in org.restscs.v3_gpt4o_run02_TitleTest
+testSchemaValidation(org.restscs.v3_gpt4o_run02_TitleTest)  Time elapsed: 0.021 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restscs.v3_gpt4o_run02_TitleTest.testSchemaValidation(v3_gpt4o_run02_TitleTest.java:112)
+
+testInvalidInput(org.restscs.v3_gpt4o_run02_TitleTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v3_gpt4o_run02_TitleTest.testInvalidInput(v3_gpt4o_run02_TitleTest.java:92)
+
+test500InternalServerError(org.restscs.v3_gpt4o_run02_TitleTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run02_TitleTest.test500InternalServerError(v3_gpt4o_run02_TitleTest.java:103)
+

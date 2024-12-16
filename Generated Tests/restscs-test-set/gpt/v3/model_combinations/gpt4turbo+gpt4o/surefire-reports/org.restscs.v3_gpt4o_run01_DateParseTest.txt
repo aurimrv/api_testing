@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run01_DateParseTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 3, Errors: 1, Skipped: 0, Time elapsed: 0.738 s <<< FAILURE! - in org.restscs.v3_gpt4o_run01_DateParseTest
+testServerErrorSimulation(org.restscs.v3_gpt4o_run01_DateParseTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_DateParseTest.testServerErrorSimulation(v3_gpt4o_run01_DateParseTest.java:115)
+
+testForbiddenResponse(org.restscs.v3_gpt4o_run01_DateParseTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_DateParseTest.testForbiddenResponse(v3_gpt4o_run01_DateParseTest.java:160)
+
+testUnauthorizedResponse(org.restscs.v3_gpt4o_run01_DateParseTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <200>.
+
+	at org.restscs.v3_gpt4o_run01_DateParseTest.testUnauthorizedResponse(v3_gpt4o_run01_DateParseTest.java:172)
+
+testSchemaValidation(org.restscs.v3_gpt4o_run01_DateParseTest)  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restscs.v3_gpt4o_run01_DateParseTest.testSchemaValidation(v3_gpt4o_run01_DateParseTest.java:127)
+

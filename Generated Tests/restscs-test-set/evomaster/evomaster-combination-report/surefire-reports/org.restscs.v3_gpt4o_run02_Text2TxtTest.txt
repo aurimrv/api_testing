@@ -1,0 +1,67 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run02_Text2TxtTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 0.852 s <<< FAILURE! - in org.restscs.v3_gpt4o_run02_Text2TxtTest
+testCalcUsingGET(org.restscs.v3_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run02_Text2TxtTest.testCalcUsingGET(v3_gpt4o_run02_Text2TxtTest.java:67)
+
+testCookieUsingGET(org.restscs.v3_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Cookie set"
+  Actual: 2
+
+	at org.restscs.v3_gpt4o_run02_Text2TxtTest.testCookieUsingGET(v3_gpt4o_run02_Text2TxtTest.java:173)
+
+testDateParseUsingGET(org.restscs.v3_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Parsed date"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run02_Text2TxtTest.testDateParseUsingGET(v3_gpt4o_run02_Text2TxtTest.java:194)
+
+testFileSuffixUsingGET(org.restscs.v3_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: ".txt"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run02_Text2TxtTest.testFileSuffixUsingGET(v3_gpt4o_run02_Text2TxtTest.java:214)
+
+testPatUsingGET(org.restscs.v3_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Pattern found"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run02_Text2TxtTest.testPatUsingGET(v3_gpt4o_run02_Text2TxtTest.java:234)
+
+testRegexUsingGET(org.restscs.v3_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Pattern matches regex"
+  Actual: none
+
+	at org.restscs.v3_gpt4o_run02_Text2TxtTest.testRegexUsingGET(v3_gpt4o_run02_Text2TxtTest.java:253)
+
+testTitleUsingGET(org.restscs.v3_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Title valid"
+  Actual: 1
+
+	at org.restscs.v3_gpt4o_run02_Text2TxtTest.testTitleUsingGET(v3_gpt4o_run02_Text2TxtTest.java:272)
+

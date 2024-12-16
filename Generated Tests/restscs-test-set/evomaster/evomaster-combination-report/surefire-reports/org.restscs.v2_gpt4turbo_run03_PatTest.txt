@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4turbo_run03_PatTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 1.106 s <<< FAILURE! - in org.restscs.v2_gpt4turbo_run03_PatTest
+testSubjectWithInvalidInput(org.restscs.v2_gpt4turbo_run03_PatTest)  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v2_gpt4turbo_run03_PatTest.testSubjectWithInvalidInput(v2_gpt4turbo_run03_PatTest.java:85)
+
+testSubjectResponseSchemaValidation(org.restscs.v2_gpt4turbo_run03_PatTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected content-type "application/json" doesn't match actual content-type "text/plain;charset=UTF-8".
+
+	at org.restscs.v2_gpt4turbo_run03_PatTest.testSubjectResponseSchemaValidation(v2_gpt4turbo_run03_PatTest.java:100)
+
+testSubjectErrorScenario(org.restscs.v2_gpt4turbo_run03_PatTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4turbo_run03_PatTest.testSubjectErrorScenario(v2_gpt4turbo_run03_PatTest.java:115)
+
+testBusinessRuleEnforcement(org.restscs.v2_gpt4turbo_run03_PatTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: The response should indicate multiple occurrences
+	at org.restscs.v2_gpt4turbo_run03_PatTest.testBusinessRuleEnforcement(v2_gpt4turbo_run03_PatTest.java:132)
+

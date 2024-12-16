@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.restncs.v3_gpt4o_run03_TriangleClassificationTest
--------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.364 s - in org.restncs.v3_gpt4o_run03_TriangleClassificationTest

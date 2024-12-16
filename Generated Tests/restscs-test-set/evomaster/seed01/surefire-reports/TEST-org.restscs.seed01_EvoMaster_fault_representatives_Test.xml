@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="4.168" tests="124" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/test-classes:/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/classes:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.0.3.RELEASE/spring-boot-starter-web-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter/2.0.3.RELEASE/spring-boot-starter-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot/2.0.3.RELEASE/spring-boot-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.3.RELEASE/spring-boot-autoconfigure-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.0.3.RELEASE/spring-boot-starter-logging-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/rincon/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.10.0/log4j-to-slf4j-2.10.0.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar:/home/rincon/.m2/repository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar:/home/rincon/.m2/repository/org/springframework/spring-core/5.0.7.RELEASE/spring-core-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-jcl/5.0.7.RELEASE/spring-jcl-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/yaml/snakeyaml/1.19/snakeyaml-1.19.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.0.3.RELEASE/spring-boot-starter-json-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.6/jackson-databind-2.9.6.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.6/jackson-core-2.9.6.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.6/jackson-datatype-jdk8-2.9.6.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.6/jackson-datatype-jsr310-2.9.6.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.6/jackson-module-parameter-names-2.9.6.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.0.3.RELEASE/spring-boot-starter-tomcat-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.5.31/tomcat-embed-el-8.5.31.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.31/tomcat-embed-websocket-8.5.31.jar:/home/rincon/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.10.Final/hibernate-validator-6.0.10.Final.jar:/home/rincon/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar:/home/rincon/.m2/repository/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-beans/5.0.7.RELEASE/spring-beans-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-webmvc/5.0.7.RELEASE/spring-webmvc-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-aop/5.0.7.RELEASE/spring-aop-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-context/5.0.7.RELEASE/spring-context-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-expression/5.0.7.RELEASE/spring-expression-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger2/2.9.2/springfox-swagger2-2.9.2.jar:/home/rincon/.m2/repository/io/swagger/swagger-annotations/1.5.20/swagger-annotations-1.5.20.jar:/home/rincon/.m2/repository/io/swagger/swagger-models/1.5.20/swagger-models-1.5.20.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.5/jackson-annotations-2.9.5.jar:/home/rincon/.m2/repository/io/springfox/springfox-spi/2.9.2/springfox-spi-2.9.2.jar:/home/rincon/.m2/repository/io/springfox/springfox-core/2.9.2/springfox-core-2.9.2.jar:/home/rincon/.m2/repository/net/bytebuddy/byte-buddy/1.8.12/byte-buddy-1.8.12.jar:/home/rincon/.m2/repository/io/springfox/springfox-schema/2.9.2/springfox-schema-2.9.2.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger-common/2.9.2/springfox-swagger-common-2.9.2.jar:/home/rincon/.m2/repository/com/google/guava/guava/20.0/guava-20.0.jar:/home/rincon/.m2/repository/com/fasterxml/classmate/1.4.0/classmate-1.4.0.jar:/home/rincon/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/rincon/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/plugin/spring-plugin-metadata/1.2.0.RELEASE/spring-plugin-metadata-1.2.0.RELEASE.jar:/home/rincon/.m2/repository/org/mapstruct/mapstruct/1.2.0.Final/mapstruct-1.2.0.Final.jar:/home/rincon/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger-ui/2.9.2/springfox-swagger-ui-2.9.2.jar:/home/rincon/.m2/repository/io/rest-assured/rest-assured/4.3.0/rest-assured-4.3.0.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/home/rincon/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/rincon/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/home/rincon/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/home/rincon/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/rincon/.m2/repository/io/rest-assured/xml-path/4.3.0/xml-path-4.3.0.jar:/home/rincon/.m2/repository/io/rest-assured/rest-assured-common/4.3.0/rest-assured-common-4.3.0.jar:/home/rincon/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/home/rincon/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar:/home/rincon/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar:/home/rincon/.m2/repository/com/sun/xml/bind/jaxb-osgi/2.3.0.1/jaxb-osgi-2.3.0.1.jar:/home/rincon/.m2/repository/org/apache/sling/org.apache.sling.javax.activation/0.1.0/org.apache.sling.javax.activation-0.1.0.jar:/home/rincon/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/home/rincon/.m2/repository/io/rest-assured/json-path/4.3.0/json-path-4.3.0.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy-json/3.0.2/groovy-json-3.0.2.jar:/home/rincon/.m2/repository/io/rest-assured/json-schema-validator/4.3.0/json-schema-validator-4.3.0.jar:/home/rincon/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.10/json-schema-validator-2.2.10.jar:/home/rincon/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.10/json-schema-core-1.2.10.jar:/home/rincon/.m2/repository/com/github/java-json-tools/jackson-coreutils/1.9/jackson-coreutils-1.9.jar:/home/rincon/.m2/repository/com/github/fge/msg-simple/1.1/msg-simple-1.1.jar:/home/rincon/.m2/repository/com/github/fge/btf/1.2/btf-1.2.jar:/home/rincon/.m2/repository/com/github/fge/uri-template/0.9/uri-template-0.9.jar:/home/rincon/.m2/repository/org/mozilla/rhino/1.7.7.1/rhino-1.7.7.1.jar:/home/rincon/.m2/repository/javax/mail/mailapi/1.4.3/mailapi-1.4.3.jar:/home/rincon/.m2/repository/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar:/home/rincon/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.0.0/libphonenumber-8.0.0.jar:/home/rincon/.m2/repository/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar:/home/rincon/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar:/home/rincon/.m2/repository/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy/3.0.9/groovy-3.0.9.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.9/groovy-xml-3.0.9.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-controller-api/3.0.0/evomaster-client-java-controller-api-3.0.0.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-sql-dto/3.0.0/evomaster-client-java-sql-dto-3.0.0.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-controller/3.0.0/evomaster-client-java-controller-3.0.0.jar:/home/rincon/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/home/rincon/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/rincon/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/home/rincon/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/rincon/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.1.1/javax.ws.rs-api-2.1.1.jar:/home/rincon/.m2/repository/junit/junit/4.4/junit-4.4.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Linux"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/home/rincon/apps/java/jdk-8/jre/lib/amd64"/>
+    <property name="sun.java.command" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/surefire/surefirebooter1063156286261628774.jar /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/surefire 2024-08-02T10-39-02_974-jvmRun1 surefire4823258333045757760tmp surefire_09149847421096815134tmp"/>
+    <property name="surefire.test.class.path" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/test-classes:/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/classes:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.0.3.RELEASE/spring-boot-starter-web-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter/2.0.3.RELEASE/spring-boot-starter-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot/2.0.3.RELEASE/spring-boot-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.3.RELEASE/spring-boot-autoconfigure-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.0.3.RELEASE/spring-boot-starter-logging-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/rincon/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.10.0/log4j-to-slf4j-2.10.0.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar:/home/rincon/.m2/repository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar:/home/rincon/.m2/repository/org/springframework/spring-core/5.0.7.RELEASE/spring-core-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-jcl/5.0.7.RELEASE/spring-jcl-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/yaml/snakeyaml/1.19/snakeyaml-1.19.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.0.3.RELEASE/spring-boot-starter-json-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.6/jackson-databind-2.9.6.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.6/jackson-core-2.9.6.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.6/jackson-datatype-jdk8-2.9.6.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.6/jackson-datatype-jsr310-2.9.6.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.6/jackson-module-parameter-names-2.9.6.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.0.3.RELEASE/spring-boot-starter-tomcat-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.5.31/tomcat-embed-el-8.5.31.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.31/tomcat-embed-websocket-8.5.31.jar:/home/rincon/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.10.Final/hibernate-validator-6.0.10.Final.jar:/home/rincon/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar:/home/rincon/.m2/repository/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-beans/5.0.7.RELEASE/spring-beans-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-webmvc/5.0.7.RELEASE/spring-webmvc-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-aop/5.0.7.RELEASE/spring-aop-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-context/5.0.7.RELEASE/spring-context-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-expression/5.0.7.RELEASE/spring-expression-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger2/2.9.2/springfox-swagger2-2.9.2.jar:/home/rincon/.m2/repository/io/swagger/swagger-annotations/1.5.20/swagger-annotations-1.5.20.jar:/home/rincon/.m2/repository/io/swagger/swagger-models/1.5.20/swagger-models-1.5.20.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.5/jackson-annotations-2.9.5.jar:/home/rincon/.m2/repository/io/springfox/springfox-spi/2.9.2/springfox-spi-2.9.2.jar:/home/rincon/.m2/repository/io/springfox/springfox-core/2.9.2/springfox-core-2.9.2.jar:/home/rincon/.m2/repository/net/bytebuddy/byte-buddy/1.8.12/byte-buddy-1.8.12.jar:/home/rincon/.m2/repository/io/springfox/springfox-schema/2.9.2/springfox-schema-2.9.2.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger-common/2.9.2/springfox-swagger-common-2.9.2.jar:/home/rincon/.m2/repository/com/google/guava/guava/20.0/guava-20.0.jar:/home/rincon/.m2/repository/com/fasterxml/classmate/1.4.0/classmate-1.4.0.jar:/home/rincon/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/rincon/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/plugin/spring-plugin-metadata/1.2.0.RELEASE/spring-plugin-metadata-1.2.0.RELEASE.jar:/home/rincon/.m2/repository/org/mapstruct/mapstruct/1.2.0.Final/mapstruct-1.2.0.Final.jar:/home/rincon/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger-ui/2.9.2/springfox-swagger-ui-2.9.2.jar:/home/rincon/.m2/repository/io/rest-assured/rest-assured/4.3.0/rest-assured-4.3.0.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/home/rincon/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/rincon/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/home/rincon/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/home/rincon/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/rincon/.m2/repository/io/rest-assured/xml-path/4.3.0/xml-path-4.3.0.jar:/home/rincon/.m2/repository/io/rest-assured/rest-assured-common/4.3.0/rest-assured-common-4.3.0.jar:/home/rincon/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/home/rincon/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar:/home/rincon/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar:/home/rincon/.m2/repository/com/sun/xml/bind/jaxb-osgi/2.3.0.1/jaxb-osgi-2.3.0.1.jar:/home/rincon/.m2/repository/org/apache/sling/org.apache.sling.javax.activation/0.1.0/org.apache.sling.javax.activation-0.1.0.jar:/home/rincon/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/home/rincon/.m2/repository/io/rest-assured/json-path/4.3.0/json-path-4.3.0.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy-json/3.0.2/groovy-json-3.0.2.jar:/home/rincon/.m2/repository/io/rest-assured/json-schema-validator/4.3.0/json-schema-validator-4.3.0.jar:/home/rincon/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.10/json-schema-validator-2.2.10.jar:/home/rincon/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.10/json-schema-core-1.2.10.jar:/home/rincon/.m2/repository/com/github/java-json-tools/jackson-coreutils/1.9/jackson-coreutils-1.9.jar:/home/rincon/.m2/repository/com/github/fge/msg-simple/1.1/msg-simple-1.1.jar:/home/rincon/.m2/repository/com/github/fge/btf/1.2/btf-1.2.jar:/home/rincon/.m2/repository/com/github/fge/uri-template/0.9/uri-template-0.9.jar:/home/rincon/.m2/repository/org/mozilla/rhino/1.7.7.1/rhino-1.7.7.1.jar:/home/rincon/.m2/repository/javax/mail/mailapi/1.4.3/mailapi-1.4.3.jar:/home/rincon/.m2/repository/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar:/home/rincon/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.0.0/libphonenumber-8.0.0.jar:/home/rincon/.m2/repository/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar:/home/rincon/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar:/home/rincon/.m2/repository/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy/3.0.9/groovy-3.0.9.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.9/groovy-xml-3.0.9.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-controller-api/3.0.0/evomaster-client-java-controller-api-3.0.0.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-sql-dto/3.0.0/evomaster-client-java-sql-dto-3.0.0.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-controller/3.0.0/evomaster-client-java-controller-3.0.0.jar:/home/rincon/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/home/rincon/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/rincon/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/home/rincon/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/rincon/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.1.1/javax.ws.rs-api-2.1.1.jar:/home/rincon/.m2/repository/junit/junit/4.4/junit-4.4.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/rincon"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/home/rincon/apps/java/jdk-8/jre"/>
+    <property name="basedir" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/surefire/surefirebooter1063156286261628774.jar:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar"/>
+    <property name="sun.boot.class.path" value="/home/rincon/apps/java/jdk-8/jre/lib/resources.jar:/home/rincon/apps/java/jdk-8/jre/lib/rt.jar:/home/rincon/apps/java/jdk-8/jre/lib/sunrsasign.jar:/home/rincon/apps/java/jdk-8/jre/lib/jsse.jar:/home/rincon/apps/java/jdk-8/jre/lib/jce.jar:/home/rincon/apps/java/jdk-8/jre/lib/charsets.jar:/home/rincon/apps/java/jdk-8/jre/lib/jfr.jar:/home/rincon/apps/java/jdk-8/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_202-b08"/>
+    <property name="user.name" value="rincon"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.0-117-generic"/>
+    <property name="java.endorsed.dirs" value="/home/rincon/apps/java/jdk-8/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/rincon/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="1.8.0_202"/>
+    <property name="user.dir" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.202-b08"/>
+    <property name="java.ext.dirs" value="/home/rincon/apps/java/jdk-8/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="maven.test.failure.ignore" value="true"/>
+  </properties>
+  <testcase name="test_0" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.121"/>
+  <testcase name="test_1" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.013"/>
+  <testcase name="test_2" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_3" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.012"/>
+  <testcase name="test_4" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.012"/>
+  <testcase name="test_5" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_6" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_7" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.014"/>
+  <testcase name="test_8" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_9" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_10" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_11" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_12" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_13" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_14" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_15" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_16" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_17" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_18" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_19" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_20" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_21" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_22" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_23" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.012"/>
+  <testcase name="test_24" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.013"/>
+  <testcase name="test_25" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_26" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_27" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_28" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_29" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_30" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_31" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_32" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_33" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_34" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_35" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_36" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_37" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_38" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.042"/>
+  <testcase name="test_39" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.021"/>
+  <testcase name="test_40" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_41" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_42" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_43" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_44" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_45" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_46" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_47" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_48" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_49" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_50" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_51" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_52" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_53" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_54" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_55" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_56" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_57" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_58" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_59" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_60" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.012"/>
+  <testcase name="test_61" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_62" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_63" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_64" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_65" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_66" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_67" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_68" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.013"/>
+  <testcase name="test_69" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_70" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_71" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_72" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_73" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.013"/>
+  <testcase name="test_74" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_75" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_76" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_77" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_78" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_79" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_80" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_81" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_82" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_83" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_84" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_85" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_86" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_87" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_88" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_89" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_90" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_91" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_92" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_93" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_94" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_95" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_96" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.011"/>
+  <testcase name="test_97" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_98" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_99" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_100" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.01"/>
+  <testcase name="test_101" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_102" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_107" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.012"/>
+  <testcase name="test_106" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.008"/>
+  <testcase name="test_109" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.008"/>
+  <testcase name="test_113" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.007"/>
+  <testcase name="test_114" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="1.001"/>
+  <testcase name="test_115" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.075"/>
+  <testcase name="test_116" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.062"/>
+  <testcase name="test_117" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.065"/>
+  <testcase name="test_118" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.063"/>
+  <testcase name="test_119" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.059"/>
+  <testcase name="test_120" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.068"/>
+  <testcase name="test_121" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.066"/>
+  <testcase name="test_122" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.053"/>
+  <testcase name="test_123" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.067"/>
+  <testcase name="test_110" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_108" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_103" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.008"/>
+  <testcase name="test_112" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.008"/>
+  <testcase name="test_104" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.009"/>
+  <testcase name="test_111" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.008"/>
+  <testcase name="test_105" classname="org.restscs.seed01_EvoMaster_fault_representatives_Test" time="0.008"/>
+</testsuite>

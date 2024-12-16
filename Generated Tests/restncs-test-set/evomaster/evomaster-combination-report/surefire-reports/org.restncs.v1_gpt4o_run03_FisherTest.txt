@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v1_gpt4o_run03_FisherTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.25 s <<< FAILURE! - in org.restncs.v1_gpt4o_run03_FisherTest
+testFisherEndpoint_BoundaryValues(org.restncs.v1_gpt4o_run03_FisherTest)  Time elapsed: 0.096 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: is <NaN>
+  Actual: NaN
+
+	at org.restncs.v1_gpt4o_run03_FisherTest.testFisherEndpoint_BoundaryValues(v1_gpt4o_run03_FisherTest.java:79)
+
+testFisherEndpoint_InvalidPathParams(org.restncs.v1_gpt4o_run03_FisherTest)  Time elapsed: 0.048 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: is <NaN>
+  Actual: NaN
+
+	at org.restncs.v1_gpt4o_run03_FisherTest.testFisherEndpoint_InvalidPathParams(v1_gpt4o_run03_FisherTest.java:90)
+

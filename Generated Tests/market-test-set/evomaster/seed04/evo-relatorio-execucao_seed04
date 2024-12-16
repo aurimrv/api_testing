@@ -1,0 +1,20 @@
+Seed 04
+* Analyzing 7 tests with size greater than 1
+* Minimization progress: 5/7
+* Minimization progress: 7/7
+* Minimization phase took 7 seconds
+* Evaluated tests: 15985
+* Evaluated actions: 36555
+* Needed budget: 83%
+* Passed time (seconds): 3607
+* Execution time per test (ms): Avg=218,32 , min=8,00 , max=1103,00
+* Execution time per action (ms): Avg=97,19 , min=8,00 , max=622,00
+* Computation overhead between tests (ms): Avg=7,34 , min=0,00 , max=7295,00
+* Computation overhead of resetting the SUT (ms): Avg=4,12 , min=0,00 , max=33,00
+* Computation overhead of fetching test results, per test, subset of targets (ms): Avg=11,37 , min=0,00 , max=62,00
+* Going to save 38 tests to /home/rincon/ar_benchmark/artigo/market-test-suits/evomaster-1h/seed03/tests_seed04
+* Potential faults: 20
+* Covered targets (lines, branches, faults, etc.): 1208
+* Bytecode line coverage: 46% (566 out of 1233 in 79 units/classes)
+* Successfully executed (HTTP code 2xx) 11 endpoints out of 14 (79%)
+

@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.restncs.v0_gpt4o_run01_TriangleClassificationTest
--------------------------------------------------------------------------------
-Tests run: 9, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.961 s <<< FAILURE! - in org.restncs.v0_gpt4o_run01_TriangleClassificationTest
-testMissingParameter(org.restncs.v0_gpt4o_run01_TriangleClassificationTest)  Time elapsed: 0.002 s  <<< ERROR!
-java.net.URISyntaxException: Illegal character in path at index 40: http://localhost:41671/api/triangle/3/4/{c}
-	at org.restncs.v0_gpt4o_run01_TriangleClassificationTest.testMissingParameter(v0_gpt4o_run01_TriangleClassificationTest.java:141)
-

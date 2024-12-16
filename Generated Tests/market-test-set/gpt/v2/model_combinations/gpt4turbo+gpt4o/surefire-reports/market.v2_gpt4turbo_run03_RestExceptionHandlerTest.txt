@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4turbo_run03_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.801 s <<< FAILURE! - in market.v2_gpt4turbo_run03_RestExceptionHandlerTest
+testUnknownEntityException  Time elapsed: 0.028 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is (null or an empty string)
+  Actual: {"timestamp":"2024-12-08T17:42:52.168+00:00","status":404,"error":"Not Found","message":"","path":"/entity/notExist"}
+
+	at market.v2_gpt4turbo_run03_RestExceptionHandlerTest.testUnknownEntityException(v2_gpt4turbo_run03_RestExceptionHandlerTest.java:85)
+

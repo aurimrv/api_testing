@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: market.v1_gpt4o_run02_ContactsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.493 s <<< FAILURE! - in market.v1_gpt4o_run02_ContactsRestControllerTest
+testUpdateContacts_Authorized  Time elapsed: 0.032 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v1_gpt4o_run02_ContactsRestControllerTest.loginAndGetToken(v1_gpt4o_run02_ContactsRestControllerTest.java:127)
+	at market.v1_gpt4o_run02_ContactsRestControllerTest.testUpdateContacts_Authorized(v1_gpt4o_run02_ContactsRestControllerTest.java:103)
+
+testGetContacts_Authorized  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v1_gpt4o_run02_ContactsRestControllerTest.loginAndGetToken(v1_gpt4o_run02_ContactsRestControllerTest.java:127)
+	at market.v1_gpt4o_run02_ContactsRestControllerTest.testGetContacts_Authorized(v1_gpt4o_run02_ContactsRestControllerTest.java:75)
+

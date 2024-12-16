@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v0_gpt35_run03_FisherTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.755 s <<< FAILURE! - in org.restncs.v0_gpt35_run03_FisherTest
+testFisher(org.restncs.v0_gpt35_run03_FisherTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0.42857142857142855> but was:<0.9565149593408894>
+	at org.restncs.v0_gpt35_run03_FisherTest.testFisher(v0_gpt35_run03_FisherTest.java:66)
+

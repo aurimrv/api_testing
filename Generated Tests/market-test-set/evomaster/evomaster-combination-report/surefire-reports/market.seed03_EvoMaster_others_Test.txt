@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: market.seed03_EvoMaster_others_Test
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.815 s <<< FAILURE! - in market.seed03_EvoMaster_others_Test
+test_10  Time elapsed: 0.253 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'fieldErrors'[0].'message' doesn't match.
+Expected: a string containing "Card number shall consist of 13-16 digits"
+  Actual: The value shall not be empty
+
+	at market.seed03_EvoMaster_others_Test.test_10(seed03_EvoMaster_others_Test.java:308)
+
+test_12  Time elapsed: 0.202 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'fieldErrors'[0].'field' doesn't match.
+Expected: a string containing "phone"
+  Actual: address
+
+	at market.seed03_EvoMaster_others_Test.test_12(seed03_EvoMaster_others_Test.java:365)
+
+test_13  Time elapsed: 0.203 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'fieldErrors'[0].'field' doesn't match.
+Expected: a string containing "phone"
+  Actual: email
+
+	at market.seed03_EvoMaster_others_Test.test_13(seed03_EvoMaster_others_Test.java:405)
+

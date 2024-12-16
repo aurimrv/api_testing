@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v1_gpt4o_run01_BessjTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.229 s <<< FAILURE! - in org.restncs.v1_gpt4o_run01_BessjTest
+testFisherEndpoint(org.restncs.v1_gpt4o_run01_BessjTest)  Time elapsed: 0.062 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restncs.v1_gpt4o_run01_BessjTest.testFisherEndpoint(v1_gpt4o_run01_BessjTest.java:99)
+

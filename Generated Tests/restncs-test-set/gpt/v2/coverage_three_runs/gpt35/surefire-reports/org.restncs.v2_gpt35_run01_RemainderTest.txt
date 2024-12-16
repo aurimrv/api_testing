@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v2_gpt35_run01_RemainderTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.776 s <<< FAILURE! - in org.restncs.v2_gpt35_run01_RemainderTest
+testInvalidInputsForRemainder(org.restncs.v2_gpt35_run01_RemainderTest)  Time elapsed: 0.031 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restncs.v2_gpt35_run01_RemainderTest.testInvalidInputsForRemainder(v2_gpt35_run01_RemainderTest.java:63)
+
+testSchemaValidationForRemainderResponse(org.restncs.v2_gpt35_run01_RemainderTest)  Time elapsed: 0.046 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: not null
+  Actual: null
+
+	at org.restncs.v2_gpt35_run01_RemainderTest.testSchemaValidationForRemainderResponse(v2_gpt35_run01_RemainderTest.java:74)
+
+testBusinessRuleEnforcementForRemainder(org.restncs.v2_gpt35_run01_RemainderTest)  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: <0.0F>
+  Actual: null
+
+	at org.restncs.v2_gpt35_run01_RemainderTest.testBusinessRuleEnforcementForRemainder(v2_gpt35_run01_RemainderTest.java:85)
+

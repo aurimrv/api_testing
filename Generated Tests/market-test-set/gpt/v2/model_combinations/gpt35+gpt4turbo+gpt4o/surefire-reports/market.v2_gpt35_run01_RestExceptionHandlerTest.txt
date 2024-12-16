@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt35_run01_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.041 s <<< FAILURE! - in market.v2_gpt35_run01_RestExceptionHandlerTest
+testUpdateContactsBusinessRuleEnforcement  Time elapsed: 0.026 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v2_gpt35_run01_RestExceptionHandlerTest.testUpdateContactsBusinessRuleEnforcement(v2_gpt35_run01_RestExceptionHandlerTest.java:98)
+
+testInvalidInputReturns500  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <406>.
+
+	at market.v2_gpt35_run01_RestExceptionHandlerTest.testInvalidInputReturns500(v2_gpt35_run01_RestExceptionHandlerTest.java:71)
+
+testGetCustomerSchemaValidation  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v2_gpt35_run01_RestExceptionHandlerTest.testGetCustomerSchemaValidation(v2_gpt35_run01_RestExceptionHandlerTest.java:81)
+

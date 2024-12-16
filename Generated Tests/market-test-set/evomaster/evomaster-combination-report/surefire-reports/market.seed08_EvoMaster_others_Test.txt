@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: market.seed08_EvoMaster_others_Test
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.234 s <<< FAILURE! - in market.seed08_EvoMaster_others_Test
+test_13  Time elapsed: 0.199 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'fieldErrors'[0].'field' doesn't match.
+Expected: a string containing "phone"
+  Actual: address
+
+	at market.seed08_EvoMaster_others_Test.test_13(seed08_EvoMaster_others_Test.java:398)
+
+test_14  Time elapsed: 0.196 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'fieldErrors'[0].'field' doesn't match.
+Expected: a string containing "email"
+  Actual: phone
+
+	at market.seed08_EvoMaster_others_Test.test_14(seed08_EvoMaster_others_Test.java:429)
+
+test_1  Time elapsed: 0.11 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <406>.
+
+	at market.seed08_EvoMaster_others_Test.test_1(seed08_EvoMaster_others_Test.java:123)
+

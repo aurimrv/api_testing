@@ -1,0 +1,43 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4o_run02_CalcTest
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 5, Errors: 1, Skipped: 0, Time elapsed: 0.792 s <<< FAILURE! - in org.restscs.v2_gpt4o_run02_CalcTest
+testSchemaValidation(org.restscs.v2_gpt4o_run02_CalcTest)  Time elapsed: 0.018 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restscs.v2_gpt4o_run02_CalcTest.testSchemaValidation(v2_gpt4o_run02_CalcTest.java:165)
+
+testCalcDivideByZero(org.restscs.v2_gpt4o_run02_CalcTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4o_run02_CalcTest.testCalcDivideByZero(v2_gpt4o_run02_CalcTest.java:150)
+
+testInvalidOp(org.restscs.v2_gpt4o_run02_CalcTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4o_run02_CalcTest.testInvalidOp(v2_gpt4o_run02_CalcTest.java:157)
+
+testUnauthorizedAccess(org.restscs.v2_gpt4o_run02_CalcTest)  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <200>.
+
+	at org.restscs.v2_gpt4o_run02_CalcTest.testUnauthorizedAccess(v2_gpt4o_run02_CalcTest.java:172)
+
+testForbiddenAccess(org.restscs.v2_gpt4o_run02_CalcTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at org.restscs.v2_gpt4o_run02_CalcTest.testForbiddenAccess(v2_gpt4o_run02_CalcTest.java:179)
+
+testResourceNotFound(org.restscs.v2_gpt4o_run02_CalcTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v2_gpt4o_run02_CalcTest.testResourceNotFound(v2_gpt4o_run02_CalcTest.java:186)
+

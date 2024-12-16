@@ -1,0 +1,58 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4o_run03_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 6, Errors: 1, Skipped: 0, Time elapsed: 1.678 s <<< FAILURE! - in org.restscs.v2_gpt4o_run03_RegexTest
+testValidURLPattern(org.restscs.v2_gpt4o_run03_RegexTest)  Time elapsed: 0.052 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "url"
+  Actual: 0
+
+	at org.restscs.v2_gpt4o_run03_RegexTest.testValidURLPattern(v2_gpt4o_run03_RegexTest.java:139)
+
+testSchemaValidationCalc(org.restscs.v2_gpt4o_run03_RegexTest)  Time elapsed: 0.073 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+0.0
+
+	at org.restscs.v2_gpt4o_run03_RegexTest.testSchemaValidationCalc(v2_gpt4o_run03_RegexTest.java:71)
+
+testBusinessRuleEnforcementPost(org.restscs.v2_gpt4o_run03_RegexTest)  Time elapsed: 0.091 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v2_gpt4o_run03_RegexTest.testBusinessRuleEnforcementPost(v2_gpt4o_run03_RegexTest.java:83)
+
+testBusinessRuleEnforcementPut(org.restscs.v2_gpt4o_run03_RegexTest)  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at org.restscs.v2_gpt4o_run03_RegexTest.testBusinessRuleEnforcementPut(v2_gpt4o_run03_RegexTest.java:96)
+
+testEdgeCaseEmptyString(org.restscs.v2_gpt4o_run03_RegexTest)  Time elapsed: 0.027 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v2_gpt4o_run03_RegexTest.testEdgeCaseEmptyString(v2_gpt4o_run03_RegexTest.java:115)
+
+testErrorScenario500(org.restscs.v2_gpt4o_run03_RegexTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4o_run03_RegexTest.testErrorScenario500(v2_gpt4o_run03_RegexTest.java:62)
+
+testBusinessRuleEnforcementDelete(org.restscs.v2_gpt4o_run03_RegexTest)  Time elapsed: 0.054 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <204> but was <405>.
+
+	at org.restscs.v2_gpt4o_run03_RegexTest.testBusinessRuleEnforcementDelete(v2_gpt4o_run03_RegexTest.java:107)
+

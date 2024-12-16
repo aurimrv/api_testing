@@ -1,0 +1,47 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4o_run02_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 2.56 s <<< FAILURE! - in market.v2_gpt4o_run02_RestExceptionHandlerTest
+testGetProductsUnauthorized  Time elapsed: 0.187 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <200>.
+
+	at market.v2_gpt4o_run02_RestExceptionHandlerTest.testGetProductsUnauthorized(v2_gpt4o_run02_RestExceptionHandlerTest.java:169)
+
+testGetCustomerInvalidName  Time elapsed: 0.238 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.v2_gpt4o_run02_RestExceptionHandlerTest.testGetCustomerInvalidName(v2_gpt4o_run02_RestExceptionHandlerTest.java:70)
+
+testGetOrderNotFound  Time elapsed: 0.027 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.v2_gpt4o_run02_RestExceptionHandlerTest.testGetOrderNotFound(v2_gpt4o_run02_RestExceptionHandlerTest.java:160)
+
+testPayByCardUnauthorized  Time elapsed: 0.042 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <406>.
+
+	at market.v2_gpt4o_run02_RestExceptionHandlerTest.testPayByCardUnauthorized(v2_gpt4o_run02_RestExceptionHandlerTest.java:120)
+
+testGetCustomerValidData  Time elapsed: 0.054 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v2_gpt4o_run02_RestExceptionHandlerTest.testCreateCustomerValidData(v2_gpt4o_run02_RestExceptionHandlerTest.java:202)
+	at market.v2_gpt4o_run02_RestExceptionHandlerTest.testGetCustomerValidData(v2_gpt4o_run02_RestExceptionHandlerTest.java:212)
+
+testCreateCustomerValidData  Time elapsed: 0.041 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v2_gpt4o_run02_RestExceptionHandlerTest.testCreateCustomerValidData(v2_gpt4o_run02_RestExceptionHandlerTest.java:202)
+

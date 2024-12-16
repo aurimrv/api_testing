@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run01_FileSuffixTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.958 s <<< FAILURE! - in org.restscs.v1_gpt4o_run01_FileSuffixTest
+testCalcUsingGET(org.restscs.v1_gpt4o_run01_FileSuffixTest)  Time elapsed: 0.034 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "8.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run01_FileSuffixTest.testCalcUsingGET(v1_gpt4o_run01_FileSuffixTest.java:67)
+
+testCookieUsingGET(org.restscs.v1_gpt4o_run01_FileSuffixTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Cookie set"
+  Actual: 2
+
+	at org.restscs.v1_gpt4o_run01_FileSuffixTest.testCookieUsingGET(v1_gpt4o_run01_FileSuffixTest.java:90)
+
+testFileSuffixUsingGET(org.restscs.v1_gpt4o_run01_FileSuffixTest)  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run01_FileSuffixTest.testFileSuffixUsingGET(v1_gpt4o_run01_FileSuffixTest.java:135)
+
+testText2txtUsingGET(org.restscs.v1_gpt4o_run01_FileSuffixTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: not (null or an empty string)
+  Actual: 
+
+	at org.restscs.v1_gpt4o_run01_FileSuffixTest.testText2txtUsingGET(v1_gpt4o_run01_FileSuffixTest.java:224)
+

@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt35_run01_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.674 s <<< FAILURE! - in org.restscs.v1_gpt35_run01_RegexTest
+testTitleEndpoint(org.restscs.v1_gpt35_run01_RegexTest)  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Mr Smith"
+  Actual: -1
+
+	at org.restscs.v1_gpt35_run01_RegexTest.testTitleEndpoint(v1_gpt35_run01_RegexTest.java:130)
+
+testText2TxtEndpoint(org.restscs.v1_gpt35_run01_RegexTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Hello World!"
+  Actual: 
+
+	at org.restscs.v1_gpt35_run01_RegexTest.testText2TxtEndpoint(v1_gpt35_run01_RegexTest.java:118)
+
+testPatternEndpoint(org.restscs.v1_gpt35_run01_RegexTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 42: http://localhost:36105/api/pat/HelloWorld/[a-zA-Z]+
+	at org.restscs.v1_gpt35_run01_RegexTest.testPatternEndpoint(v1_gpt35_run01_RegexTest.java:102)
+

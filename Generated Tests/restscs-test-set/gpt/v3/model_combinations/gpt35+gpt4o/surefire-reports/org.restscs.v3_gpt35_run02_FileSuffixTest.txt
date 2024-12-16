@@ -1,0 +1,41 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt35_run02_FileSuffixTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.663 s <<< FAILURE! - in org.restscs.v3_gpt35_run02_FileSuffixTest
+testFileSuffix_ValidInput_Ok(org.restscs.v3_gpt35_run02_FileSuffixTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "1"
+  Actual: 0
+
+	at org.restscs.v3_gpt35_run02_FileSuffixTest.testFileSuffix_ValidInput_Ok(v3_gpt35_run02_FileSuffixTest.java:64)
+
+testFileSuffix_InvalidDirectory_InternalServerError(org.restscs.v3_gpt35_run02_FileSuffixTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_FileSuffixTest.testFileSuffix_InvalidDirectory_InternalServerError(v3_gpt35_run02_FileSuffixTest.java:73)
+
+testFileSuffix_InvalidFile_InternalServerError(org.restscs.v3_gpt35_run02_FileSuffixTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run02_FileSuffixTest.testFileSuffix_InvalidFile_InternalServerError(v3_gpt35_run02_FileSuffixTest.java:82)
+
+testFileSuffix_MissingDirectory_InternalServerError(org.restscs.v3_gpt35_run02_FileSuffixTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at org.restscs.v3_gpt35_run02_FileSuffixTest.testFileSuffix_MissingDirectory_InternalServerError(v3_gpt35_run02_FileSuffixTest.java:91)
+
+testFileSuffix_MissingFile_InternalServerError(org.restscs.v3_gpt35_run02_FileSuffixTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at org.restscs.v3_gpt35_run02_FileSuffixTest.testFileSuffix_MissingFile_InternalServerError(v3_gpt35_run02_FileSuffixTest.java:100)
+

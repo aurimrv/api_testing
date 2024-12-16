@@ -1,0 +1,74 @@
+-------------------------------------------------------------------------------
+Test set: market.v1_gpt4o_run01_ProductsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 10, Errors: 0, Skipped: 0, Time elapsed: 3.907 s <<< FAILURE! - in market.v1_gpt4o_run01_ProductsRestControllerTest
+testSetDelivery  Time elapsed: 0.071 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testSetDelivery(v1_gpt4o_run01_ProductsRestControllerTest.java:152)
+
+testGetCustomerCart  Time elapsed: 0.031 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testGetCustomerCart(v1_gpt4o_run01_ProductsRestControllerTest.java:115)
+
+testUpdateContacts  Time elapsed: 0.227 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testUpdateContacts(v1_gpt4o_run01_ProductsRestControllerTest.java:191)
+
+testPayByCard  Time elapsed: 0.06 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testPayByCard(v1_gpt4o_run01_ProductsRestControllerTest.java:166)
+
+testClearCart  Time elapsed: 0.039 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <204> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testClearCart(v1_gpt4o_run01_ProductsRestControllerTest.java:140)
+
+testAddItemToCart  Time elapsed: 0.056 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testAddItemToCart(v1_gpt4o_run01_ProductsRestControllerTest.java:129)
+
+testGetOrderById  Time elapsed: 0.047 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testGetOrderById(v1_gpt4o_run01_ProductsRestControllerTest.java:214)
+
+testGetContacts  Time elapsed: 0.031 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testGetContacts(v1_gpt4o_run01_ProductsRestControllerTest.java:177)
+
+testGetOrders  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testGetOrders(v1_gpt4o_run01_ProductsRestControllerTest.java:202)
+
+testGetCustomer  Time elapsed: 0.322 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt4o_run01_ProductsRestControllerTest.testGetCustomer(v1_gpt4o_run01_ProductsRestControllerTest.java:104)
+

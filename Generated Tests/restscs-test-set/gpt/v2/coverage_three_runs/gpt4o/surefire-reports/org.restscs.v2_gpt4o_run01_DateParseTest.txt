@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4o_run01_DateParseTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.91 s <<< FAILURE! - in org.restscs.v2_gpt4o_run01_DateParseTest
+testDateParseInternalServerError(org.restscs.v2_gpt4o_run01_DateParseTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at org.restscs.v2_gpt4o_run01_DateParseTest.testDateParseInternalServerError(v2_gpt4o_run01_DateParseTest.java:125)
+
+testDateParseEmptyInputs(org.restscs.v2_gpt4o_run01_DateParseTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 37: http://localhost:44561/api/dateparse/ /
+	at org.restscs.v2_gpt4o_run01_DateParseTest.testDateParseEmptyInputs(v2_gpt4o_run01_DateParseTest.java:111)
+

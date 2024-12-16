@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v2_gpt4o_run03_ExpintTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.131 s <<< FAILURE! - in org.restncs.v2_gpt4o_run03_ExpintTest
+testFisherInvalidParams(org.restncs.v2_gpt4o_run03_ExpintTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: <NaN>
+  Actual: NaN
+
+	at org.restncs.v2_gpt4o_run03_ExpintTest.testFisherInvalidParams(v2_gpt4o_run03_ExpintTest.java:137)
+

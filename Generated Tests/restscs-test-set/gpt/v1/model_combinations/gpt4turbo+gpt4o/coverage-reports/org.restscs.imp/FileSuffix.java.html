@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FileSuffix.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">evomaster-benchmark-cs-rest-artificial-scs</a> &gt; <a href="index.source.html" class="el_package">org.restscs.imp</a> &gt; <span class="el_source">FileSuffix.java</span></div><h1>FileSuffix.java</h1><pre class="source lang-java linenums">//! futname = Subject      //NAME OF FUNCTION UNDER TEST
+//! mutation = false        //SPECIFY MUTATION COVERAGE
+//! textout = true        //WRITE INSTRUMENTED SUBJECT TO FILE
+//! maxchildren = 500000  //MAX LENGTH OF SEARCH
+//! totalpopsize = 100    //TOTAL SIZE OF POPULATIONS 
+//! mutationpercent = 50  //REL FREQUENCY OF GENETIC MUTATION TO CROSSOVER
+//! samefitcountmax = 100 //NUMBER OF CONSECUTIVE TESTS IN A POP 
+//THAT MUST HAVE THE SAME COST FOR POP TO BE STAGNANT
+//! verbose = false        //PRINT MESSAGES SHOWING PROGRESS OF SEARCH
+//! showevery = 3000      //NUMBER OF CANDIDATE INPUTS GENERATED BETWEEN EACH SHOW
+//! numbins = 0           //GRANULARITY OF CANDIDATE INPUT HISTOGRAM, SET TO 0 TO NOT COLLECT STATS
+//! trialfirst = 1        //EACH TRIAL USES A DIFFERENT RANDOM SEED
+//! triallast = 1         //NUMBER OF TRIALS = triallast - trialfirst + 1
+
+package org.restscs.imp;
+
+<span class="nc" id="L17">public class FileSuffix</span>
+{
+	public static String  subject(String directory , String file )
+	{
+<span class="fc" id="L21">		int result = 0;</span>
+
+		//EG pathname = &quot;...WORD/FILE.DOC&quot;;
+		// files : Object[];
+<span class="fc" id="L25">		String[] fileparts = null;</span>
+		//var lastfile : int = 0;
+<span class="fc" id="L27">		int lastpart  = 0;</span>
+<span class="fc" id="L28">		String suffix = null;  </span>
+<span class="fc" id="L29">		fileparts = file.split(&quot;.&quot;);</span>
+<span class="fc" id="L30">		lastpart = fileparts.length - 1;</span>
+<span class="pc bpc" id="L31" title="1 of 2 branches missed.">		if (lastpart &gt; 0) {</span>
+<span class="nc" id="L32">			suffix = fileparts[lastpart];</span>
+			//Console.WriteLine(&quot;{0}, {1}&quot;, directory, suffix);
+<span class="nc bnc" id="L34" title="All 2 branches missed.">			if (&quot;text&quot;.equals(directory)) {</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">				if (&quot;txt&quot;.equals(suffix)) {</span>
+<span class="nc" id="L36">					result = 1;</span>
+				}
+			}
+<span class="nc bnc" id="L39" title="All 2 branches missed.">			if (&quot;acrobat&quot;.equals(directory)) {</span>
+<span class="nc bnc" id="L40" title="All 2 branches missed.">				if (&quot;pdf&quot;.equals(suffix)) {					 </span>
+					//print(&quot;acrobat&quot;);
+<span class="nc" id="L42">					result = 2;</span>
+				}
+			}
+<span class="nc bnc" id="L45" title="All 2 branches missed.">			if (&quot;word&quot;.equals(directory)) {</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">				if (&quot;doc&quot;.equals(suffix)) {</span>
+					//print(&quot;word&quot;);
+<span class="nc" id="L48">					result = 3;</span>
+				}
+			}
+<span class="nc bnc" id="L51" title="All 2 branches missed.">			if (&quot;bin&quot;.equals(directory)) {</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">				if (&quot;exe&quot;.equals(suffix)) {</span>
+					//print(&quot;bin&quot;);
+<span class="nc" id="L54">					result = 4;</span>
+				}
+			}
+<span class="nc bnc" id="L57" title="All 2 branches missed.">			if (&quot;lib&quot;.equals(directory)) {</span>
+<span class="nc bnc" id="L58" title="All 2 branches missed.">				if (&quot;dll&quot;.equals(suffix)) {</span>
+					//print(&quot;lib&quot;);
+<span class="nc" id="L60">					result = 5;</span>
+				}
+			}
+		}
+<span class="fc" id="L64">		return &quot;&quot; + result;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

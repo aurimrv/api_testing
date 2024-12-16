@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4o_run01_NotyPevarTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.782 s <<< FAILURE! - in org.restscs.v2_gpt4o_run01_NotyPevarTest
+testSchemaValidation(org.restscs.v2_gpt4o_run01_NotyPevarTest)  Time elapsed: 0.027 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restscs.v2_gpt4o_run01_NotyPevarTest.testSchemaValidation(v2_gpt4o_run01_NotyPevarTest.java:91)
+

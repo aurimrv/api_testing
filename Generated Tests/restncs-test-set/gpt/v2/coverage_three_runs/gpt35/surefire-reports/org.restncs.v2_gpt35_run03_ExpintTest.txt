@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v2_gpt35_run03_ExpintTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.881 s <<< FAILURE! - in org.restncs.v2_gpt35_run03_ExpintTest
+testInvalidInputsForExpint(org.restncs.v2_gpt35_run03_ExpintTest)  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at org.restncs.v2_gpt35_run03_ExpintTest.testInvalidInputsForExpint(v2_gpt35_run03_ExpintTest.java:62)
+
+testSchemaValidationForExpint(org.restncs.v2_gpt35_run03_ExpintTest)  Time elapsed: 0.045 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsInt doesn't match.
+Expected: not null
+  Actual: null
+
+	at org.restncs.v2_gpt35_run03_ExpintTest.testSchemaValidationForExpint(v2_gpt35_run03_ExpintTest.java:73)
+
+testBusinessRuleEnforcementForExpint(org.restncs.v2_gpt35_run03_ExpintTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restncs.v2_gpt35_run03_ExpintTest.testBusinessRuleEnforcementForExpint(v2_gpt35_run03_ExpintTest.java:82)
+

@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.restscs.v2_gpt35_run02_CookieTest
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.184 s - in org.restscs.v2_gpt35_run02_CookieTest

@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt35_run03_CartRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.483 s <<< FAILURE! - in market.v2_gpt35_run03_CartRestControllerTest
+testClearCart_emptyCart_expectEmptyCartException  Time elapsed: 0.037 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <401>.
+
+	at market.v2_gpt35_run03_CartRestControllerTest.testClearCart_emptyCart_expectEmptyCartException(v2_gpt35_run03_CartRestControllerTest.java:78)
+
+testAddItem_invalidProductId_expectError  Time elapsed: 0.062 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <406>.
+
+	at market.v2_gpt35_run03_CartRestControllerTest.testAddItem_invalidProductId_expectError(v2_gpt35_run03_CartRestControllerTest.java:70)
+
+testPayByCard_emptyCart_expectEmptyCartException  Time elapsed: 0.045 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <406>.
+
+	at market.v2_gpt35_run03_CartRestControllerTest.testPayByCard_emptyCart_expectEmptyCartException(v2_gpt35_run03_CartRestControllerTest.java:101)
+

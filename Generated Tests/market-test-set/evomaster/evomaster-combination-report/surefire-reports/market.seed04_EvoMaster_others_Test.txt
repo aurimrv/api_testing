@@ -1,0 +1,38 @@
+-------------------------------------------------------------------------------
+Test set: market.seed04_EvoMaster_others_Test
+-------------------------------------------------------------------------------
+Tests run: 17, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 18.973 s <<< FAILURE! - in market.seed04_EvoMaster_others_Test
+test_12  Time elapsed: 0.296 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'fieldErrors'[0].'message' doesn't match.
+Expected: a string containing "Not a valid credit card number"
+  Actual: Card number shall consist of 13-16 digits
+
+	at market.seed04_EvoMaster_others_Test.test_12(seed04_EvoMaster_others_Test.java:538)
+
+test_13  Time elapsed: 0.252 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'fieldErrors'[0].'field' doesn't match.
+Expected: a string containing "email"
+  Actual: phone
+
+	at market.seed04_EvoMaster_others_Test.test_13(seed04_EvoMaster_others_Test.java:584)
+
+test_14  Time elapsed: 0.186 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path 'fieldErrors'[0].'field' doesn't match.
+Expected: a string containing "email"
+  Actual: name
+
+	at market.seed04_EvoMaster_others_Test.test_14(seed04_EvoMaster_others_Test.java:677)
+
+test_1  Time elapsed: 0.13 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <406>.
+
+	at market.seed04_EvoMaster_others_Test.test_1(seed04_EvoMaster_others_Test.java:139)
+

@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt35_run03_CalcTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.842 s <<< FAILURE! - in org.restscs.v3_gpt35_run03_CalcTest
+testInvalidInputsReturn500(org.restscs.v3_gpt35_run03_CalcTest)  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run03_CalcTest.testInvalidInputsReturn500(v3_gpt35_run03_CalcTest.java:64)
+

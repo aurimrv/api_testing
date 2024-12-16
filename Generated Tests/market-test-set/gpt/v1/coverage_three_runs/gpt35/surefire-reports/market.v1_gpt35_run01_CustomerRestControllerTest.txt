@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: market.v1_gpt35_run01_CustomerRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.374 s <<< FAILURE! - in market.v1_gpt35_run01_CustomerRestControllerTest
+testGetCustomerEndpoint  Time elapsed: 0.253 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v1_gpt35_run01_CustomerRestControllerTest.testGetCustomerEndpoint(v1_gpt35_run01_CustomerRestControllerTest.java:68)
+
+testCreateCustomerEndpoint  Time elapsed: 0.047 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v1_gpt35_run01_CustomerRestControllerTest.testCreateCustomerEndpoint(v1_gpt35_run01_CustomerRestControllerTest.java:80)
+

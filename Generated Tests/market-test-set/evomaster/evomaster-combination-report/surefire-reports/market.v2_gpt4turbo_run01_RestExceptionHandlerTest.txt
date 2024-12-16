@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4turbo_run01_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.41 s <<< FAILURE! - in market.v2_gpt4turbo_run01_RestExceptionHandlerTest
+testAccessDeniedException  Time elapsed: 0.039 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: a string containing "Not Found"
+  Actual: 
+
+	at market.v2_gpt4turbo_run01_RestExceptionHandlerTest.testAccessDeniedException(v2_gpt4turbo_run01_RestExceptionHandlerTest.java:83)
+
+testInternalServerException  Time elapsed: 0.037 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: a string containing "Not Found"
+  Actual: 
+
+	at market.v2_gpt4turbo_run01_RestExceptionHandlerTest.testInternalServerException(v2_gpt4turbo_run01_RestExceptionHandlerTest.java:68)
+

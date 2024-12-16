@@ -1,0 +1,49 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt35_run02_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.621 s <<< FAILURE! - in org.restscs.v1_gpt35_run02_RegexTest
+testRegexApiEndpoint(org.restscs.v1_gpt35_run02_RegexTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "url"
+  Actual: 0
+
+	at org.restscs.v1_gpt35_run02_RegexTest.testRegexApiEndpoint(v1_gpt35_run02_RegexTest.java:66)
+
+testCalcApiEndpoint(org.restscs.v1_gpt35_run02_RegexTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "8.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt35_run02_RegexTest.testCalcApiEndpoint(v1_gpt35_run02_RegexTest.java:79)
+
+testDateParseApiEndpoint(org.restscs.v1_gpt35_run02_RegexTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "01jan"
+  Actual: 2
+
+	at org.restscs.v1_gpt35_run02_RegexTest.testDateParseApiEndpoint(v1_gpt35_run02_RegexTest.java:91)
+
+testFileSuffixApiEndpoint(org.restscs.v1_gpt35_run02_RegexTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "docx"
+  Actual: 0
+
+	at org.restscs.v1_gpt35_run02_RegexTest.testFileSuffixApiEndpoint(v1_gpt35_run02_RegexTest.java:103)
+
+testTitleApiEndpoint(org.restscs.v1_gpt35_run02_RegexTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Mr."
+  Actual: -1
+
+	at org.restscs.v1_gpt35_run02_RegexTest.testTitleApiEndpoint(v1_gpt35_run02_RegexTest.java:115)
+

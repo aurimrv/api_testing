@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt4turbo_run03_CartRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.226 s <<< FAILURE! - in market.v3_gpt4turbo_run03_CartRestControllerTest
+testInternalServerErrorOnAddItem  Time elapsed: 0.186 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at market.v3_gpt4turbo_run03_CartRestControllerTest.testInternalServerErrorOnAddItem(v3_gpt4turbo_run03_CartRestControllerTest.java:110)
+
+testPayByCardSuccess  Time elapsed: 0.155 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.v3_gpt4turbo_run03_CartRestControllerTest.testPayByCardSuccess(v3_gpt4turbo_run03_CartRestControllerTest.java:100)
+

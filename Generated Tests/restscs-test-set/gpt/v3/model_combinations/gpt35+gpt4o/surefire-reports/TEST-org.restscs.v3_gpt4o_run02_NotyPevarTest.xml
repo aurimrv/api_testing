@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.824" tests="22" errors="1" skipped="0" failures="19">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/test-classes:/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/classes:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.0.3.RELEASE/spring-boot-starter-web-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter/2.0.3.RELEASE/spring-boot-starter-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot/2.0.3.RELEASE/spring-boot-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.3.RELEASE/spring-boot-autoconfigure-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.0.3.RELEASE/spring-boot-starter-logging-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/rincon/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.10.0/log4j-to-slf4j-2.10.0.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar:/home/rincon/.m2/repository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar:/home/rincon/.m2/repository/org/springframework/spring-core/5.0.7.RELEASE/spring-core-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-jcl/5.0.7.RELEASE/spring-jcl-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/yaml/snakeyaml/1.19/snakeyaml-1.19.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.0.3.RELEASE/spring-boot-starter-json-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.6/jackson-databind-2.9.6.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.6/jackson-core-2.9.6.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.6/jackson-datatype-jdk8-2.9.6.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.6/jackson-datatype-jsr310-2.9.6.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.6/jackson-module-parameter-names-2.9.6.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.0.3.RELEASE/spring-boot-starter-tomcat-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.5.31/tomcat-embed-el-8.5.31.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.31/tomcat-embed-websocket-8.5.31.jar:/home/rincon/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.10.Final/hibernate-validator-6.0.10.Final.jar:/home/rincon/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar:/home/rincon/.m2/repository/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-beans/5.0.7.RELEASE/spring-beans-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-webmvc/5.0.7.RELEASE/spring-webmvc-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-aop/5.0.7.RELEASE/spring-aop-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-context/5.0.7.RELEASE/spring-context-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-expression/5.0.7.RELEASE/spring-expression-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger2/2.9.2/springfox-swagger2-2.9.2.jar:/home/rincon/.m2/repository/io/swagger/swagger-annotations/1.5.20/swagger-annotations-1.5.20.jar:/home/rincon/.m2/repository/io/swagger/swagger-models/1.5.20/swagger-models-1.5.20.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.5/jackson-annotations-2.9.5.jar:/home/rincon/.m2/repository/io/springfox/springfox-spi/2.9.2/springfox-spi-2.9.2.jar:/home/rincon/.m2/repository/io/springfox/springfox-core/2.9.2/springfox-core-2.9.2.jar:/home/rincon/.m2/repository/net/bytebuddy/byte-buddy/1.8.12/byte-buddy-1.8.12.jar:/home/rincon/.m2/repository/io/springfox/springfox-schema/2.9.2/springfox-schema-2.9.2.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger-common/2.9.2/springfox-swagger-common-2.9.2.jar:/home/rincon/.m2/repository/com/google/guava/guava/20.0/guava-20.0.jar:/home/rincon/.m2/repository/com/fasterxml/classmate/1.4.0/classmate-1.4.0.jar:/home/rincon/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/rincon/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/plugin/spring-plugin-metadata/1.2.0.RELEASE/spring-plugin-metadata-1.2.0.RELEASE.jar:/home/rincon/.m2/repository/org/mapstruct/mapstruct/1.2.0.Final/mapstruct-1.2.0.Final.jar:/home/rincon/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger-ui/2.9.2/springfox-swagger-ui-2.9.2.jar:/home/rincon/.m2/repository/io/rest-assured/rest-assured/4.3.0/rest-assured-4.3.0.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/home/rincon/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/rincon/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/home/rincon/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/home/rincon/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/rincon/.m2/repository/io/rest-assured/xml-path/4.3.0/xml-path-4.3.0.jar:/home/rincon/.m2/repository/io/rest-assured/rest-assured-common/4.3.0/rest-assured-common-4.3.0.jar:/home/rincon/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/home/rincon/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar:/home/rincon/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar:/home/rincon/.m2/repository/com/sun/xml/bind/jaxb-osgi/2.3.0.1/jaxb-osgi-2.3.0.1.jar:/home/rincon/.m2/repository/org/apache/sling/org.apache.sling.javax.activation/0.1.0/org.apache.sling.javax.activation-0.1.0.jar:/home/rincon/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/home/rincon/.m2/repository/io/rest-assured/json-path/4.3.0/json-path-4.3.0.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy-json/3.0.2/groovy-json-3.0.2.jar:/home/rincon/.m2/repository/io/rest-assured/json-schema-validator/4.3.0/json-schema-validator-4.3.0.jar:/home/rincon/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.10/json-schema-validator-2.2.10.jar:/home/rincon/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.10/json-schema-core-1.2.10.jar:/home/rincon/.m2/repository/com/github/java-json-tools/jackson-coreutils/1.9/jackson-coreutils-1.9.jar:/home/rincon/.m2/repository/com/github/fge/msg-simple/1.1/msg-simple-1.1.jar:/home/rincon/.m2/repository/com/github/fge/btf/1.2/btf-1.2.jar:/home/rincon/.m2/repository/com/github/fge/uri-template/0.9/uri-template-0.9.jar:/home/rincon/.m2/repository/org/mozilla/rhino/1.7.7.1/rhino-1.7.7.1.jar:/home/rincon/.m2/repository/javax/mail/mailapi/1.4.3/mailapi-1.4.3.jar:/home/rincon/.m2/repository/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar:/home/rincon/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.0.0/libphonenumber-8.0.0.jar:/home/rincon/.m2/repository/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar:/home/rincon/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar:/home/rincon/.m2/repository/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy/3.0.9/groovy-3.0.9.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.9/groovy-xml-3.0.9.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-controller-api/3.0.0/evomaster-client-java-controller-api-3.0.0.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-sql-dto/3.0.0/evomaster-client-java-sql-dto-3.0.0.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-controller/3.0.0/evomaster-client-java-controller-3.0.0.jar:/home/rincon/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/home/rincon/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/rincon/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/home/rincon/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/rincon/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.1.1/javax.ws.rs-api-2.1.1.jar:/home/rincon/.m2/repository/junit/junit/4.4/junit-4.4.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Linux"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/home/rincon/apps/java/jdk-8/jre/lib/amd64"/>
+    <property name="sun.java.command" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/surefire/surefirebooter1729686776317579085.jar /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/surefire 2024-12-08T16-15-01_158-jvmRun1 surefire4962442897660228302tmp surefire_01791133601317675014tmp"/>
+    <property name="surefire.test.class.path" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/test-classes:/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/classes:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.0.3.RELEASE/spring-boot-starter-web-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter/2.0.3.RELEASE/spring-boot-starter-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot/2.0.3.RELEASE/spring-boot-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.3.RELEASE/spring-boot-autoconfigure-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.0.3.RELEASE/spring-boot-starter-logging-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/rincon/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.10.0/log4j-to-slf4j-2.10.0.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar:/home/rincon/.m2/repository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar:/home/rincon/.m2/repository/org/springframework/spring-core/5.0.7.RELEASE/spring-core-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-jcl/5.0.7.RELEASE/spring-jcl-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/yaml/snakeyaml/1.19/snakeyaml-1.19.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.0.3.RELEASE/spring-boot-starter-json-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.6/jackson-databind-2.9.6.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.6/jackson-core-2.9.6.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.9.6/jackson-datatype-jdk8-2.9.6.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.9.6/jackson-datatype-jsr310-2.9.6.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.9.6/jackson-module-parameter-names-2.9.6.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.0.3.RELEASE/spring-boot-starter-tomcat-2.0.3.RELEASE.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.5.31/tomcat-embed-core-8.5.31.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.5.31/tomcat-embed-el-8.5.31.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.31/tomcat-embed-websocket-8.5.31.jar:/home/rincon/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.10.Final/hibernate-validator-6.0.10.Final.jar:/home/rincon/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar:/home/rincon/.m2/repository/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-beans/5.0.7.RELEASE/spring-beans-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-webmvc/5.0.7.RELEASE/spring-webmvc-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-aop/5.0.7.RELEASE/spring-aop-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-context/5.0.7.RELEASE/spring-context-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/spring-expression/5.0.7.RELEASE/spring-expression-5.0.7.RELEASE.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger2/2.9.2/springfox-swagger2-2.9.2.jar:/home/rincon/.m2/repository/io/swagger/swagger-annotations/1.5.20/swagger-annotations-1.5.20.jar:/home/rincon/.m2/repository/io/swagger/swagger-models/1.5.20/swagger-models-1.5.20.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.5/jackson-annotations-2.9.5.jar:/home/rincon/.m2/repository/io/springfox/springfox-spi/2.9.2/springfox-spi-2.9.2.jar:/home/rincon/.m2/repository/io/springfox/springfox-core/2.9.2/springfox-core-2.9.2.jar:/home/rincon/.m2/repository/net/bytebuddy/byte-buddy/1.8.12/byte-buddy-1.8.12.jar:/home/rincon/.m2/repository/io/springfox/springfox-schema/2.9.2/springfox-schema-2.9.2.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger-common/2.9.2/springfox-swagger-common-2.9.2.jar:/home/rincon/.m2/repository/com/google/guava/guava/20.0/guava-20.0.jar:/home/rincon/.m2/repository/com/fasterxml/classmate/1.4.0/classmate-1.4.0.jar:/home/rincon/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/rincon/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/plugin/spring-plugin-metadata/1.2.0.RELEASE/spring-plugin-metadata-1.2.0.RELEASE.jar:/home/rincon/.m2/repository/org/mapstruct/mapstruct/1.2.0.Final/mapstruct-1.2.0.Final.jar:/home/rincon/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger-ui/2.9.2/springfox-swagger-ui-2.9.2.jar:/home/rincon/.m2/repository/io/rest-assured/rest-assured/4.3.0/rest-assured-4.3.0.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpclient/4.5.3/httpclient-4.5.3.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpcore/4.4.6/httpcore-4.4.6.jar:/home/rincon/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/rincon/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpmime/4.5.3/httpmime-4.5.3.jar:/home/rincon/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/home/rincon/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/rincon/.m2/repository/io/rest-assured/xml-path/4.3.0/xml-path-4.3.0.jar:/home/rincon/.m2/repository/io/rest-assured/rest-assured-common/4.3.0/rest-assured-common-4.3.0.jar:/home/rincon/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar:/home/rincon/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar:/home/rincon/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar:/home/rincon/.m2/repository/com/sun/xml/bind/jaxb-osgi/2.3.0.1/jaxb-osgi-2.3.0.1.jar:/home/rincon/.m2/repository/org/apache/sling/org.apache.sling.javax.activation/0.1.0/org.apache.sling.javax.activation-0.1.0.jar:/home/rincon/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/home/rincon/.m2/repository/io/rest-assured/json-path/4.3.0/json-path-4.3.0.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy-json/3.0.2/groovy-json-3.0.2.jar:/home/rincon/.m2/repository/io/rest-assured/json-schema-validator/4.3.0/json-schema-validator-4.3.0.jar:/home/rincon/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.10/json-schema-validator-2.2.10.jar:/home/rincon/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.10/json-schema-core-1.2.10.jar:/home/rincon/.m2/repository/com/github/java-json-tools/jackson-coreutils/1.9/jackson-coreutils-1.9.jar:/home/rincon/.m2/repository/com/github/fge/msg-simple/1.1/msg-simple-1.1.jar:/home/rincon/.m2/repository/com/github/fge/btf/1.2/btf-1.2.jar:/home/rincon/.m2/repository/com/github/fge/uri-template/0.9/uri-template-0.9.jar:/home/rincon/.m2/repository/org/mozilla/rhino/1.7.7.1/rhino-1.7.7.1.jar:/home/rincon/.m2/repository/javax/mail/mailapi/1.4.3/mailapi-1.4.3.jar:/home/rincon/.m2/repository/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar:/home/rincon/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.0.0/libphonenumber-8.0.0.jar:/home/rincon/.m2/repository/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar:/home/rincon/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar:/home/rincon/.m2/repository/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy/3.0.9/groovy-3.0.9.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.9/groovy-xml-3.0.9.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-controller-api/3.0.0/evomaster-client-java-controller-api-3.0.0.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-sql-dto/3.0.0/evomaster-client-java-sql-dto-3.0.0.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-controller/3.0.0/evomaster-client-java-controller-3.0.0.jar:/home/rincon/.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar:/home/rincon/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/rincon/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar:/home/rincon/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/home/rincon/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.1.1/javax.ws.rs-api-2.1.1.jar:/home/rincon/.m2/repository/junit/junit/4.4/junit-4.4.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/rincon"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/home/rincon/apps/java/jdk-8/jre"/>
+    <property name="basedir" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs"/>
+    <property name="file.separator" value="/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs/target/surefire/surefirebooter1729686776317579085.jar:/home/rincon/.m2/repository/org/jacoco/org.jacoco.agent/0.8.7/org.jacoco.agent-0.8.7-runtime.jar"/>
+    <property name="sun.boot.class.path" value="/home/rincon/apps/java/jdk-8/jre/lib/resources.jar:/home/rincon/apps/java/jdk-8/jre/lib/rt.jar:/home/rincon/apps/java/jdk-8/jre/lib/sunrsasign.jar:/home/rincon/apps/java/jdk-8/jre/lib/jsse.jar:/home/rincon/apps/java/jdk-8/jre/lib/jce.jar:/home/rincon/apps/java/jdk-8/jre/lib/charsets.jar:/home/rincon/apps/java/jdk-8/jre/lib/jfr.jar:/home/rincon/apps/java/jdk-8/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_202-b08"/>
+    <property name="user.name" value="rincon"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.0-126-generic"/>
+    <property name="java.endorsed.dirs" value="/home/rincon/apps/java/jdk-8/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/rincon/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="1.8.0_202"/>
+    <property name="user.dir" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.202-b08"/>
+    <property name="java.ext.dirs" value="/home/rincon/apps/java/jdk-8/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="maven.test.failure.ignore" value="true"/>
+  </properties>
+  <testcase name="testCookieInvalidInput" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.025">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;404&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testCookieInvalidInput(v3_gpt4o_run02_NotyPevarTest.java:126)
+]]></failure>
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.3.RELEASE)
+
+2024-12-08 16:15:41.311  INFO 112895 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Starting ForkedBooter v2.22.0 on IFTO-PROBOOK with PID 112895 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_8_maven/cs/rest/artificial/scs)
+2024-12-08 16:15:41.311  INFO 112895 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : No active profile set, falling back to default profiles: default
+2024-12-08 16:15:41.312  INFO 112895 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35c29914: startup date [Sun Dec 08 16:15:41 BRT 2024]; root of context hierarchy
+2024-12-08 16:15:41.434  INFO 112895 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2024-12-08 16:15:41.484  INFO 112895 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2024-12-08 16:15:41.485  INFO 112895 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-08 16:15:41.485  INFO 112895 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2024-12-08 16:15:41.488  INFO 112895 --- [ost-startStop-1] o.a.c.c.C.[Tomcat-30].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2024-12-08 16:15:41.488  INFO 112895 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 176 ms
+2024-12-08 16:15:41.536  INFO 112895 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2024-12-08 16:15:41.536  INFO 112895 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2024-12-08 16:15:41.536  INFO 112895 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2024-12-08 16:15:41.537  INFO 112895 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2024-12-08 16:15:41.537  INFO 112895 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2024-12-08 16:15:41.660  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/pat/{txt}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.regex(java.lang.String)
+2024-12-08 16:15:41.661  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/pat/{txt}/{pat}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.pat(java.lang.String,java.lang.String)
+2024-12-08 16:15:41.661  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/title/{sex}/{title}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.title(java.lang.String,java.lang.String)
+2024-12-08 16:15:41.661  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/cookie/{name}/{val}/{site}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.cookie(java.lang.String,java.lang.String,java.lang.String)
+2024-12-08 16:15:41.661  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/costfuns/{i}/{s}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.costfuns(java.lang.Integer,java.lang.String)
+2024-12-08 16:15:41.661  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/calc/{op}/{arg1}/{arg2}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.calc(java.lang.String,double,double)
+2024-12-08 16:15:41.661  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/dateparse/{dayname}/{monthname}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.dateParse(java.lang.String,java.lang.String)
+2024-12-08 16:15:41.661  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/filesuffix/{directory}/{file}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.fileSuffix(java.lang.String,java.lang.String)
+2024-12-08 16:15:41.662  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/notypevar/{i}/{s}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.notyPevar(java.lang.Integer,java.lang.String)
+2024-12-08 16:15:41.662  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/ordered4/{w}/{x}/{z}/{y}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.ordered4(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2024-12-08 16:15:41.662  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/text2txt/{word1}/{word2}/{word3}],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.lang.String> org.restscs.ScsRest.text2txt(java.lang.String,java.lang.String,java.lang.String)
+2024-12-08 16:15:41.664  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2024-12-08 16:15:41.664  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2024-12-08 16:15:41.664  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2024-12-08 16:15:41.665  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2024-12-08 16:15:41.666  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2024-12-08 16:15:41.716  INFO 112895 --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-12-08 16:15:41.748  INFO 112895 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-12-08 16:15:41.785  INFO 112895 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35c29914: startup date [Sun Dec 08 16:15:41 BRT 2024]; root of context hierarchy
+2024-12-08 16:15:41.798  INFO 112895 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-12-08 16:15:41.798  INFO 112895 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2024-12-08 16:15:41.859  INFO 112895 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2024-12-08 16:15:41.861  INFO 112895 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2024-12-08 16:15:41.861  INFO 112895 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2024-12-08 16:15:41.862  INFO 112895 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2024-12-08 16:15:41.865  INFO 112895 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2024-12-08 16:15:41.890  INFO 112895 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 35161 (http) with context path ''
+2024-12-08 16:15:41.891  INFO 112895 --- [           main] o.a.maven.surefire.booter.ForkedBooter   : Started ForkedBooter in 0.588 seconds (JVM running for 40.437)
+2024-12-08 16:15:41.901  INFO 112895 --- [-auto-31-exec-1] o.a.c.c.C.[Tomcat-30].[localhost].[/]    : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2024-12-08 16:15:41.901  INFO 112895 --- [-auto-31-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2024-12-08 16:15:41.908  INFO 112895 --- [-auto-31-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 7 ms
+Request method:	GET
+Request URI:	http://localhost:35161/api/cookie///
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	name=
+				val=
+				site=
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 404 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+{
+    "timestamp": "2024-12-08T19:15:41.911+0000",
+    "status": 404,
+    "error": "Not Found",
+    "message": "No message available",
+    "path": "/api/cookie///"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testCostfunsInvalidInput" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.012"/>
+  <testcase name="testFileSuffixInvalidInput" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.01">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;404&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testFileSuffixInvalidInput(v3_gpt4o_run02_NotyPevarTest.java:160)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/filesuffix//
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	directory=
+				file=
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 404 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+{
+    "timestamp": "2024-12-08T19:15:41.936+0000",
+    "status": 404,
+    "error": "Not Found",
+    "message": "No message available",
+    "path": "/api/filesuffix//"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testNotyPevarInvalidInput" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.011">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;500&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testNotyPevarInvalidInput(v3_gpt4o_run02_NotyPevarTest.java:90)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/notypevar/2147483647/test
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	i=2147483647
+				s=test
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 1
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+3
+]]></system-out>
+  </testcase>
+  <testcase name="testOrdered4InvalidInput" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.013">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;404&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testOrdered4InvalidInput(v3_gpt4o_run02_NotyPevarTest.java:181)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/ordered4////
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	w=
+				x=
+				y=
+				z=
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 404 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+{
+    "timestamp": "2024-12-08T19:15:41.960+0000",
+    "status": 404,
+    "error": "Not Found",
+    "message": "No message available",
+    "path": "/api/ordered4////"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testRegexInvalidInput" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.01">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;404&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testRegexInvalidInput(v3_gpt4o_run02_NotyPevarTest.java:196)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/pat/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	txt=
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 404 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+{
+    "timestamp": "2024-12-08T19:15:41.971+0000",
+    "status": 404,
+    "error": "Not Found",
+    "message": "No message available",
+    "path": "/api/pat/"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testPatInvalidInput" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.009">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testPatInvalidInput(v3_gpt4o_run02_NotyPevarTest.java:213)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/pat/abc123/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	txt=abc123
+				pat=
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 4
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+none
+]]></system-out>
+  </testcase>
+  <testcase name="testText2txtInvalidInput" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.012">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;404&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testText2txtInvalidInput(v3_gpt4o_run02_NotyPevarTest.java:232)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/text2txt///
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	word1=
+				word2=
+				word3=
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 404 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+{
+    "timestamp": "2024-12-08T19:15:41.991+0000",
+    "status": 404,
+    "error": "Not Found",
+    "message": "No message available",
+    "path": "/api/text2txt///"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testTitleInvalidInput" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.01">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;404&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testTitleInvalidInput(v3_gpt4o_run02_NotyPevarTest.java:249)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/title//
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	sex=
+				title=
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 404 
+Content-Type: application/json;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+{
+    "timestamp": "2024-12-08T19:15:42.001+0000",
+    "status": 404,
+    "error": "Not Found",
+    "message": "No message available",
+    "path": "/api/title//"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testCostfuns" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.011">
+    <failure message="1 expectation failed.&#10;Response body doesn&apos;t match expectation.&#10;Expected: &quot;56&quot;&#10;  Actual: 10&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "56"
+  Actual: 10
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testCostfuns(v3_gpt4o_run02_NotyPevarTest.java:99)
+</failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/costfuns/56/test
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	i=56
+				s=test
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 2
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+10
+]]></system-out>
+  </testcase>
+  <testcase name="testRegex" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.008">
+    <failure message="1 expectation failed.&#10;Response body doesn&apos;t match expectation.&#10;Expected: &quot;Matched: abc123&quot;&#10;  Actual: none&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Matched: abc123"
+  Actual: none
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testRegex(v3_gpt4o_run02_NotyPevarTest.java:189)
+</failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/pat/abc123
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	txt=abc123
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 4
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+none
+]]></system-out>
+  </testcase>
+  <testcase name="testPat" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.002">
+    <error message="Illegal character in path at index 38: http://localhost:35161/api/pat/abc123/\\d+" type="java.net.URISyntaxException">java.net.URISyntaxException: Illegal character in path at index 38: http://localhost:35161/api/pat/abc123/\\d+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testPat(v3_gpt4o_run02_NotyPevarTest.java:203)
+</error>
+  </testcase>
+  <testcase name="testCalcOperation" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.009">
+    <failure message="1 expectation failed.&#10;Response body doesn&apos;t match expectation.&#10;Expected: &quot;3.0&quot;&#10;  Actual: 0.0&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testCalcOperation(v3_gpt4o_run02_NotyPevarTest.java:64)
+</failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/calc/add/1.0/2.0
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	op=add
+				arg1=1.0
+				arg2=2.0
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Disposition: inline;filename=f.txt
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 3
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+0.0
+]]></system-out>
+  </testcase>
+  <testcase name="testCalcOperationInvalidOp" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.011">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testCalcOperationInvalidOp(v3_gpt4o_run02_NotyPevarTest.java:73)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/calc/invalid/1.0/2.0
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	op=invalid
+				arg1=1.0
+				arg2=2.0
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Disposition: inline;filename=f.txt
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 3
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+0.0
+]]></system-out>
+  </testcase>
+  <testcase name="testDateParseInvalidInput" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.009">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;400&gt; but was &lt;200&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testDateParseInvalidInput(v3_gpt4o_run02_NotyPevarTest.java:143)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/dateparse/InvalidDay/InvalidMonth
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	dayname=InvalidDay
+				monthname=InvalidMonth
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 1
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+0
+]]></system-out>
+  </testcase>
+  <testcase name="testText2txt" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.011">
+    <failure message="1 expectation failed.&#10;Response body doesn&apos;t match expectation.&#10;Expected: &quot;hello world test&quot;&#10;  Actual: &#10;" type="java.lang.AssertionError">java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "hello world test"
+  Actual: 
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testText2txt(v3_gpt4o_run02_NotyPevarTest.java:223)
+</failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/text2txt/hello/world/test
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	word1=hello
+				word2=world
+				word3=test
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 0
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+]]></system-out>
+  </testcase>
+  <testcase name="testCookie" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.015">
+    <failure message="1 expectation failed.&#10;Response body doesn&apos;t match expectation.&#10;Expected: &quot;session=12345; Domain=example.com&quot;&#10;  Actual: 2&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "session=12345; Domain=example.com"
+  Actual: 2
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testCookie(v3_gpt4o_run02_NotyPevarTest.java:117)
+</failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/cookie/session/12345/example.com
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	name=session
+				val=12345
+				site=example.com
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Disposition: inline;filename=f.txt
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 1
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+2
+]]></system-out>
+  </testcase>
+  <testcase name="testDateParse" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.008">
+    <failure message="1 expectation failed.&#10;Response body doesn&apos;t match expectation.&#10;Expected: &quot;Parsed: Monday, January&quot;&#10;  Actual: 0&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Parsed: Monday, January"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testDateParse(v3_gpt4o_run02_NotyPevarTest.java:135)
+</failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/dateparse/Monday/January
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	dayname=Monday
+				monthname=January
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 1
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+0
+]]></system-out>
+  </testcase>
+  <testcase name="testFileSuffix" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.009">
+    <failure message="1 expectation failed.&#10;Response body doesn&apos;t match expectation.&#10;Expected: &quot;.txt&quot;&#10;  Actual: 0&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: ".txt"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testFileSuffix(v3_gpt4o_run02_NotyPevarTest.java:152)
+</failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/filesuffix/usr/file.txt
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	directory=usr
+				file=file.txt
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 1
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+0
+]]></system-out>
+  </testcase>
+  <testcase name="testOrdered4" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.012">
+    <failure message="1 expectation failed.&#10;Response body doesn&apos;t match expectation.&#10;Expected: &quot;abcd&quot;&#10;  Actual: unordered&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "abcd"
+  Actual: unordered
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testOrdered4(v3_gpt4o_run02_NotyPevarTest.java:171)
+</failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/ordered4/a/b/d/c
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	w=a
+				x=b
+				y=c
+				z=d
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 9
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+unordered
+]]></system-out>
+  </testcase>
+  <testcase name="testTitle" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.009">
+    <failure message="1 expectation failed.&#10;Response body doesn&apos;t match expectation.&#10;Expected: &quot;Mr Smith&quot;&#10;  Actual: -1&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Mr Smith"
+  Actual: -1
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testTitle(v3_gpt4o_run02_NotyPevarTest.java:241)
+</failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:35161/api/title/Mr/Smith
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	sex=Mr
+				title=Smith
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 200 
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 2
+Date: Sun, 08 Dec 2024 19:15:41 GMT
+
+-1
+]]></system-out>
+  </testcase>
+  <testcase name="testNotyPevar" classname="org.restscs.v3_gpt4o_run02_NotyPevarTest" time="0.007"/>
+</testsuite>

@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v1_gpt35_run01_GammqTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.995 s <<< FAILURE! - in org.restncs.v1_gpt35_run01_GammqTest
+testGammqEndpoint(org.restncs.v1_gpt35_run01_GammqTest)  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: <0.3085375387259869>
+  Actual: 0.6065306631481238
+
+	at org.restncs.v1_gpt35_run01_GammqTest.testGammqEndpoint(v1_gpt35_run01_GammqTest.java:64)
+
+testGammqEndpointUnauthorized(org.restncs.v1_gpt35_run01_GammqTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <200>.
+
+	at org.restncs.v1_gpt35_run01_GammqTest.testGammqEndpointUnauthorized(v1_gpt35_run01_GammqTest.java:82)
+

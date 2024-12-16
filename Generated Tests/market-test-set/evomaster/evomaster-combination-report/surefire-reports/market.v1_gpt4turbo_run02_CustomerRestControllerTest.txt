@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: market.v1_gpt4turbo_run02_CustomerRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.415 s <<< FAILURE! - in market.v1_gpt4turbo_run02_CustomerRestControllerTest
+testCreateCustomer  Time elapsed: 0.351 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.v1_gpt4turbo_run02_CustomerRestControllerTest.testCreateCustomer(v1_gpt4turbo_run02_CustomerRestControllerTest.java:64)
+
+testGetCustomer  Time elapsed: 0.15 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.v1_gpt4turbo_run02_CustomerRestControllerTest.testCreateCustomer(v1_gpt4turbo_run02_CustomerRestControllerTest.java:64)
+	at market.v1_gpt4turbo_run02_CustomerRestControllerTest.testGetCustomer(v1_gpt4turbo_run02_CustomerRestControllerTest.java:71)
+

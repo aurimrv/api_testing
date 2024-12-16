@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="market.v2_gpt4o_run03_RestErrorResponseTest" time="1.346" tests="13" errors="0" skipped="0" failures="11">
+  <properties>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/test-classes:/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/classes:/home/rincon/.m2/repository/net/lukyanets/market-core/0.1.2/market-core-0.1.2.jar:/home/rincon/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/home/rincon/.m2/repository/org/postgresql/postgresql/42.2.18/postgresql-42.2.18.jar:/home/rincon/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/home/rincon/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar:/home/rincon/.m2/repository/org/springframework/hateoas/spring-hateoas/1.2.4/spring-hateoas-1.2.4.jar:/home/rincon/.m2/repository/org/springframework/spring-aop/5.3.4/spring-aop-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-context/5.3.4/spring-context-5.3.4.jar:/home/rincon/.m2/repository/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar:/home/rincon/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar:/home/rincon/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar:/home/rincon/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.4.3/spring-boot-starter-data-jpa-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.4.3/spring-boot-starter-aop-2.4.3.jar:/home/rincon/.m2/repository/org/aspectj/aspectjweaver/1.9.6/aspectjweaver-1.9.6.jar:/home/rincon/.m2/repository/jakarta/transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar:/home/rincon/.m2/repository/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar:/home/rincon/.m2/repository/org/hibernate/hibernate-core/5.4.28.Final/hibernate-core-5.4.28.Final.jar:/home/rincon/.m2/repository/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar:/home/rincon/.m2/repository/org/javassist/javassist/3.27.0-GA/javassist-3.27.0-GA.jar:/home/rincon/.m2/repository/net/bytebuddy/byte-buddy/1.10.20/byte-buddy-1.10.20.jar:/home/rincon/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/rincon/.m2/repository/org/jboss/jandex/2.2.3.Final/jandex-2.2.3.Final.jar:/home/rincon/.m2/repository/org/dom4j/dom4j/2.1.3/dom4j-2.1.3.jar:/home/rincon/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar:/home/rincon/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.3/jaxb-runtime-2.3.3.jar:/home/rincon/.m2/repository/org/glassfish/jaxb/txw2/2.3.3/txw2-2.3.3.jar:/home/rincon/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.11/istack-commons-runtime-3.0.11.jar:/home/rincon/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/home/rincon/.m2/repository/org/springframework/data/spring-data-jpa/2.4.5/spring-data-jpa-2.4.5.jar:/home/rincon/.m2/repository/org/springframework/data/spring-data-commons/2.4.5/spring-data-commons-2.4.5.jar:/home/rincon/.m2/repository/org/springframework/spring-orm/5.3.4/spring-orm-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-tx/5.3.4/spring-tx-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-aspects/5.3.4/spring-aspects-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.4.3/spring-boot-starter-jdbc-2.4.3.jar:/home/rincon/.m2/repository/com/zaxxer/HikariCP/3.4.5/HikariCP-3.4.5.jar:/home/rincon/.m2/repository/org/springframework/spring-jdbc/5.3.4/spring-jdbc-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-security/2.4.3/spring-boot-starter-security-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/security/spring-security-config/5.4.5/spring-security-config-5.4.5.jar:/home/rincon/.m2/repository/org/springframework/security/spring-security-core/5.4.5/spring-security-core-5.4.5.jar:/home/rincon/.m2/repository/org/springframework/security/spring-security-web/5.4.5/spring-security-web-5.4.5.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-validation/2.4.3/spring-boot-starter-validation-2.4.3.jar:/home/rincon/.m2/repository/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar:/home/rincon/.m2/repository/org/hibernate/validator/hibernate-validator/6.1.7.Final/hibernate-validator-6.1.7.Final.jar:/home/rincon/.m2/repository/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.4.3/spring-boot-starter-test-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-test/2.4.3/spring-boot-test-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.4.3/spring-boot-test-autoconfigure-2.4.3.jar:/home/rincon/.m2/repository/org/assertj/assertj-core/3.18.1/assertj-core-3.18.1.jar:/home/rincon/.m2/repository/org/junit/jupiter/junit-jupiter/5.7.1/junit-jupiter-5.7.1.jar:/home/rincon/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1.jar:/home/rincon/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/rincon/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/rincon/.m2/repository/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1.jar:/home/rincon/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.7.1/junit-jupiter-params-5.7.1.jar:/home/rincon/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.1/junit-jupiter-engine-5.7.1.jar:/home/rincon/.m2/repository/org/junit/platform/junit-platform-engine/1.7.1/junit-platform-engine-1.7.1.jar:/home/rincon/.m2/repository/org/mockito/mockito-core/3.6.28/mockito-core-3.6.28.jar:/home/rincon/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.20/byte-buddy-agent-1.10.20.jar:/home/rincon/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:/home/rincon/.m2/repository/org/mockito/mockito-junit-jupiter/3.6.28/mockito-junit-jupiter-3.6.28.jar:/home/rincon/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar:/home/rincon/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/rincon/.m2/repository/org/springframework/spring-test/5.3.4/spring-test-5.3.4.jar:/home/rincon/.m2/repository/org/xmlunit/xmlunit-core/2.7.0/xmlunit-core-2.7.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-boot-starter/3.0.0/springfox-boot-starter-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-oas/3.0.0/springfox-oas-3.0.0.jar:/home/rincon/.m2/repository/io/swagger/core/v3/swagger-annotations/2.1.2/swagger-annotations-2.1.2.jar:/home/rincon/.m2/repository/io/swagger/core/v3/swagger-models/2.1.2/swagger-models-2.1.2.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.jar:/home/rincon/.m2/repository/io/springfox/springfox-spi/3.0.0/springfox-spi-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-schema/3.0.0/springfox-schema-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-core/3.0.0/springfox-core-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-spring-web/3.0.0/springfox-spring-web-3.0.0.jar:/home/rincon/.m2/repository/io/github/classgraph/classgraph/4.8.83/classgraph-4.8.83.jar:/home/rincon/.m2/repository/io/springfox/springfox-spring-webmvc/3.0.0/springfox-spring-webmvc-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-spring-webflux/3.0.0/springfox-spring-webflux-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger-common/3.0.0/springfox-swagger-common-3.0.0.jar:/home/rincon/.m2/repository/org/mapstruct/mapstruct/1.3.1.Final/mapstruct-1.3.1.Final.jar:/home/rincon/.m2/repository/io/springfox/springfox-data-rest/3.0.0/springfox-data-rest-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-bean-validators/3.0.0/springfox-bean-validators-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger2/3.0.0/springfox-swagger2-3.0.0.jar:/home/rincon/.m2/repository/io/swagger/swagger-annotations/1.5.20/swagger-annotations-1.5.20.jar:/home/rincon/.m2/repository/io/swagger/swagger-models/1.5.20/swagger-models-1.5.20.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger-ui/3.0.0/springfox-swagger-ui-3.0.0.jar:/home/rincon/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/home/rincon/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/home/rincon/.m2/repository/org/springframework/plugin/spring-plugin-core/2.0.0.RELEASE/spring-plugin-core-2.0.0.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/plugin/spring-plugin-metadata/2.0.0.RELEASE/spring-plugin-metadata-2.0.0.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.4.3/spring-boot-starter-web-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.4.3/spring-boot-starter-json-2.4.3.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.11.4/jackson-databind-2.11.4.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.11.4/jackson-core-2.11.4.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.11.4/jackson-datatype-jdk8-2.11.4.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.11.4/jackson-datatype-jsr310-2.11.4.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.4/jackson-module-parameter-names-2.11.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.4.3/spring-boot-starter-tomcat-2.4.3.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.43/tomcat-embed-core-9.0.43.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.43/tomcat-embed-websocket-9.0.43.jar:/home/rincon/.m2/repository/org/springframework/spring-web/5.3.4/spring-web-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-webmvc/5.3.4/spring-webmvc-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-expression/5.3.4/spring-expression-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter/2.4.3/spring-boot-starter-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot/2.4.3/spring-boot-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.4.3/spring-boot-autoconfigure-2.4.3.jar:/home/rincon/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/home/rincon/.m2/repository/org/springframework/spring-core/5.3.4/spring-core-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-jcl/5.3.4/spring-jcl-5.3.4.jar:/home/rincon/.m2/repository/org/yaml/snakeyaml/1.27/snakeyaml-1.27.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-log4j2/2.4.3/spring-boot-starter-log4j2-2.4.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.13.3/log4j-slf4j-impl-2.13.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-core/2.13.3/log4j-core-2.13.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-jul/2.13.3/log4j-jul-2.13.3.jar:/home/rincon/.m2/repository/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar:/home/rincon/.m2/repository/com/lmax/disruptor/3.4.2/disruptor-3.4.2.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-devtools/2.4.3/spring-boot-devtools-2.4.3.jar:/home/rincon/.m2/repository/io/rest-assured/rest-assured/4.3.0/rest-assured-4.3.0.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpcore/4.4.14/httpcore-4.4.14.jar:/home/rincon/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/rincon/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/rincon/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/rincon/.m2/repository/io/rest-assured/xml-path/4.3.0/xml-path-4.3.0.jar:/home/rincon/.m2/repository/io/rest-assured/rest-assured-common/4.3.0/rest-assured-common-4.3.0.jar:/home/rincon/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/home/rincon/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/home/rincon/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/home/rincon/.m2/repository/com/sun/xml/bind/jaxb-osgi/2.3.0.1/jaxb-osgi-2.3.0.1.jar:/home/rincon/.m2/repository/org/apache/sling/org.apache.sling.javax.activation/0.1.0/org.apache.sling.javax.activation-0.1.0.jar:/home/rincon/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/home/rincon/.m2/repository/io/rest-assured/json-path/4.3.0/json-path-4.3.0.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy-json/2.5.14/groovy-json-2.5.14.jar:/home/rincon/.m2/repository/io/rest-assured/json-schema-validator/4.3.0/json-schema-validator-4.3.0.jar:/home/rincon/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.10/json-schema-validator-2.2.10.jar:/home/rincon/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.10/json-schema-core-1.2.10.jar:/home/rincon/.m2/repository/com/github/java-json-tools/jackson-coreutils/1.9/jackson-coreutils-1.9.jar:/home/rincon/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/home/rincon/.m2/repository/com/github/fge/msg-simple/1.1/msg-simple-1.1.jar:/home/rincon/.m2/repository/com/github/fge/btf/1.2/btf-1.2.jar:/home/rincon/.m2/repository/com/github/fge/uri-template/0.9/uri-template-0.9.jar:/home/rincon/.m2/repository/org/mozilla/rhino/1.7.7.1/rhino-1.7.7.1.jar:/home/rincon/.m2/repository/javax/mail/mailapi/1.4.3/mailapi-1.4.3.jar:/home/rincon/.m2/repository/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar:/home/rincon/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.0.0/libphonenumber-8.0.0.jar:/home/rincon/.m2/repository/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar:/home/rincon/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar:/home/rincon/.m2/repository/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy/3.0.9/groovy-3.0.9.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.9/groovy-xml-3.0.9.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-controller-api/3.0.0/evomaster-client-java-controller-api-3.0.0.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-sql-dto/3.0.0/evomaster-client-java-sql-dto-3.0.0.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-controller/3.0.0/evomaster-client-java-controller-3.0.0.jar:/home/rincon/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/home/rincon/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/rincon/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar:/home/rincon/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.1.1/javax.ws.rs-api-2.1.1.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="/home/rincon/apps/java/jdk-11/lib"/>
+    <property name="sun.java.command" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/surefire/surefirebooter5637931699700322038.jar /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/surefire 2024-12-08T14-43-50_817-jvmRun1 surefire1397478618876700372tmp surefire_014687271725335159821tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/test-classes:/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/classes:/home/rincon/.m2/repository/net/lukyanets/market-core/0.1.2/market-core-0.1.2.jar:/home/rincon/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/home/rincon/.m2/repository/org/postgresql/postgresql/42.2.18/postgresql-42.2.18.jar:/home/rincon/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/home/rincon/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar:/home/rincon/.m2/repository/org/springframework/hateoas/spring-hateoas/1.2.4/spring-hateoas-1.2.4.jar:/home/rincon/.m2/repository/org/springframework/spring-aop/5.3.4/spring-aop-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-context/5.3.4/spring-context-5.3.4.jar:/home/rincon/.m2/repository/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar:/home/rincon/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar:/home/rincon/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar:/home/rincon/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.4.3/spring-boot-starter-data-jpa-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.4.3/spring-boot-starter-aop-2.4.3.jar:/home/rincon/.m2/repository/org/aspectj/aspectjweaver/1.9.6/aspectjweaver-1.9.6.jar:/home/rincon/.m2/repository/jakarta/transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar:/home/rincon/.m2/repository/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar:/home/rincon/.m2/repository/org/hibernate/hibernate-core/5.4.28.Final/hibernate-core-5.4.28.Final.jar:/home/rincon/.m2/repository/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar:/home/rincon/.m2/repository/org/javassist/javassist/3.27.0-GA/javassist-3.27.0-GA.jar:/home/rincon/.m2/repository/net/bytebuddy/byte-buddy/1.10.20/byte-buddy-1.10.20.jar:/home/rincon/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/rincon/.m2/repository/org/jboss/jandex/2.2.3.Final/jandex-2.2.3.Final.jar:/home/rincon/.m2/repository/org/dom4j/dom4j/2.1.3/dom4j-2.1.3.jar:/home/rincon/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar:/home/rincon/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.3/jaxb-runtime-2.3.3.jar:/home/rincon/.m2/repository/org/glassfish/jaxb/txw2/2.3.3/txw2-2.3.3.jar:/home/rincon/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.11/istack-commons-runtime-3.0.11.jar:/home/rincon/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/home/rincon/.m2/repository/org/springframework/data/spring-data-jpa/2.4.5/spring-data-jpa-2.4.5.jar:/home/rincon/.m2/repository/org/springframework/data/spring-data-commons/2.4.5/spring-data-commons-2.4.5.jar:/home/rincon/.m2/repository/org/springframework/spring-orm/5.3.4/spring-orm-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-tx/5.3.4/spring-tx-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-aspects/5.3.4/spring-aspects-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.4.3/spring-boot-starter-jdbc-2.4.3.jar:/home/rincon/.m2/repository/com/zaxxer/HikariCP/3.4.5/HikariCP-3.4.5.jar:/home/rincon/.m2/repository/org/springframework/spring-jdbc/5.3.4/spring-jdbc-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-security/2.4.3/spring-boot-starter-security-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/security/spring-security-config/5.4.5/spring-security-config-5.4.5.jar:/home/rincon/.m2/repository/org/springframework/security/spring-security-core/5.4.5/spring-security-core-5.4.5.jar:/home/rincon/.m2/repository/org/springframework/security/spring-security-web/5.4.5/spring-security-web-5.4.5.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-validation/2.4.3/spring-boot-starter-validation-2.4.3.jar:/home/rincon/.m2/repository/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar:/home/rincon/.m2/repository/org/hibernate/validator/hibernate-validator/6.1.7.Final/hibernate-validator-6.1.7.Final.jar:/home/rincon/.m2/repository/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.4.3/spring-boot-starter-test-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-test/2.4.3/spring-boot-test-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.4.3/spring-boot-test-autoconfigure-2.4.3.jar:/home/rincon/.m2/repository/org/assertj/assertj-core/3.18.1/assertj-core-3.18.1.jar:/home/rincon/.m2/repository/org/junit/jupiter/junit-jupiter/5.7.1/junit-jupiter-5.7.1.jar:/home/rincon/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.1/junit-jupiter-api-5.7.1.jar:/home/rincon/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/home/rincon/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/rincon/.m2/repository/org/junit/platform/junit-platform-commons/1.7.1/junit-platform-commons-1.7.1.jar:/home/rincon/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.7.1/junit-jupiter-params-5.7.1.jar:/home/rincon/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.1/junit-jupiter-engine-5.7.1.jar:/home/rincon/.m2/repository/org/junit/platform/junit-platform-engine/1.7.1/junit-platform-engine-1.7.1.jar:/home/rincon/.m2/repository/org/mockito/mockito-core/3.6.28/mockito-core-3.6.28.jar:/home/rincon/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.20/byte-buddy-agent-1.10.20.jar:/home/rincon/.m2/repository/org/objenesis/objenesis/3.1/objenesis-3.1.jar:/home/rincon/.m2/repository/org/mockito/mockito-junit-jupiter/3.6.28/mockito-junit-jupiter-3.6.28.jar:/home/rincon/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar:/home/rincon/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/rincon/.m2/repository/org/springframework/spring-test/5.3.4/spring-test-5.3.4.jar:/home/rincon/.m2/repository/org/xmlunit/xmlunit-core/2.7.0/xmlunit-core-2.7.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-boot-starter/3.0.0/springfox-boot-starter-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-oas/3.0.0/springfox-oas-3.0.0.jar:/home/rincon/.m2/repository/io/swagger/core/v3/swagger-annotations/2.1.2/swagger-annotations-2.1.2.jar:/home/rincon/.m2/repository/io/swagger/core/v3/swagger-models/2.1.2/swagger-models-2.1.2.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.jar:/home/rincon/.m2/repository/io/springfox/springfox-spi/3.0.0/springfox-spi-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-schema/3.0.0/springfox-schema-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-core/3.0.0/springfox-core-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-spring-web/3.0.0/springfox-spring-web-3.0.0.jar:/home/rincon/.m2/repository/io/github/classgraph/classgraph/4.8.83/classgraph-4.8.83.jar:/home/rincon/.m2/repository/io/springfox/springfox-spring-webmvc/3.0.0/springfox-spring-webmvc-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-spring-webflux/3.0.0/springfox-spring-webflux-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger-common/3.0.0/springfox-swagger-common-3.0.0.jar:/home/rincon/.m2/repository/org/mapstruct/mapstruct/1.3.1.Final/mapstruct-1.3.1.Final.jar:/home/rincon/.m2/repository/io/springfox/springfox-data-rest/3.0.0/springfox-data-rest-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-bean-validators/3.0.0/springfox-bean-validators-3.0.0.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger2/3.0.0/springfox-swagger2-3.0.0.jar:/home/rincon/.m2/repository/io/swagger/swagger-annotations/1.5.20/swagger-annotations-1.5.20.jar:/home/rincon/.m2/repository/io/swagger/swagger-models/1.5.20/swagger-models-1.5.20.jar:/home/rincon/.m2/repository/io/springfox/springfox-swagger-ui/3.0.0/springfox-swagger-ui-3.0.0.jar:/home/rincon/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/home/rincon/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/home/rincon/.m2/repository/org/springframework/plugin/spring-plugin-core/2.0.0.RELEASE/spring-plugin-core-2.0.0.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/plugin/spring-plugin-metadata/2.0.0.RELEASE/spring-plugin-metadata-2.0.0.RELEASE.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.4.3/spring-boot-starter-web-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.4.3/spring-boot-starter-json-2.4.3.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.11.4/jackson-databind-2.11.4.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.11.4/jackson-core-2.11.4.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.11.4/jackson-datatype-jdk8-2.11.4.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.11.4/jackson-datatype-jsr310-2.11.4.jar:/home/rincon/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.4/jackson-module-parameter-names-2.11.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.4.3/spring-boot-starter-tomcat-2.4.3.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.43/tomcat-embed-core-9.0.43.jar:/home/rincon/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.43/tomcat-embed-websocket-9.0.43.jar:/home/rincon/.m2/repository/org/springframework/spring-web/5.3.4/spring-web-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-webmvc/5.3.4/spring-webmvc-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-expression/5.3.4/spring-expression-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter/2.4.3/spring-boot-starter-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot/2.4.3/spring-boot-2.4.3.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.4.3/spring-boot-autoconfigure-2.4.3.jar:/home/rincon/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/home/rincon/.m2/repository/org/springframework/spring-core/5.3.4/spring-core-5.3.4.jar:/home/rincon/.m2/repository/org/springframework/spring-jcl/5.3.4/spring-jcl-5.3.4.jar:/home/rincon/.m2/repository/org/yaml/snakeyaml/1.27/snakeyaml-1.27.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-starter-log4j2/2.4.3/spring-boot-starter-log4j2-2.4.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.13.3/log4j-slf4j-impl-2.13.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-core/2.13.3/log4j-core-2.13.3.jar:/home/rincon/.m2/repository/org/apache/logging/log4j/log4j-jul/2.13.3/log4j-jul-2.13.3.jar:/home/rincon/.m2/repository/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar:/home/rincon/.m2/repository/com/lmax/disruptor/3.4.2/disruptor-3.4.2.jar:/home/rincon/.m2/repository/org/springframework/boot/spring-boot-devtools/2.4.3/spring-boot-devtools-2.4.3.jar:/home/rincon/.m2/repository/io/rest-assured/rest-assured/4.3.0/rest-assured-4.3.0.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpcore/4.4.14/httpcore-4.4.14.jar:/home/rincon/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/rincon/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/home/rincon/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/rincon/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/home/rincon/.m2/repository/io/rest-assured/xml-path/4.3.0/xml-path-4.3.0.jar:/home/rincon/.m2/repository/io/rest-assured/rest-assured-common/4.3.0/rest-assured-common-4.3.0.jar:/home/rincon/.m2/repository/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11.jar:/home/rincon/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/home/rincon/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/home/rincon/.m2/repository/com/sun/xml/bind/jaxb-osgi/2.3.0.1/jaxb-osgi-2.3.0.1.jar:/home/rincon/.m2/repository/org/apache/sling/org.apache.sling.javax.activation/0.1.0/org.apache.sling.javax.activation-0.1.0.jar:/home/rincon/.m2/repository/javax/activation/activation/1.1.1/activation-1.1.1.jar:/home/rincon/.m2/repository/io/rest-assured/json-path/4.3.0/json-path-4.3.0.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy-json/2.5.14/groovy-json-2.5.14.jar:/home/rincon/.m2/repository/io/rest-assured/json-schema-validator/4.3.0/json-schema-validator-4.3.0.jar:/home/rincon/.m2/repository/com/github/java-json-tools/json-schema-validator/2.2.10/json-schema-validator-2.2.10.jar:/home/rincon/.m2/repository/com/github/java-json-tools/json-schema-core/1.2.10/json-schema-core-1.2.10.jar:/home/rincon/.m2/repository/com/github/java-json-tools/jackson-coreutils/1.9/jackson-coreutils-1.9.jar:/home/rincon/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/home/rincon/.m2/repository/com/github/fge/msg-simple/1.1/msg-simple-1.1.jar:/home/rincon/.m2/repository/com/github/fge/btf/1.2/btf-1.2.jar:/home/rincon/.m2/repository/com/github/fge/uri-template/0.9/uri-template-0.9.jar:/home/rincon/.m2/repository/org/mozilla/rhino/1.7.7.1/rhino-1.7.7.1.jar:/home/rincon/.m2/repository/javax/mail/mailapi/1.4.3/mailapi-1.4.3.jar:/home/rincon/.m2/repository/joda-time/joda-time/2.9.7/joda-time-2.9.7.jar:/home/rincon/.m2/repository/com/googlecode/libphonenumber/libphonenumber/8.0.0/libphonenumber-8.0.0.jar:/home/rincon/.m2/repository/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar:/home/rincon/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar:/home/rincon/.m2/repository/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy/3.0.9/groovy-3.0.9.jar:/home/rincon/.m2/repository/org/codehaus/groovy/groovy-xml/3.0.9/groovy-xml-3.0.9.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-controller-api/3.0.0/evomaster-client-java-controller-api-3.0.0.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-sql-dto/3.0.0/evomaster-client-java-sql-dto-3.0.0.jar:/home/rincon/.m2/repository/org/evomaster/evomaster-client-java-controller/3.0.0/evomaster-client-java-controller-3.0.0.jar:/home/rincon/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/home/rincon/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/rincon/.m2/repository/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar:/home/rincon/.m2/repository/javax/ws/rs/javax.ws.rs-api/2.1.1/javax.ws.rs-api-2.1.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/rincon"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-07-18"/>
+    <property name="java.home" value="/home/rincon/apps/java/jdk-11"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest/target/surefire/surefirebooter5637931699700322038.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.20+9-LTS-256"/>
+    <property name="user.name" value="rincon"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.0-126-generic"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="localRepository" value="/home/rincon/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.20"/>
+    <property name="user.dir" value="/media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.20+9-LTS-256"/>
+    <property name="java.specification.maintenance.version" value="2"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="maven.test.failure.ignore" value="true"/>
+  </properties>
+  <testcase name="testCreateCustomerInvalidEmail" classname="market.v2_gpt4o_run03_RestErrorResponseTest" time="0.053">
+    <failure message="1 expectation failed.&#10;JSON path message doesn&apos;t match.&#10;Expected: a string containing &quot;The value shall be in the format of an email address&quot;&#10;  Actual: Argument validation error&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: a string containing "The value shall be in the format of an email address"
+  Actual: Argument validation error
+
+	at market.v2_gpt4o_run03_RestErrorResponseTest.testCreateCustomerInvalidEmail(v2_gpt4o_run03_RestErrorResponseTest.java:111)
+</failure>
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.3)
+
+2024-12-08 14:45:16,099 INFO  [main] o.a.m.s.b.ForkedBooter - Starting ForkedBooter v2.22.0 using Java 11.0.20 on IFTO-PROBOOK with PID 35031 (started by rincon in /media/rincon/63999417195/eclipse-workspace/EMB-master/jdk_11_maven/cs/rest-gui/market/market-rest)
+2024-12-08 14:45:16,100 INFO  [main] o.a.m.s.b.ForkedBooter - No active profile set, falling back to default profiles: default
+2024-12-08 14:45:16,101 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 34:13]
+2024-12-08 14:45:16,101 WARN  [main] o.s.b.c.c.ConfigDataEnvironment - Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 24:13]
+2024-12-08 14:45:16,272 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-08 14:45:16,291 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 8 JPA repository interfaces.
+2024-12-08 14:45:16,315 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'market.DataConfig' of type [market.DataConfig$$EnhancerBySpringCGLIB$$565450a5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:45:16,326 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2bf23b33' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:45:16,327 INFO  [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-12-08 14:45:16,353 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 0 (http)
+2024-12-08 14:45:16,354 INFO  [main] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-47"]
+2024-12-08 14:45:16,354 INFO  [main] o.a.c.c.StandardService - Starting service [Tomcat]
+2024-12-08 14:45:16,354 INFO  [main] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.43]
+2024-12-08 14:45:16,364 INFO  [main] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+2024-12-08 14:45:16,364 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 263 ms
+2024-12-08 14:45:16,385 INFO  [main] c.z.h.HikariDataSource - HikariPool-47 - Starting...
+2024-12-08 14:45:16,386 INFO  [main] c.z.h.HikariDataSource - HikariPool-47 - Start completed.
+2024-12-08 14:45:16,394 INFO  [main] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-08 14:45:16,410 INFO  [main] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-12-08 14:45:16,421 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:45:16,422 WARN  [main] o.h.b.i.InFlightMetadataCollectorImpl - HHH000069: Duplicate generator name gen
+2024-12-08 14:45:16,493 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-12-08 14:45:16,494 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-08 14:45:16,650 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-08 14:45:16,760 INFO  [main] o.s.s.w.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48cc5b40, org.springframework.security.web.context.SecurityContextPersistenceFilter@28ff30c2, org.springframework.security.web.header.HeaderWriterFilter@34a04392, org.springframework.security.web.authentication.logout.LogoutFilter@240bcfb5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@553b1b5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f8f6318, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@798515a8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7be73fb, org.springframework.security.web.session.SessionManagementFilter@4da82043, org.springframework.security.web.access.ExceptionTranslationFilter@189fe104, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5250e8f7]
+2024-12-08 14:45:16,778 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-12-08 14:45:16,852 INFO  [main] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-47"]
+2024-12-08 14:45:16,854 INFO  [main] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 36935 (http) with context path ''
+2024-12-08 14:45:16,923 INFO  [main] o.a.m.s.b.ForkedBooter - Started ForkedBooter in 0.842 seconds (JVM running for 85.946)
+2024-12-08 14:45:16,949 INFO  [http-nio-auto-47-exec-1] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-08 14:45:16,949 INFO  [http-nio-auto-47-exec-1] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-08 14:45:16,951 INFO  [http-nio-auto-47-exec-1] o.s.w.s.DispatcherServlet - Completed initialization in 2 ms
+2024-12-08 14:45:16,973 WARN  [http-nio-auto-47-exec-1] m.r.e.RestExceptionHandler - RestErrorResponse{message='Argument validation error', entityName='userDTO', description='uri=/register', fieldErrors=[{field='email', message='The value shall be in the format of an email address'}]}
+Request method:	POST
+Request URI:	http://localhost:36935/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "invalid-email",
+    "password": "petrov",
+    "name": "Ivan Petrov",
+    "phone": "+7 123 456 78 90",
+    "address": "Riesstrasse 18"
+}
+
+HTTP/1.1 406 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:45:16 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Argument validation error",
+    "description": "uri=/register",
+    "entityName": "userDTO",
+    "fieldErrors": [
+        {
+            "field": "email",
+            "message": "The value shall be in the format of an email address"
+        }
+    ]
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetCustomerNotFound" classname="market.v2_gpt4o_run03_RestErrorResponseTest" time="0.187">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;404&gt; but was &lt;401&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.v2_gpt4o_run03_RestErrorResponseTest.testGetCustomerNotFound(v2_gpt4o_run03_RestErrorResponseTest.java:64)
+]]></failure>
+    <system-out><![CDATA[Request method:	GET
+Request URI:	http://localhost:36935/customer?name=nonexistent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+WWW-Authenticate: Basic realm="Realm"
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:45:17 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "timestamp": "2024-12-08T17:45:17.177+00:00",
+    "status": 401,
+    "error": "Unauthorized",
+    "message": "",
+    "path": "/customer"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testSetDeliveryIncluded" classname="market.v2_gpt4o_run03_RestErrorResponseTest" time="0.01">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;401&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v2_gpt4o_run03_RestErrorResponseTest.testSetDeliveryIncluded(v2_gpt4o_run03_RestErrorResponseTest.java:187)
+]]></failure>
+    <system-out><![CDATA[2024-12-08 14:45:17,187 WARN  [http-nio-auto-47-exec-4] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart/delivery', fieldErrors=[]}
+Request method:	PUT
+Request URI:	http://localhost:36935/customer/cart/delivery?included=true&name=Ivan
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:45:17 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart/delivery",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdateContacts" classname="market.v2_gpt4o_run03_RestErrorResponseTest" time="0.018">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;401&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v2_gpt4o_run03_RestErrorResponseTest.testUpdateContacts(v2_gpt4o_run03_RestErrorResponseTest.java:175)
+]]></failure>
+    <system-out><![CDATA[2024-12-08 14:45:17,204 WARN  [http-nio-auto-47-exec-5] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/contacts', fieldErrors=[]}
+Request method:	PUT
+Request URI:	http://localhost:36935/customer/contacts?name=Ivan
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "address": "Riesstrasse 19",
+    "phone": "+7 987 654 32 10"
+}
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:45:17 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/contacts",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testClearCart" classname="market.v2_gpt4o_run03_RestErrorResponseTest" time="0.013">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;401&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v2_gpt4o_run03_RestErrorResponseTest.testClearCart(v2_gpt4o_run03_RestErrorResponseTest.java:163)
+]]></failure>
+    <system-out><![CDATA[2024-12-08 14:45:17,217 WARN  [http-nio-auto-47-exec-6] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart', fieldErrors=[]}
+Request method:	DELETE
+Request URI:	http://localhost:36935/customer/cart?name=Ivan
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:45:17 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetProductNotFound" classname="market.v2_gpt4o_run03_RestErrorResponseTest" time="0.024"/>
+  <testcase name="testCreateCustomer" classname="market.v2_gpt4o_run03_RestErrorResponseTest" time="0.021">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;201&gt; but was &lt;406&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v2_gpt4o_run03_RestErrorResponseTest.testCreateCustomer(v2_gpt4o_run03_RestErrorResponseTest.java:96)
+]]></failure>
+    <system-out><![CDATA[2024-12-08 14:45:17,263 WARN  [http-nio-auto-47-exec-8] m.r.e.RestExceptionHandler - RestErrorResponse{message='Argument validation error', entityName='UserAccount', description='uri=/register', fieldErrors=[{field='email', message='Account with this email already exists'}]}
+Request method:	POST
+Request URI:	http://localhost:36935/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "ivan.petrov@yandex.ru",
+    "password": "petrov",
+    "name": "Ivan Petrov",
+    "phone": "+7 123 456 78 90",
+    "address": "Riesstrasse 18"
+}
+
+HTTP/1.1 406 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:45:17 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Argument validation error",
+    "description": "uri=/register",
+    "entityName": "UserAccount",
+    "fieldErrors": [
+        {
+            "field": "email",
+            "message": "Account with this email already exists"
+        }
+    ]
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetProducts" classname="market.v2_gpt4o_run03_RestErrorResponseTest" time="0.051"/>
+  <testcase name="testPayByCardInvalidCardNumber" classname="market.v2_gpt4o_run03_RestErrorResponseTest" time="0.03">
+    <failure message="1 expectation failed.&#10;JSON path message doesn&apos;t match.&#10;Expected: a string containing &quot;Card number shall consist of 13-16 digits&quot;&#10;  Actual: Argument validation error&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: a string containing "Card number shall consist of 13-16 digits"
+  Actual: Argument validation error
+
+	at market.v2_gpt4o_run03_RestErrorResponseTest.testPayByCardInvalidCardNumber(v2_gpt4o_run03_RestErrorResponseTest.java:154)
+</failure>
+    <system-out><![CDATA[2024-12-08 14:45:17,331 WARN  [http-nio-auto-47-exec-10] m.r.e.RestExceptionHandler - RestErrorResponse{message='Argument validation error', entityName='creditCardDTO', description='uri=/customer/cart/pay', fieldErrors=[{field='ccNumber', message='Not a valid credit card number'}, {field='ccNumber', message='Card number shall consist of 13-16 digits'}]}
+Request method:	POST
+Request URI:	http://localhost:36935/customer/cart/pay?name=Ivan
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ccNumber": "1234"
+}
+
+HTTP/1.1 406 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:45:17 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Argument validation error",
+    "description": "uri=/customer/cart/pay",
+    "entityName": "creditCardDTO",
+    "fieldErrors": [
+        {
+            "field": "ccNumber",
+            "message": "Not a valid credit card number"
+        },
+        {
+            "field": "ccNumber",
+            "message": "Card number shall consist of 13-16 digits"
+        }
+    ]
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testSetDeliveryExcluded" classname="market.v2_gpt4o_run03_RestErrorResponseTest" time="0.014">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;401&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <401>.
+
+	at market.v2_gpt4o_run03_RestErrorResponseTest.testSetDeliveryExcluded(v2_gpt4o_run03_RestErrorResponseTest.java:198)
+]]></failure>
+    <system-out><![CDATA[2024-12-08 14:45:17,358 WARN  [http-nio-auto-47-exec-1] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart/delivery', fieldErrors=[]}
+Request method:	PUT
+Request URI:	http://localhost:36935/customer/cart/delivery?included=false&name=Ivan
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:45:17 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart/delivery",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testAddItemToCartInvalidProduct" classname="market.v2_gpt4o_run03_RestErrorResponseTest" time="0.018">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;404&gt; but was &lt;401&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.v2_gpt4o_run03_RestErrorResponseTest.testAddItemToCartInvalidProduct(v2_gpt4o_run03_RestErrorResponseTest.java:76)
+]]></failure>
+    <system-out><![CDATA[2024-12-08 14:45:17,377 WARN  [http-nio-auto-47-exec-2] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart', fieldErrors=[]}
+Request method:	PUT
+Request URI:	http://localhost:36935/customer/cart?name=Ivan
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "productId": 9999,
+    "quantity": 1
+}
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:45:17 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetOrderNotFound" classname="market.v2_gpt4o_run03_RestErrorResponseTest" time="0.012">
+    <failure message="1 expectation failed.&#10;Expected status code &lt;404&gt; but was &lt;401&gt;.&#10;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <401>.
+
+	at market.v2_gpt4o_run03_RestErrorResponseTest.testGetOrderNotFound(v2_gpt4o_run03_RestErrorResponseTest.java:141)
+]]></failure>
+    <system-out><![CDATA[2024-12-08 14:45:17,390 WARN  [http-nio-auto-47-exec-3] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/orders/9999', fieldErrors=[]}
+Request method:	GET
+Request URI:	http://localhost:36935/customer/orders/9999
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:45:17 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/orders/9999",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+]]></system-out>
+  </testcase>
+  <testcase name="testGetCartUnauthorized" classname="market.v2_gpt4o_run03_RestErrorResponseTest" time="0.027">
+    <failure message="1 expectation failed.&#10;JSON path message doesn&apos;t match.&#10;Expected: Unauthorized&#10;  Actual: Acesso negado&#10;" type="java.lang.AssertionError">java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: Unauthorized
+  Actual: Acesso negado
+
+	at market.v2_gpt4o_run03_RestErrorResponseTest.testGetCartUnauthorized(v2_gpt4o_run03_RestErrorResponseTest.java:86)
+</failure>
+    <system-out><![CDATA[2024-12-08 14:45:17,404 WARN  [http-nio-auto-47-exec-4] m.r.e.RestExceptionHandler - RestErrorResponse{message='Acesso negado', entityName='null', description='uri=/customer/cart', fieldErrors=[]}
+Request method:	GET
+Request URI:	http://localhost:36935/customer/cart
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+
+HTTP/1.1 401 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sun, 08 Dec 2024 17:45:17 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "message": "Acesso negado",
+    "description": "uri=/customer/cart",
+    "entityName": null,
+    "fieldErrors": [
+        
+    ]
+}
+]]></system-out>
+  </testcase>
+</testsuite>

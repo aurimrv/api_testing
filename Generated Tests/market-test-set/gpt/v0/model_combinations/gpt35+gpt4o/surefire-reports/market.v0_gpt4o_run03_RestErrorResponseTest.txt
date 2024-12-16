@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: market.v0_gpt4o_run03_RestErrorResponseTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.034 s - in market.v0_gpt4o_run03_RestErrorResponseTest

@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4turbo_run03_CostfunsTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.733 s <<< FAILURE! - in org.restscs.v3_gpt4turbo_run03_CostfunsTest
+testCostfuns_ExpectedBehavior(org.restscs.v3_gpt4turbo_run03_CostfunsTest)  Time elapsed: 0.038 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 10
+
+	at org.restscs.v3_gpt4turbo_run03_CostfunsTest.testCostfuns_ExpectedBehavior(v3_gpt4turbo_run03_CostfunsTest.java:79)
+
+testCostfuns_ErrorScenarios(org.restscs.v3_gpt4turbo_run03_CostfunsTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4turbo_run03_CostfunsTest.testCostfuns_ErrorScenarios(v3_gpt4turbo_run03_CostfunsTest.java:103)
+

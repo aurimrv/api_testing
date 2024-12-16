@@ -1,0 +1,94 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run01_Ordered4Test
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 10, Errors: 0, Skipped: 0, Time elapsed: 0.825 s <<< FAILURE! - in org.restscs.v1_gpt4o_run01_Ordered4Test
+testCookieUsingGET(org.restscs.v1_gpt4o_run01_Ordered4Test)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Cookie set"
+  Actual: 2
+
+	at org.restscs.v1_gpt4o_run01_Ordered4Test.testCookieUsingGET(v1_gpt4o_run01_Ordered4Test.java:83)
+
+testCostfunsUsingGET(org.restscs.v1_gpt4o_run01_Ordered4Test)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Cost calculated"
+  Actual: 10
+
+	at org.restscs.v1_gpt4o_run01_Ordered4Test.testCostfunsUsingGET(v1_gpt4o_run01_Ordered4Test.java:93)
+
+testDateParseUsingGET(org.restscs.v1_gpt4o_run01_Ordered4Test)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Date parsed"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run01_Ordered4Test.testDateParseUsingGET(v1_gpt4o_run01_Ordered4Test.java:103)
+
+testFileSuffixUsingGET(org.restscs.v1_gpt4o_run01_Ordered4Test)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: ".txt"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run01_Ordered4Test.testFileSuffixUsingGET(v1_gpt4o_run01_Ordered4Test.java:113)
+
+testNotyPevarUsingGET(org.restscs.v1_gpt4o_run01_Ordered4Test)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "No type var"
+  Actual: 3
+
+	at org.restscs.v1_gpt4o_run01_Ordered4Test.testNotyPevarUsingGET(v1_gpt4o_run01_Ordered4Test.java:123)
+
+testRegexUsingGET(org.restscs.v1_gpt4o_run01_Ordered4Test)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Pattern matched"
+  Actual: none
+
+	at org.restscs.v1_gpt4o_run01_Ordered4Test.testRegexUsingGET(v1_gpt4o_run01_Ordered4Test.java:162)
+
+testText2txtUsingGET(org.restscs.v1_gpt4o_run01_Ordered4Test)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Text converted"
+  Actual: 
+
+	at org.restscs.v1_gpt4o_run01_Ordered4Test.testText2txtUsingGET(v1_gpt4o_run01_Ordered4Test.java:183)
+
+testTitleUsingGET(org.restscs.v1_gpt4o_run01_Ordered4Test)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Title matched"
+  Actual: 1
+
+	at org.restscs.v1_gpt4o_run01_Ordered4Test.testTitleUsingGET(v1_gpt4o_run01_Ordered4Test.java:193)
+
+testPatUsingGET(org.restscs.v1_gpt4o_run01_Ordered4Test)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Pattern matched"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run01_Ordered4Test.testPatUsingGET(v1_gpt4o_run01_Ordered4Test.java:172)
+
+testCalcUsingGET(org.restscs.v1_gpt4o_run01_Ordered4Test)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run01_Ordered4Test.testCalcUsingGET(v1_gpt4o_run01_Ordered4Test.java:64)
+

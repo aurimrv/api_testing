@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt4turbo_run01_TitleTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.904 s <<< FAILURE! - in org.restscs.v0_gpt4turbo_run01_TitleTest
+testTitleInvalidSex(org.restscs.v0_gpt4turbo_run01_TitleTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v0_gpt4turbo_run01_TitleTest.testTitleInvalidSex(v0_gpt4turbo_run01_TitleTest.java:98)
+
+testTitleInvalidTitle(org.restscs.v0_gpt4turbo_run01_TitleTest)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v0_gpt4turbo_run01_TitleTest.testTitleInvalidTitle(v0_gpt4turbo_run01_TitleTest.java:107)
+

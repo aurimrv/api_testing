@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4o_run02_ContactsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.162 s <<< FAILURE! - in market.v2_gpt4o_run02_ContactsRestControllerTest
+testSchemaValidationOnGetContacts  Time elapsed: 0.221 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.v2_gpt4o_run02_ContactsRestControllerTest.testSchemaValidationOnGetContacts(v2_gpt4o_run02_ContactsRestControllerTest.java:133)
+

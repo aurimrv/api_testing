@@ -1,0 +1,39 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4turbo_run02_OrdersRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 1.422 s <<< FAILURE! - in market.v2_gpt4turbo_run02_OrdersRestControllerTest
+testGetOrdersServerInternalError  Time elapsed: 0.034 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at market.v2_gpt4turbo_run02_OrdersRestControllerTest.testGetOrdersServerInternalError(v2_gpt4turbo_run02_OrdersRestControllerTest.java:111)
+
+testGetOrdersUnauthorized  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <404>.
+
+	at market.v2_gpt4turbo_run02_OrdersRestControllerTest.testGetOrdersUnauthorized(v2_gpt4turbo_run02_OrdersRestControllerTest.java:93)
+
+testGetOrdersForbidden  Time elapsed: 0.026 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <404>.
+
+	at market.v2_gpt4turbo_run02_OrdersRestControllerTest.testGetOrdersForbidden(v2_gpt4turbo_run02_OrdersRestControllerTest.java:101)
+
+testGetOrderById  Time elapsed: 0.027 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v2_gpt4turbo_run02_OrdersRestControllerTest.testGetOrderById(v2_gpt4turbo_run02_OrdersRestControllerTest.java:75)
+
+testGetOrders  Time elapsed: 0.057 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at market.v2_gpt4turbo_run02_OrdersRestControllerTest.testGetOrders(v2_gpt4turbo_run02_OrdersRestControllerTest.java:64)
+

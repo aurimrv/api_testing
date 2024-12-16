@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v2_gpt35_run03_BessjTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.972 s <<< FAILURE! - in org.restncs.v2_gpt35_run03_BessjTest
+testBusinessRuleForBessjEndpoint(org.restncs.v2_gpt35_run03_BessjTest)  Time elapsed: 0.074 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsDouble doesn't match.
+Expected: <0.2165958483046988>
+  Actual: 0.06096395114116368
+
+	at org.restncs.v2_gpt35_run03_BessjTest.testBusinessRuleForBessjEndpoint(v2_gpt35_run03_BessjTest.java:90)
+
+testInvalidInputForBessjEndpoint(org.restncs.v2_gpt35_run03_BessjTest)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at org.restncs.v2_gpt35_run03_BessjTest.testInvalidInputForBessjEndpoint(v2_gpt35_run03_BessjTest.java:65)
+
+testSchemaValidationForBessjEndpoint(org.restncs.v2_gpt35_run03_BessjTest)  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v2_gpt35_run03_BessjTest.testSchemaValidationForBessjEndpoint(v2_gpt35_run03_BessjTest.java:76)
+

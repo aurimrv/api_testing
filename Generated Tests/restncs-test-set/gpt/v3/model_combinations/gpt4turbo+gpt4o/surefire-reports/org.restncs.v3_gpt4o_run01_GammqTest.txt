@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v3_gpt4o_run01_GammqTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.241 s <<< FAILURE! - in org.restncs.v3_gpt4o_run01_GammqTest
+testGammqUnauthorized(org.restncs.v3_gpt4o_run01_GammqTest)  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <200>.
+
+	at org.restncs.v3_gpt4o_run01_GammqTest.testGammqUnauthorized(v3_gpt4o_run01_GammqTest.java:124)
+
+testGammqForbidden(org.restncs.v3_gpt4o_run01_GammqTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at org.restncs.v3_gpt4o_run01_GammqTest.testGammqForbidden(v3_gpt4o_run01_GammqTest.java:137)
+

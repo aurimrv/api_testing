@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt35_run01_NotyPevarTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 1.027 s <<< FAILURE! - in org.restscs.v0_gpt35_run01_NotyPevarTest
+testSubjectDefaultCase(org.restscs.v0_gpt35_run01_NotyPevarTest)  Time elapsed: 0.04 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "0"
+  Actual: 3
+
+	at org.restscs.v0_gpt35_run01_NotyPevarTest.testSubjectDefaultCase(v0_gpt35_run01_NotyPevarTest.java:107)
+
+testSubjectCase3(org.restscs.v0_gpt35_run01_NotyPevarTest)  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3"
+  Actual: 0
+
+	at org.restscs.v0_gpt35_run01_NotyPevarTest.testSubjectCase3(v0_gpt35_run01_NotyPevarTest.java:94)
+
+testSubjectCase2(org.restscs.v0_gpt35_run01_NotyPevarTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 0
+
+	at org.restscs.v0_gpt35_run01_NotyPevarTest.testSubjectCase2(v0_gpt35_run01_NotyPevarTest.java:81)
+
+testSubjectCase1(org.restscs.v0_gpt35_run01_NotyPevarTest)  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "1"
+  Actual: 3
+
+	at org.restscs.v0_gpt35_run01_NotyPevarTest.testSubjectCase1(v0_gpt35_run01_NotyPevarTest.java:68)
+

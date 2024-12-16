@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt4o_run03_NotyPevarTest
+-------------------------------------------------------------------------------
+Tests run: 18, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.133 s <<< FAILURE! - in org.restscs.v0_gpt4o_run03_NotyPevarTest
+testNotyPevar(org.restscs.v0_gpt4o_run03_NotyPevarTest)  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "1"
+  Actual: 3
+
+	at org.restscs.v0_gpt4o_run03_NotyPevarTest.testNotyPevar(v0_gpt4o_run03_NotyPevarTest.java:69)
+
+testCalc(org.restscs.v0_gpt4o_run03_NotyPevarTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 2.0
+
+	at org.restscs.v0_gpt4o_run03_NotyPevarTest.testCalc(v0_gpt4o_run03_NotyPevarTest.java:111)
+

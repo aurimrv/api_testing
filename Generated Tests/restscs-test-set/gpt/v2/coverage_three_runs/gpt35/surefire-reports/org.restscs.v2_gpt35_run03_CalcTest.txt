@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt35_run03_CalcTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.724 s <<< FAILURE! - in org.restscs.v2_gpt35_run03_CalcTest
+testBusinessRuleEnforcement(org.restscs.v2_gpt35_run03_CalcTest)  Time elapsed: 0.039 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "15"
+  Actual: 15.0
+
+	at org.restscs.v2_gpt35_run03_CalcTest.testBusinessRuleEnforcement(v2_gpt35_run03_CalcTest.java:96)
+
+testSchemaValidation(org.restscs.v2_gpt35_run03_CalcTest)  Time elapsed: 0.026 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+15.0
+
+	at org.restscs.v2_gpt35_run03_CalcTest.testSchemaValidation(v2_gpt35_run03_CalcTest.java:82)
+
+testInvalidInputReturns500(org.restscs.v2_gpt35_run03_CalcTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt35_run03_CalcTest.testInvalidInputReturns500(v2_gpt35_run03_CalcTest.java:68)
+

@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4o_run02_OrdersRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.245 s <<< FAILURE! - in market.v2_gpt4o_run02_OrdersRestControllerTest
+testGetOrderInvalidId  Time elapsed: 0.123 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <500>.
+
+	at market.v2_gpt4o_run02_OrdersRestControllerTest.testGetOrderInvalidId(v2_gpt4o_run02_OrdersRestControllerTest.java:100)
+
+testInvalidEndpoint  Time elapsed: 0.115 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <500>.
+
+	at market.v2_gpt4o_run02_OrdersRestControllerTest.testInvalidEndpoint(v2_gpt4o_run02_OrdersRestControllerTest.java:155)
+

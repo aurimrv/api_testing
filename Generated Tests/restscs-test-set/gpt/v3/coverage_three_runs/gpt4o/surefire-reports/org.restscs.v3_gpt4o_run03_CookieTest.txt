@@ -1,0 +1,90 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run03_CookieTest
+-------------------------------------------------------------------------------
+Tests run: 23, Failures: 12, Errors: 0, Skipped: 0, Time elapsed: 1.85 s <<< FAILURE! - in org.restscs.v3_gpt4o_run03_CookieTest
+testTitleEndpointNotFound(org.restscs.v3_gpt4o_run03_CookieTest)  Time elapsed: 0.028 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_CookieTest.testTitleEndpointNotFound(v3_gpt4o_run03_CookieTest.java:319)
+
+testCalcEndpoint(org.restscs.v3_gpt4o_run03_CookieTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run03_CookieTest.testCalcEndpoint(v3_gpt4o_run03_CookieTest.java:67)
+
+testCalcEndpointNotFound(org.restscs.v3_gpt4o_run03_CookieTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_CookieTest.testCalcEndpointNotFound(v3_gpt4o_run03_CookieTest.java:206)
+
+testCookieEndpointNotFound(org.restscs.v3_gpt4o_run03_CookieTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_CookieTest.testCookieEndpointNotFound(v3_gpt4o_run03_CookieTest.java:218)
+
+testCostfunsEndpointNotFound(org.restscs.v3_gpt4o_run03_CookieTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_CookieTest.testCostfunsEndpointNotFound(v3_gpt4o_run03_CookieTest.java:229)
+
+testDateParseEndpointNotFound(org.restscs.v3_gpt4o_run03_CookieTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_CookieTest.testDateParseEndpointNotFound(v3_gpt4o_run03_CookieTest.java:240)
+
+testFileSuffixEndpointNotFound(org.restscs.v3_gpt4o_run03_CookieTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_CookieTest.testFileSuffixEndpointNotFound(v3_gpt4o_run03_CookieTest.java:251)
+
+testNoTypeVarEndpointNotFound(org.restscs.v3_gpt4o_run03_CookieTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_CookieTest.testNoTypeVarEndpointNotFound(v3_gpt4o_run03_CookieTest.java:262)
+
+testOrdered4EndpointNotFound(org.restscs.v3_gpt4o_run03_CookieTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_CookieTest.testOrdered4EndpointNotFound(v3_gpt4o_run03_CookieTest.java:275)
+
+testRegexEndpointNotFound(org.restscs.v3_gpt4o_run03_CookieTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_CookieTest.testRegexEndpointNotFound(v3_gpt4o_run03_CookieTest.java:285)
+
+testPatEndpointNotFound(org.restscs.v3_gpt4o_run03_CookieTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_CookieTest.testPatEndpointNotFound(v3_gpt4o_run03_CookieTest.java:296)
+
+testText2TxtEndpointNotFound(org.restscs.v3_gpt4o_run03_CookieTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run03_CookieTest.testText2TxtEndpointNotFound(v3_gpt4o_run03_CookieTest.java:308)
+

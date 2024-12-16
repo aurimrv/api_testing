@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt4o_run02_CustomerRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.978 s <<< FAILURE! - in market.v2_gpt4o_run02_CustomerRestControllerTest
+testRegisterCustomerDuplicateEmail  Time elapsed: 0.121 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v2_gpt4o_run02_CustomerRestControllerTest.testRegisterCustomerDuplicateEmail(v2_gpt4o_run02_CustomerRestControllerTest.java:127)
+
+testSchemaValidationOnGetCustomer  Time elapsed: 0.037 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v2_gpt4o_run02_CustomerRestControllerTest.testSchemaValidationOnGetCustomer(v2_gpt4o_run02_CustomerRestControllerTest.java:175)
+
+testRegisterCustomer  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <406>.
+
+	at market.v2_gpt4o_run02_CustomerRestControllerTest.testRegisterCustomer(v2_gpt4o_run02_CustomerRestControllerTest.java:96)
+

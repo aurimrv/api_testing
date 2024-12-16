@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt35_run02_CookieTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.635 s <<< FAILURE! - in org.restscs.v0_gpt35_run02_CookieTest
+testCookieUnauthorized(org.restscs.v0_gpt35_run02_CookieTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <401> but was <200>.
+
+	at org.restscs.v0_gpt35_run02_CookieTest.testCookieUnauthorized(v0_gpt35_run02_CookieTest.java:86)
+
+testCookieForbidden(org.restscs.v0_gpt35_run02_CookieTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <200>.
+
+	at org.restscs.v0_gpt35_run02_CookieTest.testCookieForbidden(v0_gpt35_run02_CookieTest.java:100)
+
+testCookieNotFound(org.restscs.v0_gpt35_run02_CookieTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v0_gpt35_run02_CookieTest.testCookieNotFound(v0_gpt35_run02_CookieTest.java:114)
+

@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run02_TitleTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.828 s <<< FAILURE! - in org.restscs.v1_gpt4o_run02_TitleTest
+testText2txtUsingGET(org.restscs.v1_gpt4o_run02_TitleTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is not an empty string
+  Actual: 
+
+	at org.restscs.v1_gpt4o_run02_TitleTest.testText2txtUsingGET(v1_gpt4o_run02_TitleTest.java:208)
+
+testCalcUsingGET(org.restscs.v1_gpt4o_run02_TitleTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run02_TitleTest.testCalcUsingGET(v1_gpt4o_run02_TitleTest.java:67)
+

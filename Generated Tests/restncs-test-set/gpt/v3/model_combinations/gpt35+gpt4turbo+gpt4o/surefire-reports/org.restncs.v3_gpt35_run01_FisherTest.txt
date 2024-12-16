@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v3_gpt35_run01_FisherTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.884 s <<< FAILURE! - in org.restncs.v3_gpt35_run01_FisherTest
+testFisherWithInvalidInput(org.restncs.v3_gpt35_run01_FisherTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restncs.v3_gpt35_run01_FisherTest.testFisherWithInvalidInput(v3_gpt35_run01_FisherTest.java:67)
+

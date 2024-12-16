@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt35_run01_CalcTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.361 s <<< FAILURE! - in org.restscs.v3_gpt35_run01_CalcTest
+testCalcAPI_InvalidInput(org.restscs.v3_gpt35_run01_CalcTest)  Time elapsed: 0.069 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run01_CalcTest.testCalcAPI_InvalidInput(v3_gpt35_run01_CalcTest.java:84)
+
+testCalcAPI_ErrorDetection(org.restscs.v3_gpt35_run01_CalcTest)  Time elapsed: 0.031 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt35_run01_CalcTest.testCalcAPI_ErrorDetection(v3_gpt35_run01_CalcTest.java:101)
+

@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v0_gpt4turbo_run01_PatTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 8.493 s <<< FAILURE! - in org.restscs.v0_gpt4turbo_run01_PatTest
+testSubjectWithBothPatAndReverse(org.restscs.v0_gpt4turbo_run01_PatTest)  Time elapsed: 0.076 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "3"
+  Actual: 2
+
+	at org.restscs.v0_gpt4turbo_run01_PatTest.testSubjectWithBothPatAndReverse(v0_gpt4turbo_run01_PatTest.java:93)
+
+testSubjectWithPalindromePatFollowedByReverse(org.restscs.v0_gpt4turbo_run01_PatTest)  Time elapsed: 0.044 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "4"
+  Actual: 0
+
+	at org.restscs.v0_gpt4turbo_run01_PatTest.testSubjectWithPalindromePatFollowedByReverse(v0_gpt4turbo_run01_PatTest.java:107)
+
+testSubjectWithPalindromeReverseFollowedByPat(org.restscs.v0_gpt4turbo_run01_PatTest)  Time elapsed: 0.032 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "5"
+  Actual: 2
+
+	at org.restscs.v0_gpt4turbo_run01_PatTest.testSubjectWithPalindromeReverseFollowedByPat(v0_gpt4turbo_run01_PatTest.java:121)
+

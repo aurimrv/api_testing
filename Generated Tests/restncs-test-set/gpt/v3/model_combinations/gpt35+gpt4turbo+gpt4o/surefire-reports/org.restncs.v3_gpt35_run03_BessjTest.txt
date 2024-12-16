@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v3_gpt35_run03_BessjTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.689 s <<< FAILURE! - in org.restncs.v3_gpt35_run03_BessjTest
+testBessjServerError(org.restncs.v3_gpt35_run03_BessjTest)  Time elapsed: 0.025 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at org.restncs.v3_gpt35_run03_BessjTest.testBessjServerError(v3_gpt35_run03_BessjTest.java:107)
+
+testBessjSchemaValidation(org.restncs.v3_gpt35_run03_BessjTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v3_gpt35_run03_BessjTest.testBessjSchemaValidation(v3_gpt35_run03_BessjTest.java:90)
+
+testBessjValidInput(org.restncs.v3_gpt35_run03_BessjTest)  Time elapsed: 0.026 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path resultAsInt doesn't match.
+Expected: not null
+  Actual: null
+
+	at org.restncs.v3_gpt35_run03_BessjTest.testBessjValidInput(v3_gpt35_run03_BessjTest.java:68)
+
+testBessjInvalidInput(org.restncs.v3_gpt35_run03_BessjTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at org.restncs.v3_gpt35_run03_BessjTest.testBessjInvalidInput(v3_gpt35_run03_BessjTest.java:79)
+

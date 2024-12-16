@@ -1,0 +1,159 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run02_NotyPevarTest
+-------------------------------------------------------------------------------
+Tests run: 22, Failures: 19, Errors: 1, Skipped: 0, Time elapsed: 0.863 s <<< FAILURE! - in org.restscs.v3_gpt4o_run02_NotyPevarTest
+testCookieInvalidInput(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testCookieInvalidInput(v3_gpt4o_run02_NotyPevarTest.java:126)
+
+testFileSuffixInvalidInput(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testFileSuffixInvalidInput(v3_gpt4o_run02_NotyPevarTest.java:160)
+
+testNotyPevarInvalidInput(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testNotyPevarInvalidInput(v3_gpt4o_run02_NotyPevarTest.java:90)
+
+testOrdered4InvalidInput(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testOrdered4InvalidInput(v3_gpt4o_run02_NotyPevarTest.java:181)
+
+testRegexInvalidInput(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testRegexInvalidInput(v3_gpt4o_run02_NotyPevarTest.java:196)
+
+testPatInvalidInput(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testPatInvalidInput(v3_gpt4o_run02_NotyPevarTest.java:213)
+
+testText2txtInvalidInput(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testText2txtInvalidInput(v3_gpt4o_run02_NotyPevarTest.java:232)
+
+testTitleInvalidInput(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <404>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testTitleInvalidInput(v3_gpt4o_run02_NotyPevarTest.java:249)
+
+testCookie(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "session=12345; Domain=example.com"
+  Actual: 2
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testCookie(v3_gpt4o_run02_NotyPevarTest.java:117)
+
+testDateParse(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Parsed: Monday, January"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testDateParse(v3_gpt4o_run02_NotyPevarTest.java:135)
+
+testFileSuffix(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: ".txt"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testFileSuffix(v3_gpt4o_run02_NotyPevarTest.java:152)
+
+testOrdered4(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "abcd"
+  Actual: unordered
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testOrdered4(v3_gpt4o_run02_NotyPevarTest.java:171)
+
+testCostfuns(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "56"
+  Actual: 10
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testCostfuns(v3_gpt4o_run02_NotyPevarTest.java:99)
+
+testCalcOperation(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testCalcOperation(v3_gpt4o_run02_NotyPevarTest.java:64)
+
+testCalcOperationInvalidOp(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testCalcOperationInvalidOp(v3_gpt4o_run02_NotyPevarTest.java:73)
+
+testDateParseInvalidInput(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testDateParseInvalidInput(v3_gpt4o_run02_NotyPevarTest.java:143)
+
+testPat(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.net.URISyntaxException: Illegal character in path at index 38: http://localhost:37559/api/pat/abc123/\\d+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testPat(v3_gpt4o_run02_NotyPevarTest.java:203)
+
+testRegex(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Matched: abc123"
+  Actual: none
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testRegex(v3_gpt4o_run02_NotyPevarTest.java:189)
+
+testTitle(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.01 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Mr Smith"
+  Actual: -1
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testTitle(v3_gpt4o_run02_NotyPevarTest.java:241)
+
+testText2txt(org.restscs.v3_gpt4o_run02_NotyPevarTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "hello world test"
+  Actual: 
+
+	at org.restscs.v3_gpt4o_run02_NotyPevarTest.testText2txt(v3_gpt4o_run02_NotyPevarTest.java:223)
+

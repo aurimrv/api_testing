@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4turbo_run01_FileSuffixTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 1.426 s <<< FAILURE! - in org.restscs.v2_gpt4turbo_run01_FileSuffixTest
+testFileSuffixSchemaValidation(org.restscs.v2_gpt4turbo_run01_FileSuffixTest)  Time elapsed: 0.782 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+0
+
+	at org.restscs.v2_gpt4turbo_run01_FileSuffixTest.testFileSuffixSchemaValidation(v2_gpt4turbo_run01_FileSuffixTest.java:102)
+
+testFileSuffixWithValidInputs(org.restscs.v2_gpt4turbo_run01_FileSuffixTest)  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 0
+
+	at org.restscs.v2_gpt4turbo_run01_FileSuffixTest.testFileSuffixWithValidInputs(v2_gpt4turbo_run01_FileSuffixTest.java:71)
+

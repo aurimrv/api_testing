@@ -1,0 +1,85 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run02_DateParseTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 1.424 s <<< FAILURE! - in org.restscs.v1_gpt4o_run02_DateParseTest
+testTitleEndpoint(org.restscs.v1_gpt4o_run02_DateParseTest)  Time elapsed: 0.044 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Mr"
+  Actual: 1
+
+	at org.restscs.v1_gpt4o_run02_DateParseTest.testTitleEndpoint(v1_gpt4o_run02_DateParseTest.java:217)
+
+testCalcEndpoint(org.restscs.v1_gpt4o_run02_DateParseTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run02_DateParseTest.testCalcEndpoint(v1_gpt4o_run02_DateParseTest.java:65)
+
+testCostfunsEndpoint(org.restscs.v1_gpt4o_run02_DateParseTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "example10"
+  Actual: 10
+
+	at org.restscs.v1_gpt4o_run02_DateParseTest.testCostfunsEndpoint(v1_gpt4o_run02_DateParseTest.java:110)
+
+testCookieEndpoint(org.restscs.v1_gpt4o_run02_DateParseTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "sessionId=12345; Domain=example.com"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run02_DateParseTest.testCookieEndpoint(v1_gpt4o_run02_DateParseTest.java:100)
+
+testOrdered4Endpoint(org.restscs.v1_gpt4o_run02_DateParseTest)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "first-second-fourth-third"
+  Actual: unordered
+
+	at org.restscs.v1_gpt4o_run02_DateParseTest.testOrdered4Endpoint(v1_gpt4o_run02_DateParseTest.java:180)
+
+testText2txtEndpoint(org.restscs.v1_gpt4o_run02_DateParseTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "hello world !"
+  Actual: 
+
+	at org.restscs.v1_gpt4o_run02_DateParseTest.testText2txtEndpoint(v1_gpt4o_run02_DateParseTest.java:207)
+
+testFileSuffixEndpoint(org.restscs.v1_gpt4o_run02_DateParseTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: ".txt"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run02_DateParseTest.testFileSuffixEndpoint(v1_gpt4o_run02_DateParseTest.java:158)
+
+testRegexEndpoint(org.restscs.v1_gpt4o_run02_DateParseTest)  Time elapsed: 0.053 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "example"
+  Actual: none
+
+	at org.restscs.v1_gpt4o_run02_DateParseTest.testRegexEndpoint(v1_gpt4o_run02_DateParseTest.java:189)
+
+testNotypevarEndpoint(org.restscs.v1_gpt4o_run02_DateParseTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "test1"
+  Actual: 2
+
+	at org.restscs.v1_gpt4o_run02_DateParseTest.testNotypevarEndpoint(v1_gpt4o_run02_DateParseTest.java:168)
+

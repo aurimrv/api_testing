@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: market.v0_gpt35_run02_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.31 s - in market.v0_gpt35_run02_RestExceptionHandlerTest

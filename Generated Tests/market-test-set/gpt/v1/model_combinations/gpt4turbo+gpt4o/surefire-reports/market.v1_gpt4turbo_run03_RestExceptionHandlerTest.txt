@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: market.v1_gpt4turbo_run03_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.317 s <<< FAILURE! - in market.v1_gpt4turbo_run03_RestExceptionHandlerTest
+testAccessDeniedExceptionHandling  Time elapsed: 0.145 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path message doesn't match.
+Expected: Acesso negado
+  Actual: 
+
+	at market.v1_gpt4turbo_run03_RestExceptionHandlerTest.testAccessDeniedExceptionHandling(v1_gpt4turbo_run03_RestExceptionHandlerTest.java:64)
+
+testMethodArgumentNotValidExceptionHandling  Time elapsed: 0.071 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path allowedMethods doesn't match.
+Expected: iterable containing ["GET", "PUT"]
+  Actual: null
+
+	at market.v1_gpt4turbo_run03_RestExceptionHandlerTest.testMethodArgumentNotValidExceptionHandling(v1_gpt4turbo_run03_RestExceptionHandlerTest.java:98)
+

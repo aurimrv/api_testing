@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt35_run03_RestExceptionHandlerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.513 s <<< FAILURE! - in market.v3_gpt35_run03_RestExceptionHandlerTest
+testCustomNotValidException_NotAcceptable  Time elapsed: 0.044 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <406> but was <401>.
+
+	at market.v3_gpt35_run03_RestExceptionHandlerTest.testCustomNotValidException_NotAcceptable(v3_gpt35_run03_RestExceptionHandlerTest.java:96)
+

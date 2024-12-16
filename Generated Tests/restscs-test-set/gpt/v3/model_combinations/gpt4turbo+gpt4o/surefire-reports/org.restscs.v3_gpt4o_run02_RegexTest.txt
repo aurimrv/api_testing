@@ -1,0 +1,99 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run02_RegexTest
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 11, Errors: 0, Skipped: 0, Time elapsed: 1.217 s <<< FAILURE! - in org.restscs.v3_gpt4o_run02_RegexTest
+testCalcInvalidOperation(org.restscs.v3_gpt4o_run02_RegexTest)  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v3_gpt4o_run02_RegexTest.testCalcInvalidOperation(v3_gpt4o_run02_RegexTest.java:67)
+
+testCalc(org.restscs.v3_gpt4o_run02_RegexTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "15.0"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run02_RegexTest.testCalc(v3_gpt4o_run02_RegexTest.java:60)
+
+testCookie(org.restscs.v3_gpt4o_run02_RegexTest)  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "name=testName; value=testVal; site=testSite"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run02_RegexTest.testCookie(v3_gpt4o_run02_RegexTest.java:82)
+
+testCostFuns(org.restscs.v3_gpt4o_run02_RegexTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Cost function result"
+  Actual: 10
+
+	at org.restscs.v3_gpt4o_run02_RegexTest.testCostFuns(v3_gpt4o_run02_RegexTest.java:90)
+
+testDateParse(org.restscs.v3_gpt4o_run02_RegexTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Monday January"
+  Actual: 2
+
+	at org.restscs.v3_gpt4o_run02_RegexTest.testDateParse(v3_gpt4o_run02_RegexTest.java:98)
+
+testFileSuffix(org.restscs.v3_gpt4o_run02_RegexTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "txt"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run02_RegexTest.testFileSuffix(v3_gpt4o_run02_RegexTest.java:106)
+
+testNoTypeVar(org.restscs.v3_gpt4o_run02_RegexTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Notypevar result"
+  Actual: 2
+
+	at org.restscs.v3_gpt4o_run02_RegexTest.testNoTypeVar(v3_gpt4o_run02_RegexTest.java:114)
+
+testOrdered4(org.restscs.v3_gpt4o_run02_RegexTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Ordered 4 result"
+  Actual: unordered
+
+	at org.restscs.v3_gpt4o_run02_RegexTest.testOrdered4(v3_gpt4o_run02_RegexTest.java:122)
+
+testRegexUrl(org.restscs.v3_gpt4o_run02_RegexTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "url"
+  Actual: 0
+
+	at org.restscs.v3_gpt4o_run02_RegexTest.testRegexUrl(v3_gpt4o_run02_RegexTest.java:130)
+
+testTitle(org.restscs.v3_gpt4o_run02_RegexTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Title result"
+  Actual: -1
+
+	at org.restscs.v3_gpt4o_run02_RegexTest.testTitle(v3_gpt4o_run02_RegexTest.java:162)
+
+testInternalServerErrors(org.restscs.v3_gpt4o_run02_RegexTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4o_run02_RegexTest.testInternalServerErrors(v3_gpt4o_run02_RegexTest.java:169)
+

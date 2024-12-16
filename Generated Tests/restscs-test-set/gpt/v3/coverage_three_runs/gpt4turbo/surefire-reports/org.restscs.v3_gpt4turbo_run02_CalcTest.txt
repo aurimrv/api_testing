@@ -1,0 +1,47 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4turbo_run02_CalcTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 1.075 s <<< FAILURE! - in org.restscs.v3_gpt4turbo_run02_CalcTest
+testCalcDivideByZero(org.restscs.v3_gpt4turbo_run02_CalcTest)  Time elapsed: 0.033 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v3_gpt4turbo_run02_CalcTest.testCalcDivideByZero(v3_gpt4turbo_run02_CalcTest.java:211)
+
+testCalcPlus(org.restscs.v3_gpt4turbo_run02_CalcTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "3"
+  Actual: 3.0
+
+	at org.restscs.v3_gpt4turbo_run02_CalcTest.testCalcPlus(v3_gpt4turbo_run02_CalcTest.java:160)
+
+testCalcSubtract(org.restscs.v3_gpt4turbo_run02_CalcTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "3"
+  Actual: 3.0
+
+	at org.restscs.v3_gpt4turbo_run02_CalcTest.testCalcSubtract(v3_gpt4turbo_run02_CalcTest.java:173)
+
+testCalcMultiply(org.restscs.v3_gpt4turbo_run02_CalcTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "6"
+  Actual: 6.0
+
+	at org.restscs.v3_gpt4turbo_run02_CalcTest.testCalcMultiply(v3_gpt4turbo_run02_CalcTest.java:186)
+
+testCalcDivide(org.restscs.v3_gpt4turbo_run02_CalcTest)  Time elapsed: 0.014 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: is "4"
+  Actual: 4.0
+
+	at org.restscs.v3_gpt4turbo_run02_CalcTest.testCalcDivide(v3_gpt4turbo_run02_CalcTest.java:199)
+

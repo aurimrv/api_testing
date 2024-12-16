@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4o_run03_CostfunsTest
+-------------------------------------------------------------------------------
+Tests run: 15, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.214 s <<< FAILURE! - in org.restscs.v2_gpt4o_run03_CostfunsTest
+testSchemaValidation(org.restscs.v2_gpt4o_run03_CostfunsTest)  Time elapsed: 0.266 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: The content to match the given JSON schema.
+error: instance type (integer) does not match any allowed primitive type (allowed: ["object"])
+    level: "error"
+    schema: {"loadingURI":"#","pointer":""}
+    instance: {"pointer":""}
+    domain: "validation"
+    keyword: "type"
+    found: "integer"
+    expected: ["object"]
+
+  Actual: 10
+
+	at org.restscs.v2_gpt4o_run03_CostfunsTest.testSchemaValidation(v2_gpt4o_run03_CostfunsTest.java:214)
+

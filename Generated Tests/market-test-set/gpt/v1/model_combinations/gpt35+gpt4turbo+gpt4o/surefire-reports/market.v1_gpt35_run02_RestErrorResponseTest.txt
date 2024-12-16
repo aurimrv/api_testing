@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: market.v1_gpt35_run02_RestErrorResponseTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.963 s - in market.v1_gpt35_run02_RestErrorResponseTest

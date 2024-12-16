@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4turbo_run03_NotyPevarTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.826 s <<< FAILURE! - in org.restscs.v2_gpt4turbo_run03_NotyPevarTest
+testSubjectWithInvalidInputLeadingToServerError(org.restscs.v2_gpt4turbo_run03_NotyPevarTest)  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4turbo_run03_NotyPevarTest.testSubjectWithInvalidInputLeadingToServerError(v2_gpt4turbo_run03_NotyPevarTest.java:63)
+
+testSubjectBusinessRule(org.restscs.v2_gpt4turbo_run03_NotyPevarTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "56"
+  Actual: 3
+
+	at org.restscs.v2_gpt4turbo_run03_NotyPevarTest.testSubjectBusinessRule(v2_gpt4turbo_run03_NotyPevarTest.java:97)
+
+testSubjectWithValidInput(org.restscs.v2_gpt4turbo_run03_NotyPevarTest)  Time elapsed: 0.011 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "28"
+  Actual: 3
+
+	at org.restscs.v2_gpt4turbo_run03_NotyPevarTest.testSubjectWithValidInput(v2_gpt4turbo_run03_NotyPevarTest.java:74)
+

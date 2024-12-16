@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v2_gpt4turbo_run01_FisherTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.125 s <<< FAILURE! - in org.restncs.v2_gpt4turbo_run01_FisherTest
+testFisherInvalidInputs(org.restncs.v2_gpt4turbo_run01_FisherTest)  Time elapsed: 0.056 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restncs.v2_gpt4turbo_run01_FisherTest.testFisherInvalidInputs(v2_gpt4turbo_run01_FisherTest.java:60)
+
+testFisherBoundaryValues(org.restncs.v2_gpt4turbo_run01_FisherTest)  Time elapsed: 0.077 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <200> but was <400>.
+
+	at org.restncs.v2_gpt4turbo_run01_FisherTest.testFisherBoundaryValues(v2_gpt4turbo_run01_FisherTest.java:80)
+

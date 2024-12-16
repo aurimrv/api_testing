@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: market.v2_gpt35_run02_ContactsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.851 s <<< FAILURE! - in market.v2_gpt35_run02_ContactsRestControllerTest
+testErrorScenarios  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at market.v2_gpt35_run02_ContactsRestControllerTest.testErrorScenarios(v2_gpt35_run02_ContactsRestControllerTest.java:71)
+

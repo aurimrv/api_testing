@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v3_gpt4o_run01_RemainderTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.833 s <<< FAILURE! - in org.restncs.v3_gpt4o_run01_RemainderTest
+testRemainderSchemaValidation(org.restncs.v3_gpt4o_run01_RemainderTest)  Time elapsed: 0.009 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restncs.v3_gpt4o_run01_RemainderTest.testRemainderSchemaValidation(v3_gpt4o_run01_RemainderTest.java:115)
+

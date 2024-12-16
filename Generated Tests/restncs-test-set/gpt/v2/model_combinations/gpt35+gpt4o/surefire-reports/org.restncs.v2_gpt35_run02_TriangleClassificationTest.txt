@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v2_gpt35_run02_TriangleClassificationTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.022 s <<< FAILURE! - in org.restncs.v2_gpt35_run02_TriangleClassificationTest
+testInvalidTriangleEdgesShouldReturnBadRequest(org.restncs.v2_gpt35_run02_TriangleClassificationTest)  Time elapsed: 0.037 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <400> but was <200>.
+
+	at org.restncs.v2_gpt35_run02_TriangleClassificationTest.testInvalidTriangleEdgesShouldReturnBadRequest(v2_gpt35_run02_TriangleClassificationTest.java:67)
+

@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v3_gpt4o_run03_DateParseTest
+-------------------------------------------------------------------------------
+Tests run: 26, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.42 s <<< FAILURE! - in org.restscs.v3_gpt4o_run03_DateParseTest
+testCalcValidOperation(org.restscs.v3_gpt4o_run03_DateParseTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3.0"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run03_DateParseTest.testCalcValidOperation(v3_gpt4o_run03_DateParseTest.java:126)
+
+testCalcDivisionByZero(org.restscs.v3_gpt4o_run03_DateParseTest)  Time elapsed: 0.019 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "Infinity"
+  Actual: 0.0
+
+	at org.restscs.v3_gpt4o_run03_DateParseTest.testCalcDivisionByZero(v3_gpt4o_run03_DateParseTest.java:139)
+

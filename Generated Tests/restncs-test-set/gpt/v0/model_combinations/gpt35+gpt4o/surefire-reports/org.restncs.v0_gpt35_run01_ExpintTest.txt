@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: org.restncs.v0_gpt35_run01_ExpintTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.701 s <<< FAILURE! - in org.restncs.v0_gpt35_run01_ExpintTest
+testExpintErrorEndpoint(org.restncs.v0_gpt35_run01_ExpintTest)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <400>.
+
+	at org.restncs.v0_gpt35_run01_ExpintTest.testExpintErrorEndpoint(v0_gpt35_run01_ExpintTest.java:91)
+
+testExpintEndpoint(org.restncs.v0_gpt35_run01_ExpintTest)  Time elapsed: 0.027 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1.354117939> but was:<0.016295368588209777>
+	at org.restncs.v0_gpt35_run01_ExpintTest.testExpintEndpoint(v0_gpt35_run01_ExpintTest.java:75)
+

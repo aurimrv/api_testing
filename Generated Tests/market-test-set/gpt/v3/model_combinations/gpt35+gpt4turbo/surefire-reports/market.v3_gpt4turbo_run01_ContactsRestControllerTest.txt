@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt4turbo_run01_ContactsRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.55 s <<< FAILURE! - in market.v3_gpt4turbo_run01_ContactsRestControllerTest
+testUpdateContacts_invalidPhoneResponse  Time elapsed: 0.197 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <406>.
+
+	at market.v3_gpt4turbo_run01_ContactsRestControllerTest.testUpdateContacts_invalidPhoneResponse(v3_gpt4turbo_run01_ContactsRestControllerTest.java:93)
+
+testForbiddenAccess  Time elapsed: 0.089 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <403> but was <401>.
+
+	at market.v3_gpt4turbo_run01_ContactsRestControllerTest.testForbiddenAccess(v3_gpt4turbo_run01_ContactsRestControllerTest.java:107)
+

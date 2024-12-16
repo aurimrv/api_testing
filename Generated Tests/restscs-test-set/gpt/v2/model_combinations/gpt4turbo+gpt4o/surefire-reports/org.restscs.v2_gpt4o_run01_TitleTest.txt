@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4o_run01_TitleTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.803 s <<< FAILURE! - in org.restscs.v2_gpt4o_run01_TitleTest
+testErrorScenario500(org.restscs.v2_gpt4o_run01_TitleTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <200>.
+
+	at org.restscs.v2_gpt4o_run01_TitleTest.testErrorScenario500(v2_gpt4o_run01_TitleTest.java:75)
+
+testSchemaValidation(org.restscs.v2_gpt4o_run01_TitleTest)  Time elapsed: 0.01 s  <<< ERROR!
+java.lang.IllegalStateException: 
+Expected response body to be verified as JSON, HTML or XML but content-type 'text/plain' is not supported out of the box.
+Try registering a custom parser using:
+   RestAssured.registerParser("text/plain", <parser type>);
+Content was:
+1
+
+	at org.restscs.v2_gpt4o_run01_TitleTest.testSchemaValidation(v2_gpt4o_run01_TitleTest.java:65)
+

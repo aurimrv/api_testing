@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run02_Text2TxtTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 1.246 s <<< FAILURE! - in org.restscs.v1_gpt4o_run02_Text2TxtTest
+testCalcEndpoint(org.restscs.v1_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.022 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v1_gpt4o_run02_Text2TxtTest.testCalcEndpoint(v1_gpt4o_run02_Text2TxtTest.java:64)
+
+testCostfunsEndpoint(org.restscs.v1_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.036 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <400>.
+
+	at org.restscs.v1_gpt4o_run02_Text2TxtTest.testCostfunsEndpoint(v1_gpt4o_run02_Text2TxtTest.java:84)
+
+testPatEndpoint(org.restscs.v1_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.018 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <200>.
+
+	at org.restscs.v1_gpt4o_run02_Text2TxtTest.testPatEndpoint(v1_gpt4o_run02_Text2TxtTest.java:144)
+
+testNoTypeVarEndpoint(org.restscs.v1_gpt4o_run02_Text2TxtTest)  Time elapsed: 0.023 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <404> but was <400>.
+
+	at org.restscs.v1_gpt4o_run02_Text2TxtTest.testNoTypeVarEndpoint(v1_gpt4o_run02_Text2TxtTest.java:114)
+

@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v2_gpt4turbo_run02_Ordered4Test
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.155 s <<< FAILURE! - in org.restscs.v2_gpt4turbo_run02_Ordered4Test
+testOrdered4SchemaValidation(org.restscs.v2_gpt4turbo_run02_Ordered4Test)  Time elapsed: 0.02 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at org.restscs.v2_gpt4turbo_run02_Ordered4Test.testOrdered4SchemaValidation(v2_gpt4turbo_run02_Ordered4Test.java:137)
+

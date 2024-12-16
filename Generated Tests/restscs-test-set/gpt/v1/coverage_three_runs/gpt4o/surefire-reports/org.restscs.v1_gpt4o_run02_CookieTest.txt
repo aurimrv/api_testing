@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: org.restscs.v1_gpt4o_run02_CookieTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 9.667 s <<< FAILURE! - in org.restscs.v1_gpt4o_run02_CookieTest
+testCalcEndpoint(org.restscs.v1_gpt4o_run02_CookieTest)  Time elapsed: 1.734 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "3"
+  Actual: 0.0
+
+	at org.restscs.v1_gpt4o_run02_CookieTest.testCalcEndpoint(v1_gpt4o_run02_CookieTest.java:62)
+
+testNotyPevarEndpoint(org.restscs.v1_gpt4o_run02_CookieTest)  Time elapsed: 0.038 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "2"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run02_CookieTest.testNotyPevarEndpoint(v1_gpt4o_run02_CookieTest.java:161)
+
+testPatEndpoint(org.restscs.v1_gpt4o_run02_CookieTest)  Time elapsed: 0.077 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: "matched"
+  Actual: 0
+
+	at org.restscs.v1_gpt4o_run02_CookieTest.testPatEndpoint(v1_gpt4o_run02_CookieTest.java:192)
+
+testText2txtEndpoint(org.restscs.v1_gpt4o_run02_CookieTest)  Time elapsed: 0.044 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Response body doesn't match expectation.
+Expected: ""
+  Actual: 4
+
+	at org.restscs.v1_gpt4o_run02_CookieTest.testText2txtEndpoint(v1_gpt4o_run02_CookieTest.java:210)
+

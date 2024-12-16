@@ -1,0 +1,18 @@
+Seed 01
+* Minimization progress: 5/5
+* Minimization phase took 6 seconds
+* Evaluated tests: 17679
+* Evaluated actions: 36597
+* Needed budget: 90%
+* Passed time (seconds): 3606
+* Execution time per test (ms): Avg=197,71 , min=10,00 , max=1039,00
+* Execution time per action (ms): Avg=96,78 , min=10,00 , max=544,00
+* Computation overhead between tests (ms): Avg=6,27 , min=0,00 , max=6194,00
+* Computation overhead of resetting the SUT (ms): Avg=3,65 , min=0,00 , max=34,00
+* Computation overhead of fetching test results, per test, subset of targets (ms): Avg=10,79 , min=1,00 , max=61,00
+* Going to save 35 tests to src/test/java/em/embedded/market/
+* Potential faults: 18
+* Covered targets (lines, branches, faults, etc.): 1144
+* Bytecode line coverage: 44% (538 out of 1233 in 79 units/classes)
+* Successfully executed (HTTP code 2xx) 10 endpoints out of 14 (71%)
+

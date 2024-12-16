@@ -1,0 +1,35 @@
+-------------------------------------------------------------------------------
+Test set: market.v3_gpt4o_run02_CartRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 3, Errors: 2, Skipped: 0, Time elapsed: 1.882 s <<< FAILURE! - in market.v3_gpt4o_run02_CartRestControllerTest
+testAddItem  Time elapsed: 0.115 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path cartItems[0].productId doesn't match.
+Expected: <1>
+  Actual: 5
+
+	at market.v3_gpt4o_run02_CartRestControllerTest.testAddItem(v3_gpt4o_run02_CartRestControllerTest.java:81)
+
+testPayByCard  Time elapsed: 0.16 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <201> but was <500>.
+
+	at market.v3_gpt4o_run02_CartRestControllerTest.testPayByCard(v3_gpt4o_run02_CartRestControllerTest.java:112)
+
+testInternalServerError  Time elapsed: 0.075 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+Expected status code <500> but was <404>.
+
+	at market.v3_gpt4o_run02_CartRestControllerTest.testInternalServerError(v3_gpt4o_run02_CartRestControllerTest.java:139)
+
+testSchemaValidationForAddItem  Time elapsed: 0.092 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.v3_gpt4o_run02_CartRestControllerTest.testSchemaValidationForAddItem(v3_gpt4o_run02_CartRestControllerTest.java:160)
+
+testSchemaValidationForGetCart  Time elapsed: 0.093 s  <<< ERROR!
+java.lang.IllegalArgumentException: Schema to use cannot be null
+	at market.v3_gpt4o_run02_CartRestControllerTest.testSchemaValidationForGetCart(v3_gpt4o_run02_CartRestControllerTest.java:148)
+
