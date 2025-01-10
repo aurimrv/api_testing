@@ -1,5 +1,4 @@
-# Repository created for the paper  
-**"LLM Prompt Engineering for Automated White-Box Integration Test Generation in REST APIs"**, submitted to the 5th International Workshop on Artificial Intelligence in Software Testing.
+Repository created for the paper **"LLM Prompt Engineering for Automated White-Box Integration Test Generation in REST APIs"**, submitted to the 5th International Workshop on Artificial Intelligence in Software Testing.
 
 ---
 
