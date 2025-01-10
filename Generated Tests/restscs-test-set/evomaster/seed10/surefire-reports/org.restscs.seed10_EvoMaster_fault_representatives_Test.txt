@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.restscs.seed10_EvoMaster_fault_representatives_Test
--------------------------------------------------------------------------------
-Tests run: 118, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.55 s - in org.restscs.seed10_EvoMaster_fault_representatives_Test

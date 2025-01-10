@@ -1,4 +1,4 @@
-package market;
+package em.embedded.market; //SEED 05
 
 import  org.junit.jupiter.api.AfterAll;
 import  org.junit.jupiter.api.BeforeAll;
