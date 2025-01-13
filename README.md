@@ -62,6 +62,12 @@ Repository created for the paper **"LLM Prompt Engineering for Automated White-B
 
 ---
 
+### **RQ3**
+- **Data Related to Table III in the Paper**
+  - **Example:** `market-test-set/gpt/v0/gpt35/run01/exec/`  
+   - The `exec` folder contains the final version of the tests used to calculate the number of test cases.
+---
+
 ### **RQ4**
 - **Data Related to Table IV in the Paper**  
   - **Example:** `market-test-set/evomaster/evomaster-combination-report/`  
